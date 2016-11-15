@@ -1,4 +1,4 @@
-#Wed Nov 09 15:30:57 PST 2016
+#Mon Nov 14 18:48:52 PST 2016
 base.0=/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b508fbc31e9f0600f9421695f3bccb32fefa5f5d
 renamed.1=classes2.dex
 renamed.0=classes.dex

@@ -272,7 +272,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
         //flickr.auth.oauth.checkToken with auth token
         //check for new user and cancel for certain\\
 
-        Observable<Who> tagsObservable = getJacksonService().getTags(Util.getUserId());
+         Observable<Who> tagsObservable = getJacksonService().getTags(Util.getUserId());
         friendSubscription = getJacksonService().getFriendsPhotos(Util.getUserId())
                 .zipWith(tagsObservable, new Func2<Photos, Who, UserInfo>() {
 
