@@ -16,7 +16,6 @@ import se.akerfeldt.okhttp.signpost.OkHttpOAuthProvider;
 public class OAuthSignPostOKHttpClient {    //
 
 
-
     private OkHttpOAuthConsumer consumer;
     private OkHttpOAuthProvider provider;
     private OAuthSignPostOKHttpClient.OAuthTokenHandler handler;
@@ -30,15 +29,15 @@ public class OAuthSignPostOKHttpClient {    //
     private static final String authorizationEndpoint = BuildConfig.authorizationEndpoint;
 
 
-    public OAuthSignPostOKHttpClient( OAuthSignPostOKHttpClient.OAuthTokenHandler handler, SharedPreferences prefs) {
+    public OAuthSignPostOKHttpClient(OAuthSignPostOKHttpClient.OAuthTokenHandler handler, SharedPreferences prefs) {
         this.handler = handler;
         this.prefs = prefs;
         if (callbackUrl == null) {
             callbackUrl = "oob";
         }
 
-        this.consumer = new OkHttpOAuthConsumer(consumerKey,consumerSecret);
-        this.provider = new OkHttpOAuthProvider(requestTokenEndpoint,accessTokenEndpoint, authorizationEndpoint);
+        this.consumer = new OkHttpOAuthConsumer(consumerKey, consumerSecret);
+        this.provider = new OkHttpOAuthProvider(requestTokenEndpoint, accessTokenEndpoint, authorizationEndpoint);
     }
 
     public OkHttpOAuthConsumer getConsumer() {
@@ -121,9 +120,6 @@ public class OAuthSignPostOKHttpClient {    //
             }
         });
     }
-
-
-
 
 
     private void setHttpResponseParams(HttpParameters params) {

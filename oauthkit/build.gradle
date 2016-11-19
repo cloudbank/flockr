@@ -13,7 +13,7 @@ android {
         def props = new Properties()
         props.load(new FileInputStream(propsFile))
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "baseUrl",  props['baseUrl']
+        buildConfigField "String", "baseUrl", props['baseUrl']
         buildConfigField "String", "callbackUrl", props['callbackUrl']
         buildConfigField "String", "consumerKey", props['consumerKey']
         buildConfigField "String", "consumerSecret", props['consumerSecret']

@@ -5,7 +5,6 @@ package com.anubis.oauthkit;
  */
 
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -50,7 +49,7 @@ public class OAuthBaseClient {
         this.context = context;
         this.prefs = this.context.getSharedPreferences("OAuthKit_Prefs", 0);
         this.editor = this.prefs.edit();
-        this.client = new OAuthSignPostOKHttpClient( new OAuthSignPostOKHttpClient.OAuthTokenHandler() {
+        this.client = new OAuthSignPostOKHttpClient(new OAuthSignPostOKHttpClient.OAuthTokenHandler() {
 
             //@todo implement interface and ovverride here
             public void onReceivedRequestToken(OkHttpOAuthConsumer consumer, String authorizeUrl) {
@@ -89,7 +88,6 @@ public class OAuthBaseClient {
         }, this.prefs);
 
 
-
     }
 
     public void connect() {
@@ -126,7 +124,6 @@ public class OAuthBaseClient {
 
         this.editor.commit();
     }
-
 
 
     public interface OAuthAccessHandler {

@@ -1,18 +1,29 @@
 package com.anubis.flickr.activity;
 
+import android.Manifest;
 import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.annotation.TargetApi;
 import android.content.ContentResolver;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.HandlerThread;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.anubis.flickr.FlickrClientApp;
 import com.anubis.flickr.R;
@@ -39,6 +50,7 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
     private Subscription subscription;
     private Photos mPhotos;
     HandlerThread handlerThread;
+    View rootView;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -51,6 +63,71 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         //just add the photo bitmap to realm
         Log.d("POST", "callback");
         vpPager.setCurrentItem(0);
+    }
+
+    // Identifier for the permission request
+    private static final int GET_ACCOUNTS_PERMISSIONS_REQUEST = 1;
+
+    // Called when the user is performing an action which requires the app to
+    //--get accounts which is under contacts; runtime permission only in M
+    @TargetApi(Build.VERSION_CODES.M)
+    private boolean checkAccountsPermission() {
+        final String perm = Manifest.permission.GET_ACCOUNTS;
+        int permissionCheck = ContextCompat.checkSelfPermission(this, perm);
+        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+            // We have the permission
+            return true;
+        } else if (ActivityCompat.shouldShowRequestPermissionRationale(this, perm)) {
+            // Need to show permission rationale, display a snackbar and then request
+            // the permission again when the snackbar is dismissed to re-request it
+            Snackbar.make(rootView, R.string.permission_grant, Snackbar.LENGTH_INDEFINITE)
+                    .setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Request the permission again.
+                            ActivityCompat.requestPermissions(getParent(),
+                                    new String[]{perm},
+                                    GET_ACCOUNTS_PERMISSIONS_REQUEST);
+                        }
+                    }).show();
+            return false;
+        } else {
+            // No explanation needed, we can request the permission.
+            ActivityCompat.requestPermissions(this,
+                    new String[]{perm},
+                    GET_ACCOUNTS_PERMISSIONS_REQUEST);
+            return false;
+        }
+    }
+
+    // Callback with the request from calling requestPermissions(...)
+    @Override
+    @TargetApi(Build.VERSION_CODES.M)
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
+        // Make sure it's our original GET_ACCTS request
+        if (requestCode == GET_ACCOUNTS_PERMISSIONS_REQUEST) {
+            if (grantResults.length > 0 &&
+                    grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Get Accounts permission granted", Toast.LENGTH_SHORT).show();
+                //callback to continue
+            } else {
+                // showRationale = false if user clicks Never Ask Again, otherwise true
+                boolean showRationale = shouldShowRequestPermissionRationale(Manifest.permission.GET_ACCOUNTS);
+
+                if (showRationale) {
+                    //did not grant, but did not say never ask
+                    ActivityCompat.requestPermissions(getParent(),
+                            new String[]{ Manifest.permission.GET_ACCOUNTS},
+                            GET_ACCOUNTS_PERMISSIONS_REQUEST);
+
+                } else {
+                    Toast.makeText(this, "Get  Accounts permission denied, app must quit", Toast.LENGTH_SHORT).show();
+                    //logout
+                }
+            }
+        }
     }
 
 
@@ -70,13 +147,30 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photos);
+        //for snackbar
+        rootView = findViewById(android.R.id.content);
         //oauthkit shared prefs
         SharedPreferences authPrefs = getApplicationContext().getSharedPreferences(getString(R.string.OAuthKit_Prefs), 0);
 
         if (!Util.getCurrentUser().equals(authPrefs.getString(getString(R.string.username), ""))) {
             //@todo stop the sync adapter and restart
+            Log.d("SYNC", "changing accounts for sync adapter");
             //find out how to properly stop before restart
-            ContentResolver.cancelSync(new Account(authPrefs.getString(getString(R.string.username),""), getApplication().getString(R.string.account_type)), getApplication().getString(R.string.authority));
+            AccountManager am = AccountManager.get(this.getApplicationContext());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                checkAccountsPermission();
+            }
+            Account[] accounts = new Account[]{};
+            try {
+                accounts = am.getAccounts();
+            } catch (SecurityException e) {
+
+            }
+            if (accounts.length > 0) {
+                Account accountToRemove = accounts[0];
+                am.removeAccount(accountToRemove, null, null);
+            }
+            ContentResolver.cancelSync(new Account(authPrefs.getString(getString(R.string.username), ""), getApplication().getString(R.string.account_type)), getApplication().getString(R.string.authority));
             // could also cancelSync(null);
             updateUserInfo(authPrefs);
         }
@@ -125,7 +219,6 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
 
 
     }
-
 
 
     private TabLayout.OnTabSelectedListener onTabSelectedListener(final ViewPager pager) {

@@ -737,6 +737,7 @@
     <string name="no_storage_card">No storage card</string>
     <string name="not_enough_space">Not enough space</string>
     <string name="or_search">  any of the tags entered</string>
+    <string name="permission_grant">GET ACCOUNTS permissions must be granted for the app to work</string>
     <string name="photo.jpg">photo.jpg</string>
     <string name="preparing_card">Preparing card</string>
     <string name="previous_user">previousUser</string>

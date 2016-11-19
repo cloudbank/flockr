@@ -17,7 +17,7 @@
         android:layout_centerInParent="true"
         android:textStyle="bold"
         android:background="@color/AliceBlue"
-        android:text="My Tags"/>
+        android:text="My Tags" />
 
     <co.hkm.soltag.TagContainerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/my_tag_group"
@@ -54,27 +54,27 @@
         android:orientation='horizontal'>
 
 
-    <RadioButton
-        android:id="@+id/radio5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:textStyle="bold"
-        android:layout_below="@id/radioGroup1"
-        android:theme="@style/MyRadioButton"
-        android:textColor="@color/RoyalBlue"
-        android:text="5 each"/>
+        <RadioButton
+            android:id="@+id/radio5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textStyle="bold"
+            android:layout_below="@id/radioGroup1"
+            android:theme="@style/MyRadioButton"
+            android:textColor="@color/RoyalBlue"
+            android:text="5 each" />
 
 
-    <RadioButton
-        android:id="@+id/radio1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/RoyalBlue"
-        android:checked="false"
-        android:textStyle="bold"
-        android:theme="@style/MyRadioButton"
-        android:text="1 each"/>
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/RoyalBlue"
+            android:checked="false"
+            android:textStyle="bold"
+            android:theme="@style/MyRadioButton"
+            android:text="1 each" />
 
     </RadioGroup>
 
@@ -86,7 +86,6 @@
         android:scrollbars="vertical"
         android:background="@color/AliceBlue"
         android:clipToPadding="true" />
-
 
 
 </RelativeLayout>

@@ -1,18 +1,19 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/action_save"
         android:onClick="onSaveButton"
         android:orderInCategory="200"
         app:showAsAction="always"
-        android:title="Save"/>
+        android:title="Save" />
 
     <item
         android:id="@+id/action_cancel"
         android:onClick="onCancelButton"
         android:orderInCategory="300"
         app:showAsAction="always"
-        android:title="Cancel"/>
+        android:title="Cancel" />
 
 
     <item
@@ -26,33 +27,33 @@
                 android:id="@+id/filter_none"
                 android:orderInCategory="50"
                 app:showAsAction="ifRoom"
-                android:title="Normal"/>
+                android:title="Normal" />
             <item
                 android:id="@+id/filter_blur"
                 android:orderInCategory="100"
                 app:showAsAction="ifRoom"
-                android:title="Blur"/>     
+                android:title="Blur" />
             <item
                 android:id="@+id/filter_grayscale"
                 android:orderInCategory="100"
                 app:showAsAction="ifRoom"
-                android:title="Grayscale"/>
+                android:title="Grayscale" />
             <item
                 android:id="@+id/filter_crystallize"
                 android:orderInCategory="100"
                 app:showAsAction="ifRoom"
-                android:title="Crystal"/>
+                android:title="Crystal" />
             <item
                 android:id="@+id/filter_solarize"
                 android:orderInCategory="100"
                 app:showAsAction="ifRoom"
-                android:title="Solar"/>
+                android:title="Solar" />
             <item
                 android:id="@+id/filter_glow"
                 android:orderInCategory="100"
                 app:showAsAction="ifRoom"
-                android:title="Glow"/>
-            
+                android:title="Glow" />
+
         </menu>
     </item>
 

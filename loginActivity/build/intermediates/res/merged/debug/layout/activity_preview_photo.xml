@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/AliceBlue"
-    tools:context=".PreviewPhotoActivity" >
+    tools:context=".PreviewPhotoActivity">
 
     <include
         android:id="@+id/toolbar"
@@ -18,8 +18,7 @@
         android:layout_height="300dp"
         android:layout_below="@+id/toolbar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        />
+        android:layout_marginTop="20dp" />
 
     <EditText
         android:id="@+id/etPhotoName"

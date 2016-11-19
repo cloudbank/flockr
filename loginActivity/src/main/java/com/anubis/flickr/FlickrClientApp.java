@@ -28,7 +28,6 @@ public class FlickrClientApp extends Application {
     Account mAccount;
 
 
-
     private static Context context;
 
 
@@ -48,7 +47,6 @@ public class FlickrClientApp extends Application {
     }
 
 
-
     public static void setJacksonService(OkHttpOAuthConsumer consumer, String baseUrl) {
         jacksonService = ServiceGenerator.createRetrofitRxService(consumer, FlickrService.class, baseUrl, JacksonConverterFactory.create());
     }
@@ -56,7 +54,6 @@ public class FlickrClientApp extends Application {
     public static void setDefaultService(OkHttpOAuthConsumer consumer, String baseUrl) {
         defaultService = ServiceGenerator.createRetrofitRxService(consumer, FlickrService.class, baseUrl, SimpleXmlConverterFactory.create());
     }
-
 
 
     @Override
@@ -69,8 +66,6 @@ public class FlickrClientApp extends Application {
         Realm.setDefaultConfiguration(config);
 
 
-
-
         FlickrClientApp.context = getApplicationContext();
         Stetho.initializeWithDefaults(this);
 
@@ -78,7 +73,7 @@ public class FlickrClientApp extends Application {
         //TypefaceUtil.setDefaultFont(this, "SERIF", "fonts/Exo-Medium.otf");
         Picasso.Builder builder = new Picasso.Builder(this);
         //wharton lib requires picasso 2.5.2 right now
-        builder.downloader(new OkHttp3Downloader(this,Integer.MAX_VALUE));
+        builder.downloader(new OkHttp3Downloader(this, Integer.MAX_VALUE));
         Picasso built = builder.build();
         built.setIndicatorsEnabled(true);
         built.setLoggingEnabled(false);

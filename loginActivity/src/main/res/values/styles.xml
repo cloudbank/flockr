@@ -22,8 +22,6 @@
     </style>
 
 
-
-
     <style name="MySwitch" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->
         <item name="colorControlActivated">@color/RoyalBlue</item>
@@ -83,8 +81,6 @@
     </style>
 
 
-
-
     <style name="MyEditText" parent="Theme.AppCompat.Light">
         <item name="colorControlNormal">@color/RoyalBlue</item>
         <item name="colorControlActivated">@color/DeepPink</item>
@@ -107,6 +103,7 @@
         <item name="colorButtonNormal">#E00065</item>
 
     </style>
+
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!--buttons color-->
         <item name="colorAccent">@color/DeepPink</item>
