@@ -1,7 +1,6 @@
 package com.anubis.flickr.adapter;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -11,7 +10,6 @@ import android.widget.TextView;
 
 import com.anubis.flickr.R;
 import com.anubis.flickr.models.Comment;
-import com.anubis.flickr.util.Util;
 
 import java.util.List;
 
@@ -23,8 +21,6 @@ public class ImageDisplayAdapter extends RecyclerView.Adapter<ImageDisplayAdapte
 
 
     private OnItemClickListener listener;
-    protected SharedPreferences prefs;
-    protected SharedPreferences.Editor editor;
 
 
     public OnItemClickListener getListener(){
@@ -73,8 +69,7 @@ public class ImageDisplayAdapter extends RecyclerView.Adapter<ImageDisplayAdapte
         mStaggered = staggered;
         mComments = comments;
         mContext = context;
-        this.prefs = Util.getUserPrefs();
-        this.editor = this.prefs.edit();
+
 
     }
 

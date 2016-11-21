@@ -2,7 +2,6 @@ package com.anubis.flickr.fragments;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -42,8 +41,7 @@ public class FriendsFragment extends FlickrBaseFragment {
     FriendsAdapter fAdapter;
     RecyclerView rvPhotos;
     List<Tag> mTags;
-    protected SharedPreferences prefs;
-    protected SharedPreferences.Editor editor;
+
     TagContainerLayout mTagView;
     Realm userRealm, r;
     public UserModel mUser;
@@ -140,8 +138,7 @@ public class FriendsFragment extends FlickrBaseFragment {
         mTags = new ArrayList<Tag>();
         fAdapter = new FriendsAdapter(getActivity(), mPhotos, false);
         ringProgressDialog = new ProgressDialog(getActivity(), R.style.CustomProgessBarStyle);
-        this.prefs = Util.getUserPrefs();
-        this.editor = this.prefs.edit();
+
         setRetainInstance(true);
     }
 

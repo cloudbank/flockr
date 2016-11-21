@@ -1,7 +1,6 @@
 package com.anubis.flickr.adapter;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 
 import com.anubis.flickr.R;
 import com.anubis.flickr.models.Photo;
-import com.anubis.flickr.util.Util;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -29,8 +27,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
 
     private OnItemClickListener listener;
-    protected SharedPreferences prefs;
-    protected SharedPreferences.Editor editor;
+
 
 
     public OnItemClickListener getListener() {
@@ -82,8 +79,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         mStaggered = staggered;
         mPhotos = photos;
         mContext = context;
-        this.prefs = Util.getUserPrefs();
-        this.editor = this.prefs.edit();
+
 
     }
 

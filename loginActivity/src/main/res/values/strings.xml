@@ -2,22 +2,13 @@
 <resources>
 
     <string name="app_name">phlix</string>
-    <string name="search">Search</string>
     <string name="image_detail">Image Detail</string>
-    <string name="enter_comment">Enter Comment</string>
     <string name="friends_and_you">Friends  &amp; I</string>
     <string name="interesting_today">Explore</string>
     <string name="commons_search">The Commons</string>
     <string name="tags">Hot Tags  &amp; Recent Photos</string>
-    <string name="bye">Bye...</string>
     <string name="commons"><b>The Commons</b>\n <i>Help catalog the world’s public photo archives.</i></string>
     <string name="commons_under"><u>The key goal of The Commons is to share hidden treasures\n from the world\'s public photography archives.</u> </string>
-    <string name="text_search"> title, description, or tags entered</string>
-    <string name="or_search">  any of the tags entered</string>
-    <string name="and_search"> all of the tags entered</string>
-    <string name="add">Add</string>
-    <string name="search_by">Search by any tags entered </string>
-    <string name="previous_user">previousUser</string>
     <string name="current_user">currentUser</string>
     <string name="user_id">userId</string>
     <string name="OAuthKit_Prefs">OAuthKit_Prefs</string>
@@ -28,7 +19,6 @@
     <string name="account_type">com.anubis.flickr</string>
     <string name="authority">com.anubis.flickr.provider</string>
     <string name="timestamp">timestamp</string>
-    <string name="photo.jpg">photo.jpg</string>
     <string name="Me">Me</string>
     <string name="permission_grant">GET ACCOUNTS permissions must be granted for the app to work</string>
 

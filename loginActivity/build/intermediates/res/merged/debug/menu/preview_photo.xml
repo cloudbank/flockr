@@ -9,7 +9,6 @@
         android:title="Save" />
 
     <item
-        android:id="@+id/action_cancel"
         android:onClick="onCancelButton"
         android:orderInCategory="300"
         app:showAsAction="always"

@@ -138,7 +138,7 @@
             android:fontFamily="monospace"
             android:scrollbars="vertical"
             android:textColor="@color/RoyalBlue"
-            android:textSize="8sp"
+            android:textSize="12sp"
             android:typeface="monospace"></WebView>
 
 

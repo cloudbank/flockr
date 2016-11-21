@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/RoyalBlue"
         android:ems="10"
-        android:singleLine="true"
+        android:maxLines="1"
         android:theme="@style/MyEditText"
         android:hint="(&lt;name&gt;)" />
 

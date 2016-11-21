@@ -8,21 +8,21 @@ package eu.janmuller.android.simplecropimage;
 
 public final class R {
 	public static final class drawable {
-		public static final int btn_crop_operator = 0x7f020064;
-		public static final int btn_crop_pressed = 0x7f020065;
-		public static final int camera_crop_height = 0x7f02006a;
-		public static final int camera_crop_width = 0x7f02006b;
-		public static final int ic_rotate_left = 0x7f020088;
-		public static final int ic_rotate_right = 0x7f020089;
-		public static final int indicator_autocrop = 0x7f02008c;
-		public static final int selector_crop_button = 0x7f02009e;
+		public static final int btn_crop_operator = 0x7f020054;
+		public static final int btn_crop_pressed = 0x7f020055;
+		public static final int camera_crop_height = 0x7f020056;
+		public static final int camera_crop_width = 0x7f020057;
+		public static final int ic_rotate_left = 0x7f02005e;
+		public static final int ic_rotate_right = 0x7f02005f;
+		public static final int indicator_autocrop = 0x7f020061;
+		public static final int selector_crop_button = 0x7f020065;
 	}
 	public static final class id {
-		public static final int discard = 0x7f0d0085;
+		public static final int discard = 0x7f0d0084;
 		public static final int image = 0x7f0d0047;
-		public static final int rotateLeft = 0x7f0d0086;
-		public static final int rotateRight = 0x7f0d0087;
-		public static final int save = 0x7f0d0088;
+		public static final int rotateLeft = 0x7f0d0085;
+		public static final int rotateRight = 0x7f0d0086;
+		public static final int save = 0x7f0d0087;
 	}
 	public static final class layout {
 		public static final int cropimage = 0x7f040020;

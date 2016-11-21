@@ -2,7 +2,6 @@ package com.anubis.flickr.fragments;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
@@ -19,7 +18,6 @@ import com.anubis.flickr.adapter.TagsAdapter;
 import com.anubis.flickr.models.Photo;
 import com.anubis.flickr.models.Recent;
 import com.anubis.flickr.models.Tag;
-import com.anubis.flickr.util.Util;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -40,8 +38,7 @@ public class TagsFragment extends FlickrBaseFragment {
     ProgressDialog ringProgressDialog;
     TagsAdapter tAdapter;
     RecyclerView rvPhotos;
-    protected SharedPreferences prefs;
-    protected SharedPreferences.Editor editor;
+
     RealmChangeListener changeListener;
     Realm tagsRealm, r;
 
@@ -105,8 +102,7 @@ public class TagsFragment extends FlickrBaseFragment {
         mPhotos = new ArrayList<Photo>();
         ringProgressDialog = new ProgressDialog(getActivity(), R.style.MyDialogTheme);
         tAdapter = new TagsAdapter(getActivity(), mPhotos, false);
-        this.prefs = Util.getUserPrefs();
-        this.editor = this.prefs.edit();
+
         mTags = new ArrayList<Tag>();
         Log.d("TABS", "tags oncreate");
         setRetainInstance(true);

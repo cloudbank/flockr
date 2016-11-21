@@ -39,7 +39,7 @@ public class FlickrClientApp extends Application {
 
 
     public static FlickrService getJacksonService() {
-        return (FlickrService) jacksonService;
+        return  jacksonService;
     }
 
     public static FlickrService getDefaultService() {
@@ -59,7 +59,7 @@ public class FlickrClientApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        this.context = this;
 
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().build();
@@ -75,7 +75,7 @@ public class FlickrClientApp extends Application {
         //wharton lib requires picasso 2.5.2 right now
         builder.downloader(new OkHttp3Downloader(this, Integer.MAX_VALUE));
         Picasso built = builder.build();
-        built.setIndicatorsEnabled(true);
+        //built.setIndicatorsEnabled(true);
         built.setLoggingEnabled(false);
         Picasso.setSingletonInstance(built);
 

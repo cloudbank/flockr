@@ -215,7 +215,7 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         editor.putString(getApplicationContext().getString(R.string.user_id), authPrefs.getString(getApplicationContext().getString(R.string.user_nsid), ""));
 
         editor.commit();
-        // in a bg thread
+        //apply() in a bg thread
 
 
     }

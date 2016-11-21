@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:textStyle="bold"
-            android:layout_below="@id/radioGroup1"
+
             android:theme="@style/MyRadioButton"
             android:textColor="@color/RoyalBlue"
             android:text="5 each" />

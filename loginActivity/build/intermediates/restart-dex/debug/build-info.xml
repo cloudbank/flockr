@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="21"
+    density="xhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="61460194269197"
+    token="2872332265169310905"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="7439" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="3578" />
+    <task
+        name="verifier"
+        duration="486" />
+
+    <artifact
+        location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/outputs/apk/loginActivity-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="61460194269197"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/outputs/apk/loginActivity-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
