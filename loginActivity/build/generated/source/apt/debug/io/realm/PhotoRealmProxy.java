@@ -5,31 +5,27 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.util.JsonReader;
 import android.util.JsonToken;
-import io.realm.RealmObjectSchema;
-import io.realm.RealmSchema;
+
 import io.realm.exceptions.RealmMigrationNeededException;
 import io.realm.internal.ColumnInfo;
-import io.realm.internal.LinkView;
 import io.realm.internal.RealmObjectProxy;
 import io.realm.internal.Row;
 import io.realm.internal.SharedRealm;
 import io.realm.internal.Table;
 import io.realm.internal.TableOrView;
-import io.realm.internal.android.JsonUtils;
 import io.realm.log.RealmLog;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import org.json.JSONArray;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
+public class PhotoRealmProxy extends com.anubis.phlix.models.Photo
     implements RealmObjectProxy, PhotoRealmProxyInterface {
 
     static final class PhotoColumnInfo extends ColumnInfo
@@ -178,7 +174,7 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
     private void injectObjectContext() {
         final BaseRealm.RealmObjectContext context = BaseRealm.objectContext.get();
         this.columnInfo = (PhotoColumnInfo) context.getColumnInfo();
-        this.proxyState = new ProxyState(com.anubis.flickr.models.Photo.class, this);
+        this.proxyState = new ProxyState(com.anubis.phlix.models.Photo.class, this);
         proxyState.setRealm$realm(context.getRealm());
         proxyState.setRow$realm(context.getRow());
         proxyState.setAcceptDefaultValue$realm(context.getAcceptDefaultValue());
@@ -1261,12 +1257,12 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
     }
 
     @SuppressWarnings("cast")
-    public static com.anubis.flickr.models.Photo createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
+    public static com.anubis.phlix.models.Photo createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
         throws JSONException {
         final List<String> excludeFields = Collections.<String> emptyList();
-        com.anubis.flickr.models.Photo obj = null;
+        com.anubis.phlix.models.Photo obj = null;
         if (update) {
-            Table table = realm.getTable(com.anubis.flickr.models.Photo.class);
+            Table table = realm.getTable(com.anubis.phlix.models.Photo.class);
             long pkColumnIndex = table.getPrimaryKey();
             long rowIndex = TableOrView.NO_MATCH;
             if (json.isNull("id")) {
@@ -1277,7 +1273,7 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
             if (rowIndex != TableOrView.NO_MATCH) {
                 final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
                 try {
-                    objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.flickr.models.Photo.class), false, Collections.<String> emptyList());
+                    objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.phlix.models.Photo.class), false, Collections.<String> emptyList());
                     obj = new io.realm.PhotoRealmProxy();
                 } finally {
                     objectContext.clear();
@@ -1287,9 +1283,9 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
         if (obj == null) {
             if (json.has("id")) {
                 if (json.isNull("id")) {
-                    obj = (io.realm.PhotoRealmProxy) realm.createObjectInternal(com.anubis.flickr.models.Photo.class, null, true, excludeFields);
+                    obj = (io.realm.PhotoRealmProxy) realm.createObjectInternal(com.anubis.phlix.models.Photo.class, null, true, excludeFields);
                 } else {
-                    obj = (io.realm.PhotoRealmProxy) realm.createObjectInternal(com.anubis.flickr.models.Photo.class, json.getString("id"), true, excludeFields);
+                    obj = (io.realm.PhotoRealmProxy) realm.createObjectInternal(com.anubis.phlix.models.Photo.class, json.getString("id"), true, excludeFields);
                 }
             } else {
                 throw new IllegalArgumentException("JSON object doesn't have the primary key field 'id'.");
@@ -1440,10 +1436,10 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
 
     @SuppressWarnings("cast")
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static com.anubis.flickr.models.Photo createUsingJsonStream(Realm realm, JsonReader reader)
+    public static com.anubis.phlix.models.Photo createUsingJsonStream(Realm realm, JsonReader reader)
         throws IOException {
         boolean jsonHasPrimaryKey = false;
-        com.anubis.flickr.models.Photo obj = new com.anubis.flickr.models.Photo();
+        com.anubis.phlix.models.Photo obj = new com.anubis.phlix.models.Photo();
         reader.beginObject();
         while (reader.hasNext()) {
             String name = reader.nextName();
@@ -1607,7 +1603,7 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
         return obj;
     }
 
-    public static com.anubis.flickr.models.Photo copyOrUpdate(Realm realm, com.anubis.flickr.models.Photo object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.anubis.phlix.models.Photo copyOrUpdate(Realm realm, com.anubis.phlix.models.Photo object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm().threadId != realm.threadId) {
             throw new IllegalArgumentException("Objects which belong to Realm instances in other threads cannot be copied into this Realm instance.");
         }
@@ -1617,12 +1613,12 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
         final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
         RealmObjectProxy cachedRealmObject = cache.get(object);
         if (cachedRealmObject != null) {
-            return (com.anubis.flickr.models.Photo) cachedRealmObject;
+            return (com.anubis.phlix.models.Photo) cachedRealmObject;
         } else {
-            com.anubis.flickr.models.Photo realmObject = null;
+            com.anubis.phlix.models.Photo realmObject = null;
             boolean canUpdate = update;
             if (canUpdate) {
-                Table table = realm.getTable(com.anubis.flickr.models.Photo.class);
+                Table table = realm.getTable(com.anubis.phlix.models.Photo.class);
                 long pkColumnIndex = table.getPrimaryKey();
                 String value = ((PhotoRealmProxyInterface) object).realmGet$id();
                 long rowIndex = TableOrView.NO_MATCH;
@@ -1633,7 +1629,7 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
                 }
                 if (rowIndex != TableOrView.NO_MATCH) {
                     try {
-                        objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.flickr.models.Photo.class), false, Collections.<String> emptyList());
+                        objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.phlix.models.Photo.class), false, Collections.<String> emptyList());
                         realmObject = new io.realm.PhotoRealmProxy();
                         cache.put(object, (RealmObjectProxy) realmObject);
                     } finally {
@@ -1652,13 +1648,13 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
         }
     }
 
-    public static com.anubis.flickr.models.Photo copy(Realm realm, com.anubis.flickr.models.Photo newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.anubis.phlix.models.Photo copy(Realm realm, com.anubis.phlix.models.Photo newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         RealmObjectProxy cachedRealmObject = cache.get(newObject);
         if (cachedRealmObject != null) {
-            return (com.anubis.flickr.models.Photo) cachedRealmObject;
+            return (com.anubis.phlix.models.Photo) cachedRealmObject;
         } else {
             // rejecting default values to avoid creating unexpected objects from RealmModel/RealmList fields.
-            com.anubis.flickr.models.Photo realmObject = realm.createObjectInternal(com.anubis.flickr.models.Photo.class, ((PhotoRealmProxyInterface) newObject).realmGet$id(), false, Collections.<String>emptyList());
+            com.anubis.phlix.models.Photo realmObject = realm.createObjectInternal(com.anubis.phlix.models.Photo.class, ((PhotoRealmProxyInterface) newObject).realmGet$id(), false, Collections.<String>emptyList());
             cache.put(newObject, (RealmObjectProxy) realmObject);
             ((PhotoRealmProxyInterface) realmObject).realmSet$secret(((PhotoRealmProxyInterface) newObject).realmGet$secret());
             ((PhotoRealmProxyInterface) realmObject).realmSet$server(((PhotoRealmProxyInterface) newObject).realmGet$server());
@@ -1684,13 +1680,13 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
         }
     }
 
-    public static long insert(Realm realm, com.anubis.flickr.models.Photo object, Map<RealmModel,Long> cache) {
+    public static long insert(Realm realm, com.anubis.phlix.models.Photo object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.anubis.flickr.models.Photo.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Photo.class);
         long tableNativePtr = table.getNativeTablePointer();
-        PhotoColumnInfo columnInfo = (PhotoColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Photo.class);
+        PhotoColumnInfo columnInfo = (PhotoColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Photo.class);
         long pkColumnIndex = table.getPrimaryKey();
         String primaryKeyValue = ((PhotoRealmProxyInterface) object).realmGet$id();
         long rowIndex = TableOrView.NO_MATCH;
@@ -1783,13 +1779,13 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
     }
 
     public static void insert(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.anubis.flickr.models.Photo.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Photo.class);
         long tableNativePtr = table.getNativeTablePointer();
-        PhotoColumnInfo columnInfo = (PhotoColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Photo.class);
+        PhotoColumnInfo columnInfo = (PhotoColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Photo.class);
         long pkColumnIndex = table.getPrimaryKey();
-        com.anubis.flickr.models.Photo object = null;
+        com.anubis.phlix.models.Photo object = null;
         while (objects.hasNext()) {
-            object = (com.anubis.flickr.models.Photo) objects.next();
+            object = (com.anubis.phlix.models.Photo) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -1886,13 +1882,13 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
         }
     }
 
-    public static long insertOrUpdate(Realm realm, com.anubis.flickr.models.Photo object, Map<RealmModel,Long> cache) {
+    public static long insertOrUpdate(Realm realm, com.anubis.phlix.models.Photo object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.anubis.flickr.models.Photo.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Photo.class);
         long tableNativePtr = table.getNativeTablePointer();
-        PhotoColumnInfo columnInfo = (PhotoColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Photo.class);
+        PhotoColumnInfo columnInfo = (PhotoColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Photo.class);
         long pkColumnIndex = table.getPrimaryKey();
         String primaryKeyValue = ((PhotoRealmProxyInterface) object).realmGet$id();
         long rowIndex = TableOrView.NO_MATCH;
@@ -2019,13 +2015,13 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
     }
 
     public static void insertOrUpdate(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.anubis.flickr.models.Photo.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Photo.class);
         long tableNativePtr = table.getNativeTablePointer();
-        PhotoColumnInfo columnInfo = (PhotoColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Photo.class);
+        PhotoColumnInfo columnInfo = (PhotoColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Photo.class);
         long pkColumnIndex = table.getPrimaryKey();
-        com.anubis.flickr.models.Photo object = null;
+        com.anubis.phlix.models.Photo object = null;
         while (objects.hasNext()) {
-            object = (com.anubis.flickr.models.Photo) objects.next();
+            object = (com.anubis.phlix.models.Photo) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -2156,22 +2152,22 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
         }
     }
 
-    public static com.anubis.flickr.models.Photo createDetachedCopy(com.anubis.flickr.models.Photo realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
+    public static com.anubis.phlix.models.Photo createDetachedCopy(com.anubis.phlix.models.Photo realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
         if (currentDepth > maxDepth || realmObject == null) {
             return null;
         }
         CacheData<RealmModel> cachedObject = cache.get(realmObject);
-        com.anubis.flickr.models.Photo unmanagedObject;
+        com.anubis.phlix.models.Photo unmanagedObject;
         if (cachedObject != null) {
             // Reuse cached object or recreate it because it was encountered at a lower depth.
             if (currentDepth >= cachedObject.minDepth) {
-                return (com.anubis.flickr.models.Photo)cachedObject.object;
+                return (com.anubis.phlix.models.Photo)cachedObject.object;
             } else {
-                unmanagedObject = (com.anubis.flickr.models.Photo)cachedObject.object;
+                unmanagedObject = (com.anubis.phlix.models.Photo)cachedObject.object;
                 cachedObject.minDepth = currentDepth;
             }
         } else {
-            unmanagedObject = new com.anubis.flickr.models.Photo();
+            unmanagedObject = new com.anubis.phlix.models.Photo();
             cache.put(realmObject, new RealmObjectProxy.CacheData(currentDepth, unmanagedObject));
         }
         ((PhotoRealmProxyInterface) unmanagedObject).realmSet$id(((PhotoRealmProxyInterface) realmObject).realmGet$id());
@@ -2198,7 +2194,7 @@ public class PhotoRealmProxy extends com.anubis.flickr.models.Photo
         return unmanagedObject;
     }
 
-    static com.anubis.flickr.models.Photo update(Realm realm, com.anubis.flickr.models.Photo realmObject, com.anubis.flickr.models.Photo newObject, Map<RealmModel, RealmObjectProxy> cache) {
+    static com.anubis.phlix.models.Photo update(Realm realm, com.anubis.phlix.models.Photo realmObject, com.anubis.phlix.models.Photo newObject, Map<RealmModel, RealmObjectProxy> cache) {
         ((PhotoRealmProxyInterface) realmObject).realmSet$secret(((PhotoRealmProxyInterface) newObject).realmGet$secret());
         ((PhotoRealmProxyInterface) realmObject).realmSet$server(((PhotoRealmProxyInterface) newObject).realmGet$server());
         ((PhotoRealmProxyInterface) realmObject).realmSet$farm(((PhotoRealmProxyInterface) newObject).realmGet$farm());

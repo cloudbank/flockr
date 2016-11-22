@@ -1,0 +1,237 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:2:1-97:12
+	package
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:3:5-31
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.camera
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:7:5-9:36
+	android:required
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:9:9-33
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:8:9-47
+uses-permission#android.permission.INTERNET
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.CAMERA
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:13:22-62
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:14:22-76
+uses-permission#android.permission.READ_SYNC_SETTINGS
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:15:5-77
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:15:22-74
+uses-permission#android.permission.WRITE_SYNC_SETTINGS
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:16:5-78
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:16:22-75
+uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:17:22-77
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:18:5-71
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:18:22-68
+uses-permission#android.permission.MANAGE_ACCOUNTS
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:19:5-74
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:19:22-71
+application
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:21:5-95:19
+MERGED from [flockr:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/flockr/oauthkit/unspecified/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/design/24.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.hkm.taglib:tag:1.6.0] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.hkm.taglib/tag/1.6.0/AndroidManifest.xml:11:5-12:19
+MERGED from [com.android.support:support-v13:24.0.0] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-v13/24.0.0/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:25:9-41
+	android:supportsRtl
+		ADDED from [flockr:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/flockr/oauthkit/unspecified/AndroidManifest.xml:14:9-35
+	android:allowBackup
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:23:9-35
+	android:icon
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:24:9-52
+	android:theme
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:26:9-40
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:22:9-56
+meta-data#AA_DB_NAME
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:27:9-29:41
+	android:value
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:29:13-38
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:28:13-38
+meta-data#AA_DB_VERSION
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:30:9-32:33
+	android:value
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:32:13-30
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:31:13-41
+activity#com.anubis.phlix.activity.LoginActivity
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:34:9-53:20
+	android:label
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:36:13-45
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:35:13-67
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:37:13-41:29
+action#android.intent.action.MAIN
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:38:17-69
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:38:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:40:17-77
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:40:27-74
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:42:13-51:29
+action#android.intent.action.VIEW
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:43:17-69
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:43:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:45:17-76
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:45:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:46:17-78
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:46:27-75
+data
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:48:17-50:46
+	android:host
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:49:21-42
+	android:scheme
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:50:21-43
+activity#com.anubis.phlix.activity.PhotosActivity
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:54:9-57:64
+	android:label
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:56:13-45
+	android:windowSoftInputMode
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:57:13-52
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:55:13-68
+activity#com.anubis.phlix.activity.PreviewPhotoActivity
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:58:9-60:57
+	android:label
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:60:13-45
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:59:13-74
+activity#com.anubis.phlix.activity.ImageDisplayActivity
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:61:9-63:57
+	android:label
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:63:13-45
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:62:13-74
+activity#eu.janmuller.android.simplecropimage.CropImage
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:64:9-83
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:64:19-80
+provider#com.anubis.phlix.provider.StubProvider
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:67:9-72:39
+	android:authorities
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:69:13-60
+	android:label
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:71:13-43
+	android:syncable
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:72:13-36
+	android:exported
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:70:13-37
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:68:13-66
+service#com.anubis.phlix.service.AuthenticatorService
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:75:9-82:19
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:75:18-78
+intent-filter#android.accounts.AccountAuthenticator
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:76:13-78:29
+action#android.accounts.AccountAuthenticator
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:77:17-80
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:77:25-77
+meta-data#android.accounts.AccountAuthenticator
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:79:13-81:57
+	android:resource
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:81:17-54
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:80:17-69
+service#com.anubis.phlix.service.SyncService
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:83:9-93:19
+	android:exported
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:85:13-36
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:84:13-64
+intent-filter#android.content.SyncAdapter
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:87:13-89:29
+action#android.content.SyncAdapter
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:88:17-70
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:88:25-67
+meta-data#android.content.SyncAdapter
+ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:90:13-92:55
+	android:resource
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:92:17-52
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:91:17-59
+uses-sdk
+INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [io.realm:realm-android-library:2.0.2] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/io.realm/realm-android-library/2.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.2/AndroidManifest.xml:7:5-43
+MERGED from [flockr:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/flockr/oauthkit/unspecified/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/design/24.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/AndroidManifest.xml:20:5-43
+MERGED from [io.reactivex:rxandroid:1.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/AndroidManifest.xml:19:5-43
+MERGED from [com.hkm.taglib:tag:1.6.0] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.hkm.taglib/tag/1.6.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v13:24.0.0] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/support-v13/24.0.0/AndroidManifest.xml:21:5-23:55
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.2.1] /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml
+android:uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:2:1-97:12 reason: eu.janmuller.android.simplecropimage has a targetSdkVersion < 4
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/AndroidManifest.xml:2:1-97:12 reason: eu.janmuller.android.simplecropimage requested WRITE_EXTERNAL_STORAGE

@@ -5,8 +5,7 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.util.JsonReader;
 import android.util.JsonToken;
-import io.realm.RealmObjectSchema;
-import io.realm.RealmSchema;
+
 import io.realm.exceptions.RealmMigrationNeededException;
 import io.realm.internal.ColumnInfo;
 import io.realm.internal.LinkView;
@@ -29,7 +28,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
+public class UserModelRealmProxy extends com.anubis.phlix.models.UserModel
     implements RealmObjectProxy, UserModelRealmProxyInterface {
 
     static final class UserModelColumnInfo extends ColumnInfo
@@ -77,8 +76,8 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
     }
     private UserModelColumnInfo columnInfo;
     private ProxyState proxyState;
-    private RealmList<com.anubis.flickr.models.Photo> friendsListRealmList;
-    private RealmList<com.anubis.flickr.models.Tag> tagsListRealmList;
+    private RealmList<com.anubis.phlix.models.Photo> friendsListRealmList;
+    private RealmList<com.anubis.phlix.models.Tag> tagsListRealmList;
     private static final List<String> FIELD_NAMES;
     static {
         List<String> fieldNames = new ArrayList<String>();
@@ -100,7 +99,7 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
     private void injectObjectContext() {
         final BaseRealm.RealmObjectContext context = BaseRealm.objectContext.get();
         this.columnInfo = (UserModelColumnInfo) context.getColumnInfo();
-        this.proxyState = new ProxyState(com.anubis.flickr.models.UserModel.class, this);
+        this.proxyState = new ProxyState(com.anubis.phlix.models.UserModel.class, this);
         proxyState.setRealm$realm(context.getRealm());
         proxyState.setRow$realm(context.getRow());
         proxyState.setAcceptDefaultValue$realm(context.getAcceptDefaultValue());
@@ -212,7 +211,7 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         proxyState.getRow$realm().setDate(columnInfo.timestampIndex, value);
     }
 
-    public RealmList<com.anubis.flickr.models.Photo> realmGet$friendsList() {
+    public RealmList<com.anubis.phlix.models.Photo> realmGet$friendsList() {
         if (proxyState == null) {
             // Called from model's constructor. Inject context.
             injectObjectContext();
@@ -224,12 +223,12 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
             return friendsListRealmList;
         } else {
             LinkView linkView = proxyState.getRow$realm().getLinkList(columnInfo.friendsListIndex);
-            friendsListRealmList = new RealmList<com.anubis.flickr.models.Photo>(com.anubis.flickr.models.Photo.class, linkView, proxyState.getRealm$realm());
+            friendsListRealmList = new RealmList<com.anubis.phlix.models.Photo>(com.anubis.phlix.models.Photo.class, linkView, proxyState.getRealm$realm());
             return friendsListRealmList;
         }
     }
 
-    public void realmSet$friendsList(RealmList<com.anubis.flickr.models.Photo> value) {
+    public void realmSet$friendsList(RealmList<com.anubis.phlix.models.Photo> value) {
         if (proxyState == null) {
             // Called from model's constructor. Inject context.
             injectObjectContext();
@@ -244,9 +243,9 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
             }
             if (value != null && !value.isManaged()) {
                 final Realm realm = (Realm) proxyState.getRealm$realm();
-                final RealmList<com.anubis.flickr.models.Photo> original = value;
-                value = new RealmList<com.anubis.flickr.models.Photo>();
-                for (com.anubis.flickr.models.Photo item : original) {
+                final RealmList<com.anubis.phlix.models.Photo> original = value;
+                value = new RealmList<com.anubis.phlix.models.Photo>();
+                for (com.anubis.phlix.models.Photo item : original) {
                     if (item == null || RealmObject.isManaged(item)) {
                         value.add(item);
                     } else {
@@ -273,7 +272,7 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         }
     }
 
-    public RealmList<com.anubis.flickr.models.Tag> realmGet$tagsList() {
+    public RealmList<com.anubis.phlix.models.Tag> realmGet$tagsList() {
         if (proxyState == null) {
             // Called from model's constructor. Inject context.
             injectObjectContext();
@@ -285,12 +284,12 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
             return tagsListRealmList;
         } else {
             LinkView linkView = proxyState.getRow$realm().getLinkList(columnInfo.tagsListIndex);
-            tagsListRealmList = new RealmList<com.anubis.flickr.models.Tag>(com.anubis.flickr.models.Tag.class, linkView, proxyState.getRealm$realm());
+            tagsListRealmList = new RealmList<com.anubis.phlix.models.Tag>(com.anubis.phlix.models.Tag.class, linkView, proxyState.getRealm$realm());
             return tagsListRealmList;
         }
     }
 
-    public void realmSet$tagsList(RealmList<com.anubis.flickr.models.Tag> value) {
+    public void realmSet$tagsList(RealmList<com.anubis.phlix.models.Tag> value) {
         if (proxyState == null) {
             // Called from model's constructor. Inject context.
             injectObjectContext();
@@ -305,9 +304,9 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
             }
             if (value != null && !value.isManaged()) {
                 final Realm realm = (Realm) proxyState.getRealm$realm();
-                final RealmList<com.anubis.flickr.models.Tag> original = value;
-                value = new RealmList<com.anubis.flickr.models.Tag>();
-                for (com.anubis.flickr.models.Tag item : original) {
+                final RealmList<com.anubis.phlix.models.Tag> original = value;
+                value = new RealmList<com.anubis.phlix.models.Tag>();
+                for (com.anubis.phlix.models.Tag item : original) {
                     if (item == null || RealmObject.isManaged(item)) {
                         value.add(item);
                     } else {
@@ -469,12 +468,12 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
     }
 
     @SuppressWarnings("cast")
-    public static com.anubis.flickr.models.UserModel createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
+    public static com.anubis.phlix.models.UserModel createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
         throws JSONException {
         final List<String> excludeFields = new ArrayList<String>(2);
-        com.anubis.flickr.models.UserModel obj = null;
+        com.anubis.phlix.models.UserModel obj = null;
         if (update) {
-            Table table = realm.getTable(com.anubis.flickr.models.UserModel.class);
+            Table table = realm.getTable(com.anubis.phlix.models.UserModel.class);
             long pkColumnIndex = table.getPrimaryKey();
             long rowIndex = TableOrView.NO_MATCH;
             if (json.isNull("userId")) {
@@ -485,7 +484,7 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
             if (rowIndex != TableOrView.NO_MATCH) {
                 final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
                 try {
-                    objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.flickr.models.UserModel.class), false, Collections.<String> emptyList());
+                    objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.phlix.models.UserModel.class), false, Collections.<String> emptyList());
                     obj = new io.realm.UserModelRealmProxy();
                 } finally {
                     objectContext.clear();
@@ -501,9 +500,9 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
             }
             if (json.has("userId")) {
                 if (json.isNull("userId")) {
-                    obj = (io.realm.UserModelRealmProxy) realm.createObjectInternal(com.anubis.flickr.models.UserModel.class, null, true, excludeFields);
+                    obj = (io.realm.UserModelRealmProxy) realm.createObjectInternal(com.anubis.phlix.models.UserModel.class, null, true, excludeFields);
                 } else {
-                    obj = (io.realm.UserModelRealmProxy) realm.createObjectInternal(com.anubis.flickr.models.UserModel.class, json.getString("userId"), true, excludeFields);
+                    obj = (io.realm.UserModelRealmProxy) realm.createObjectInternal(com.anubis.phlix.models.UserModel.class, json.getString("userId"), true, excludeFields);
                 }
             } else {
                 throw new IllegalArgumentException("JSON object doesn't have the primary key field 'userId'.");
@@ -535,7 +534,7 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
                 ((UserModelRealmProxyInterface) obj).realmGet$friendsList().clear();
                 JSONArray array = json.getJSONArray("friendsList");
                 for (int i = 0; i < array.length(); i++) {
-                    com.anubis.flickr.models.Photo item = PhotoRealmProxy.createOrUpdateUsingJsonObject(realm, array.getJSONObject(i), update);
+                    com.anubis.phlix.models.Photo item = PhotoRealmProxy.createOrUpdateUsingJsonObject(realm, array.getJSONObject(i), update);
                     ((UserModelRealmProxyInterface) obj).realmGet$friendsList().add(item);
                 }
             }
@@ -547,7 +546,7 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
                 ((UserModelRealmProxyInterface) obj).realmGet$tagsList().clear();
                 JSONArray array = json.getJSONArray("tagsList");
                 for (int i = 0; i < array.length(); i++) {
-                    com.anubis.flickr.models.Tag item = TagRealmProxy.createOrUpdateUsingJsonObject(realm, array.getJSONObject(i), update);
+                    com.anubis.phlix.models.Tag item = TagRealmProxy.createOrUpdateUsingJsonObject(realm, array.getJSONObject(i), update);
                     ((UserModelRealmProxyInterface) obj).realmGet$tagsList().add(item);
                 }
             }
@@ -557,10 +556,10 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
 
     @SuppressWarnings("cast")
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static com.anubis.flickr.models.UserModel createUsingJsonStream(Realm realm, JsonReader reader)
+    public static com.anubis.phlix.models.UserModel createUsingJsonStream(Realm realm, JsonReader reader)
         throws IOException {
         boolean jsonHasPrimaryKey = false;
-        com.anubis.flickr.models.UserModel obj = new com.anubis.flickr.models.UserModel();
+        com.anubis.phlix.models.UserModel obj = new com.anubis.phlix.models.UserModel();
         reader.beginObject();
         while (reader.hasNext()) {
             String name = reader.nextName();
@@ -596,10 +595,10 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
                     reader.skipValue();
                     ((UserModelRealmProxyInterface) obj).realmSet$friendsList(null);
                 } else {
-                    ((UserModelRealmProxyInterface) obj).realmSet$friendsList(new RealmList<com.anubis.flickr.models.Photo>());
+                    ((UserModelRealmProxyInterface) obj).realmSet$friendsList(new RealmList<com.anubis.phlix.models.Photo>());
                     reader.beginArray();
                     while (reader.hasNext()) {
-                        com.anubis.flickr.models.Photo item = PhotoRealmProxy.createUsingJsonStream(realm, reader);
+                        com.anubis.phlix.models.Photo item = PhotoRealmProxy.createUsingJsonStream(realm, reader);
                         ((UserModelRealmProxyInterface) obj).realmGet$friendsList().add(item);
                     }
                     reader.endArray();
@@ -609,10 +608,10 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
                     reader.skipValue();
                     ((UserModelRealmProxyInterface) obj).realmSet$tagsList(null);
                 } else {
-                    ((UserModelRealmProxyInterface) obj).realmSet$tagsList(new RealmList<com.anubis.flickr.models.Tag>());
+                    ((UserModelRealmProxyInterface) obj).realmSet$tagsList(new RealmList<com.anubis.phlix.models.Tag>());
                     reader.beginArray();
                     while (reader.hasNext()) {
-                        com.anubis.flickr.models.Tag item = TagRealmProxy.createUsingJsonStream(realm, reader);
+                        com.anubis.phlix.models.Tag item = TagRealmProxy.createUsingJsonStream(realm, reader);
                         ((UserModelRealmProxyInterface) obj).realmGet$tagsList().add(item);
                     }
                     reader.endArray();
@@ -629,7 +628,7 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         return obj;
     }
 
-    public static com.anubis.flickr.models.UserModel copyOrUpdate(Realm realm, com.anubis.flickr.models.UserModel object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.anubis.phlix.models.UserModel copyOrUpdate(Realm realm, com.anubis.phlix.models.UserModel object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm().threadId != realm.threadId) {
             throw new IllegalArgumentException("Objects which belong to Realm instances in other threads cannot be copied into this Realm instance.");
         }
@@ -639,12 +638,12 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
         RealmObjectProxy cachedRealmObject = cache.get(object);
         if (cachedRealmObject != null) {
-            return (com.anubis.flickr.models.UserModel) cachedRealmObject;
+            return (com.anubis.phlix.models.UserModel) cachedRealmObject;
         } else {
-            com.anubis.flickr.models.UserModel realmObject = null;
+            com.anubis.phlix.models.UserModel realmObject = null;
             boolean canUpdate = update;
             if (canUpdate) {
-                Table table = realm.getTable(com.anubis.flickr.models.UserModel.class);
+                Table table = realm.getTable(com.anubis.phlix.models.UserModel.class);
                 long pkColumnIndex = table.getPrimaryKey();
                 String value = ((UserModelRealmProxyInterface) object).realmGet$userId();
                 long rowIndex = TableOrView.NO_MATCH;
@@ -655,7 +654,7 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
                 }
                 if (rowIndex != TableOrView.NO_MATCH) {
                     try {
-                        objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.flickr.models.UserModel.class), false, Collections.<String> emptyList());
+                        objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.phlix.models.UserModel.class), false, Collections.<String> emptyList());
                         realmObject = new io.realm.UserModelRealmProxy();
                         cache.put(object, (RealmObjectProxy) realmObject);
                     } finally {
@@ -674,23 +673,23 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         }
     }
 
-    public static com.anubis.flickr.models.UserModel copy(Realm realm, com.anubis.flickr.models.UserModel newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.anubis.phlix.models.UserModel copy(Realm realm, com.anubis.phlix.models.UserModel newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         RealmObjectProxy cachedRealmObject = cache.get(newObject);
         if (cachedRealmObject != null) {
-            return (com.anubis.flickr.models.UserModel) cachedRealmObject;
+            return (com.anubis.phlix.models.UserModel) cachedRealmObject;
         } else {
             // rejecting default values to avoid creating unexpected objects from RealmModel/RealmList fields.
-            com.anubis.flickr.models.UserModel realmObject = realm.createObjectInternal(com.anubis.flickr.models.UserModel.class, ((UserModelRealmProxyInterface) newObject).realmGet$userId(), false, Collections.<String>emptyList());
+            com.anubis.phlix.models.UserModel realmObject = realm.createObjectInternal(com.anubis.phlix.models.UserModel.class, ((UserModelRealmProxyInterface) newObject).realmGet$userId(), false, Collections.<String>emptyList());
             cache.put(newObject, (RealmObjectProxy) realmObject);
             ((UserModelRealmProxyInterface) realmObject).realmSet$name(((UserModelRealmProxyInterface) newObject).realmGet$name());
             ((UserModelRealmProxyInterface) realmObject).realmSet$timestamp(((UserModelRealmProxyInterface) newObject).realmGet$timestamp());
 
-            RealmList<com.anubis.flickr.models.Photo> friendsListList = ((UserModelRealmProxyInterface) newObject).realmGet$friendsList();
+            RealmList<com.anubis.phlix.models.Photo> friendsListList = ((UserModelRealmProxyInterface) newObject).realmGet$friendsList();
             if (friendsListList != null) {
-                RealmList<com.anubis.flickr.models.Photo> friendsListRealmList = ((UserModelRealmProxyInterface) realmObject).realmGet$friendsList();
+                RealmList<com.anubis.phlix.models.Photo> friendsListRealmList = ((UserModelRealmProxyInterface) realmObject).realmGet$friendsList();
                 for (int i = 0; i < friendsListList.size(); i++) {
-                    com.anubis.flickr.models.Photo friendsListItem = friendsListList.get(i);
-                    com.anubis.flickr.models.Photo cachefriendsList = (com.anubis.flickr.models.Photo) cache.get(friendsListItem);
+                    com.anubis.phlix.models.Photo friendsListItem = friendsListList.get(i);
+                    com.anubis.phlix.models.Photo cachefriendsList = (com.anubis.phlix.models.Photo) cache.get(friendsListItem);
                     if (cachefriendsList != null) {
                         friendsListRealmList.add(cachefriendsList);
                     } else {
@@ -700,12 +699,12 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
             }
 
 
-            RealmList<com.anubis.flickr.models.Tag> tagsListList = ((UserModelRealmProxyInterface) newObject).realmGet$tagsList();
+            RealmList<com.anubis.phlix.models.Tag> tagsListList = ((UserModelRealmProxyInterface) newObject).realmGet$tagsList();
             if (tagsListList != null) {
-                RealmList<com.anubis.flickr.models.Tag> tagsListRealmList = ((UserModelRealmProxyInterface) realmObject).realmGet$tagsList();
+                RealmList<com.anubis.phlix.models.Tag> tagsListRealmList = ((UserModelRealmProxyInterface) realmObject).realmGet$tagsList();
                 for (int i = 0; i < tagsListList.size(); i++) {
-                    com.anubis.flickr.models.Tag tagsListItem = tagsListList.get(i);
-                    com.anubis.flickr.models.Tag cachetagsList = (com.anubis.flickr.models.Tag) cache.get(tagsListItem);
+                    com.anubis.phlix.models.Tag tagsListItem = tagsListList.get(i);
+                    com.anubis.phlix.models.Tag cachetagsList = (com.anubis.phlix.models.Tag) cache.get(tagsListItem);
                     if (cachetagsList != null) {
                         tagsListRealmList.add(cachetagsList);
                     } else {
@@ -718,13 +717,13 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         }
     }
 
-    public static long insert(Realm realm, com.anubis.flickr.models.UserModel object, Map<RealmModel,Long> cache) {
+    public static long insert(Realm realm, com.anubis.phlix.models.UserModel object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.anubis.flickr.models.UserModel.class);
+        Table table = realm.getTable(com.anubis.phlix.models.UserModel.class);
         long tableNativePtr = table.getNativeTablePointer();
-        UserModelColumnInfo columnInfo = (UserModelColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.UserModel.class);
+        UserModelColumnInfo columnInfo = (UserModelColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.UserModel.class);
         long pkColumnIndex = table.getPrimaryKey();
         String primaryKeyValue = ((UserModelRealmProxyInterface) object).realmGet$userId();
         long rowIndex = TableOrView.NO_MATCH;
@@ -748,10 +747,10 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
             Table.nativeSetTimestamp(tableNativePtr, columnInfo.timestampIndex, rowIndex, realmGet$timestamp.getTime(), false);
         }
 
-        RealmList<com.anubis.flickr.models.Photo> friendsListList = ((UserModelRealmProxyInterface) object).realmGet$friendsList();
+        RealmList<com.anubis.phlix.models.Photo> friendsListList = ((UserModelRealmProxyInterface) object).realmGet$friendsList();
         if (friendsListList != null) {
             long friendsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.friendsListIndex, rowIndex);
-            for (com.anubis.flickr.models.Photo friendsListItem : friendsListList) {
+            for (com.anubis.phlix.models.Photo friendsListItem : friendsListList) {
                 Long cacheItemIndexfriendsList = cache.get(friendsListItem);
                 if (cacheItemIndexfriendsList == null) {
                     cacheItemIndexfriendsList = PhotoRealmProxy.insert(realm, friendsListItem, cache);
@@ -762,10 +761,10 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         }
 
 
-        RealmList<com.anubis.flickr.models.Tag> tagsListList = ((UserModelRealmProxyInterface) object).realmGet$tagsList();
+        RealmList<com.anubis.phlix.models.Tag> tagsListList = ((UserModelRealmProxyInterface) object).realmGet$tagsList();
         if (tagsListList != null) {
             long tagsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.tagsListIndex, rowIndex);
-            for (com.anubis.flickr.models.Tag tagsListItem : tagsListList) {
+            for (com.anubis.phlix.models.Tag tagsListItem : tagsListList) {
                 Long cacheItemIndextagsList = cache.get(tagsListItem);
                 if (cacheItemIndextagsList == null) {
                     cacheItemIndextagsList = TagRealmProxy.insert(realm, tagsListItem, cache);
@@ -779,13 +778,13 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
     }
 
     public static void insert(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.anubis.flickr.models.UserModel.class);
+        Table table = realm.getTable(com.anubis.phlix.models.UserModel.class);
         long tableNativePtr = table.getNativeTablePointer();
-        UserModelColumnInfo columnInfo = (UserModelColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.UserModel.class);
+        UserModelColumnInfo columnInfo = (UserModelColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.UserModel.class);
         long pkColumnIndex = table.getPrimaryKey();
-        com.anubis.flickr.models.UserModel object = null;
+        com.anubis.phlix.models.UserModel object = null;
         while (objects.hasNext()) {
-            object = (com.anubis.flickr.models.UserModel) objects.next();
+            object = (com.anubis.phlix.models.UserModel) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -813,10 +812,10 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
                     Table.nativeSetTimestamp(tableNativePtr, columnInfo.timestampIndex, rowIndex, realmGet$timestamp.getTime(), false);
                 }
 
-                RealmList<com.anubis.flickr.models.Photo> friendsListList = ((UserModelRealmProxyInterface) object).realmGet$friendsList();
+                RealmList<com.anubis.phlix.models.Photo> friendsListList = ((UserModelRealmProxyInterface) object).realmGet$friendsList();
                 if (friendsListList != null) {
                     long friendsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.friendsListIndex, rowIndex);
-                    for (com.anubis.flickr.models.Photo friendsListItem : friendsListList) {
+                    for (com.anubis.phlix.models.Photo friendsListItem : friendsListList) {
                         Long cacheItemIndexfriendsList = cache.get(friendsListItem);
                         if (cacheItemIndexfriendsList == null) {
                             cacheItemIndexfriendsList = PhotoRealmProxy.insert(realm, friendsListItem, cache);
@@ -827,10 +826,10 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
                 }
 
 
-                RealmList<com.anubis.flickr.models.Tag> tagsListList = ((UserModelRealmProxyInterface) object).realmGet$tagsList();
+                RealmList<com.anubis.phlix.models.Tag> tagsListList = ((UserModelRealmProxyInterface) object).realmGet$tagsList();
                 if (tagsListList != null) {
                     long tagsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.tagsListIndex, rowIndex);
-                    for (com.anubis.flickr.models.Tag tagsListItem : tagsListList) {
+                    for (com.anubis.phlix.models.Tag tagsListItem : tagsListList) {
                         Long cacheItemIndextagsList = cache.get(tagsListItem);
                         if (cacheItemIndextagsList == null) {
                             cacheItemIndextagsList = TagRealmProxy.insert(realm, tagsListItem, cache);
@@ -844,13 +843,13 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         }
     }
 
-    public static long insertOrUpdate(Realm realm, com.anubis.flickr.models.UserModel object, Map<RealmModel,Long> cache) {
+    public static long insertOrUpdate(Realm realm, com.anubis.phlix.models.UserModel object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.anubis.flickr.models.UserModel.class);
+        Table table = realm.getTable(com.anubis.phlix.models.UserModel.class);
         long tableNativePtr = table.getNativeTablePointer();
-        UserModelColumnInfo columnInfo = (UserModelColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.UserModel.class);
+        UserModelColumnInfo columnInfo = (UserModelColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.UserModel.class);
         long pkColumnIndex = table.getPrimaryKey();
         String primaryKeyValue = ((UserModelRealmProxyInterface) object).realmGet$userId();
         long rowIndex = TableOrView.NO_MATCH;
@@ -878,9 +877,9 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
 
         long friendsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.friendsListIndex, rowIndex);
         LinkView.nativeClear(friendsListNativeLinkViewPtr);
-        RealmList<com.anubis.flickr.models.Photo> friendsListList = ((UserModelRealmProxyInterface) object).realmGet$friendsList();
+        RealmList<com.anubis.phlix.models.Photo> friendsListList = ((UserModelRealmProxyInterface) object).realmGet$friendsList();
         if (friendsListList != null) {
-            for (com.anubis.flickr.models.Photo friendsListItem : friendsListList) {
+            for (com.anubis.phlix.models.Photo friendsListItem : friendsListList) {
                 Long cacheItemIndexfriendsList = cache.get(friendsListItem);
                 if (cacheItemIndexfriendsList == null) {
                     cacheItemIndexfriendsList = PhotoRealmProxy.insertOrUpdate(realm, friendsListItem, cache);
@@ -893,9 +892,9 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
 
         long tagsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.tagsListIndex, rowIndex);
         LinkView.nativeClear(tagsListNativeLinkViewPtr);
-        RealmList<com.anubis.flickr.models.Tag> tagsListList = ((UserModelRealmProxyInterface) object).realmGet$tagsList();
+        RealmList<com.anubis.phlix.models.Tag> tagsListList = ((UserModelRealmProxyInterface) object).realmGet$tagsList();
         if (tagsListList != null) {
-            for (com.anubis.flickr.models.Tag tagsListItem : tagsListList) {
+            for (com.anubis.phlix.models.Tag tagsListItem : tagsListList) {
                 Long cacheItemIndextagsList = cache.get(tagsListItem);
                 if (cacheItemIndextagsList == null) {
                     cacheItemIndextagsList = TagRealmProxy.insertOrUpdate(realm, tagsListItem, cache);
@@ -909,13 +908,13 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
     }
 
     public static void insertOrUpdate(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.anubis.flickr.models.UserModel.class);
+        Table table = realm.getTable(com.anubis.phlix.models.UserModel.class);
         long tableNativePtr = table.getNativeTablePointer();
-        UserModelColumnInfo columnInfo = (UserModelColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.UserModel.class);
+        UserModelColumnInfo columnInfo = (UserModelColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.UserModel.class);
         long pkColumnIndex = table.getPrimaryKey();
-        com.anubis.flickr.models.UserModel object = null;
+        com.anubis.phlix.models.UserModel object = null;
         while (objects.hasNext()) {
-            object = (com.anubis.flickr.models.UserModel) objects.next();
+            object = (com.anubis.phlix.models.UserModel) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -947,9 +946,9 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
 
                 long friendsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.friendsListIndex, rowIndex);
                 LinkView.nativeClear(friendsListNativeLinkViewPtr);
-                RealmList<com.anubis.flickr.models.Photo> friendsListList = ((UserModelRealmProxyInterface) object).realmGet$friendsList();
+                RealmList<com.anubis.phlix.models.Photo> friendsListList = ((UserModelRealmProxyInterface) object).realmGet$friendsList();
                 if (friendsListList != null) {
-                    for (com.anubis.flickr.models.Photo friendsListItem : friendsListList) {
+                    for (com.anubis.phlix.models.Photo friendsListItem : friendsListList) {
                         Long cacheItemIndexfriendsList = cache.get(friendsListItem);
                         if (cacheItemIndexfriendsList == null) {
                             cacheItemIndexfriendsList = PhotoRealmProxy.insertOrUpdate(realm, friendsListItem, cache);
@@ -962,9 +961,9 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
 
                 long tagsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.tagsListIndex, rowIndex);
                 LinkView.nativeClear(tagsListNativeLinkViewPtr);
-                RealmList<com.anubis.flickr.models.Tag> tagsListList = ((UserModelRealmProxyInterface) object).realmGet$tagsList();
+                RealmList<com.anubis.phlix.models.Tag> tagsListList = ((UserModelRealmProxyInterface) object).realmGet$tagsList();
                 if (tagsListList != null) {
-                    for (com.anubis.flickr.models.Tag tagsListItem : tagsListList) {
+                    for (com.anubis.phlix.models.Tag tagsListItem : tagsListList) {
                         Long cacheItemIndextagsList = cache.get(tagsListItem);
                         if (cacheItemIndextagsList == null) {
                             cacheItemIndextagsList = TagRealmProxy.insertOrUpdate(realm, tagsListItem, cache);
@@ -978,22 +977,22 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         }
     }
 
-    public static com.anubis.flickr.models.UserModel createDetachedCopy(com.anubis.flickr.models.UserModel realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
+    public static com.anubis.phlix.models.UserModel createDetachedCopy(com.anubis.phlix.models.UserModel realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
         if (currentDepth > maxDepth || realmObject == null) {
             return null;
         }
         CacheData<RealmModel> cachedObject = cache.get(realmObject);
-        com.anubis.flickr.models.UserModel unmanagedObject;
+        com.anubis.phlix.models.UserModel unmanagedObject;
         if (cachedObject != null) {
             // Reuse cached object or recreate it because it was encountered at a lower depth.
             if (currentDepth >= cachedObject.minDepth) {
-                return (com.anubis.flickr.models.UserModel)cachedObject.object;
+                return (com.anubis.phlix.models.UserModel)cachedObject.object;
             } else {
-                unmanagedObject = (com.anubis.flickr.models.UserModel)cachedObject.object;
+                unmanagedObject = (com.anubis.phlix.models.UserModel)cachedObject.object;
                 cachedObject.minDepth = currentDepth;
             }
         } else {
-            unmanagedObject = new com.anubis.flickr.models.UserModel();
+            unmanagedObject = new com.anubis.phlix.models.UserModel();
             cache.put(realmObject, new RealmObjectProxy.CacheData(currentDepth, unmanagedObject));
         }
         ((UserModelRealmProxyInterface) unmanagedObject).realmSet$userId(((UserModelRealmProxyInterface) realmObject).realmGet$userId());
@@ -1004,13 +1003,13 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         if (currentDepth == maxDepth) {
             ((UserModelRealmProxyInterface) unmanagedObject).realmSet$friendsList(null);
         } else {
-            RealmList<com.anubis.flickr.models.Photo> managedfriendsListList = ((UserModelRealmProxyInterface) realmObject).realmGet$friendsList();
-            RealmList<com.anubis.flickr.models.Photo> unmanagedfriendsListList = new RealmList<com.anubis.flickr.models.Photo>();
+            RealmList<com.anubis.phlix.models.Photo> managedfriendsListList = ((UserModelRealmProxyInterface) realmObject).realmGet$friendsList();
+            RealmList<com.anubis.phlix.models.Photo> unmanagedfriendsListList = new RealmList<com.anubis.phlix.models.Photo>();
             ((UserModelRealmProxyInterface) unmanagedObject).realmSet$friendsList(unmanagedfriendsListList);
             int nextDepth = currentDepth + 1;
             int size = managedfriendsListList.size();
             for (int i = 0; i < size; i++) {
-                com.anubis.flickr.models.Photo item = PhotoRealmProxy.createDetachedCopy(managedfriendsListList.get(i), nextDepth, maxDepth, cache);
+                com.anubis.phlix.models.Photo item = PhotoRealmProxy.createDetachedCopy(managedfriendsListList.get(i), nextDepth, maxDepth, cache);
                 unmanagedfriendsListList.add(item);
             }
         }
@@ -1019,29 +1018,29 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
         if (currentDepth == maxDepth) {
             ((UserModelRealmProxyInterface) unmanagedObject).realmSet$tagsList(null);
         } else {
-            RealmList<com.anubis.flickr.models.Tag> managedtagsListList = ((UserModelRealmProxyInterface) realmObject).realmGet$tagsList();
-            RealmList<com.anubis.flickr.models.Tag> unmanagedtagsListList = new RealmList<com.anubis.flickr.models.Tag>();
+            RealmList<com.anubis.phlix.models.Tag> managedtagsListList = ((UserModelRealmProxyInterface) realmObject).realmGet$tagsList();
+            RealmList<com.anubis.phlix.models.Tag> unmanagedtagsListList = new RealmList<com.anubis.phlix.models.Tag>();
             ((UserModelRealmProxyInterface) unmanagedObject).realmSet$tagsList(unmanagedtagsListList);
             int nextDepth = currentDepth + 1;
             int size = managedtagsListList.size();
             for (int i = 0; i < size; i++) {
-                com.anubis.flickr.models.Tag item = TagRealmProxy.createDetachedCopy(managedtagsListList.get(i), nextDepth, maxDepth, cache);
+                com.anubis.phlix.models.Tag item = TagRealmProxy.createDetachedCopy(managedtagsListList.get(i), nextDepth, maxDepth, cache);
                 unmanagedtagsListList.add(item);
             }
         }
         return unmanagedObject;
     }
 
-    static com.anubis.flickr.models.UserModel update(Realm realm, com.anubis.flickr.models.UserModel realmObject, com.anubis.flickr.models.UserModel newObject, Map<RealmModel, RealmObjectProxy> cache) {
+    static com.anubis.phlix.models.UserModel update(Realm realm, com.anubis.phlix.models.UserModel realmObject, com.anubis.phlix.models.UserModel newObject, Map<RealmModel, RealmObjectProxy> cache) {
         ((UserModelRealmProxyInterface) realmObject).realmSet$name(((UserModelRealmProxyInterface) newObject).realmGet$name());
         ((UserModelRealmProxyInterface) realmObject).realmSet$timestamp(((UserModelRealmProxyInterface) newObject).realmGet$timestamp());
-        RealmList<com.anubis.flickr.models.Photo> friendsListList = ((UserModelRealmProxyInterface) newObject).realmGet$friendsList();
-        RealmList<com.anubis.flickr.models.Photo> friendsListRealmList = ((UserModelRealmProxyInterface) realmObject).realmGet$friendsList();
+        RealmList<com.anubis.phlix.models.Photo> friendsListList = ((UserModelRealmProxyInterface) newObject).realmGet$friendsList();
+        RealmList<com.anubis.phlix.models.Photo> friendsListRealmList = ((UserModelRealmProxyInterface) realmObject).realmGet$friendsList();
         friendsListRealmList.clear();
         if (friendsListList != null) {
             for (int i = 0; i < friendsListList.size(); i++) {
-                com.anubis.flickr.models.Photo friendsListItem = friendsListList.get(i);
-                com.anubis.flickr.models.Photo cachefriendsList = (com.anubis.flickr.models.Photo) cache.get(friendsListItem);
+                com.anubis.phlix.models.Photo friendsListItem = friendsListList.get(i);
+                com.anubis.phlix.models.Photo cachefriendsList = (com.anubis.phlix.models.Photo) cache.get(friendsListItem);
                 if (cachefriendsList != null) {
                     friendsListRealmList.add(cachefriendsList);
                 } else {
@@ -1049,13 +1048,13 @@ public class UserModelRealmProxy extends com.anubis.flickr.models.UserModel
                 }
             }
         }
-        RealmList<com.anubis.flickr.models.Tag> tagsListList = ((UserModelRealmProxyInterface) newObject).realmGet$tagsList();
-        RealmList<com.anubis.flickr.models.Tag> tagsListRealmList = ((UserModelRealmProxyInterface) realmObject).realmGet$tagsList();
+        RealmList<com.anubis.phlix.models.Tag> tagsListList = ((UserModelRealmProxyInterface) newObject).realmGet$tagsList();
+        RealmList<com.anubis.phlix.models.Tag> tagsListRealmList = ((UserModelRealmProxyInterface) realmObject).realmGet$tagsList();
         tagsListRealmList.clear();
         if (tagsListList != null) {
             for (int i = 0; i < tagsListList.size(); i++) {
-                com.anubis.flickr.models.Tag tagsListItem = tagsListList.get(i);
-                com.anubis.flickr.models.Tag cachetagsList = (com.anubis.flickr.models.Tag) cache.get(tagsListItem);
+                com.anubis.phlix.models.Tag tagsListItem = tagsListList.get(i);
+                com.anubis.phlix.models.Tag cachetagsList = (com.anubis.phlix.models.Tag) cache.get(tagsListItem);
                 if (cachetagsList != null) {
                     tagsListRealmList.add(cachetagsList);
                 } else {

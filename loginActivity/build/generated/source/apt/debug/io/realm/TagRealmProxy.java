@@ -5,31 +5,26 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.util.JsonReader;
 import android.util.JsonToken;
-import io.realm.RealmObjectSchema;
-import io.realm.RealmSchema;
+
 import io.realm.exceptions.RealmMigrationNeededException;
 import io.realm.internal.ColumnInfo;
-import io.realm.internal.LinkView;
 import io.realm.internal.RealmObjectProxy;
 import io.realm.internal.Row;
 import io.realm.internal.SharedRealm;
 import io.realm.internal.Table;
-import io.realm.internal.TableOrView;
-import io.realm.internal.android.JsonUtils;
 import io.realm.log.RealmLog;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import org.json.JSONArray;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class TagRealmProxy extends com.anubis.flickr.models.Tag
+public class TagRealmProxy extends com.anubis.phlix.models.Tag
     implements RealmObjectProxy, TagRealmProxyInterface {
 
     static final class TagColumnInfo extends ColumnInfo
@@ -103,7 +98,7 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
     private void injectObjectContext() {
         final BaseRealm.RealmObjectContext context = BaseRealm.objectContext.get();
         this.columnInfo = (TagColumnInfo) context.getColumnInfo();
-        this.proxyState = new ProxyState(com.anubis.flickr.models.Tag.class, this);
+        this.proxyState = new ProxyState(com.anubis.phlix.models.Tag.class, this);
         proxyState.setRealm$realm(context.getRealm());
         proxyState.setRow$realm(context.getRow());
         proxyState.setAcceptDefaultValue$realm(context.getAcceptDefaultValue());
@@ -449,10 +444,10 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
     }
 
     @SuppressWarnings("cast")
-    public static com.anubis.flickr.models.Tag createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
+    public static com.anubis.phlix.models.Tag createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
         throws JSONException {
         final List<String> excludeFields = Collections.<String> emptyList();
-        com.anubis.flickr.models.Tag obj = realm.createObjectInternal(com.anubis.flickr.models.Tag.class, true, excludeFields);
+        com.anubis.phlix.models.Tag obj = realm.createObjectInternal(com.anubis.phlix.models.Tag.class, true, excludeFields);
         if (json.has("id")) {
             if (json.isNull("id")) {
                 ((TagRealmProxyInterface) obj).realmSet$id(null);
@@ -500,9 +495,9 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
 
     @SuppressWarnings("cast")
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static com.anubis.flickr.models.Tag createUsingJsonStream(Realm realm, JsonReader reader)
+    public static com.anubis.phlix.models.Tag createUsingJsonStream(Realm realm, JsonReader reader)
         throws IOException {
-        com.anubis.flickr.models.Tag obj = new com.anubis.flickr.models.Tag();
+        com.anubis.phlix.models.Tag obj = new com.anubis.phlix.models.Tag();
         reader.beginObject();
         while (reader.hasNext()) {
             String name = reader.nextName();
@@ -557,7 +552,7 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
         return obj;
     }
 
-    public static com.anubis.flickr.models.Tag copyOrUpdate(Realm realm, com.anubis.flickr.models.Tag object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.anubis.phlix.models.Tag copyOrUpdate(Realm realm, com.anubis.phlix.models.Tag object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm().threadId != realm.threadId) {
             throw new IllegalArgumentException("Objects which belong to Realm instances in other threads cannot be copied into this Realm instance.");
         }
@@ -567,19 +562,19 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
         final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
         RealmObjectProxy cachedRealmObject = cache.get(object);
         if (cachedRealmObject != null) {
-            return (com.anubis.flickr.models.Tag) cachedRealmObject;
+            return (com.anubis.phlix.models.Tag) cachedRealmObject;
         } else {
             return copy(realm, object, update, cache);
         }
     }
 
-    public static com.anubis.flickr.models.Tag copy(Realm realm, com.anubis.flickr.models.Tag newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.anubis.phlix.models.Tag copy(Realm realm, com.anubis.phlix.models.Tag newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         RealmObjectProxy cachedRealmObject = cache.get(newObject);
         if (cachedRealmObject != null) {
-            return (com.anubis.flickr.models.Tag) cachedRealmObject;
+            return (com.anubis.phlix.models.Tag) cachedRealmObject;
         } else {
             // rejecting default values to avoid creating unexpected objects from RealmModel/RealmList fields.
-            com.anubis.flickr.models.Tag realmObject = realm.createObjectInternal(com.anubis.flickr.models.Tag.class, false, Collections.<String>emptyList());
+            com.anubis.phlix.models.Tag realmObject = realm.createObjectInternal(com.anubis.phlix.models.Tag.class, false, Collections.<String>emptyList());
             cache.put(newObject, (RealmObjectProxy) realmObject);
             ((TagRealmProxyInterface) realmObject).realmSet$id(((TagRealmProxyInterface) newObject).realmGet$id());
             ((TagRealmProxyInterface) realmObject).realmSet$author(((TagRealmProxyInterface) newObject).realmGet$author());
@@ -591,13 +586,13 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
         }
     }
 
-    public static long insert(Realm realm, com.anubis.flickr.models.Tag object, Map<RealmModel,Long> cache) {
+    public static long insert(Realm realm, com.anubis.phlix.models.Tag object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.anubis.flickr.models.Tag.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Tag.class);
         long tableNativePtr = table.getNativeTablePointer();
-        TagColumnInfo columnInfo = (TagColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Tag.class);
+        TagColumnInfo columnInfo = (TagColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Tag.class);
         long rowIndex = Table.nativeAddEmptyRow(tableNativePtr, 1);
         cache.put(object, rowIndex);
         String realmGet$id = ((TagRealmProxyInterface)object).realmGet$id();
@@ -625,12 +620,12 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
     }
 
     public static void insert(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.anubis.flickr.models.Tag.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Tag.class);
         long tableNativePtr = table.getNativeTablePointer();
-        TagColumnInfo columnInfo = (TagColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Tag.class);
-        com.anubis.flickr.models.Tag object = null;
+        TagColumnInfo columnInfo = (TagColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Tag.class);
+        com.anubis.phlix.models.Tag object = null;
         while (objects.hasNext()) {
-            object = (com.anubis.flickr.models.Tag) objects.next();
+            object = (com.anubis.phlix.models.Tag) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -663,13 +658,13 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
         }
     }
 
-    public static long insertOrUpdate(Realm realm, com.anubis.flickr.models.Tag object, Map<RealmModel,Long> cache) {
+    public static long insertOrUpdate(Realm realm, com.anubis.phlix.models.Tag object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.anubis.flickr.models.Tag.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Tag.class);
         long tableNativePtr = table.getNativeTablePointer();
-        TagColumnInfo columnInfo = (TagColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Tag.class);
+        TagColumnInfo columnInfo = (TagColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Tag.class);
         long rowIndex = Table.nativeAddEmptyRow(tableNativePtr, 1);
         cache.put(object, rowIndex);
         String realmGet$id = ((TagRealmProxyInterface)object).realmGet$id();
@@ -707,12 +702,12 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
     }
 
     public static void insertOrUpdate(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.anubis.flickr.models.Tag.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Tag.class);
         long tableNativePtr = table.getNativeTablePointer();
-        TagColumnInfo columnInfo = (TagColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Tag.class);
-        com.anubis.flickr.models.Tag object = null;
+        TagColumnInfo columnInfo = (TagColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Tag.class);
+        com.anubis.phlix.models.Tag object = null;
         while (objects.hasNext()) {
-            object = (com.anubis.flickr.models.Tag) objects.next();
+            object = (com.anubis.phlix.models.Tag) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -755,22 +750,22 @@ public class TagRealmProxy extends com.anubis.flickr.models.Tag
         }
     }
 
-    public static com.anubis.flickr.models.Tag createDetachedCopy(com.anubis.flickr.models.Tag realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
+    public static com.anubis.phlix.models.Tag createDetachedCopy(com.anubis.phlix.models.Tag realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
         if (currentDepth > maxDepth || realmObject == null) {
             return null;
         }
         CacheData<RealmModel> cachedObject = cache.get(realmObject);
-        com.anubis.flickr.models.Tag unmanagedObject;
+        com.anubis.phlix.models.Tag unmanagedObject;
         if (cachedObject != null) {
             // Reuse cached object or recreate it because it was encountered at a lower depth.
             if (currentDepth >= cachedObject.minDepth) {
-                return (com.anubis.flickr.models.Tag)cachedObject.object;
+                return (com.anubis.phlix.models.Tag)cachedObject.object;
             } else {
-                unmanagedObject = (com.anubis.flickr.models.Tag)cachedObject.object;
+                unmanagedObject = (com.anubis.phlix.models.Tag)cachedObject.object;
                 cachedObject.minDepth = currentDepth;
             }
         } else {
-            unmanagedObject = new com.anubis.flickr.models.Tag();
+            unmanagedObject = new com.anubis.phlix.models.Tag();
             cache.put(realmObject, new RealmObjectProxy.CacheData(currentDepth, unmanagedObject));
         }
         ((TagRealmProxyInterface) unmanagedObject).realmSet$id(((TagRealmProxyInterface) realmObject).realmGet$id());

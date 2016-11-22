@@ -16,8 +16,8 @@
     <string name="title">title</string>
     <string name="username">username</string>
     <string name="user_nsid">user_nsid</string>
-    <string name="account_type">com.anubis.flickr</string>
-    <string name="authority">com.anubis.flickr.provider</string>
+    <string name="account_type">com.anubis.phlix</string>
+    <string name="authority">com.anubis.phlix.provider</string>
     <string name="timestamp">timestamp</string>
     <string name="Me">Me</string>
     <string name="permission_grant">GET ACCOUNTS permissions must be granted for the app to work</string>

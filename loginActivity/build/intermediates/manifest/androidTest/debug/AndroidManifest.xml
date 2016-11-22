@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anubis.flickr.test">
+    package="com.anubis.phlix.test">
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="24" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.anubis.flickr"
+                     android:targetPackage="com.anubis.phlix"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.anubis.flickr"/>
+                     android:label="Tests for com.anubis.phlix"/>
 </manifest>

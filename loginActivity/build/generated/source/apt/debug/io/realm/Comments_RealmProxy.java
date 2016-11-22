@@ -5,8 +5,7 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.util.JsonReader;
 import android.util.JsonToken;
-import io.realm.RealmObjectSchema;
-import io.realm.RealmSchema;
+
 import io.realm.exceptions.RealmMigrationNeededException;
 import io.realm.internal.ColumnInfo;
 import io.realm.internal.LinkView;
@@ -29,7 +28,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
+public class Comments_RealmProxy extends com.anubis.phlix.models.Comments_
     implements RealmObjectProxy, Comments_RealmProxyInterface {
 
     static final class Comments_ColumnInfo extends ColumnInfo
@@ -69,7 +68,7 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
     }
     private Comments_ColumnInfo columnInfo;
     private ProxyState proxyState;
-    private RealmList<com.anubis.flickr.models.Comment> commentsListRealmList;
+    private RealmList<com.anubis.phlix.models.Comment> commentsListRealmList;
     private static final List<String> FIELD_NAMES;
     static {
         List<String> fieldNames = new ArrayList<String>();
@@ -89,7 +88,7 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
     private void injectObjectContext() {
         final BaseRealm.RealmObjectContext context = BaseRealm.objectContext.get();
         this.columnInfo = (Comments_ColumnInfo) context.getColumnInfo();
-        this.proxyState = new ProxyState(com.anubis.flickr.models.Comments_.class, this);
+        this.proxyState = new ProxyState(com.anubis.phlix.models.Comments_.class, this);
         proxyState.setRealm$realm(context.getRealm());
         proxyState.setRow$realm(context.getRow());
         proxyState.setAcceptDefaultValue$realm(context.getAcceptDefaultValue());
@@ -163,7 +162,7 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
         proxyState.getRow$realm().setDate(columnInfo.timestampIndex, value);
     }
 
-    public RealmList<com.anubis.flickr.models.Comment> realmGet$commentsList() {
+    public RealmList<com.anubis.phlix.models.Comment> realmGet$commentsList() {
         if (proxyState == null) {
             // Called from model's constructor. Inject context.
             injectObjectContext();
@@ -175,12 +174,12 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
             return commentsListRealmList;
         } else {
             LinkView linkView = proxyState.getRow$realm().getLinkList(columnInfo.commentsListIndex);
-            commentsListRealmList = new RealmList<com.anubis.flickr.models.Comment>(com.anubis.flickr.models.Comment.class, linkView, proxyState.getRealm$realm());
+            commentsListRealmList = new RealmList<com.anubis.phlix.models.Comment>(com.anubis.phlix.models.Comment.class, linkView, proxyState.getRealm$realm());
             return commentsListRealmList;
         }
     }
 
-    public void realmSet$commentsList(RealmList<com.anubis.flickr.models.Comment> value) {
+    public void realmSet$commentsList(RealmList<com.anubis.phlix.models.Comment> value) {
         if (proxyState == null) {
             // Called from model's constructor. Inject context.
             injectObjectContext();
@@ -195,9 +194,9 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
             }
             if (value != null && !value.isManaged()) {
                 final Realm realm = (Realm) proxyState.getRealm$realm();
-                final RealmList<com.anubis.flickr.models.Comment> original = value;
-                value = new RealmList<com.anubis.flickr.models.Comment>();
-                for (com.anubis.flickr.models.Comment item : original) {
+                final RealmList<com.anubis.phlix.models.Comment> original = value;
+                value = new RealmList<com.anubis.phlix.models.Comment>();
+                for (com.anubis.phlix.models.Comment item : original) {
                     if (item == null || RealmObject.isManaged(item)) {
                         value.add(item);
                     } else {
@@ -327,12 +326,12 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
     }
 
     @SuppressWarnings("cast")
-    public static com.anubis.flickr.models.Comments_ createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
+    public static com.anubis.phlix.models.Comments_ createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
         throws JSONException {
         final List<String> excludeFields = new ArrayList<String>(1);
-        com.anubis.flickr.models.Comments_ obj = null;
+        com.anubis.phlix.models.Comments_ obj = null;
         if (update) {
-            Table table = realm.getTable(com.anubis.flickr.models.Comments_.class);
+            Table table = realm.getTable(com.anubis.phlix.models.Comments_.class);
             long pkColumnIndex = table.getPrimaryKey();
             long rowIndex = TableOrView.NO_MATCH;
             if (json.isNull("photoId")) {
@@ -343,7 +342,7 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
             if (rowIndex != TableOrView.NO_MATCH) {
                 final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
                 try {
-                    objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.flickr.models.Comments_.class), false, Collections.<String> emptyList());
+                    objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.phlix.models.Comments_.class), false, Collections.<String> emptyList());
                     obj = new io.realm.Comments_RealmProxy();
                 } finally {
                     objectContext.clear();
@@ -356,9 +355,9 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
             }
             if (json.has("photoId")) {
                 if (json.isNull("photoId")) {
-                    obj = (io.realm.Comments_RealmProxy) realm.createObjectInternal(com.anubis.flickr.models.Comments_.class, null, true, excludeFields);
+                    obj = (io.realm.Comments_RealmProxy) realm.createObjectInternal(com.anubis.phlix.models.Comments_.class, null, true, excludeFields);
                 } else {
-                    obj = (io.realm.Comments_RealmProxy) realm.createObjectInternal(com.anubis.flickr.models.Comments_.class, json.getString("photoId"), true, excludeFields);
+                    obj = (io.realm.Comments_RealmProxy) realm.createObjectInternal(com.anubis.phlix.models.Comments_.class, json.getString("photoId"), true, excludeFields);
                 }
             } else {
                 throw new IllegalArgumentException("JSON object doesn't have the primary key field 'photoId'.");
@@ -383,7 +382,7 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
                 ((Comments_RealmProxyInterface) obj).realmGet$commentsList().clear();
                 JSONArray array = json.getJSONArray("commentsList");
                 for (int i = 0; i < array.length(); i++) {
-                    com.anubis.flickr.models.Comment item = CommentRealmProxy.createOrUpdateUsingJsonObject(realm, array.getJSONObject(i), update);
+                    com.anubis.phlix.models.Comment item = CommentRealmProxy.createOrUpdateUsingJsonObject(realm, array.getJSONObject(i), update);
                     ((Comments_RealmProxyInterface) obj).realmGet$commentsList().add(item);
                 }
             }
@@ -393,10 +392,10 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
 
     @SuppressWarnings("cast")
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static com.anubis.flickr.models.Comments_ createUsingJsonStream(Realm realm, JsonReader reader)
+    public static com.anubis.phlix.models.Comments_ createUsingJsonStream(Realm realm, JsonReader reader)
         throws IOException {
         boolean jsonHasPrimaryKey = false;
-        com.anubis.flickr.models.Comments_ obj = new com.anubis.flickr.models.Comments_();
+        com.anubis.phlix.models.Comments_ obj = new com.anubis.phlix.models.Comments_();
         reader.beginObject();
         while (reader.hasNext()) {
             String name = reader.nextName();
@@ -425,10 +424,10 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
                     reader.skipValue();
                     ((Comments_RealmProxyInterface) obj).realmSet$commentsList(null);
                 } else {
-                    ((Comments_RealmProxyInterface) obj).realmSet$commentsList(new RealmList<com.anubis.flickr.models.Comment>());
+                    ((Comments_RealmProxyInterface) obj).realmSet$commentsList(new RealmList<com.anubis.phlix.models.Comment>());
                     reader.beginArray();
                     while (reader.hasNext()) {
-                        com.anubis.flickr.models.Comment item = CommentRealmProxy.createUsingJsonStream(realm, reader);
+                        com.anubis.phlix.models.Comment item = CommentRealmProxy.createUsingJsonStream(realm, reader);
                         ((Comments_RealmProxyInterface) obj).realmGet$commentsList().add(item);
                     }
                     reader.endArray();
@@ -445,7 +444,7 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
         return obj;
     }
 
-    public static com.anubis.flickr.models.Comments_ copyOrUpdate(Realm realm, com.anubis.flickr.models.Comments_ object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.anubis.phlix.models.Comments_ copyOrUpdate(Realm realm, com.anubis.phlix.models.Comments_ object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm().threadId != realm.threadId) {
             throw new IllegalArgumentException("Objects which belong to Realm instances in other threads cannot be copied into this Realm instance.");
         }
@@ -455,12 +454,12 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
         final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
         RealmObjectProxy cachedRealmObject = cache.get(object);
         if (cachedRealmObject != null) {
-            return (com.anubis.flickr.models.Comments_) cachedRealmObject;
+            return (com.anubis.phlix.models.Comments_) cachedRealmObject;
         } else {
-            com.anubis.flickr.models.Comments_ realmObject = null;
+            com.anubis.phlix.models.Comments_ realmObject = null;
             boolean canUpdate = update;
             if (canUpdate) {
-                Table table = realm.getTable(com.anubis.flickr.models.Comments_.class);
+                Table table = realm.getTable(com.anubis.phlix.models.Comments_.class);
                 long pkColumnIndex = table.getPrimaryKey();
                 String value = ((Comments_RealmProxyInterface) object).realmGet$photoId();
                 long rowIndex = TableOrView.NO_MATCH;
@@ -471,7 +470,7 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
                 }
                 if (rowIndex != TableOrView.NO_MATCH) {
                     try {
-                        objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.flickr.models.Comments_.class), false, Collections.<String> emptyList());
+                        objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.anubis.phlix.models.Comments_.class), false, Collections.<String> emptyList());
                         realmObject = new io.realm.Comments_RealmProxy();
                         cache.put(object, (RealmObjectProxy) realmObject);
                     } finally {
@@ -490,22 +489,22 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
         }
     }
 
-    public static com.anubis.flickr.models.Comments_ copy(Realm realm, com.anubis.flickr.models.Comments_ newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.anubis.phlix.models.Comments_ copy(Realm realm, com.anubis.phlix.models.Comments_ newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         RealmObjectProxy cachedRealmObject = cache.get(newObject);
         if (cachedRealmObject != null) {
-            return (com.anubis.flickr.models.Comments_) cachedRealmObject;
+            return (com.anubis.phlix.models.Comments_) cachedRealmObject;
         } else {
             // rejecting default values to avoid creating unexpected objects from RealmModel/RealmList fields.
-            com.anubis.flickr.models.Comments_ realmObject = realm.createObjectInternal(com.anubis.flickr.models.Comments_.class, ((Comments_RealmProxyInterface) newObject).realmGet$photoId(), false, Collections.<String>emptyList());
+            com.anubis.phlix.models.Comments_ realmObject = realm.createObjectInternal(com.anubis.phlix.models.Comments_.class, ((Comments_RealmProxyInterface) newObject).realmGet$photoId(), false, Collections.<String>emptyList());
             cache.put(newObject, (RealmObjectProxy) realmObject);
             ((Comments_RealmProxyInterface) realmObject).realmSet$timestamp(((Comments_RealmProxyInterface) newObject).realmGet$timestamp());
 
-            RealmList<com.anubis.flickr.models.Comment> commentsListList = ((Comments_RealmProxyInterface) newObject).realmGet$commentsList();
+            RealmList<com.anubis.phlix.models.Comment> commentsListList = ((Comments_RealmProxyInterface) newObject).realmGet$commentsList();
             if (commentsListList != null) {
-                RealmList<com.anubis.flickr.models.Comment> commentsListRealmList = ((Comments_RealmProxyInterface) realmObject).realmGet$commentsList();
+                RealmList<com.anubis.phlix.models.Comment> commentsListRealmList = ((Comments_RealmProxyInterface) realmObject).realmGet$commentsList();
                 for (int i = 0; i < commentsListList.size(); i++) {
-                    com.anubis.flickr.models.Comment commentsListItem = commentsListList.get(i);
-                    com.anubis.flickr.models.Comment cachecommentsList = (com.anubis.flickr.models.Comment) cache.get(commentsListItem);
+                    com.anubis.phlix.models.Comment commentsListItem = commentsListList.get(i);
+                    com.anubis.phlix.models.Comment cachecommentsList = (com.anubis.phlix.models.Comment) cache.get(commentsListItem);
                     if (cachecommentsList != null) {
                         commentsListRealmList.add(cachecommentsList);
                     } else {
@@ -518,13 +517,13 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
         }
     }
 
-    public static long insert(Realm realm, com.anubis.flickr.models.Comments_ object, Map<RealmModel,Long> cache) {
+    public static long insert(Realm realm, com.anubis.phlix.models.Comments_ object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.anubis.flickr.models.Comments_.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Comments_.class);
         long tableNativePtr = table.getNativeTablePointer();
-        Comments_ColumnInfo columnInfo = (Comments_ColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Comments_.class);
+        Comments_ColumnInfo columnInfo = (Comments_ColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Comments_.class);
         long pkColumnIndex = table.getPrimaryKey();
         String primaryKeyValue = ((Comments_RealmProxyInterface) object).realmGet$photoId();
         long rowIndex = TableOrView.NO_MATCH;
@@ -544,10 +543,10 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
             Table.nativeSetTimestamp(tableNativePtr, columnInfo.timestampIndex, rowIndex, realmGet$timestamp.getTime(), false);
         }
 
-        RealmList<com.anubis.flickr.models.Comment> commentsListList = ((Comments_RealmProxyInterface) object).realmGet$commentsList();
+        RealmList<com.anubis.phlix.models.Comment> commentsListList = ((Comments_RealmProxyInterface) object).realmGet$commentsList();
         if (commentsListList != null) {
             long commentsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.commentsListIndex, rowIndex);
-            for (com.anubis.flickr.models.Comment commentsListItem : commentsListList) {
+            for (com.anubis.phlix.models.Comment commentsListItem : commentsListList) {
                 Long cacheItemIndexcommentsList = cache.get(commentsListItem);
                 if (cacheItemIndexcommentsList == null) {
                     cacheItemIndexcommentsList = CommentRealmProxy.insert(realm, commentsListItem, cache);
@@ -561,13 +560,13 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
     }
 
     public static void insert(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.anubis.flickr.models.Comments_.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Comments_.class);
         long tableNativePtr = table.getNativeTablePointer();
-        Comments_ColumnInfo columnInfo = (Comments_ColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Comments_.class);
+        Comments_ColumnInfo columnInfo = (Comments_ColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Comments_.class);
         long pkColumnIndex = table.getPrimaryKey();
-        com.anubis.flickr.models.Comments_ object = null;
+        com.anubis.phlix.models.Comments_ object = null;
         while (objects.hasNext()) {
-            object = (com.anubis.flickr.models.Comments_) objects.next();
+            object = (com.anubis.phlix.models.Comments_) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -591,10 +590,10 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
                     Table.nativeSetTimestamp(tableNativePtr, columnInfo.timestampIndex, rowIndex, realmGet$timestamp.getTime(), false);
                 }
 
-                RealmList<com.anubis.flickr.models.Comment> commentsListList = ((Comments_RealmProxyInterface) object).realmGet$commentsList();
+                RealmList<com.anubis.phlix.models.Comment> commentsListList = ((Comments_RealmProxyInterface) object).realmGet$commentsList();
                 if (commentsListList != null) {
                     long commentsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.commentsListIndex, rowIndex);
-                    for (com.anubis.flickr.models.Comment commentsListItem : commentsListList) {
+                    for (com.anubis.phlix.models.Comment commentsListItem : commentsListList) {
                         Long cacheItemIndexcommentsList = cache.get(commentsListItem);
                         if (cacheItemIndexcommentsList == null) {
                             cacheItemIndexcommentsList = CommentRealmProxy.insert(realm, commentsListItem, cache);
@@ -608,13 +607,13 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
         }
     }
 
-    public static long insertOrUpdate(Realm realm, com.anubis.flickr.models.Comments_ object, Map<RealmModel,Long> cache) {
+    public static long insertOrUpdate(Realm realm, com.anubis.phlix.models.Comments_ object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.anubis.flickr.models.Comments_.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Comments_.class);
         long tableNativePtr = table.getNativeTablePointer();
-        Comments_ColumnInfo columnInfo = (Comments_ColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Comments_.class);
+        Comments_ColumnInfo columnInfo = (Comments_ColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Comments_.class);
         long pkColumnIndex = table.getPrimaryKey();
         String primaryKeyValue = ((Comments_RealmProxyInterface) object).realmGet$photoId();
         long rowIndex = TableOrView.NO_MATCH;
@@ -636,9 +635,9 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
 
         long commentsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.commentsListIndex, rowIndex);
         LinkView.nativeClear(commentsListNativeLinkViewPtr);
-        RealmList<com.anubis.flickr.models.Comment> commentsListList = ((Comments_RealmProxyInterface) object).realmGet$commentsList();
+        RealmList<com.anubis.phlix.models.Comment> commentsListList = ((Comments_RealmProxyInterface) object).realmGet$commentsList();
         if (commentsListList != null) {
-            for (com.anubis.flickr.models.Comment commentsListItem : commentsListList) {
+            for (com.anubis.phlix.models.Comment commentsListItem : commentsListList) {
                 Long cacheItemIndexcommentsList = cache.get(commentsListItem);
                 if (cacheItemIndexcommentsList == null) {
                     cacheItemIndexcommentsList = CommentRealmProxy.insertOrUpdate(realm, commentsListItem, cache);
@@ -652,13 +651,13 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
     }
 
     public static void insertOrUpdate(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.anubis.flickr.models.Comments_.class);
+        Table table = realm.getTable(com.anubis.phlix.models.Comments_.class);
         long tableNativePtr = table.getNativeTablePointer();
-        Comments_ColumnInfo columnInfo = (Comments_ColumnInfo) realm.schema.getColumnInfo(com.anubis.flickr.models.Comments_.class);
+        Comments_ColumnInfo columnInfo = (Comments_ColumnInfo) realm.schema.getColumnInfo(com.anubis.phlix.models.Comments_.class);
         long pkColumnIndex = table.getPrimaryKey();
-        com.anubis.flickr.models.Comments_ object = null;
+        com.anubis.phlix.models.Comments_ object = null;
         while (objects.hasNext()) {
-            object = (com.anubis.flickr.models.Comments_) objects.next();
+            object = (com.anubis.phlix.models.Comments_) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -684,9 +683,9 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
 
                 long commentsListNativeLinkViewPtr = Table.nativeGetLinkView(tableNativePtr, columnInfo.commentsListIndex, rowIndex);
                 LinkView.nativeClear(commentsListNativeLinkViewPtr);
-                RealmList<com.anubis.flickr.models.Comment> commentsListList = ((Comments_RealmProxyInterface) object).realmGet$commentsList();
+                RealmList<com.anubis.phlix.models.Comment> commentsListList = ((Comments_RealmProxyInterface) object).realmGet$commentsList();
                 if (commentsListList != null) {
-                    for (com.anubis.flickr.models.Comment commentsListItem : commentsListList) {
+                    for (com.anubis.phlix.models.Comment commentsListItem : commentsListList) {
                         Long cacheItemIndexcommentsList = cache.get(commentsListItem);
                         if (cacheItemIndexcommentsList == null) {
                             cacheItemIndexcommentsList = CommentRealmProxy.insertOrUpdate(realm, commentsListItem, cache);
@@ -700,22 +699,22 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
         }
     }
 
-    public static com.anubis.flickr.models.Comments_ createDetachedCopy(com.anubis.flickr.models.Comments_ realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
+    public static com.anubis.phlix.models.Comments_ createDetachedCopy(com.anubis.phlix.models.Comments_ realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
         if (currentDepth > maxDepth || realmObject == null) {
             return null;
         }
         CacheData<RealmModel> cachedObject = cache.get(realmObject);
-        com.anubis.flickr.models.Comments_ unmanagedObject;
+        com.anubis.phlix.models.Comments_ unmanagedObject;
         if (cachedObject != null) {
             // Reuse cached object or recreate it because it was encountered at a lower depth.
             if (currentDepth >= cachedObject.minDepth) {
-                return (com.anubis.flickr.models.Comments_)cachedObject.object;
+                return (com.anubis.phlix.models.Comments_)cachedObject.object;
             } else {
-                unmanagedObject = (com.anubis.flickr.models.Comments_)cachedObject.object;
+                unmanagedObject = (com.anubis.phlix.models.Comments_)cachedObject.object;
                 cachedObject.minDepth = currentDepth;
             }
         } else {
-            unmanagedObject = new com.anubis.flickr.models.Comments_();
+            unmanagedObject = new com.anubis.phlix.models.Comments_();
             cache.put(realmObject, new RealmObjectProxy.CacheData(currentDepth, unmanagedObject));
         }
         ((Comments_RealmProxyInterface) unmanagedObject).realmSet$photoId(((Comments_RealmProxyInterface) realmObject).realmGet$photoId());
@@ -725,28 +724,28 @@ public class Comments_RealmProxy extends com.anubis.flickr.models.Comments_
         if (currentDepth == maxDepth) {
             ((Comments_RealmProxyInterface) unmanagedObject).realmSet$commentsList(null);
         } else {
-            RealmList<com.anubis.flickr.models.Comment> managedcommentsListList = ((Comments_RealmProxyInterface) realmObject).realmGet$commentsList();
-            RealmList<com.anubis.flickr.models.Comment> unmanagedcommentsListList = new RealmList<com.anubis.flickr.models.Comment>();
+            RealmList<com.anubis.phlix.models.Comment> managedcommentsListList = ((Comments_RealmProxyInterface) realmObject).realmGet$commentsList();
+            RealmList<com.anubis.phlix.models.Comment> unmanagedcommentsListList = new RealmList<com.anubis.phlix.models.Comment>();
             ((Comments_RealmProxyInterface) unmanagedObject).realmSet$commentsList(unmanagedcommentsListList);
             int nextDepth = currentDepth + 1;
             int size = managedcommentsListList.size();
             for (int i = 0; i < size; i++) {
-                com.anubis.flickr.models.Comment item = CommentRealmProxy.createDetachedCopy(managedcommentsListList.get(i), nextDepth, maxDepth, cache);
+                com.anubis.phlix.models.Comment item = CommentRealmProxy.createDetachedCopy(managedcommentsListList.get(i), nextDepth, maxDepth, cache);
                 unmanagedcommentsListList.add(item);
             }
         }
         return unmanagedObject;
     }
 
-    static com.anubis.flickr.models.Comments_ update(Realm realm, com.anubis.flickr.models.Comments_ realmObject, com.anubis.flickr.models.Comments_ newObject, Map<RealmModel, RealmObjectProxy> cache) {
+    static com.anubis.phlix.models.Comments_ update(Realm realm, com.anubis.phlix.models.Comments_ realmObject, com.anubis.phlix.models.Comments_ newObject, Map<RealmModel, RealmObjectProxy> cache) {
         ((Comments_RealmProxyInterface) realmObject).realmSet$timestamp(((Comments_RealmProxyInterface) newObject).realmGet$timestamp());
-        RealmList<com.anubis.flickr.models.Comment> commentsListList = ((Comments_RealmProxyInterface) newObject).realmGet$commentsList();
-        RealmList<com.anubis.flickr.models.Comment> commentsListRealmList = ((Comments_RealmProxyInterface) realmObject).realmGet$commentsList();
+        RealmList<com.anubis.phlix.models.Comment> commentsListList = ((Comments_RealmProxyInterface) newObject).realmGet$commentsList();
+        RealmList<com.anubis.phlix.models.Comment> commentsListRealmList = ((Comments_RealmProxyInterface) realmObject).realmGet$commentsList();
         commentsListRealmList.clear();
         if (commentsListList != null) {
             for (int i = 0; i < commentsListList.size(); i++) {
-                com.anubis.flickr.models.Comment commentsListItem = commentsListList.get(i);
-                com.anubis.flickr.models.Comment cachecommentsList = (com.anubis.flickr.models.Comment) cache.get(commentsListItem);
+                com.anubis.phlix.models.Comment commentsListItem = commentsListList.get(i);
+                com.anubis.phlix.models.Comment cachecommentsList = (com.anubis.phlix.models.Comment) cache.get(commentsListItem);
                 if (cachecommentsList != null) {
                     commentsListRealmList.add(cachecommentsList);
                 } else {
