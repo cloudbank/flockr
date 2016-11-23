@@ -22,6 +22,8 @@ import com.anubis.phlix.models.Photo;
 import com.anubis.phlix.models.Tag;
 import com.anubis.phlix.models.UserModel;
 import com.anubis.phlix.util.Util;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +38,7 @@ public class FriendsFragment extends FlickrBaseFragment {
 
     private List<Photo> mPhotos, cPhotos;
 
-
+    AdView mPublisherAdView;
     ProgressDialog ringProgressDialog;
     FriendsAdapter fAdapter;
     RecyclerView rvPhotos;
@@ -181,6 +183,9 @@ public class FriendsFragment extends FlickrBaseFragment {
 
     @Override
     public void onDestroy() {
+        if (mPublisherAdView != null) {
+            mPublisherAdView.destroy();
+        }
         super.onDestroy();
         if (null != userRealm && !userRealm.isClosed()) {
             userRealm.close();
@@ -190,6 +195,26 @@ public class FriendsFragment extends FlickrBaseFragment {
         }
         if (null != this.ringProgressDialog) {
             this.ringProgressDialog = null;
+        }
+
+    }
+
+    @Override
+    public void onPause() {
+        if (mPublisherAdView != null) {
+            mPublisherAdView.pause();
+        }
+        super.onPause();
+    }
+
+    /**
+     * Called when returning to the activity
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mPublisherAdView != null) {
+            mPublisherAdView.resume();
         }
     }
 
@@ -217,7 +242,15 @@ public class FriendsFragment extends FlickrBaseFragment {
         rg = (RadioGroup) view.findViewById(R.id.radioGroup1);
         rb1 = (RadioButton) view.findViewById(R.id.radio1);
         rb5 = (RadioButton) view.findViewById(R.id.radio5);
+
+        mPublisherAdView = (AdView) view.findViewById(R.id.publisherAdView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+                .addTestDevice("9D3A392231B42400A9CCA1CBED2D006F")  // My Galaxy Nexus test phone
+                .build();
+        mPublisherAdView.loadAd(adRequest);
         setHasOptionsMenu(true);
+
         return view;
     }
 

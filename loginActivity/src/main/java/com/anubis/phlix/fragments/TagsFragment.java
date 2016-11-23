@@ -18,6 +18,8 @@ import com.anubis.phlix.adapter.TagsAdapter;
 import com.anubis.phlix.models.Photo;
 import com.anubis.phlix.models.Recent;
 import com.anubis.phlix.models.Tag;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,13 +30,14 @@ import co.hkm.soltag.TagView;
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
 
+
 public class TagsFragment extends FlickrBaseFragment {
 
     List mTags;
     TagContainerLayout mTagsView;
     private List<Photo> mPhotos;
 
-
+    AdView mPublisherAdView;
     ProgressDialog ringProgressDialog;
     TagsAdapter tAdapter;
     RecyclerView rvPhotos;
@@ -44,10 +47,24 @@ public class TagsFragment extends FlickrBaseFragment {
 
 
     @Override
+    public void onPause() {
+        if (mPublisherAdView != null) {
+            mPublisherAdView.pause();
+        }
+        super.onPause();
+    }
+
+    /**
+     * Called when returning to the activity
+     */
+    @Override
     public void onResume() {
         super.onResume();
-        Log.d("TABS", "tags onresume");
+        if (mPublisherAdView != null) {
+            mPublisherAdView.resume();
+        }
     }
+
 
 
     @Override
@@ -147,6 +164,9 @@ public class TagsFragment extends FlickrBaseFragment {
 
     @Override
     public void onDestroy() {
+        if (mPublisherAdView != null) {
+            mPublisherAdView.pause();
+        }
         super.onDestroy();
         if (null != r && !r.isClosed()) {
             r.close();
@@ -187,6 +207,13 @@ public class TagsFragment extends FlickrBaseFragment {
                 startActivity(intent);
             }
         });
+
+        mPublisherAdView = (AdView) view.findViewById(R.id.publisherAdView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+                .addTestDevice("9D3A392231B42400A9CCA1CBED2D006F")  // My Galaxy Nexus test phone
+                .build();
+        mPublisherAdView.loadAd(adRequest);
         setHasOptionsMenu(true);
         return view;
     }

@@ -12,29 +12,29 @@ public final class R {
 		public static final int btn_crop_pressed = 0x7f020055;
 		public static final int camera_crop_height = 0x7f020056;
 		public static final int camera_crop_width = 0x7f020057;
-		public static final int ic_rotate_left = 0x7f02005e;
-		public static final int ic_rotate_right = 0x7f02005f;
-		public static final int indicator_autocrop = 0x7f020061;
-		public static final int selector_crop_button = 0x7f020065;
+		public static final int ic_rotate_left = 0x7f020073;
+		public static final int ic_rotate_right = 0x7f020074;
+		public static final int indicator_autocrop = 0x7f020076;
+		public static final int selector_crop_button = 0x7f02007a;
 	}
 	public static final class id {
-		public static final int discard = 0x7f0d0084;
-		public static final int image = 0x7f0d0047;
-		public static final int rotateLeft = 0x7f0d0085;
-		public static final int rotateRight = 0x7f0d0086;
-		public static final int save = 0x7f0d0087;
+		public static final int discard = 0x7f0d008c;
+		public static final int image = 0x7f0d004e;
+		public static final int rotateLeft = 0x7f0d008d;
+		public static final int rotateRight = 0x7f0d008e;
+		public static final int save = 0x7f0d008f;
 	}
 	public static final class layout {
 		public static final int cropimage = 0x7f040020;
 		public static final int main = 0x7f040032;
 	}
 	public static final class string {
-		public static final int cancel = 0x7f070015;
-		public static final int no_storage_card = 0x7f070016;
-		public static final int not_enough_space = 0x7f070017;
-		public static final int preparing_card = 0x7f070018;
-		public static final int save = 0x7f070019;
-		public static final int saving_image = 0x7f07001a;
+		public static final int cancel = 0x7f070030;
+		public static final int no_storage_card = 0x7f070031;
+		public static final int not_enough_space = 0x7f070032;
+		public static final int preparing_card = 0x7f070033;
+		public static final int save = 0x7f070034;
+		public static final int saving_image = 0x7f070035;
 	}
 	public static final class style {
 		public static final int CropButton = 0x7f0900c8;

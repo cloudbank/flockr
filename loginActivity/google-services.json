@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "766239359357",
+    "firebase_url": "https://phlix-aa0b3.firebaseio.com",
+    "project_id": "phlix-aa0b3",
+    "storage_bucket": "phlix-aa0b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766239359357:android:b8c8c7c433e1aa78",
+        "android_client_info": {
+          "package_name": "com.anuis.phlix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766239359357-uv997kbtrivg3ib0pmib7mv4p0n0cga1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8tr2qUgaOQG8k_nQfu2AHk1Rf6DqEQiY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766239359357:android:d1bd88d28f3d2ed3",
+        "android_client_info": {
+          "package_name": "com.anubis.phlix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766239359357-uv997kbtrivg3ib0pmib7mv4p0n0cga1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8tr2qUgaOQG8k_nQfu2AHk1Rf6DqEQiY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

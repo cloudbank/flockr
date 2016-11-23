@@ -26,6 +26,8 @@ import com.anubis.phlix.models.Comments_;
 import com.anubis.phlix.models.Photo;
 import com.anubis.phlix.util.DateUtility;
 import com.anubis.phlix.util.ImageRoundedTransformation;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 
 import org.ocpsoft.prettytime.PrettyTime;
@@ -59,6 +61,7 @@ public class ImageDisplayActivity extends AppCompatActivity {
     Photo mPhoto;
     Realm pRealm;
     HandlerThread handlerThread;
+    AdView mPublisherAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,9 +122,15 @@ public class ImageDisplayActivity extends AppCompatActivity {
 
 
         mTags = (TagContainerLayout) findViewById(R.id.tag_group);
-        displayTags(mPhoto.getTags()
+        displayTags(mPhoto.getTags());
+        mPublisherAdView = (AdView) findViewById(R.id.publisherAdView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+                .addTestDevice("9D3A392231B42400A9CCA1CBED2D006F")  // My Galaxy Nexus test phone
+                .build();
+        mPublisherAdView.loadAd(adRequest);
 
-    );
+
 }
 
     private boolean withinADay(Date timestamp) {
@@ -186,7 +195,12 @@ public class ImageDisplayActivity extends AppCompatActivity {
 
     public void displayTags(String tags) {
         //tags.stream().map(it -> it.getContent()).collect(Collectors.toCollection())
-        //when android catches up to 1.8
+        //when android catches up to 1.8if
+        if (tags.length() == 0) {
+            mTags.setVisibility(View.GONE);
+        } else {
+            mTags.setVisibility(View.VISIBLE);
+        }
         for (String s : tags.split(" ")) {
             mTags.addTag(s);
         }

@@ -35,6 +35,7 @@ import com.anubis.phlix.fragments.TagsFragment;
 import com.anubis.phlix.models.Photos;
 import com.anubis.phlix.sync.SyncAdapter;
 import com.anubis.phlix.util.Util;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 
@@ -202,7 +203,7 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         vpPager.setAdapter(adapterViewPager);
         vpPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(onTabSelectedListener(vpPager));
-
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-8660045387738182~7164386158");
 
     }
 

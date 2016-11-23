@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/AliceBlue">
+
+
+
 
     <TextView
         android:id="@+id/tvMyTags"
@@ -86,6 +90,18 @@
         android:scrollbars="vertical"
         android:background="@color/AliceBlue"
         android:clipToPadding="true" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/publisherAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_unit"/>
+
+
+
 
 
 </RelativeLayout>

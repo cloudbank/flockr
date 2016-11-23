@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.3"
@@ -66,4 +67,7 @@ dependencies {
     compile 'com.hkm.taglib:tag:1.6.0'
 
     compile 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
+    compile 'com.google.firebase:firebase-core:10.0.0'
+    compile 'com.google.firebase:firebase-ads:10.0.0'
 }
+apply plugin: 'com.google.gms.google-services'

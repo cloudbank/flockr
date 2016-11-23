@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
@@ -21,11 +22,21 @@
             android:layout_height="wrap_content" />
 
 
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/publisherAdView"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ad_unit3" />
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toolbar"
+            android:layout_below="@id/publisherAdView"
             android:layout_centerInParent="true"
             android:layout_marginTop="5dp"
             android:background="@color/AliceBlue"
@@ -76,7 +87,7 @@
             android:id="@+id/tag_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ivResult"
+            android:layout_below="@id/tvUser"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
@@ -88,8 +99,8 @@
             app:horizontal_interval="5dp"
             app:tag_border_color="@color/RoyalBlue"
             app:tag_horizontal_padding="5dp"
-            app:tag_text_size="12sp"
             app:tag_text_color="@color/white"
+            app:tag_text_size="12sp"
             app:tag_theme="random"
             app:tag_vertical_padding="5dp"
             app:vertical_interval="5dp" />
