@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Nov 22 17:33:17 PST 2016
+#Tue Nov 22 17:46:56 PST 2016
 210.set=ANDROID_RESOURCE
 282.file=/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/ic_rotate_right.png
 14.set=ANDROID_RESOURCE

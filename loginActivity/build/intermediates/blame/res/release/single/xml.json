@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/merged/release/xml/syncadapter.xml",
+        "source": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/res/xml/syncadapter.xml"
+    },
+    {
+        "merged": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/merged/release/xml/authenticator.xml",
+        "source": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/res/xml/authenticator.xml"
+    }
+]

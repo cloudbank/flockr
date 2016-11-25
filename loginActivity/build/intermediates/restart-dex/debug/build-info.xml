@@ -5,57 +5,33 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="139903631993644"
+    timestamp="140719343952116"
     token="2872332265169310905"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="3806" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="1103" />
     <task
         name="verifier"
-        duration="0" />
+        duration="276" />
 
     <artifact
-        location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
+        location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/outputs/apk/loginActivity-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="139013137090731"
+        timestamp="140719343952116"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/outputs/apk/loginActivity-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="139731428050820"
-        verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="139815823562973"
-        verifier="STATIC_INITIALIZER_CHANGE" >
-        <artifact
-            location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="139903631993644"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>

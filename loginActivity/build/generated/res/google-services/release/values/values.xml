@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">766239359357-uv997kbtrivg3ib0pmib7mv4p0n0cga1.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://phlix-aa0b3.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">766239359357</string>
+    <string name="google_api_key" translatable="false">AIzaSyA8tr2qUgaOQG8k_nQfu2AHk1Rf6DqEQiY</string>
+    <string name="google_app_id" translatable="false">1:766239359357:android:d1bd88d28f3d2ed3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA8tr2qUgaOQG8k_nQfu2AHk1Rf6DqEQiY</string>
+    <string name="google_storage_bucket" translatable="false">phlix-aa0b3.appspot.com</string>
+</resources>

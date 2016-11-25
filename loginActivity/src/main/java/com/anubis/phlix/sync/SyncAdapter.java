@@ -63,9 +63,11 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     // Global variables
     // Define a variable to contain a content resolver instance
     ContentResolver mContentResolver;
-    public static final int SYNC_INTERVAL = 60 * 3;    //60 * 180;  //@todo change to 23 hrs
-    public static final int SYNC_FLEXTIME = SYNC_INTERVAL / 3;
-    private static final int WEATHER_NOTIFICATION_ID = 3004;
+    public static final int HOUR_IN_SECS = 60 * 60;
+    public static final int SYNC_INTERVAL = 12 * HOUR_IN_SECS;    //every 12 hours
+    public static final int MIN_IN_SECS = 60;
+    public static final int SYNC_FLEXTIME =  20 * MIN_IN_SECS;  // within 20 minutes
+    private static final int DATA_NOTIFICATION_ID = 3004;
     Realm realm2, realm3, realm4, realm5;
     Subscription friendSubscription, recentSubscription, interestingSubscription, commonsSubscription;
 
@@ -260,7 +262,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
         NotificationManager mNotificationManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(WEATHER_NOTIFICATION_ID, mBuilder.build());
+        mNotificationManager.notify(DATA_NOTIFICATION_ID, mBuilder.build());
 
 
     }

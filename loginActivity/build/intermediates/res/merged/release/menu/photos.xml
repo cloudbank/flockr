@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_take_photo"
+        android:icon="@drawable/ic_camera"
+        app:showAsAction="always"
+        android:orderInCategory="1"
+        android:title="camera" />
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always"
+        android:orderInCategory="999"
+        android:title="logout" />
+
+
+</menu>

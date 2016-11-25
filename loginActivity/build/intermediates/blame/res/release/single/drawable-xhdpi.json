@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/merged/release/drawable-xhdpi/ic_camera.png",
+        "source": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/res/drawable-xhdpi/ic_camera.png"
+    },
+    {
+        "merged": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/merged/release/drawable-xhdpi/ic_logout.png",
+        "source": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/res/drawable-xhdpi/ic_logout.png"
+    }
+]

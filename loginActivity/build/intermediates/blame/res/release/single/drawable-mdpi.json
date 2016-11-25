@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/merged/release/drawable-mdpi/commons_circle_logo.png",
+        "source": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/res/drawable-mdpi/commons_circle_logo.png"
+    },
+    {
+        "merged": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/merged/release/drawable-mdpi/ic_logout.png",
+        "source": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/res/drawable-mdpi/ic_logout.png"
+    },
+    {
+        "merged": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/merged/release/drawable-mdpi/ic_camera.png",
+        "source": "/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/src/main/res/drawable-mdpi/ic_camera.png"
+    }
+]

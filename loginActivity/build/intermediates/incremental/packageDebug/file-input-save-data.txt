@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Nov 22 17:19:18 PST 2016
+#Tue Nov 22 17:47:54 PST 2016
 20.base=/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/resources-debug.ap_
 143.base=/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/res/resources-debug.ap_
 340.file=/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/assets/debug/bin/classes/com/example/flickr/activity/PhotosActivity$MyPagerAdapter.class

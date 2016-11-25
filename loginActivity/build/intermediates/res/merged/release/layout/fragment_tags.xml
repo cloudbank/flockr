@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AliceBlue">
+
+    <TextView
+        android:id="@+id/tvHotTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Top 20 Hot Tags For Today"
+        android:textColor="@color/RoyalBlue"
+        android:textStyle="bold" />
+
+
+    <co.hkm.soltag.TagContainerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tag_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHotTags"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:padding="1dp"
+        app:container_background_color="@color/AliceBlue"
+        app:container_border_color="@color/AliceBlue"
+        app:container_enable_drag="false"
+        app:horizontal_interval="3dp"
+        app:tag_border_color="@color/RoyalBlue"
+        app:tag_corner_radius="3dp"
+        app:tag_horizontal_padding="3dp"
+        app:tag_text_color="@color/white"
+        app:tag_text_size="10sp"
+        app:tag_theme="random"
+        app:tag_vertical_padding="3dp"
+        app:vertical_interval="3dp" />
+
+
+    <TextView
+        android:id="@+id/tvPhotostream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tag_group"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Recently Uploaded"
+        android:textColor="@color/RoyalBlue"
+        android:textStyle="bold" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvPhotostream"
+        android:background="@color/AliceBlue"
+        android:clipToPadding="true"
+        android:scrollbars="vertical" />
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/publisherAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_unit2"/>
+
+
+</RelativeLayout>
