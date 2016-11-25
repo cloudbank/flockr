@@ -29,7 +29,7 @@
 * *Add comments & see tags*
 * *Take your own pictures with the camera!*
 
-### --> download from the [Google Play Store](https://play.google.com/store/apps/details?userId=com.anubis.flickr)
+### --> download from the [Google Play Store](https://play.google.com/store/apps/details?id=com.anubis.phlix)
 
 ## License
 
