@@ -17,12 +17,9 @@ import android.content.SyncRequest;
 import android.content.SyncResult;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.anubis.phlix.FlickrClientApp;
 import com.anubis.phlix.R;
@@ -68,7 +65,6 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     public static final int MIN_IN_SECS = 60;
     public static final int SYNC_FLEXTIME =  20 * MIN_IN_SECS;  // within 20 minutes
     private static final int DATA_NOTIFICATION_ID = 3004;
-    Realm realm2, realm3, realm4, realm5;
     Subscription friendSubscription, recentSubscription, interestingSubscription, commonsSubscription;
 
 
@@ -245,7 +241,9 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                         .setColor(context.getResources().getColor(R.color.PaleVioletRed))
                         .setSmallIcon(iconId)
                         .setContentTitle("Phlix Data")
-                        .setContentText("Photos updated");
+                        .setContentText("Photos daily update" )
+                        .setAutoCancel(true);
+
 
 
         Intent resultIntent = new Intent(context, LoginActivity.class);
@@ -290,16 +288,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                 .subscribe(new Subscriber<UserInfo>() {
                     @Override
                     public void onCompleted() {
-                        Handler handler = new Handler(Looper.getMainLooper());
 
-                        handler.post(new Runnable() {
-
-                            @Override
-                            public void run() {
-                                //Your UI code here
-                                Toast.makeText(FlickrClientApp.getAppContext(), "Got our friends", Toast.LENGTH_SHORT).show();
-                            }
-                        });
 
                         //Log.d("DEBUG","oncompleted");
 
@@ -331,6 +320,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                         Who w = userInfo.getWho();
                         List<Tag> tags = w.getWho().getTags().getTag();
                         // }
+                        Realm realm2 = null;
                         try {
                             realm2 = Realm.getDefaultInstance();
                             realm2.beginTransaction();
@@ -341,21 +331,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                             UserModel u = null;
                             u = realm2.where(UserModel.class).equalTo("userId", user_id).findFirst();
 
-                            if (null == u) {
-                                u = realm2.createObject(UserModel.class, Util.getUserId());
-                                realm2.copyToRealmOrUpdate(u);  //deep copy
-                            }
-                            Date d = Calendar.getInstance().getTime();
-                            Interesting i = realm2.createObject(Interesting.class, d.toString());
-                            i.setTimestamp(d);
-                            realm2.copyToRealmOrUpdate(i);
-                            Recent r = realm2.createObject(Recent.class, d.toString());
-                            r.setTimestamp(d);
-                            realm2.copyToRealmOrUpdate(r);
-                            //@todo probably can change this w algo
-                            Common c = realm2.createObject(Common.class, d.toString());
-                            c.setTimestamp(d);
-                            realm2.copyToRealmOrUpdate(c);
+
 
                             //is data stale?
                             //for 'friends' list, since it is small, fixed size list and data could
@@ -427,13 +403,13 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                     public void onNext(Photos p) {
                         //og.d("DEBUG", "onNext interesting: " + p.getPhotos().getPhotoList());
                         //pass photos to fragment
+                        Realm realm3 = null;
                         try {
                             realm3 = Realm.getDefaultInstance();
                             realm3.beginTransaction();
 
                             Date maxDate = realm3.where(Interesting.class).maximumDate("timestamp");
                             Interesting interesting = realm3.where(Interesting.class).equalTo("timestamp", maxDate).findFirst();
-                            Log.d("SYNC", "interesting" + interesting);
 
 
                             for (Photo photo : p.getPhotos().getPhotoList()) {
@@ -445,7 +421,6 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                             interesting.timestamp = interesting.getTimestamp();
                             realm3.copyToRealmOrUpdate(interesting);  //deep copy
                             realm3.commitTransaction();
-                            Log.d("DEBUG", "end get interesting: " + interesting);
                         } finally {
                             if (null != realm3) {
                                 realm3.close();
@@ -490,6 +465,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
                     @Override
                     public void onNext(TagAndRecent t) {
+                        Realm realm4 = null;
                         try {
                             realm4 = Realm.getDefaultInstance();
                             realm4.beginTransaction();
@@ -510,7 +486,6 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                             realm4.copyToRealmOrUpdate(recent);  //deep copy
 
                             realm4.commitTransaction();
-                            Log.d("DEBUG", "end recent/tag");
                         } finally {
                             if (null != realm4) {
                                 realm4.close();
@@ -552,11 +527,11 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
                     @Override
                     public void onNext(Photos p) {
+                        Realm realm5 = null;
                         try {
                             realm5 = Realm.getDefaultInstance();
                             realm5.beginTransaction();
                             Common c = realm5.where(Common.class).findFirst();
-                            Log.d("DEBUG", "commons" + c);
                             for (Photo photo : p.getPhotos().getPhotoList()) {
                                 photo.isCommon = true;
                                 c.commonPhotos.add(photo);

@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
 
 
 android {
@@ -10,6 +11,15 @@ android {
         applicationId "com.anubis.phlix"
         minSdkVersion 14
         targetSdkVersion 24
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        def propsFile = rootProject.file('local.properties')
+        def props = new Properties()
+        props.load(new FileInputStream(propsFile))
+        buildConfigField "String", "consumerKey", props['consumerKey']
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -69,5 +79,8 @@ dependencies {
     compile 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
     compile 'com.google.firebase:firebase-core:10.0.0'
     compile 'com.google.firebase:firebase-ads:10.0.0'
+    compile 'com.facebook.stetho:stetho:1.4.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.1'
+    compile 'com.android.support:multidex:1.0.1'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -99,3 +99,5 @@
 -keep class org.ocpsoft.prettytime.i18n.**
 
 -keepnames class * { *; }
+
+-dontwarn java.lang.invoke.*

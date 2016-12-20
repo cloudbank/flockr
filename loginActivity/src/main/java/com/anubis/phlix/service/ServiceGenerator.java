@@ -1,6 +1,8 @@
 package com.anubis.phlix.service;
 
 
+import com.facebook.stetho.okhttp3.StethoInterceptor;
+
 import okhttp3.OkHttpClient;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
@@ -21,6 +23,7 @@ public class ServiceGenerator {
 
         //configured with a consumer that has access token set
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .addNetworkInterceptor(new StethoInterceptor())
                 .addInterceptor(new SigningInterceptor(consumer))
                 .build();
 

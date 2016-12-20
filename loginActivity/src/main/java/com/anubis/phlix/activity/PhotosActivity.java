@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -38,6 +39,7 @@ import com.anubis.phlix.util.Util;
 import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import rx.Subscription;
 
@@ -177,7 +179,7 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         }
         //@todo check that sync adapter is running as planned for repeat login
         //this only runs the sync if no account account exists; else it should be running
-        SyncAdapter.initializeSyncAdapter(this);
+       // SyncAdapter.initializeSyncAdapter(this);
 
 
         setContentView(R.layout.activity_photos);
@@ -186,6 +188,7 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_rocket);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setSubtitle(Util.getCurrentUser());
         //getSupportActionBar().setElevation(3);
         //getSupportActionBar().setTitle(R.string.app_name);
         toolbar.setTitleTextColor(getResources().getColor(R.color.Seashell));
@@ -204,8 +207,26 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         vpPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(onTabSelectedListener(vpPager));
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-8660045387738182~7164386158");
+        delaySync(FlickrClientApp.getAppContext());
+    }
+
+    static final long c_delayMax = 600 * 1000;
+    static Random r = new Random();
+
+    void delaySync(android.content.Context c) {
+        Handler h = new Handler();
+        long delay = r.nextLong() % c_delayMax;
+        //new Runnable run
+        h.postDelayed(()-> {
+
+                Log.d("SYNC", "starting after delay " + delay);
+                SyncAdapter.initializeSyncAdapter(c);
+
+
+        }, delay);
 
     }
+
 
     private void updateUserInfo(SharedPreferences authPrefs) {
 

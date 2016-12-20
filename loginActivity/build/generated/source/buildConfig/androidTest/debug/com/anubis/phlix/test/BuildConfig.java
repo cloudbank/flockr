@@ -10,4 +10,6 @@ public final class BuildConfig {
   public static final String FLAVOR = "";
   public static final int VERSION_CODE = -1;
   public static final String VERSION_NAME = "";
+  // Fields from default config.
+  public static final String consumerKey = "a2afb95b10f8d81e97b0ca6f5e2b7bfc";
 }

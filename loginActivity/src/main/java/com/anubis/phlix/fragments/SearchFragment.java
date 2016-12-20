@@ -55,43 +55,7 @@ public class SearchFragment extends FlickrBaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Log.d("TABS", "search activcreated");
-        changeListener = new RealmChangeListener<Common>()
 
-
-        {
-            @Override
-            public void onChange(Common c) {
-                updateDisplay(c);
-            }
-        };
-        commonsRealm = Realm.getDefaultInstance();
-        ringProgressDialog.setTitle("Please wait");
-        ringProgressDialog.setMessage("Retrieving tags/recent photos");
-        ringProgressDialog.setCancelable(true);
-        ringProgressDialog.show();
-        Common c = commonsRealm.where(Common.class).findFirst();
-        Log.d("DEBUG", "commonsFragment" + c);
-        if (null == c) {
-            r = Realm.getDefaultInstance();
-            RealmChangeListener realmListener = new RealmChangeListener<Realm>() {
-                @Override
-                public void onChange(Realm r) {
-                    updateDisplay();
-                }
-            };
-            r.addChangeListener(realmListener);
-
-        } else {
-            Log.d("COMMON PRESENT", "list: " + c);
-            updateDisplay(c);
-            c.addChangeListener(changeListener);
-            if (null != r) {
-                r.removeAllChangeListeners();
-                r.close();
-            }
-        }
-        ringProgressDialog.dismiss();
 
 
     }
@@ -105,16 +69,13 @@ public class SearchFragment extends FlickrBaseFragment {
         setRetainInstance(true);
     }
 
-    private void updateDisplay() {
-        Common c = commonsRealm.where(Common.class).findFirst();
-        sPhotos.clear();
-        sPhotos.addAll(c.getCommonPhotos());
-        searchAdapter.notifyDataSetChanged();
-    }
+
 
     private void updateDisplay(Common c) {
         sPhotos.clear();
-        sPhotos.addAll(c.getCommonPhotos());
+        if (c != null) {
+            sPhotos.addAll(c.getCommonPhotos());
+        }
         searchAdapter.notifyDataSetChanged();
 
 

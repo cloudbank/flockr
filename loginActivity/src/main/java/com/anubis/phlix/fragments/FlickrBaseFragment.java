@@ -1,6 +1,7 @@
 package com.anubis.phlix.fragments;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -41,7 +42,7 @@ public abstract class FlickrBaseFragment extends Fragment {
     public String photoFileName = "photo.jpg";
     File mediaStorageDir;
     OnPhotoPostedListener mCallback;
-
+    ProgressDialog dialog;
 
     // Container Activity must implement this interface
     public interface OnPhotoPostedListener {
@@ -185,5 +186,30 @@ public abstract class FlickrBaseFragment extends Fragment {
         startActivity(bye);
     }
 
-    abstract void customLoadMoreDataFromApi(int page);
+
+    public void showProgress(String msg)
+    {
+        if(dialog == null){
+            dialog = new ProgressDialog(getActivity(), R.style.MyDialogTheme);
+            dialog.setTitle(null);
+            dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
+        }
+
+        if(dialog.isShowing())
+        {
+            dialog.dismiss();
+        }
+
+        dialog.setMessage(msg);
+        dialog.show();
+    }
+
+    public void dismissProgress()
+    {
+        if(dialog != null && dialog.isShowing())
+            dialog.dismiss();
+    }
+
 }

@@ -1,8 +1,10 @@
 package com.anubis.phlix.fragments;
 
-import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -15,25 +17,32 @@ import com.anubis.phlix.FlickrClientApp;
 import com.anubis.phlix.R;
 import com.anubis.phlix.activity.ImageDisplayActivity;
 import com.anubis.phlix.adapter.InterestingAdapter;
-import com.anubis.phlix.listener.EndlessRecyclerViewScrollListener;
 import com.anubis.phlix.models.Interesting;
 import com.anubis.phlix.models.Photo;
+import com.anubis.phlix.models.Photos;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
+import retrofit2.adapter.rxjava.HttpException;
+import rx.Subscriber;
+import rx.Subscription;
+import rx.schedulers.Schedulers;
+
+import static com.anubis.phlix.FlickrClientApp.getJacksonService;
 
 public class InterestingFragment extends FlickrBaseFragment {
     InterestingAdapter rAdapter;
     RecyclerView rvPhotos;
-    ProgressDialog ringProgressDialog;
-    List<Photo> mInteresting = new ArrayList<Photo>();
+    List<Photo> photoList = new ArrayList<Photo>();
     RealmChangeListener changeListener;
     Realm interestingRealm, r;
-
+    Interesting mInteresting;
+    Subscription interestingSubscription;
 
     @Override
     public void onResume() {
@@ -41,11 +50,12 @@ public class InterestingFragment extends FlickrBaseFragment {
         Log.d("TABS", "interesting onresume");
     }
 
-
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        Log.d("TABS", "interesting activcreated");
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        rAdapter = new InterestingAdapter(FlickrClientApp.getAppContext(), photoList, true);
+
         changeListener = new RealmChangeListener<Interesting>() {
             @Override
             public void onChange(Interesting i) {
@@ -55,41 +65,37 @@ public class InterestingFragment extends FlickrBaseFragment {
 
 
         interestingRealm = Realm.getDefaultInstance();
-        ringProgressDialog.setTitle("Please wait");
-        ringProgressDialog.setMessage("Retrieving friend photos");
-        ringProgressDialog.setCancelable(true);
-        ringProgressDialog.show();
         Date maxDate = interestingRealm.where(Interesting.class).maximumDate("timestamp");
-        Interesting interesting = interestingRealm.where(Interesting.class).equalTo("timestamp", maxDate).findFirst();
-        if (null == interesting) {
-            r = Realm.getDefaultInstance();
-            RealmChangeListener realmListener = new RealmChangeListener<Realm>() {
-                @Override
-                public void onChange(Realm r) {
-                    updateDisplay();
-                }
-            };
-            r.addChangeListener(realmListener);
+        //@todo get the last selected color?
+        mInteresting = interestingRealm.where(Interesting.class).equalTo("timestamp", maxDate).findFirst();
+        if (mInteresting == null) {
+            showProgress("Please wait, loading interesting data...");
+            interestingRealm.beginTransaction();
+            mInteresting = interestingRealm.createObject(Interesting.class, Calendar.getInstance().getTime().toString());
+            //not in bg!
+            interestingRealm.commitTransaction();
+            mInteresting.addChangeListener(changeListener);
+            getInterestingPhotos();
 
         } else {
-            Log.d("INTERESTING PRESENT", "list: " + interesting);
-            updateDisplay(interesting);
-            interesting.addChangeListener(changeListener);
-            if (null != r) {
-                r.removeAllChangeListeners();
-                r.close();
-            }
+            mInteresting.addChangeListener(changeListener);
+            updateDisplay(mInteresting);
         }
-        ringProgressDialog.dismiss();
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.d("TABS", "interesting activcreated");
+
 
     }
 
 
-    private void updateDisplay() {
-        Date maxDate = interestingRealm.where(Interesting.class).maximumDate("timestamp");
-        Interesting i = interestingRealm.where(Interesting.class).equalTo("timestamp", maxDate).findFirst();
-        mInteresting.clear();
-        mInteresting.addAll(i.getInterestingPhotos());
+    private void updateDisplay(Interesting i) {
+        photoList.clear();
+        photoList.addAll(i.getInterestingPhotos());
         rAdapter.notifyDataSetChanged();
     }
 
@@ -98,8 +104,7 @@ public class InterestingFragment extends FlickrBaseFragment {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
         Log.d("TABS", "interesting oncreate");
-        ringProgressDialog = new ProgressDialog(getActivity(), R.style.MyDialogTheme);
-        rAdapter = new InterestingAdapter(FlickrClientApp.getAppContext(), mInteresting, true);
+
     }
 
     @Override
@@ -112,18 +117,18 @@ public class InterestingFragment extends FlickrBaseFragment {
         StaggeredGridLayoutManager gridLayoutManager =
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         rvPhotos.setLayoutManager(gridLayoutManager);
-        rvPhotos.addOnScrollListener(new EndlessRecyclerViewScrollListener(gridLayoutManager) {
+        /*rvPhotos.addOnScrollListener(new EndlessRecyclerViewScrollListener(gridLayoutManager) {
             @Override
             public void onLoadMore(int page, int totalItemsCount) {
                 customLoadMoreDataFromApi(page);
             }
-        });
+        });*/
         rAdapter.setOnItemClickListener(new InterestingAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(getActivity(),
                         ImageDisplayActivity.class);
-                Photo photo = mInteresting.get(position);
+                Photo photo = photoList.get(position);
 
                 intent.putExtra(RESULT, photo.getId());
                 startActivity(intent);
@@ -134,30 +139,84 @@ public class InterestingFragment extends FlickrBaseFragment {
     }
 
 
-    void customLoadMoreDataFromApi(int page) {
-    }
-
-
-    public void updateDisplay(Interesting i) {
-        mInteresting.clear();
-        mInteresting.addAll(i.getInterestingPhotos());
-        rAdapter.notifyDataSetChanged();
-    }
-
-
     @Override
     public void onDestroy() {
         super.onDestroy();
         if (null != r && !r.isClosed()) {
             r.close();
         }
-        if (null != ringProgressDialog) {
-            ringProgressDialog = null;
+        if (mInteresting != null) {
+            mInteresting.removeChangeListeners();
         }
         if (null != interestingRealm && !interestingRealm.isClosed()) {
             interestingRealm.close();
         }
     }
+
+
+    public void getInterestingPhotos() {
+        //@todo offline mode
+        //@TODO need iterableFLATMAP TO GET ALL PAGES
+        interestingSubscription = getJacksonService().getInterestingPhotos("1")
+
+                .subscribeOn(Schedulers.io()) // optional if you do not wish to override the default behavior
+                .observeOn(Schedulers.io())
+                .subscribe(new Subscriber<Photos>() {
+                    @Override
+                    public void onCompleted() {
+
+
+
+                        Handler handler = new Handler(Looper.getMainLooper());
+                        handler.post(() -> dismissProgress());
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        // cast to retrofit.HttpException to get the response code
+                        if (e instanceof HttpException) {
+                            HttpException response = (HttpException) e;
+                            int code = response.code();
+                            Log.e("ERROR", String.valueOf(code));
+                        }
+                        Log.e("ERROR", "error getting interesting photos" + e);
+                    }
+
+                    @Override
+                    public void onNext(Photos p) {
+                        //og.d("DEBUG", "onNext interesting: " + p.getPhotos().getPhotoList());
+                        //pass photos to fragment
+                        Realm realm3 = null;
+                        try {
+                            realm3 = Realm.getDefaultInstance();
+                            realm3.beginTransaction();
+
+                            Date maxDate = realm3.where(Interesting.class).maximumDate("timestamp");
+                            Interesting interesting = realm3.where(Interesting.class).equalTo("timestamp", maxDate).findFirst();
+
+
+                            for (Photo photo : p.getPhotos().getPhotoList()) {
+                                photo.isInteresting = true;
+                                interesting.interestingPhotos.add(photo);
+
+                            }
+
+                            interesting.timestamp = interesting.getTimestamp();
+                            realm3.copyToRealmOrUpdate(interesting);  //deep copy
+                            realm3.commitTransaction();
+                            Log.d("DEBUG", "end get interesting: " + interesting);
+                        } finally {
+                            if (null != realm3) {
+                                realm3.close();
+                            }
+                        }
+
+                    }
+                });
+
+    }
+
 
 }
 
