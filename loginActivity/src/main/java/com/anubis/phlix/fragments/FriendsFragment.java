@@ -94,7 +94,7 @@ public class FriendsFragment extends FlickrBaseFragment {
             showProgress("Loading data, please wait...");
 
             userRealm.beginTransaction();
-            mUser  = userRealm.createObject(UserModel.class, Calendar.getInstance().getTime().toString());
+            mUser  = userRealm.createObject(UserModel.class, user_id);
             userRealm.commitTransaction();
             mUser.addChangeListener(changeListener);
             getFriends();  //<---- change

@@ -209,13 +209,16 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-8660045387738182~7164386158");
         delaySync(FlickrClientApp.getAppContext());
     }
-
-    static final long c_delayMax = 600 * 1000;
+    long delay;
+    long c_delayMax = 600 * 1000;
     static Random r = new Random();
 
     void delaySync(android.content.Context c) {
         Handler h = new Handler();
-        long delay = r.nextLong() % c_delayMax;
+        delay = r.nextLong() % c_delayMax;
+        if (delay < 0) {
+            delay = Math.abs(delay);
+        }
         //new Runnable run
         h.postDelayed(()-> {
 
