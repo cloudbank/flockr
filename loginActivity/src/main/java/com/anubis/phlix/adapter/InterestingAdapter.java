@@ -44,14 +44,11 @@ public class InterestingAdapter extends RecyclerView.Adapter<InterestingAdapter.
 
             ivImage = (ImageView) itemView.findViewById(R.id.ivPhoto);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (listener != null && position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(itemView, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (listener != null) {
+                    int position = getAdapterPosition();
+                    if (listener != null && position != RecyclerView.NO_POSITION) {
+                        listener.onItemClick(itemView, position);
                     }
                 }
             });

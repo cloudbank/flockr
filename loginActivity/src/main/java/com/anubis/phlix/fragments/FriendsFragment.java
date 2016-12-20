@@ -159,7 +159,9 @@ public class FriendsFragment extends FlickrBaseFragment {
     public void displayTags(List<Tag> tags) {
         //tags.stream().map(it -> it.getContent()).collect(Collectors.toCollection())
         //when android catches up to 1.8
-        mTagView.removeAllTags();
+        if (null != mTagView) {
+            mTagView.removeAllTags();
+        }
         for (Tag t : tags) {
             mTagView.addTag(t.getContent());
         }
@@ -211,15 +213,12 @@ public class FriendsFragment extends FlickrBaseFragment {
         rvPhotos = (RecyclerView) view.findViewById(R.id.rvPhotos);
         rvPhotos.setAdapter(fAdapter);
         rvPhotos.setLayoutManager(new GridLayoutManager(FlickrClientApp.getAppContext(), 3));
-        fAdapter.setOnItemClickListener(new FriendsAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                Intent intent = new Intent(getActivity(),
-                        ImageDisplayActivity.class);
-                Photo photo = mPhotos.get(position);
-                intent.putExtra(RESULT, photo.getId());
-                startActivity(intent);
-            }
+        fAdapter.setOnItemClickListener((view1, position) -> {
+            Intent intent = new Intent(getActivity(),
+                    ImageDisplayActivity.class);
+            Photo photo = mPhotos.get(position);
+            intent.putExtra(RESULT, photo.getId());
+            startActivity(intent);
         });
         mTagView = (TagContainerLayout) view.findViewById(R.id.my_tag_group);
         rg = (RadioGroup) view.findViewById(R.id.radioGroup1);

@@ -479,7 +479,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                             }
                             recent.timestamp = maxDate;
 
-
+                            recent.hotTagList.clear();
                             for (Tag tag : t.getHottags().getHottags().getTag()) {
                                 recent.hotTagList.add(tag);
                             }

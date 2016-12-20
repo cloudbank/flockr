@@ -123,16 +123,13 @@ public class InterestingFragment extends FlickrBaseFragment {
                 customLoadMoreDataFromApi(page);
             }
         });*/
-        rAdapter.setOnItemClickListener(new InterestingAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                Intent intent = new Intent(getActivity(),
-                        ImageDisplayActivity.class);
-                Photo photo = photoList.get(position);
+        rAdapter.setOnItemClickListener((view1, position) -> {
+            Intent intent = new Intent(getActivity(),
+                    ImageDisplayActivity.class);
+            Photo photo = photoList.get(position);
 
-                intent.putExtra(RESULT, photo.getId());
-                startActivity(intent);
-            }
+            intent.putExtra(RESULT, photo.getId());
+            startActivity(intent);
         });
         setHasOptionsMenu(true);
         return view;

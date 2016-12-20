@@ -195,7 +195,6 @@ public class ImageDisplayActivity extends AppCompatActivity {
 
     public void displayTags(String tags) {
         //tags.stream().map(it -> it.getContent()).collect(Collectors.toCollection())
-        //when android catches up to 1.8if
         if (tags.length() == 0) {
             mTags.setVisibility(View.GONE);
         } else {
@@ -215,31 +214,27 @@ public class ImageDisplayActivity extends AppCompatActivity {
         handlerThread = new HandlerThread("BackgroundHandler");
         handlerThread.start();
         final Handler backgroundHandler = new Handler(handlerThread.getLooper());
-        return backgroundHandler.post(new Runnable() {
+        return backgroundHandler.post(() -> {
+            Realm realm = null;
+            try {
+                realm = Realm.getDefaultInstance();
+                realm.beginTransaction();
+                Comments_ c = realm.where(Comments_.class).equalTo("photoId", uid).findFirst();
+                if (null == c) {
+                    c = realm.createObject(Comments_.class, uid);
+                }
 
-            @Override
-            public void run() {
-                Realm realm = null;
-                try {
-                    realm = Realm.getDefaultInstance();
-                    realm.beginTransaction();
-                    Comments_ c = realm.where(Comments_.class).equalTo("photoId", uid).findFirst();
-                    if (null == c) {
-                        c = realm.createObject(Comments_.class, uid);
+                for (Comment comment : cList) {
+                    if (!c.commentsList.contains(comment)) {
+                        c.commentsList.add(comment);
                     }
-
-                    for (Comment comment : cList) {
-                        if (!c.commentsList.contains(comment)) {
-                            c.commentsList.add(comment);
-                        }
-                    }
-                    c.setTimestamp(new Date());
-                    realm.copyToRealmOrUpdate(c);
-                    realm.commitTransaction();
-                } finally {
-                    if (realm != null) {
-                        realm.close();
-                    }
+                }
+                c.setTimestamp(new Date());
+                realm.copyToRealmOrUpdate(c);
+                realm.commitTransaction();
+            } finally {
+                if (realm != null) {
+                    realm.close();
                 }
             }
         });

@@ -84,14 +84,11 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
             // Need to show permission rationale, display a snackbar and then request
             // the permission again when the snackbar is dismissed to re-request it
             Snackbar.make(rootView, R.string.permission_grant, Snackbar.LENGTH_INDEFINITE)
-                    .setAction("OK", new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            // Request the permission again.
-                            ActivityCompat.requestPermissions(getParent(),
-                                    new String[]{perm},
-                                    GET_ACCOUNTS_PERMISSIONS_REQUEST);
-                        }
+                    .setAction("OK", v -> {
+                        // Request the permission again.
+                        ActivityCompat.requestPermissions(getParent(),
+                                new String[]{perm},
+                                GET_ACCOUNTS_PERMISSIONS_REQUEST);
                     }).show();
             return false;
         } else {

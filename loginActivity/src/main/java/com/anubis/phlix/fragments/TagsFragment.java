@@ -85,8 +85,9 @@ public class TagsFragment extends FlickrBaseFragment {
 
         changeListener = new RealmChangeListener<Recent>() {
             @Override
-            public void onChange(Recent i) {
-                updateDisplay(i);
+            public void onChange(Recent r) {
+
+                updateDisplay(r);
             }
         };
 
@@ -132,6 +133,7 @@ public class TagsFragment extends FlickrBaseFragment {
 
 
     private void updateDisplay(Recent r) {
+
         displayHotTags(r.getHotTagList());
         mPhotos.clear();
         if (r != null) {
@@ -194,15 +196,12 @@ public class TagsFragment extends FlickrBaseFragment {
         rvPhotos = (RecyclerView) view.findViewById(R.id.rvPhotos);
         rvPhotos.setAdapter(tAdapter);
         rvPhotos.setLayoutManager(new GridLayoutManager(FlickrClientApp.getAppContext(), 3));
-        tAdapter.setOnItemClickListener(new TagsAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                Intent intent = new Intent(getActivity(),
-                        ImageDisplayActivity.class);
-                Photo photo = mPhotos.get(position);
-                intent.putExtra(RESULT, photo.getId());
-                startActivity(intent);
-            }
+        tAdapter.setOnItemClickListener((view1, position) -> {
+            Intent intent = new Intent(getActivity(),
+                    ImageDisplayActivity.class);
+            Photo photo = mPhotos.get(position);
+            intent.putExtra(RESULT, photo.getId());
+            startActivity(intent);
         });
 
         mPublisherAdView = (AdView) view.findViewById(R.id.publisherAdView);
