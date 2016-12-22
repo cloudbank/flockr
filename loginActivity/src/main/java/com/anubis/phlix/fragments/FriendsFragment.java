@@ -1,6 +1,5 @@
 package com.anubis.phlix.fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -46,14 +45,13 @@ import static com.anubis.phlix.FlickrClientApp.getJacksonService;
 
 public class FriendsFragment extends FlickrBaseFragment {
 
-    private String mUserId;
 
 
     AdView mPublisherAdView;
     FriendsAdapter fAdapter;
     RecyclerView rvPhotos;
     List<Photo> mPhotos = new ArrayList<Photo>();
-    List<Photo>cPhotos = new ArrayList<Photo>();
+    List<Photo> cPhotos = new ArrayList<Photo>();
     List<Tag> mTags = new ArrayList<Tag>();
     TagContainerLayout mTagView;
     Realm userRealm, r;
@@ -65,12 +63,11 @@ public class FriendsFragment extends FlickrBaseFragment {
     Subscription friendSubscription;
 
 
-
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-        fAdapter = new FriendsAdapter(getActivity(), mPhotos, false);
+
         changeListener = new RealmChangeListener<UserModel>() {
 
             @Override
@@ -86,34 +83,44 @@ public class FriendsFragment extends FlickrBaseFragment {
 
 
         userRealm = Realm.getDefaultInstance();
-        String user_id = Util.getUserId();
+        final String user_id = Util.getUserId();
 
 
         mUser = userRealm.where(UserModel.class).equalTo("userId", user_id).findFirst();
         if (mUser == null) {
             showProgress("Loading data, please wait...");
+            userRealm.executeTransactionAsync(new Realm.Transaction() {
+                @Override
+                public void execute(Realm bgRealm) {
+                    bgRealm.createObject(UserModel.class, user_id);
+                }
+            }, new Realm.Transaction.OnSuccess() {
+                @Override
+                public void onSuccess() {
+                    //change listeners only on looper threads
+                    Handler handler = new Handler(Looper.getMainLooper());
 
-            userRealm.beginTransaction();
-            mUser  = userRealm.createObject(UserModel.class, user_id);
-            userRealm.commitTransaction();
-            mUser.addChangeListener(changeListener);
-            getFriends();  //<---- change
+                    handler.post(() -> {
+                        mUser = userRealm.where(UserModel.class).equalTo("userId", user_id).findFirst();
+                        mUser.addChangeListener(changeListener);
+                        getFriends();
+                    });
+
+                }
+            }, new Realm.Transaction.OnError() {
+                @Override
+                public void onError(Throwable error) {
+                    // Transaction failed and was automatically canceled.
+                }
+            });
+
+
         } else {
-            //<--sync adapter
+
             mUser.addChangeListener(changeListener);
             updateDisplay(mUser);
         }
 
-
-
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-
-        //new RadioGroup.OnCheckedChangeListener() onCheckedChanged
         rg.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.radio1) {
                 makeSingle(cPhotos);
@@ -127,26 +134,23 @@ public class FriendsFragment extends FlickrBaseFragment {
 
     }
 
+
+
     // Store instance variables based on arguments passed
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
+        fAdapter = new FriendsAdapter(getActivity(), mPhotos, false);
         setRetainInstance(true);
     }
-
-
 
 
     private void updateDisplay(UserModel u) {
         mPhotos.clear();
         cPhotos.clear();
-
-        displayTags(u.getTagsList());
-        if (null !=  u) {
-
+        if (null != u) {
+            displayTags(u.getTagsList());
             cPhotos.addAll(u.getFriendsList());
             mPhotos.addAll(u.getFriendsList());
         }
@@ -154,16 +158,15 @@ public class FriendsFragment extends FlickrBaseFragment {
     }
 
 
-
-
     public void displayTags(List<Tag> tags) {
         //tags.stream().map(it -> it.getContent()).collect(Collectors.toCollection())
         //when android catches up to 1.8
         if (null != mTagView) {
             mTagView.removeAllTags();
-        }
-        for (Tag t : tags) {
-            mTagView.addTag(t.getContent());
+
+            for (Tag t : tags) {
+                mTagView.addTag(t.getContent());
+            }
         }
     }
 

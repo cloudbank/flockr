@@ -1,4 +1,4 @@
-#Tue Dec 20 13:47:00 PST 2016
+#Wed Dec 21 17:26:32 PST 2016
 base.0=/Users/sabine/github/myfriendflickr2016/flockr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -82,16 +82,39 @@ public class SearchFragment extends FlickrBaseFragment {
 
 
         commonsRealm = Realm.getDefaultInstance();
-        Date maxDate = commonsRealm.where(Common.class).maximumDate("timestamp");
+        final Date maxDate = commonsRealm.where(Common.class).maximumDate("timestamp");
         mCommon = commonsRealm.where(Common.class).equalTo("timestamp", maxDate).findFirst();
         if (mCommon == null) {
             showProgress("Loading data, please wait...");
+            commonsRealm.executeTransactionAsync(new Realm.Transaction() {
+                @Override
+                public void execute(Realm bgRealm) {
+                    bgRealm.createObject(Common.class, Calendar.getInstance().getTime().toString());
 
-            commonsRealm.beginTransaction();
-            mCommon  = commonsRealm.createObject(Common.class, Calendar.getInstance().getTime().toString());
-            commonsRealm.commitTransaction();
-            mCommon.addChangeListener(changeListener);
-            getCommonsPage1();  //<---- change
+
+                }
+            }, new Realm.Transaction.OnSuccess() {
+                @Override
+                public void onSuccess() {
+                    //change listeners only on looper threads
+                    Handler handler = new Handler(Looper.getMainLooper());
+
+                    handler.post(() -> {
+                        mCommon = commonsRealm.where(Common.class).equalTo("timestamp", maxDate).findFirst();
+
+                        mCommon.addChangeListener(changeListener);
+                        getCommonsPage1();  //<---- change
+                    });
+
+                }
+            }, new Realm.Transaction.OnError() {
+                @Override
+                public void onError(Throwable error) {
+                    // Transaction failed and was automatically canceled.
+                }
+            });
+
+
         } else {
             //<--sync adapter
             mCommon.addChangeListener(changeListener);

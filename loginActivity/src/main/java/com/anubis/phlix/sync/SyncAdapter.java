@@ -343,6 +343,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                             for (Photo p : photos.getPhotos().getPhotoList()) {
                                 u.friendsList.add(p);
                             }
+
                             if (u.tagsList.size() < tags.size()) {
                                 for (Tag t : tags) {
                                     if (!u.tagsList.contains(t)) {

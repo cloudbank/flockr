@@ -1,6 +1,5 @@
 package com.anubis.phlix.fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -45,9 +44,9 @@ import static com.anubis.phlix.FlickrClientApp.getJacksonService;
 
 public class TagsFragment extends FlickrBaseFragment {
 
-    List mTags;
+    List<Tag> mTags = new ArrayList<Tag>();
     TagContainerLayout mTagsView;
-    private List<Photo> mPhotos  = new ArrayList<Photo>();
+    private List<Photo> mPhotos = new ArrayList<Photo>();
     Subscription recentSubscription;
     AdView mPublisherAdView;
     TagsAdapter tAdapter;
@@ -78,10 +77,10 @@ public class TagsFragment extends FlickrBaseFragment {
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-        tAdapter = new TagsAdapter(getActivity(), mPhotos, false);
+
 
         changeListener = new RealmChangeListener<Recent>() {
             @Override
@@ -93,16 +92,40 @@ public class TagsFragment extends FlickrBaseFragment {
 
 
         tagsRealm = Realm.getDefaultInstance();
-        Date maxDate = tagsRealm.where(Recent.class).maximumDate("timestamp");
+        final Date maxDate = tagsRealm.where(Recent.class).maximumDate("timestamp");
         //@todo get the last selected color?
         mRecent = tagsRealm.where(Recent.class).equalTo("timestamp", maxDate).findFirst();
         if (mRecent == null) {
             showProgress("Please wait, loading interesting data...");
-            tagsRealm.beginTransaction();
-            mRecent = tagsRealm.createObject(Recent.class, Calendar.getInstance().getTime().toString());
-            tagsRealm.commitTransaction();
-            mRecent.addChangeListener(changeListener);
-            getRecentAndHotags();
+            tagsRealm.executeTransactionAsync(new Realm.Transaction() {
+                @Override
+                public void execute(Realm bgRealm) {
+                    bgRealm.createObject(Recent.class, Calendar.getInstance().getTime().toString());
+
+
+                }
+            }, new Realm.Transaction.OnSuccess() {
+                @Override
+                public void onSuccess() {
+                    //change listeners only on looper threads
+                    Handler handler = new Handler(Looper.getMainLooper());
+
+                    handler.post(() -> {
+                        mRecent = tagsRealm.where(Recent.class).equalTo("timestamp", maxDate).findFirst();
+
+
+                        mRecent.addChangeListener(changeListener);
+                        getRecentAndHotags();
+                    });
+
+                }
+            }, new Realm.Transaction.OnError() {
+                @Override
+                public void onError(Throwable error) {
+                    // Transaction failed and was automatically canceled.
+                }
+            });
+
 
         } else {
             mRecent.addChangeListener(changeListener);
@@ -112,21 +135,15 @@ public class TagsFragment extends FlickrBaseFragment {
     }
 
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
 
-
-    }
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        tAdapter = new TagsAdapter(getActivity(), mPhotos, false);
 
-
-        mTags = new ArrayList<Tag>();
         Log.d("TABS", "tags oncreate");
         setRetainInstance(true);
     }
@@ -148,12 +165,12 @@ public class TagsFragment extends FlickrBaseFragment {
 
     public void displayHotTags(List<Tag> tags) {
         //tags.stream().map(it -> it.getContent()).collect(Collectors.toCollection())
-        //when android catches up to 1.8
-        mTagsView.removeAllTags();
-        for (Tag t : tags) {
-            mTagsView.addTag(t.getContent());
-        }
-
+        if (null != mTagsView) {
+            mTagsView.removeAllTags();
+            for (Tag t : tags) {
+                mTagsView.addTag(t.getContent());
+            }
+         }
 
     }
 

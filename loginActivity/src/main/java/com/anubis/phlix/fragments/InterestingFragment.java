@@ -65,17 +65,38 @@ public class InterestingFragment extends FlickrBaseFragment {
 
 
         interestingRealm = Realm.getDefaultInstance();
-        Date maxDate = interestingRealm.where(Interesting.class).maximumDate("timestamp");
+        final Date maxDate = interestingRealm.where(Interesting.class).maximumDate("timestamp");
         //@todo get the last selected color?
         mInteresting = interestingRealm.where(Interesting.class).equalTo("timestamp", maxDate).findFirst();
         if (mInteresting == null) {
             showProgress("Please wait, loading interesting data...");
-            interestingRealm.beginTransaction();
-            mInteresting = interestingRealm.createObject(Interesting.class, Calendar.getInstance().getTime().toString());
-            //not in bg!
-            interestingRealm.commitTransaction();
-            mInteresting.addChangeListener(changeListener);
-            getInterestingPhotos();
+            interestingRealm.executeTransactionAsync(new Realm.Transaction() {
+                @Override
+                public void execute(Realm bgRealm) {
+                    bgRealm.createObject(Interesting.class, Calendar.getInstance().getTime().toString());
+
+                }
+            }, new Realm.Transaction.OnSuccess() {
+                @Override
+                public void onSuccess() {
+                    //change listeners only on looper threads
+                    Handler handler = new Handler(Looper.getMainLooper());
+
+                    handler.post(() -> {
+                        mInteresting = interestingRealm.where(Interesting.class).equalTo("timestamp", maxDate).findFirst();
+
+                        mInteresting.addChangeListener(changeListener);
+                        getInterestingPhotos();
+                    });
+
+                }
+            }, new Realm.Transaction.OnError() {
+                @Override
+                public void onError(Throwable error) {
+                    // Transaction failed and was automatically canceled.
+                }
+            });
+
 
         } else {
             mInteresting.addChangeListener(changeListener);
