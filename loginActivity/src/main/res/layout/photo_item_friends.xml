@@ -7,8 +7,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
     card_view:cardBackgroundColor="#fff"
-    card_view:cardCornerRadius="8dp"
-    card_view:cardElevation="8dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp"
     android:padding="20dp"
     card_view:cardPreventCornerOverlap="false"
 
@@ -28,10 +28,10 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:contentDescription=""
                 android:scaleType="centerCrop"
-                android:layout_margin="15dp" />
+                android:layout_margin="5dp" />
 
     <include
         layout="@layout/checkbox_tag"

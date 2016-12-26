@@ -1,6 +1,8 @@
 package com.anubis.phlix.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,7 +42,7 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tags;
         ImageView imageView;
-
+        CardView cardView;
 
         public ViewHolder(final View itemView, final OnItemClickListener listener) {
             super(itemView);
@@ -57,6 +59,7 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
                 }
             });
             tags = (TextView)itemView.findViewById(R.id.checkboxtags);
+            cardView = (CardView)itemView.findViewById(R.id.cardView);
         }
     }
 
@@ -90,6 +93,9 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
     public void onBindViewHolder(FriendsAdapter.ViewHolder viewHolder, int position) {
         Photo photo = mPhotos.get(position);
 
+        CardView cv = viewHolder.cardView;
+
+        GridLayoutManager.LayoutParams fp = (GridLayoutManager.LayoutParams) viewHolder.cardView.getLayoutParams();
         ImageView imageView = viewHolder.imageView;
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) viewHolder.imageView
                 .getLayoutParams();
@@ -100,15 +106,19 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
         boolean isMe = photo.getOwnername().equals(username);
         tags.setText((isMe ? mContext.getString(R.string.Me): photo.getOwnername()));
 
-        int aspectRatio = (null != photo.getWidth() && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight()) / Integer.parseInt(photo.getWidth()) : 1;
 
         if (mStaggered) {
+            int aspectRatio = (null != photo.getWidth() && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight()) / Integer.parseInt(photo.getWidth()) : 1;
+
             //Random rand = new Random();
             //int n = rand.nextInt(200) + 200;
-            lp.height = 450; // photo.getPhotoHeight() * 2;
+            lp.height = 400; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-            lp.width = aspectRatio > 0 ? 450 / aspectRatio : 450; // photo.getPhotoList//set the title, name, comments
+            lp.width = aspectRatio > 0 ? 400 / aspectRatio : 400; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
+            fp.width = lp.width;
+            fp.height = lp.height;
+            cv.setLayoutParams(fp);
 
         } else {
             lp.height = Integer.parseInt(photo.getHeight());

@@ -118,23 +118,22 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
 
         if (mStaggered) {
             Random rand = new Random();
-            int n = rand.nextInt() + 200;
+            int n = rand.nextInt(100) + 400;
             lp.height = n; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
             lp.width = 400; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
 
         } else {
-            int aspectRatio = (null != photo.getWidth()  && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight())/Integer.parseInt(photo.getWidth()): 1;
-            lp.height = 450; // photo.getPhotoHeight() * 2;
+            int aspectRatio = (null != photo.getWidth() && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight()) / Integer.parseInt(photo.getWidth()) : 1;
+
+            //Random rand = new Random();
+            //int n = rand.nextInt(200) + 200;
+            lp.height = 200; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-            lp.width = aspectRatio > 0 ? 450 / aspectRatio : 450; // photo.getPhotoList//set the title, name, comments
+            lp.width = aspectRatio > 0 ? 200 / aspectRatio : 200; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
-            //lp.height= 350;
-            //lp.width = 300;
-            fp.width = lp.width;
-            fp.height = lp.height;
-            cv.setLayoutParams(fp);
+
         }
         Picasso.with(this.getContext()).load(photo.getUrl()).fit().centerCrop()
                 .placeholder(android.R.drawable.btn_star)

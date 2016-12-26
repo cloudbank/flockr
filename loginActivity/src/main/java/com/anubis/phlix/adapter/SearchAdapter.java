@@ -113,7 +113,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
             int aspectRatio = (null != photo.getWidth()  && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight())/Integer.parseInt(photo.getWidth()): 1;
 
             Random rand = new Random();
-            int n = rand.nextInt(100) + 500;
+            int n = rand.nextInt(100) + 400;
             lp.height = n; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
             lp.width = aspectRatio > 0 ? n/aspectRatio : n;//
