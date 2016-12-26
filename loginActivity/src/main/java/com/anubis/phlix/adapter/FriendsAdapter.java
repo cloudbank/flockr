@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -16,9 +15,6 @@ import com.anubis.phlix.util.Util;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-import java.util.Random;
-
-import static com.anubis.phlix.R.id.checkBox;
 
 /**
  * Created by sabine on 9/26/16.
@@ -44,7 +40,6 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tags;
         ImageView imageView;
-        CheckBox checkbox;
 
 
         public ViewHolder(final View itemView, final OnItemClickListener listener) {
@@ -62,8 +57,6 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
                 }
             });
             tags = (TextView)itemView.findViewById(R.id.checkboxtags);
-            checkbox = (CheckBox)itemView.findViewById(checkBox);
-
         }
     }
 
@@ -106,27 +99,20 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
         //
         boolean isMe = photo.getOwnername().equals(username);
         tags.setText((isMe ? mContext.getString(R.string.Me): photo.getOwnername()));
-       /* CheckBox cb = viewHolder.checkbox;
-        if (isMe)  {
-            cb.setVisibility(View.VISIBLE);
-            int id = Resources.getSystem().getIdentifier("btn_check_holo_dark", "drawable", "android");
-            cb.setButtonDrawable(id);
-            cb.setHint("Batch Tag");
-            cb.setChecked(true);
-        } else {
-            cb.setVisibility(View.INVISIBLE);
-        }*/
+
+        int aspectRatio = (null != photo.getWidth() && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight()) / Integer.parseInt(photo.getWidth()) : 1;
+
         if (mStaggered) {
-            Random rand = new Random();
-            int n = rand.nextInt(300) + 200;
-            lp.height = n; // photo.getPhotoHeight() * 2;
+            //Random rand = new Random();
+            //int n = rand.nextInt(200) + 200;
+            lp.height = 450; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-            lp.width = 400;
+            lp.width = aspectRatio > 0 ? 450 / aspectRatio : 450; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
 
         } else {
-           lp.height= 250;
-           lp.width = 300;
+            lp.height = Integer.parseInt(photo.getHeight());
+            lp.width = Integer.parseInt(photo.getWidth());
         }
         Picasso.with(this.getContext()).load(photo.getUrl()).fit().centerCrop()
                 .placeholder(android.R.drawable.btn_star)

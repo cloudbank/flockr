@@ -141,7 +141,7 @@ public class FriendsFragment extends FlickrBaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        fAdapter = new FriendsAdapter(getActivity(), mPhotos, false);
+        fAdapter = new FriendsAdapter(getActivity(), mPhotos, true);
         setRetainInstance(true);
     }
 
@@ -215,7 +215,7 @@ public class FriendsFragment extends FlickrBaseFragment {
 
         rvPhotos = (RecyclerView) view.findViewById(R.id.rvPhotos);
         rvPhotos.setAdapter(fAdapter);
-        rvPhotos.setLayoutManager(new GridLayoutManager(FlickrClientApp.getAppContext(), 3));
+        rvPhotos.setLayoutManager(new GridLayoutManager(FlickrClientApp.getAppContext(), 2));
         fAdapter.setOnItemClickListener((view1, position) -> {
             Intent intent = new Intent(getActivity(),
                     ImageDisplayActivity.class);
@@ -309,23 +309,6 @@ public class FriendsFragment extends FlickrBaseFragment {
                             UserModel u = null;
                             u = realm2.where(UserModel.class).equalTo("userId", user_id).findFirst();
 
-
-                           /* Date d = Calendar.getInstance().getTime();
-                            Interesting i = realm2.createObject(Interesting.class, d.toString());
-                            i.setTimestamp(d);
-                            realm2.copyToRealmOrUpdate(i);
-                            Recent r = realm2.createObject(Recent.class, d.toString());
-                            r.setTimestamp(d);
-                            realm2.copyToRealmOrUpdate(r);
-                            //@todo probably can change this w algo
-
-                            Common c = realm2.createObject(Common.class, d.toString());
-                            c.setTimestamp(d);
-                            realm2.copyToRealmOrUpdate(c);
-                             */
-                            //is data stale?
-                            //for 'friends' list, since it is small, fixed size list and data could
-                            //change, just clobber it
 
                             if (u.friendsList.size() > 0) {
                                 u.friendsList = null;

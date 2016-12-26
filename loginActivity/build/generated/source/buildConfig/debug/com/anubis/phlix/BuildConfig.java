@@ -8,8 +8,8 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.anubis.phlix";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 3;
-  public static final String VERSION_NAME = "1.2";
+  public static final int VERSION_CODE = 4;
+  public static final String VERSION_NAME = "1.3";
   // Fields from default config.
   public static final String consumerKey = "a2afb95b10f8d81e97b0ca6f5e2b7bfc";
 }

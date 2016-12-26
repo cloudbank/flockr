@@ -1,11 +1,12 @@
 package com.anubis.phlix.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -16,8 +17,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 import java.util.Random;
-
-import static com.anubis.phlix.R.id.checkBox;
 
 /**
  * Created by sabine on 9/26/16.
@@ -46,7 +45,7 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tags;
         ImageView imageView;
-        CheckBox checkbox;
+        CardView cardView;
 
         public ViewHolder(final View itemView, final OnItemClickListener listener) {
             super(itemView);
@@ -63,7 +62,7 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
                 }
             });
             tags = (TextView) itemView.findViewById(R.id.checkboxtags);
-            checkbox = (CheckBox) itemView.findViewById(checkBox);
+            cardView = (CardView) itemView.findViewById(R.id.cardView);
 
         }
     }
@@ -98,7 +97,9 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(TagsAdapter.ViewHolder viewHolder, int position) {
         Photo photo = mPhotos.get(position);
+        CardView cv = viewHolder.cardView;
 
+        GridLayoutManager.LayoutParams fp = (GridLayoutManager.LayoutParams) viewHolder.cardView.getLayoutParams();
         ImageView imageView = viewHolder.imageView;
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) viewHolder.imageView
                 .getLayoutParams();
@@ -117,15 +118,23 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
 
         if (mStaggered) {
             Random rand = new Random();
-            int n = rand.nextInt(300) + 200;
+            int n = rand.nextInt() + 200;
             lp.height = n; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
             lp.width = 400; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
 
         } else {
-            lp.height= 250;
-            lp.width = 300;
+            int aspectRatio = (null != photo.getWidth()  && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight())/Integer.parseInt(photo.getWidth()): 1;
+            lp.height = 450; // photo.getPhotoHeight() * 2;
+            //n = rand.nextInt(200) + 100;
+            lp.width = aspectRatio > 0 ? 450 / aspectRatio : 450; // photo.getPhotoList//set the title, name, comments
+            imageView.setLayoutParams(lp);
+            //lp.height= 350;
+            //lp.width = 300;
+            fp.width = lp.width;
+            fp.height = lp.height;
+            cv.setLayoutParams(fp);
         }
         Picasso.with(this.getContext()).load(photo.getUrl()).fit().centerCrop()
                 .placeholder(android.R.drawable.btn_star)

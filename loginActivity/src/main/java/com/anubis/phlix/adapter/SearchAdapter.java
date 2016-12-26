@@ -1,11 +1,12 @@
 package com.anubis.phlix.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -16,8 +17,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 import java.util.Random;
-
-import static com.anubis.phlix.R.id.checkBox;
 
 /**
  * Created by sabine on 9/26/16.
@@ -46,7 +45,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tags;
         ImageView imageView;
-        CheckBox checkbox;
+        CardView cardView;
 
         public ViewHolder(final View itemView, final OnItemClickListener listener) {
             super(itemView);
@@ -63,7 +62,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
                 }
             });
             tags = (TextView) itemView.findViewById(R.id.checkboxtags);
-            checkbox = (CheckBox) itemView.findViewById(checkBox);
+            cardView = (CardView)itemView.findViewById(R.id.cardView);
 
         }
     }
@@ -89,7 +88,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View photosView = inflater.inflate(R.layout.photo_item_search, parent, false);
+        View photosView = inflater.inflate(R.layout.photo_item, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(photosView, getListener());
         return viewHolder;
@@ -98,7 +97,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     @Override
     public void onBindViewHolder(SearchAdapter.ViewHolder viewHolder, int position) {
         Photo photo = mPhotos.get(position);
+        CardView cv = viewHolder.cardView;
 
+        StaggeredGridLayoutManager.LayoutParams fp = (StaggeredGridLayoutManager.LayoutParams) viewHolder.cardView.getLayoutParams();
         ImageView imageView = viewHolder.imageView;
 
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) viewHolder.imageView
@@ -106,23 +107,19 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
         TextView tags = viewHolder.tags;
 
-        /*CheckBox cb = viewHolder.checkbox;
 
-        cb.setVisibility(View.GONE);
-        int id = Resources.getSystem().getIdentifier("btn_check_holo_dark", "drawable", "android");
-        cb.setButtonDrawable(id);
-        cb.setHint("Batch Tag");
-        cb.setChecked(true);*/
-        int aspectRatio = (null != photo.getWidth()  && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight())/Integer.parseInt(photo.getWidth()): 1;
 
         if (mStaggered) {
+            int aspectRatio = (null != photo.getWidth()  && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight())/Integer.parseInt(photo.getWidth()): 1;
+
             Random rand = new Random();
-            int n = rand.nextInt(200) + 200;
+            int n = rand.nextInt(100) + 500;
             lp.height = n; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-
-             lp.width =  aspectRatio > 0 ? n/aspectRatio : n; // photo.getPhotoList//set the title, name, comments
-            imageView.setLayoutParams(lp);
+            lp.width = aspectRatio > 0 ? n/aspectRatio : n;//
+            fp.width = lp.width;
+            fp.height = lp.height;
+            cv.setLayoutParams(fp);
 
         } else {
             lp.height= 250;

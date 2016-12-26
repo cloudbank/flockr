@@ -1,7 +1,9 @@
 package com.anubis.phlix.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +39,7 @@ public class InterestingAdapter extends RecyclerView.Adapter<InterestingAdapter.
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ivImage;
+        CardView cardView;
 
         public ViewHolder(final View itemView, final OnItemClickListener listener) {
             super(itemView);
@@ -52,6 +55,7 @@ public class InterestingAdapter extends RecyclerView.Adapter<InterestingAdapter.
                     }
                 }
             });
+            cardView = (CardView)itemView.findViewById(R.id.cardView);
         }
     }
 
@@ -83,17 +87,24 @@ public class InterestingAdapter extends RecyclerView.Adapter<InterestingAdapter.
     @Override
     public void onBindViewHolder(InterestingAdapter.ViewHolder viewHolder, int position) {
         Photo photo = mPhotos.get(position);
+        CardView cv = viewHolder.cardView;
 
+        StaggeredGridLayoutManager.LayoutParams fp = (StaggeredGridLayoutManager.LayoutParams) viewHolder.cardView.getLayoutParams();
         ImageView imageView = viewHolder.ivImage;
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) viewHolder.ivImage
+
+        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) imageView
                 .getLayoutParams();
         if (mStaggered) {
+            int aspectRatio = (null != photo.getWidth()  && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight())/Integer.parseInt(photo.getWidth()): 1;
+
             Random rand = new Random();
-            int n = rand.nextInt(300) + 200;
+            int n = rand.nextInt(100) + 500;
             lp.height = n; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-            lp.width = 400; // photo.getPhotoList//set the title, name, comments
-            imageView.setLayoutParams(lp);
+            lp.width = aspectRatio > 0 ? n/aspectRatio : n;//
+            fp.width = lp.width;
+            fp.height = lp.height;
+            cv.setLayoutParams(fp);
         } else {
             lp.height= 250;
             lp.width = 300;
