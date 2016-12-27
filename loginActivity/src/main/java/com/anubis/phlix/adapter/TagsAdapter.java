@@ -129,10 +129,13 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
 
             //Random rand = new Random();
             //int n = rand.nextInt(200) + 200;
-            lp.height = 200; // photo.getPhotoHeight() * 2;
+            lp.height = 250; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-            lp.width = aspectRatio > 0 ? 200 / aspectRatio : 200; // photo.getPhotoList//set the title, name, comments
+            lp.width = aspectRatio > 0 ? 250 / aspectRatio : 250; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
+            fp.width = lp.width;
+            fp.height = lp.height;
+            cv.setLayoutParams(fp);
 
         }
         Picasso.with(this.getContext()).load(photo.getUrl()).fit().centerCrop()

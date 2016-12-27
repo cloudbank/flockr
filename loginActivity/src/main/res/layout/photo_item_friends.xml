@@ -9,7 +9,7 @@
     card_view:cardBackgroundColor="#fff"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="4dp"
-    android:padding="20dp"
+    android:padding="30dp"
     card_view:cardPreventCornerOverlap="false"
 
     >
@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:padding="5dp"
+                android:padding="3dp"
                 android:contentDescription=""
                 android:scaleType="centerCrop"
                 android:layout_margin="5dp" />

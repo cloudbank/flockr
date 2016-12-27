@@ -11,7 +11,7 @@
     card_view:cardElevation="2dp"
     android:layout_gravity="center"
     android:gravity="center"
-    android:padding="20dp"
+    android:padding="25dp"
     card_view:cardPreventCornerOverlap="false"
 
     >
@@ -30,7 +30,7 @@
             android:contentDescription=""
             android:gravity="center"
             android:layout_gravity="center"
-            android:padding="10dp"
+            android:padding="0dp"
             android:scaleType="centerCrop" />
 
 
