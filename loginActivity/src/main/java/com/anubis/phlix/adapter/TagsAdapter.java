@@ -118,7 +118,7 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
 
         if (mStaggered) {
             Random rand = new Random();
-            int n = rand.nextInt(100) + 400;
+            int n = rand.nextInt(100) + 300;
             lp.height = n; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
             lp.width = 400; // photo.getPhotoList//set the title, name, comments

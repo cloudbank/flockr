@@ -112,9 +112,9 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
 
             //Random rand = new Random();
             //int n = rand.nextInt(200) + 200;
-            lp.height = 400; // photo.getPhotoHeight() * 2;
+            lp.height = 350; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-            lp.width = aspectRatio > 0 ? 400 / aspectRatio : 400; // photo.getPhotoList//set the title, name, comments
+            lp.width = aspectRatio > 0 ? 350 / aspectRatio : 350; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
             fp.width = lp.width;
             fp.height = lp.height;
