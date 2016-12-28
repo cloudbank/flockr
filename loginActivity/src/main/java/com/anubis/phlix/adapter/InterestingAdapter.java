@@ -88,6 +88,8 @@ public class InterestingAdapter extends RecyclerView.Adapter<InterestingAdapter.
     public void onBindViewHolder(InterestingAdapter.ViewHolder viewHolder, int position) {
         Photo photo = mPhotos.get(position);
         CardView cv = viewHolder.cardView;
+        cv.setUseCompatPadding(true);
+        cv.setCardElevation(2.0f);
 
         StaggeredGridLayoutManager.LayoutParams fp = (StaggeredGridLayoutManager.LayoutParams) viewHolder.cardView.getLayoutParams();
         ImageView imageView = viewHolder.ivImage;

@@ -94,6 +94,8 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
         Photo photo = mPhotos.get(position);
 
         CardView cv = viewHolder.cardView;
+        cv.setUseCompatPadding(true);
+        cv.setCardElevation(4.0f);
 
         GridLayoutManager.LayoutParams fp = (GridLayoutManager.LayoutParams) viewHolder.cardView.getLayoutParams();
         ImageView imageView = viewHolder.imageView;

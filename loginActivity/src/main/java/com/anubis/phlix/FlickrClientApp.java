@@ -64,7 +64,8 @@ public class FlickrClientApp extends MultiDexApplication {
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().build();
         Realm.setDefaultConfiguration(config);
-
+        //ObjectMapper mapper = new ObjectMapper();
+        //mapper.findAndRegisterModules();
 
         //FlickrClientApp.context = getApplicationContext();
 

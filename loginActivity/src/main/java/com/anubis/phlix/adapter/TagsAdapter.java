@@ -98,6 +98,8 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
     public void onBindViewHolder(TagsAdapter.ViewHolder viewHolder, int position) {
         Photo photo = mPhotos.get(position);
         CardView cv = viewHolder.cardView;
+        cv.setUseCompatPadding(true);
+        cv.setCardElevation(4.0f);
 
         GridLayoutManager.LayoutParams fp = (GridLayoutManager.LayoutParams) viewHolder.cardView.getLayoutParams();
         ImageView imageView = viewHolder.imageView;
