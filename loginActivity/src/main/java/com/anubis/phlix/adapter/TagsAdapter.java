@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.anubis.phlix.R;
 import com.anubis.phlix.models.Photo;
@@ -43,7 +42,6 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tags;
         ImageView imageView;
         CardView cardView;
 
@@ -61,7 +59,6 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
                     }
                 }
             });
-            tags = (TextView) itemView.findViewById(R.id.checkboxtags);
             cardView = (CardView) itemView.findViewById(R.id.cardView);
 
         }
@@ -106,17 +103,8 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) viewHolder.imageView
                 .getLayoutParams();
 
-       /* TextView tags = viewHolder.tags;
 
-        tags.setText(photo.getTags());
-        tags.setTextColor(mContext.getResources().getColor(R.color.white));*/
-        /*CheckBox cb = viewHolder.checkbox;
 
-        cb.setVisibility(View.VISIBLE);
-        int id = Resources.getSystem().getIdentifier("btn_check_holo_dark", "drawable", "android");
-        cb.setButtonDrawable(id);
-        cb.setHint("Batch Tag");
-        cb.setChecked(true);*/
 
         if (mStaggered) {
             Random rand = new Random();
@@ -131,9 +119,9 @@ public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
 
             //Random rand = new Random();
             //int n = rand.nextInt(200) + 200;
-            lp.height = 250; // photo.getPhotoHeight() * 2;
+            lp.height = 350; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-            lp.width = aspectRatio > 0 ? 250 / aspectRatio : 250; // photo.getPhotoList//set the title, name, comments
+            lp.width = aspectRatio > 0 ? 350 / aspectRatio : 350; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
             fp.width = lp.width;
             fp.height = lp.height;

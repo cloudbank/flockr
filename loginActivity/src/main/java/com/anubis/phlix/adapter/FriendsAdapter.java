@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.anubis.phlix.R;
 import com.anubis.phlix.models.Photo;
@@ -40,7 +39,7 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tags;
+       // TextView tags;
         ImageView imageView;
         CardView cardView;
 
@@ -58,7 +57,7 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
                     }
                 }
             });
-            tags = (TextView)itemView.findViewById(R.id.checkboxtags);
+            //tags = (TextView)itemView.findViewById(R.id.checkboxtags);
             cardView = (CardView)itemView.findViewById(R.id.cardView);
         }
     }
@@ -102,11 +101,11 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) viewHolder.imageView
                 .getLayoutParams();
 
-        TextView tags = viewHolder.tags;
+        //TextView tags = viewHolder.tags;
         String username = Util.getCurrentUser();
         //
         boolean isMe = photo.getOwnername().equals(username);
-        tags.setText((isMe ? mContext.getString(R.string.Me): photo.getOwnername()));
+        //tags.setText((isMe ? mContext.getString(R.string.Me): photo.getOwnername()));
 
 
         if (mStaggered) {
@@ -114,9 +113,9 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
 
             //Random rand = new Random();
             //int n = rand.nextInt(200) + 200;
-            lp.height = 350; // photo.getPhotoHeight() * 2;
+            lp.height = 375; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
-            lp.width = aspectRatio > 0 ? 350 / aspectRatio : 350; // photo.getPhotoList//set the title, name, comments
+            lp.width = aspectRatio > 0 ? 375 / aspectRatio : 375; // photo.getPhotoList//set the title, name, comments
             imageView.setLayoutParams(lp);
             fp.width = lp.width;
             fp.height = lp.height;

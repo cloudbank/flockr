@@ -43,7 +43,6 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tags;
         ImageView imageView;
         CardView cardView;
 
@@ -61,7 +60,6 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
                     }
                 }
             });
-            tags = (TextView) itemView.findViewById(R.id.checkboxtags);
             cardView = (CardView)itemView.findViewById(R.id.cardView);
 
         }
@@ -107,7 +105,6 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) viewHolder.imageView
                 .getLayoutParams();
 
-        TextView tags = viewHolder.tags;
 
 
 
@@ -115,7 +112,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
             int aspectRatio = (null != photo.getWidth()  && null != photo.getHeight()) ? Integer.parseInt(photo.getHeight())/Integer.parseInt(photo.getWidth()): 1;
 
             Random rand = new Random();
-            int n = rand.nextInt(100) + 200;
+            int n = rand.nextInt(100) + 375;
             lp.height = n; // photo.getPhotoHeight() * 2;
             //n = rand.nextInt(200) + 100;
             lp.width = aspectRatio > 0 ? n/aspectRatio : n;//

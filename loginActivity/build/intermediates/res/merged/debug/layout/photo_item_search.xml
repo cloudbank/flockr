@@ -14,8 +14,6 @@
         android:contentDescription=""
         android:scaleType="centerCrop" />
 
-    <include
-        layout="@layout/checkbox_tag"
-        android:orientation="horizontal"></include>
+   
 
 </RelativeLayout>

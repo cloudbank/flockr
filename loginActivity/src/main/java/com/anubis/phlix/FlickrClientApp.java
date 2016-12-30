@@ -65,9 +65,10 @@ public class FlickrClientApp extends MultiDexApplication {
         RealmConfiguration config = new RealmConfiguration.Builder().build();
         Realm.setDefaultConfiguration(config);
         //ObjectMapper mapper = new ObjectMapper();
-        //mapper.findAndRegisterModules();
-
+        //mapper.registerModule(new Jdk7Module());
         //FlickrClientApp.context = getApplicationContext();
+
+        // Normal app init code...
 
 
         //TypefaceUtil.setDefaultFont(this, "SERIF", "fonts/Exo-Medium.otf");
