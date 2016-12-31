@@ -28,9 +28,9 @@ import rx.Observable;
 public interface FlickrService {
 
 
-    public static final String API_BASE_URL = "https://api.flickr.com/services/rest/";
+    String API_BASE_URL = "https://api.flickr.com/services/rest/";
 
-    final String KEY = "api_key="+BuildConfig.consumerKey;
+    String KEY = "api_key="+BuildConfig.consumerKey;
 
     @GET(API_BASE_URL + "?method=flickr.test.login&format=json&nojsoncallback=1&" + KEY )
     Observable<User> testLogin();

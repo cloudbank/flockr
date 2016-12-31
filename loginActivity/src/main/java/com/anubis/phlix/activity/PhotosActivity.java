@@ -164,7 +164,7 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
             try {
                 accounts = am.getAccounts();
             } catch (SecurityException e) {
-
+                Log.e("SYNC", "account change removal error");
             }
             if (accounts.length > 0) {
                 Account accountToRemove = accounts[0];
@@ -175,9 +175,6 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
 
         }
         updateUserInfo(authPrefs);
-        //@todo check that sync adapter is running as planned for repeat login
-        //this only runs the sync if no account account exists; else it should be running
-       // SyncAdapter.initializeSyncAdapter(this);
 
 
         setContentView(R.layout.activity_photos);

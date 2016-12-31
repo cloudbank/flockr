@@ -150,10 +150,10 @@ public class TagsFragment extends FlickrBaseFragment {
 
 
     private void updateDisplay(Recent r) {
-
+        if (r != null) {
         displayHotTags(r.getHotTagList());
         mPhotos.clear();
-        if (r != null) {
+
             mPhotos.addAll(r.getRecentPhotos());
         }
 

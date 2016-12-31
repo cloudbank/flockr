@@ -50,7 +50,7 @@ public class InterestingAdapter extends RecyclerView.Adapter<InterestingAdapter.
             itemView.setOnClickListener(v -> {
                 if (listener != null) {
                     int position = getAdapterPosition();
-                    if (listener != null && position != RecyclerView.NO_POSITION) {
+                    if (position != RecyclerView.NO_POSITION) {
                         listener.onItemClick(itemView, position);
                     }
                 }

@@ -1,7 +1,6 @@
 package com.anubis.phlix;
 
 import android.accounts.Account;
-import android.content.Context;
 import android.support.multidex.MultiDexApplication;
 
 import com.anubis.phlix.service.FlickrService;
@@ -28,11 +27,11 @@ public class FlickrClientApp extends MultiDexApplication {
     Account mAccount;
 
 
-    private static Context context;
+    private static FlickrClientApp instance;
 
 
-    public static Context getAppContext() {
-        return FlickrClientApp.context;
+    public static FlickrClientApp getAppContext() {
+        return instance;
     }
 
     //prevent leaking activity context http://bit.ly/6LRzfx
@@ -59,7 +58,7 @@ public class FlickrClientApp extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        context = this;
+        instance = this;
         Stetho.initializeWithDefaults(this);
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().build();

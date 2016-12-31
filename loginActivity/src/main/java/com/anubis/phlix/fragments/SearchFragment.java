@@ -239,7 +239,7 @@ public class SearchFragment extends FlickrBaseFragment {
 
                             }
 
-                            c.timestamp = Calendar.getInstance().getTime();;
+                            c.timestamp = Calendar.getInstance().getTime();
 
                             realm.copyToRealmOrUpdate(c);
 

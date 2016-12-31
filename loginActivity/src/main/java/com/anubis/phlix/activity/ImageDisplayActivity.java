@@ -87,7 +87,7 @@ public class ImageDisplayActivity extends AppCompatActivity {
         wvComments.setHorizontalScrollBarEnabled(true);
         wvComments.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         wvComments.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-        wvComments.getSettings().setJavaScriptEnabled(true);
+        //wvComments.getSettings().setJavaScriptEnabled(true);
 
         mUid = mPhoto.getId();
         //@todo comments do not get refreshed w sync adapter
