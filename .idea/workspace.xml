@@ -31,38 +31,25 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="SYNC" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f80aa30-297e-4c7f-9a2e-a543f5abd3ab" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/SmartFragmentStatePagerAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/listener/EndlessRecyclerViewScrollListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/loginActivity/src/main/res/layout/photo_item_search.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/loginActivity/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/loginActivity/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build/intermediates/res/merged/debug/layout/photo_item_search.xml" afterPath="$PROJECT_DIR$/loginActivity/build/intermediates/res/merged/debug/layout/photo_item_search.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/proguard-rules.pro" afterPath="$PROJECT_DIR$/loginActivity/proguard-rules.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/FlickrClientApp.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/FlickrClientApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/ImageDisplayActivity.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/ImageDisplayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PhotosActivity.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PhotosActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/FriendsAdapter.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/FriendsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/InterestingAdapter.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/InterestingAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/SearchAdapter.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/SearchAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/TagsAdapter.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/TagsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/SearchFragment.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/SearchFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/TagsFragment.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/TagsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/service/FlickrService.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/service/FlickrService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauthkit/oauthkit.iml" afterPath="$PROJECT_DIR$/oauthkit/oauthkit.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" afterPath="$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PreviewPhotoActivity.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PreviewPhotoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/res/layout/activity_photos.xml" afterPath="$PROJECT_DIR$/loginActivity/src/main/res/layout/activity_photos.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_interesting.xml" afterPath="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_interesting.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_search.xml" afterPath="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_search.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/loginActivity/src/main/res/values/strings.xml" />
     </list>
     <ignored path="flockr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,21 +82,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PhotosActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PhotosActivity.java">
+      <file leaf-file-name="FriendsAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/FriendsAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="170" column="39" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
+            <state relative-caret-position="1695">
+              <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1483224233000" expanded="false" signature="3353:3384" ph="&quot;Me&quot;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FriendsFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/FriendsFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="237" column="0" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterestingAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/InterestingAdapter.java">
+      <file leaf-file-name="PhotosActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PhotosActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+            <state relative-caret-position="297">
+              <caret line="212" column="17" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SyncAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/sync/SyncAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SyncRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/android-sdk-macosx-3/sources/android-24/android/content/SyncRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="315" column="23" selection-start-line="315" selection-start-column="23" selection-end-line="315" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_interesting.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_interesting.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_friends.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_friends.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_search.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_search.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_tags.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_tags.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -118,83 +190,8 @@
       <file leaf-file-name="PreviewPhotoActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PreviewPhotoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/models/Comments.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-              <folding>
-                <element signature="e#1059#1060#0" expanded="true" />
-                <element signature="e#1099#1100#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/SearchFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TagsAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/TagsAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TagsFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/TagsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="152" column="24" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/SearchAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Photo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/models/Photo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+            <state relative-caret-position="312">
+              <caret line="74" column="39" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -3952,7 +3949,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/FriendsFragment.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/adapter/ImageDisplayAdapter.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/PhotosActivity.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/adapter/SearchAdapter.java" />
@@ -3981,8 +3977,6 @@
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/SearchFragment.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/sync/SyncAdapter.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/InterestingFragment.java" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/FriendsFragment.java" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_interesting.xml" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_tags.xml" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/photo_item.xml" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_search.xml" />
@@ -3998,11 +3992,14 @@
         <option value="$PROJECT_DIR$/loginActivity/proguard-rules.pro" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/FlickrClientApp.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/ImageDisplayActivity.java" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PhotosActivity.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/InterestingAdapter.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/SearchAdapter.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/TagsAdapter.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/TagsFragment.java" />
+        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PreviewPhotoActivity.java" />
+        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/FriendsFragment.java" />
+        <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_interesting.xml" />
+        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PhotosActivity.java" />
       </list>
     </option>
   </component>
@@ -4239,6 +4236,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sync" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flockr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flockr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loginActivity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -4693,12 +4724,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="740" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31663975" sideWeight="0.5175644" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33974358" sideWeight="0.7285945" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30769232" sideWeight="0.5621971" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30769232" sideWeight="0.7600969" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -4710,13 +4741,13 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38942307" sideWeight="0.82714057" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38942307" sideWeight="0.82714057" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22115384" sideWeight="0.57350564" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.49676898" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.023622047" sideWeight="0.49353796" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38942307" sideWeight="0.17285945" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30769232" sideWeight="0.23990306" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37075928" sideWeight="0.48243558" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43898574" sideWeight="0.7004831" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -4790,13 +4821,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/FlickrBaseFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -4847,14 +4871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="393" column="29" selection-start-line="393" selection-start-column="29" selection-end-line="393" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/FriendsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="143" column="16" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4970,43 +4986,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_interesting.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/recycler_view.xml" />
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_tags.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/checkbox_tag.xml" />
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_friends.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
-          <folding>
-            <element signature="e#3705#3722#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
@@ -5028,17 +5009,6 @@
         <state relative-caret-position="255">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/FriendsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1483224233000" expanded="false" signature="3353:3384" ph="&quot;Me&quot;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5080,40 +5050,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/sync/SyncAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="66" column="57" selection-start-line="62" selection-start-column="2" selection-end-line="66" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/FlickrClientApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/activity_preview_photo.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_search.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -5155,8 +5095,8 @@
         <state relative-caret-position="117">
           <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
           <folding>
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="false" />
+            <element signature="e#1099#1100#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -5181,22 +5121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PhotosActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="170" column="39" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PreviewPhotoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -5229,8 +5153,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/TagsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="152" column="24" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
+        <state relative-caret-position="387">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/activity_preview_photo.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PreviewPhotoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="74" column="39" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_search.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_tags.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/adapter/FriendsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1483224233000" expanded="false" signature="3353:3384" ph="&quot;Me&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/fragments/FriendsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="237" column="0" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/android-sdk-macosx-3/sources/android-24/android/content/SyncRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="315" column="23" selection-start-line="315" selection-start-column="23" selection-end-line="315" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/sync/SyncAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_friends.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_interesting.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/phlix/activity/PhotosActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="212" column="17" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
           <folding />
         </state>
       </provider>

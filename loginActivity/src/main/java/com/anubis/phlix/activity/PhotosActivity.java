@@ -200,6 +200,7 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         vpPager.setOffscreenPageLimit(3);
         vpPager.setAdapter(adapterViewPager);
         vpPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        //getWindow().setBackgroundDrawable(null);
         tabLayout.addOnTabSelectedListener(onTabSelectedListener(vpPager));
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-8660045387738182~7164386158");
         delaySync(FlickrClientApp.getAppContext());

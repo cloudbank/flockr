@@ -71,6 +71,9 @@ public class PreviewPhotoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name);
         getSupportActionBar().setSubtitle("Picture Preview");
+        //overdraw fix
+        getWindow().setBackgroundDrawable(null);
+
     }
 
     private void redisplayPreview(int effectId) {
