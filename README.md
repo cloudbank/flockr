@@ -1,32 +1,30 @@
-# Phlix v 1.0   <img src="http://i.imgur.com/PG50tzr.jpg" height="100"/> 
-### An android client for the Flickr photo API  [SDK 14+, Nougat compatible]
+# Phlaiku v 1.0   
+###  [SDK 19+, Oreo compatible]
 
 * *Friends' & your photostreams*
 * *The 'Interesting' collection*
-* *Hot tags and Recent Uploads*
-* *The Commons collection--rare pictures from around the world curated by you!*
+* *Bots*
+   
 
->>>>VIEW   
+<img src="http://i.imgur.com/ypYoNGG.png" height="500"/>    
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgur.com/iePBsAf.png" height="500"/> <img src="http://i.imgur.com/nguN38p.png" height="500" />     
+>>>>EXPERIENCE
 
->>>>COMMENT
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imegur.com/ObJP1fz.png" height="500" /><img src="http://i.imgure.com/7RUXx9k.png" height="500" />
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgur.com/ObJP1fz.png" height="500" /><img src="http://i.imgur.com/7RUXx9k.png" height="500" />
+>>>>INSPIRE
 
->>>>CURATE
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgur.com/VAxLK7w.png" height="500" /><img src="http://i.imgur.com/qS0bmHD.png" height="500" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgeur.com/VAxLK7w.png" height="500" /><img src="http://i.imgeur.com/qS0bmHD.png" height="500" />
 
 >>>>CREATE
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgur.com/dMZfxer.png" height="500"/><img src="http://i.imgur.com/M85iUwd.png" height="500" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imegur.com/dMZfxer.png" height="500"/><img src="http://i.imgeur.com/M85iUwd.png" height="500" />
 
 
 ### Designed with the Material theme and latest, greatest android libs for best viewing pleasure!
 ### In addition you can:
 
-* *Add comments & see tags*
+
 * *Take your own pictures with the camera!*
 
 ### --> download from the [Google Play Store](https://play.google.com/store/apps/details?id=com.anubis.phlix)
@@ -51,7 +49,7 @@ It also uses many other open source libraries such as:
  * [Realm]() A new db for devices that is faster than naked sqlite!
  * [Picasso]() Square's optimized image loading library with built in caching and bg thread capability
  * [Jackson]()  Streaming treemap for fastest JSON parsing available
- * [simple-crop-image] (https://github.com/biokys/cropimage)
+
  
 
 
