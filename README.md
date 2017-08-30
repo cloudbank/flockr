@@ -1,4 +1,4 @@
-# Phlaiku v 1.0   <img src="http://i.imgur.com/ypYoNGG.png" height="100"/> 
+# Phlaiku v 1.0   
 ###  [SDK 19+, Oreo compatible]
 
 * *Friends' & your photostreams*
@@ -8,7 +8,7 @@
 
 >>>>VIEW   
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgurd.com/iePBsAf.png" height="500"/> <img src="http://i.imgur.com/nguN38p.png" height="500" />     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgur.com/ypYoNGG.png" height="500"/>  <img src="http://i.imgur.com/nguN38p.png" height="500" />     
 
 >>>>COMMENT
 
