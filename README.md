@@ -3,18 +3,17 @@
 
 * *Friends' & your photostreams*
 * *The 'Interesting' collection*
-* *Hot tags and Recent Uploads*
-* *The Commons collection--rare pictures from around the world curated by you!*
+* *Bots*
 
 >>>>VIEW   
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgur.com/ypYoNGG.png" height="500"/>  <img src="http://i.imgur.com/nguN38p.png" height="500" />     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgur.com/ypYoNGG.png" height="500"/>  <img src="http://i.imgudr.com/nguN38p.png" height="500" />     
 
->>>>COMMENT
+>>>>EXPERIENCE
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imegur.com/ObJP1fz.png" height="500" /><img src="http://i.imgure.com/7RUXx9k.png" height="500" />
 
->>>>CURATE
+>>>>INSPIRE
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgeur.com/VAxLK7w.png" height="500" /><img src="http://i.imgeur.com/qS0bmHD.png" height="500" />
 
@@ -26,7 +25,7 @@
 ### Designed with the Material theme and latest, greatest android libs for best viewing pleasure!
 ### In addition you can:
 
-* *Add comments & see tags*
+
 * *Take your own pictures with the camera!*
 
 ### --> download from the [Google Play Store](https://play.google.com/store/apps/details?id=com.anubis.phlix)
