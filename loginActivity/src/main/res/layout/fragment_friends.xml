@@ -4,92 +4,119 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/AliceBlue">
+    android:background="@drawable/back_login">
 
-
-    <TextView
-        android:id="@+id/tvMyTags"
+    <com.jetradarmobile.snowfall.SnowfallView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        app:snowflakeAlphaMax="205"
+        app:snowflakeAlphaMin="100"
+        app:snowflakeAngleMax="5"
+        app:snowflakeSizeMax="8dp"
+        app:snowflakeSizeMin="5dp"
+        app:snowflakeSpeedMax="12"
+        app:snowflakeSpeedMin="8"
+        app:snowflakesAlreadyFalling="false"
+        app:snowflakesFadingEnabled="true"
+        app:snowflakesNum="250" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/AliceBlue"
-        android:gravity="center"
-        android:text="My Tags"
-        android:textColor="@color/RoyalBlue"
-        android:textStyle="bold" />
-
-    <co.hkm.soltag.TagContainerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/my_tag_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvMyTags"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:gravity="center"
-        android:padding="1dp"
-        app:container_background_color="@color/AliceBlue"
-        app:container_border_color="@color/AliceBlue"
-        app:container_enable_drag="false"
-        app:horizontal_interval="3dp"
-        app:tag_border_color="@color/RoyalBlue"
-        app:tag_corner_radius="3dp"
-        app:tag_horizontal_padding="3dp"
-        app:tag_text_size="10sp"
-        app:tag_theme="random"
-        app:tag_vertical_padding="3dp"
-        app:vertical_interval="3dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/my_tag_group"
-        android:layout_centerHorizontal="true"
-        android:background="@color/AliceBlue"
-        android:orientation='horizontal'
-        android:theme="@style/MyRadioButton">
+        android:orientation="horizontal">
 
 
-        <RadioButton
-            android:id="@+id/radio5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="5 each"
-
-            android:textColor="@color/RoyalBlue"
-            android:textStyle="bold"
-            android:theme="@style/MyRadioButton" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvPhotos"
+            android:layout_width="159dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:scrollbars="vertical" />
 
 
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="1 each"
-            android:textColor="@color/RoyalBlue"
-            android:textStyle="bold"
-            android:theme="@style/MyRadioButton" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"></View>
 
-    </RadioGroup>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvPhotos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        android:layout_below="@id/radioGroup1"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_margin="15dp"
-        android:background="@color/AliceBlue"
-        />
+
+        <LinearLayout
+            android:id="@+id/llview"
+            android:layout_width="159dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:alpha=".4"
+                android:layout_weight="1"
+                android:background="@color/back_sand_40">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The essence of haiku is &quot;cutting&quot; (kiru).[1] This is often represented by the juxtaposition of two images or ideas and a kireji (&quot;cutting word&quot;) between them,[2] a kind of verbal punctuation mark which signals the moment of separation and colours the manner in which the juxtaposed elements are related." />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:alpha=".4"
+                android:layout_weight="1"
+                android:background="@color/back_sand_40">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=" kireji " />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:alpha=".4"
+                android:layout_weight="1"
+                android:background="@color/back_sand_40">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/main_content"
+                android:layout_width="159dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom|center" >
+
+                <TextView
+                    android:id="@+id/main_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="top|right" />
+
+                <android.support.design.widget.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_add_black_24dp"
+                    ads:layout_anchor="@id/main_view"
+                    ads:layout_anchorGravity="bottom|right|end"
+                    app:backgroundTint="@color/delicious" />
+
+            </android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 
     <com.google.android.gms.ads.AdView
@@ -97,11 +124,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/ad_unit" />
-
-
 
 
 </RelativeLayout>

@@ -47,8 +47,12 @@
 
 
 
+-keep class java.beans.Transient.** {*;}
+-keep class java.beans.ConstructorProperties.** {*;}
+-keep class java.nio.file.Path.** {*;}
 
--keep class com.anubis.phlix.models.** {*;}
+
+-keep class com.anubis.flickr.models.** {*;}
 
 -dontwarn com.fasterxml.jackson.**
 
@@ -82,7 +86,7 @@
 -keep @io.realm.internal.Keep class *
 -dontwarn javax.**
 -dontwarn io.realm.**
--keep class com.anubis.phlix.realm.** { *; }
+-keep class com.anubis.flickr.realm.** { *; }
 
 # Hide warnings about references to newer platforms in the library
 -dontwarn android.support.v7.**

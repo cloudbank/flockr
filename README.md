@@ -1,4 +1,4 @@
-# Phlix v 1.0   <img src="http://i.imgur.com/PG50tzr.jpg" height="100"/> 
+# phlai.ku v 1.0   <img src="http://i.imgur.com/PG50tzr.jpg" height="100"/>
 ### An android client for the Flickr photo API  [SDK 14+, Nougat compatible]
 
 * *Friends' & your photostreams*
@@ -29,7 +29,7 @@
 * *Add comments & see tags*
 * *Take your own pictures with the camera!*
 
-### --> download from the [Google Play Store](https://play.google.com/store/apps/details?id=com.anubis.phlix)
+### --> download from the [Google Play Store](https://play.google.com/store/apps/details?id=com.anubis.flickr)
 
 ## License
 

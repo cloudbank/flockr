@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/flockr.iml" filepath="$PROJECT_DIR$/flockr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flickr.iml" filepath="$PROJECT_DIR$/flickr.iml" />
       <module fileurl="file://$PROJECT_DIR$/loginActivity/loginActivity.iml" filepath="$PROJECT_DIR$/loginActivity/loginActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/oauthkit/oauthkit.iml" filepath="$PROJECT_DIR$/oauthkit/oauthkit.iml" />
       <module fileurl="file://$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" filepath="$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tensor-lib/tensor-lib.iml" filepath="$PROJECT_DIR$/tensor-lib/tensor-lib.iml" />
     </modules>
   </component>
 </project>

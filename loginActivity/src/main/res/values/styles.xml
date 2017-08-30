@@ -8,47 +8,47 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#E03D81</item>
-        <item name="colorPrimaryDark">#E00065</item>
-        <item name="colorAccent">@color/AliceBlue</item>
+        <item name="colorPrimary">@color/back_sand_40</item>
+        <item name="colorPrimaryDark">@color/cooler</item>
+        <item name="colorAccent">@color/soap</item>
 
     </style>
 
-
-    <style name="MyDarkToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
-        <item name="android:colorBackground">#E00065</item>
-        <item name="android:textColor">@color/AliceBlue</item>
-        <item name="android:textStyle">bold</item>
+    <style name="Theme.YourAppsName.ActionBarPopupTheme" parent="android:Theme.Holo">
+        <item name="android:colorBackground">@color/cooler</item>
+        <item name="android:textColor">@color/soap</item>
     </style>
+
+
 
 
     <style name="MySwitch" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->
-        <item name="colorControlActivated">@color/RoyalBlue</item>
+        <item name="colorControlActivated">@color/soap</item>
 
         <!-- inactive thumb color -->
-        <item name="colorSwitchThumbNormal">@color/DeepPink</item>
+        <item name="colorSwitchThumbNormal">@color/cooler</item>
 
         <!-- inactive track color (30% transparency) -->
-        <item name="android:colorForeground">@color/AliceBlue</item>
+        <item name="android:colorForeground">@color/shell</item>
     </style>
 
 
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
         <item name="tabTextAppearance">@style/MyCustomTabText</item>
-        <item name="tabSelectedTextColor">@color/RoyalBlue</item>
+        <item name="tabSelectedTextColor">@color/soap</item>
     </style>
 
     <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
         <item name="android:textSize">13sp</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textColor">@color/AliceBlue</item>
+        <item name="android:textColor">@color/shell</item>
     </style>
 
     <style name="MyRadioButton" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">@color/RoyalBlue</item>
-        <item name="colorControlActivated">@color/DeepPink</item>
-        <item name="android:textColor">@color/RoyalBlue</item>
+        <item name="colorControlNormal">@color/soap</item>
+        <item name="colorControlActivated">@color/cooler</item>
+        <item name="android:textColor">@color/soap</item>
     </style>
 
 
@@ -61,17 +61,17 @@
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
-        <item name="android:textColorPrimary">@color/AliceBlue</item>
+        <item name="android:textColorPrimary">@color/shell</item>
         <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
         <item name="actionMenuTextColor">@android:color/holo_green_light</item>
         <!-- Tints the input fields like checkboxes and text fields -->
-        <item name="colorAccent">@color/android_green</item>
+        <item name="colorAccent">@color/cooler</item>
         <!-- Applies to views in their normal state. -->
-        <item name="colorControlNormal">@color/android_green</item>
+        <item name="colorControlNormal">@color/delicious</item>
         <!-- Applies to views in their activated state (i.e checked or switches) -->
-        <item name="colorControlActivated">@color/android_green</item>
+        <item name="colorControlActivated">@color/soap</item>
         <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
-        <item name="colorControlHighlight">@color/AliceBlue</item>
+        <item name="colorControlHighlight">@color/shell</item>
 
         <!-- Enable these below if you want clicking icons to trigger a ripple effect -->
 
@@ -82,46 +82,46 @@
 
 
     <style name="MyEditText" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">@color/RoyalBlue</item>
-        <item name="colorControlActivated">@color/DeepPink</item>
+        <item name="colorControlNormal">@color/soap</item>
+        <item name="colorControlActivated">@color/cooler</item>
     </style>
 
     <style name="CustomProgessBarStyle" parent="@android:style/Theme.Dialog">
         <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
-        <item name="android:background">@color/Snow</item>
+        <item name="android:background">@color/soap</item>
         <item name="android:textColorPrimary">#E00065</item>
     </style>
 
     <style name="MyButton" parent="Theme.AppCompat.Light">
-        <item name="colorControlHighlight">@color/RoyalBlue</item>
-        <item name="colorButtonNormal">@color/DeepPink</item>
+        <item name="colorControlHighlight">@color/soap</item>
+        <item name="colorButtonNormal">@color/cooler</item>
 
     </style>
 
     <style name="MyLoginButton" parent="Theme.AppCompat.Light">
-        <item name="colorControlHighlight">@color/PaleVioletRed</item>
+        <item name="colorControlHighlight">@color/satin</item>
         <item name="colorButtonNormal">#E00065</item>
 
     </style>
 
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!--buttons color-->
-        <item name="colorAccent">@color/DeepPink</item>
+        <item name="colorAccent">@color/cooler</item>
         <!--title and message color-->
-        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorPrimary">@color/soap</item>
         <!--dialog background-->
-        <item name="android:windowBackground">@color/AliceBlue</item>
+        <item name="android:windowBackground">@color/shell</item>
     </style>
 
     <style name="CustomAlertDialogStyle">
         <item name="android:bottomDark">#E00065</item>
-        <item name="android:bottomMedium">@color/WhiteSmoke</item>
-        <item name="android:centerBright">@color/WhiteSmoke</item>
+        <item name="android:bottomMedium">@color/soap</item>
+        <item name="android:centerBright">@color/soap</item>
         <item name="android:centerDark">#E00065</item>
-        <item name="android:centerMedium">@color/WhiteSmoke</item>
-        <item name="android:fullBright">@color/WhiteSmoke</item>
+        <item name="android:centerMedium">@color/soap</item>
+        <item name="android:fullBright">@color/soap</item>
         <item name="android:fullDark">#E00065</item>
-        <item name="android:topBright">@color/WhiteSmoke</item>
+        <item name="android:topBright">@color/soap</item>
         <item name="android:topDark">#E00065</item>
     </style>
 

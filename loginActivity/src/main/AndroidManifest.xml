@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anubis.phlix"
+    package="com.anubis.flickr"
     >
 
     <uses-feature
@@ -18,20 +18,14 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
 
     <application
-        android:name="com.anubis.phlix.FlickrClientApp"
+        android:name=".FlickrClientApp"
         android:allowBackup="true"
         android:icon="@drawable/rocket_transparent"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <meta-data
-            android:name="AA_DB_NAME"
-            android:value="Flickr.db" />
-        <meta-data
-            android:name="AA_DB_VERSION"
-            android:value="1" />
-
+        android:theme="@style/AppTheme"
+        >
         <activity
-            android:name="com.anubis.phlix.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,36 +45,39 @@
 
         </activity>
         <activity
-            android:name="com.anubis.phlix.activity.PhotosActivity"
+            android:name=".activity.PhotosActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name="com.anubis.phlix.activity.PreviewPhotoActivity"
+            android:name=".activity.PreviewPhotoActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name="com.anubis.phlix.activity.ImageDisplayActivity"
+            android:name=".activity.ImageDisplayActivity"
             android:label="@string/app_name"></activity>
-        <activity android:name="eu.janmuller.android.simplecropimage.CropImage" />
+        <activity
+            android:name=".activity.ClassifierDisplayActivity"
+            android:label="@string/app_name"></activity>
 
 
         <provider
-            android:name="com.anubis.phlix.provider.StubProvider"
-            android:authorities="com.anubis.phlix.provider"
+            android:name=".provider.StubProvider"
+            android:authorities="com.anubis.flickr.provider"
             android:exported="false"
             android:label="phlix provider"
             android:syncable="true" />
 
 
-        <service android:name="com.anubis.phlix.service.AuthenticatorService">
+        <service android:name=".service.AuthenticatorService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
+            <x></x>
             <meta-data
                 android:name="android.accounts.AccountAuthenticator"
                 android:resource="@xml/authenticator" />
         </service>
         <service
-            android:name="com.anubis.phlix.service.SyncService"
+            android:name=".service.SyncService"
             android:exported="true">
 
             <intent-filter>

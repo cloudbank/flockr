@@ -3,68 +3,24 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/AliceBlue">
+    android:background="@color/back_alpha_40">
 
-    <TextView
-        android:id="@+id/tvHotTags"
+
+    <WebView
+        android:id="@+id/haikubot"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Top 20 Hot Tags For Today"
-        android:textColor="@color/RoyalBlue"
-        android:textStyle="bold" />
+        android:layout_height="400dp"
+        />
 
-
-    <co.hkm.soltag.TagContainerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/tag_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvHotTags"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:padding="1dp"
-        app:container_background_color="@color/AliceBlue"
-        app:container_border_color="@color/AliceBlue"
-        app:container_enable_drag="false"
-        app:horizontal_interval="3dp"
-        app:tag_border_color="@color/RoyalBlue"
-        app:tag_corner_radius="3dp"
-        app:tag_horizontal_padding="3dp"
-        app:tag_text_color="@color/white"
-        app:tag_text_size="10sp"
-        app:tag_theme="random"
-        app:tag_vertical_padding="3dp"
-        app:vertical_interval="3dp" />
-
-
-    <TextView
-        android:id="@+id/tvPhotostream"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tag_group"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:text="Recently Uploaded"
-        android:textColor="@color/RoyalBlue"
-        android:textStyle="bold" />
 
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvPhotos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tvPhotostream"
-        android:layout_gravity="center"
+        android:layout_height="400dp"
         android:layout_margin="15dp"
-        android:background="@color/AliceBlue"
-        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_weight="1"
         android:scrollbars="vertical" />
 
 

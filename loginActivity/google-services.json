@@ -1,16 +1,16 @@
 {
   "project_info": {
     "project_number": "766239359357",
-    "firebase_url": "https://phlix-aa0b3.firebaseio.com",
-    "project_id": "phlix-aa0b3",
-    "storage_bucket": "phlix-aa0b3.appspot.com"
+    "firebase_url": "https://flickr-aa0b3.firebaseio.com",
+    "project_id": "flickr-aa0b3",
+    "storage_bucket": "flickr-aa0b3.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:766239359357:android:b8c8c7c433e1aa78",
         "android_client_info": {
-          "package_name": "com.anuis.phlix"
+          "package_name": "com.anuis.flickr"
         }
       },
       "oauth_client": [
@@ -41,7 +41,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:766239359357:android:d1bd88d28f3d2ed3",
         "android_client_info": {
-          "package_name": "com.anubis.phlix"
+          "package_name": "com.anubis.flickr"
         }
       },
       "oauth_client": [

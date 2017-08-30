@@ -9,10 +9,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer;
 
 import java.util.HashMap;
-
-import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer;
 
 public class OAuthBaseClient {
     protected Context context;
@@ -66,6 +65,7 @@ public class OAuthBaseClient {
                     intent.setFlags(OAuthBaseClient.this.requestIntentFlags);
 
                 }
+                //singleTask
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 OAuthBaseClient.this.context.startActivity(intent);
             }
