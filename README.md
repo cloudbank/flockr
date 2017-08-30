@@ -4,10 +4,9 @@
 * *Friends' & your photostreams*
 * *The 'Interesting' collection*
 * *Bots*
+   
 
->>>>VIEW   
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgur.com/ypYoNGG.png" height="500"/>  <img src="http://i.imgudr.com/nguN38p.png" height="500" />     
+<img src="http://i.imgur.com/ypYoNGG.png" height="500"/>    
 
 >>>>EXPERIENCE
 
