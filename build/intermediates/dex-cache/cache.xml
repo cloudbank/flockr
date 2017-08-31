@@ -169,7 +169,7 @@
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="e5e157a024a1fff1c8a8b8e2b5dcd27fff45ead3">
+        sha1="ad40af7764475b0f904106089327c4e8c037d9e1">
         <dex dex="/Users/sabine/github/myfriendflickr2016/flickr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/4/classes_0b903279e58f9ef4d373889c3d706c0b6560c262/classes.dex" />
     </item>
     <item
@@ -574,7 +574,7 @@
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="ab9602b55c2b2e5b39cfbdf7f1576753a806493f">
+        sha1="d131f94822a50fcc1abdfe15d6bdae7aeb428ae1">
         <dex dex="/Users/sabine/github/myfriendflickr2016/flickr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/8/libandroid_tensorflow_inference_java_afc450c6be001115b1aedf03b4e79506adab6bbb/classes.dex" />
     </item>
     <item

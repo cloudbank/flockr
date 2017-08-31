@@ -2,13 +2,18 @@ package org.tensorflow.tensorlib.activity;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.PersistableBundle;
 import android.os.SystemClock;
+import android.support.annotation.Nullable;
+import android.util.Log;
+import android.util.SparseArray;
 import android.util.TypedValue;
 
 import org.tensorflow.tensorlib.R;
@@ -18,7 +23,7 @@ import org.tensorflow.tensorlib.classifier.TensorFlowImageClassifier;
 import org.tensorflow.tensorlib.env.BorderedText;
 import org.tensorflow.tensorlib.env.Logger;
 import org.tensorflow.tensorlib.fragment.BitmapFragment;
-import org.tensorflow.tensorlib.view.ResultsView;
+import org.tensorflow.tensorlib.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,47 +39,61 @@ public class BitmapActivity extends Activity {
     private BorderedText borderedText;
 
     private static final float TEXT_SIZE_DIP = 10;
-    Bitmap croppedBitmap;
-    List<Classifier.Recognition> results;
+    List<Classifier.Recognition> results = new ArrayList<>();
     Handler handler;
     HandlerThread handlerThread;
     ClassifierType classifierType;
-    Classifier classifier;
+    Classifier classifier = null;
     int mInputSize;
+    public static final String CLASSIFIER_TYPE = "classifierType";
     public static final int INCEPTION_OBJ = 0;
     public static final int RETRAINED_OBJ = 1;
-    public static final String MODEL = "model";
+    public static final String TAG = "BitmapActivity";
+
 
     //use weakrefs?
-    //compress bitmap
-    public BitmapActivity() {
-    }
 
-    // Util.copyModelFilesFromAssetsToInternal("model",instance);
-    //https://developer.android.com/training/secure-file-sharing/setup-sharing.html#DefineProvider
-    public BitmapActivity(Context c, String type) {
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         final float textSizePx =
                 TypedValue.applyDimension(
-                        TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, c.getResources().getDisplayMetrics());
+                        TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, getApplicationContext().getResources().getDisplayMetrics());
         borderedText = new BorderedText(textSizePx);
         borderedText.setTypeface(Typeface.MONOSPACE);
         //choose either paintings or inception classifier at this point
-
-        if (type.equals(ClassifierType.CLASSIFIER_RETRAINED.getName())) {
+        //@todo lifetime of this wrt to closing app pausing/ use for camera/stylize classifier
+        //LRU cache?\\
+        Bundle extras = getIntent().getExtras();
+        Bitmap bmp = (Bitmap) extras.getParcelable("bitmap");
+        String ctype = getIntent().getStringExtra(CLASSIFIER_TYPE);
+        SparseArray<Classifier> objs = Util.getObjs();
+        classifier = null;
+        int index = -1;
+        if (ctype.equals(ClassifierType.CLASSIFIER_RETRAINED.getName())) {
             classifierType = ClassifierType.CLASSIFIER_RETRAINED;
-        } else if (type.equals(ClassifierType.CLASSIFIER_INCEPTION.getName())) {
+            if (objs.get(RETRAINED_OBJ) != null) {
+                classifier = objs.get(RETRAINED_OBJ);
+                index = RETRAINED_OBJ;
+            }
+
+        } else if (ctype.equals(ClassifierType.CLASSIFIER_INCEPTION.getName())) {
             classifierType = ClassifierType.CLASSIFIER_INCEPTION;
+            if (objs.get(INCEPTION_OBJ) != null) {
+                classifier = objs.get(INCEPTION_OBJ);
+                index = INCEPTION_OBJ;
+            }
         }
 
-        //@todo cache the classifier in sparsearray
-        classifier =
-                TensorFlowImageClassifier.create(
-                        c, classifierType.getModelFilename(), classifierType.getLabelFilename(), classifierType.getInputSize(),
-                        classifierType.getImageMean(), classifierType.getImageStd(), classifierType.getInputName(), classifierType.getOutputName()
-                );
-
+        if (classifier == null) {
+            classifier =
+                    TensorFlowImageClassifier.create(
+                            getApplicationContext(), classifierType.getModelFilename(), classifierType.getLabelFilename(), classifierType.getInputSize(),
+                            classifierType.getImageMean(), classifierType.getImageStd(), classifierType.getInputName(), classifierType.getOutputName()
+                    );
+            objs.put(index, classifier);
+        }
         mInputSize = classifierType.getInputSize();
-
+        runClassifier(bmp,index);
 
     }
 
@@ -112,10 +131,15 @@ public class BitmapActivity extends Activity {
                 .commit();
     }
 
-    public void runClassifier(final Bitmap bitmap, final ResultsView rv) {
+    public void runClassifier(final Bitmap bitmap, int index) {
         //change this to static
-
-        Bitmap b = getResizedBitmap(bitmap, mInputSize, mInputSize);
+        Bitmap b = null;
+        //@todo do we need to deal with JPEG decoding after all?  removed decodejpeg from retrained
+        if (bitmap.getWidth() > mInputSize || bitmap.getHeight() > mInputSize) {
+            b = getResizedBitmap(bitmap, mInputSize, mInputSize);
+        } else {
+            b = bitmap;
+        }
 
         // handlerThread = new HandlerThread("bitmap");
         // handlerThread.start();
@@ -130,17 +154,26 @@ public class BitmapActivity extends Activity {
         //final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
         //@todo
         //check if smaller first
-        //todo cache the results
-        results = classifier.recognizeImage(b);
+        //todo cache the results using a Future
+
+        results = (ArrayList< Classifier.Recognition>)Util.getObjs().get(index).recognizeImage(b);
         if (results.size() == 0) {
             results = new ArrayList<Classifier.Recognition>();
             results.add(new Classifier.Recognition("", "There were no results!", 0f, null));
         }
-        rv.setResults(results);
+        //rv.setResults(results);
 
         final long lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
+        Log.d("TAG", "runClassifier() time : " + lastProcessingTimeMs);
         //b.recycle();
+        Intent data = new Intent();
+        // Pass relevant data back as a result
 
+        data.putParcelableArrayListExtra("results", (ArrayList< Classifier.Recognition>)results);
+        data.putExtra("code", 700); // ints work too
+        // Activity finished ok, return the data
+        setResult(RESULT_OK, data);
+        this.finish();
     }
     // });
     //ProgressDialog d = new ProgressDialog(c);

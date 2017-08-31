@@ -27,7 +27,6 @@ public class FlickrClientApp extends MultiDexApplication {
     }
 
 
-
     private static FlickrService jacksonService;
     private static FlickrService defaultService;
     // The authority for the sync adapter's content provider
@@ -62,8 +61,7 @@ public class FlickrClientApp extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        TensorFlowImageClassifier.init("model",this);
-        //@todoTensorFlowImageClassifier.cacheObjects();
+        TensorFlowImageClassifier.init("model", this);
 
         Stetho.initializeWithDefaults(this);
         Realm.init(this);

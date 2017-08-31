@@ -3,6 +3,9 @@ package org.tensorflow.tensorlib.util;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
+import android.util.SparseArray;
+
+import org.tensorflow.tensorlib.classifier.Classifier;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +17,7 @@ import java.io.OutputStream;
  */
 
 public class Util {
-
+    static SparseArray<Classifier> objs;
 
     public static void copyModelFilesFromAssetsToInternal(String name, Context ctx) {
         AssetManager assetManager = ctx.getAssets();
@@ -47,7 +50,7 @@ public class Util {
                     Log.e("ERROR", "Failed to copy asset file: " + filename, e);
                 } finally {
                     try {
-                        if ( in != null ) {
+                        if (in != null) {
                             in.close();
                         }
                     } catch (IOException e) {
@@ -55,14 +58,14 @@ public class Util {
                     }
                     in = null;
                     try {
-                        if ( out != null) {
+                        if (out != null) {
                             out.flush();
                         }
                     } catch (IOException e) {
                         Log.e("ERROR", "Failed to copy asset file: " + filename, e);
                     }
                     try {
-                        if ( out != null) {
+                        if (out != null) {
                             out.close();
                         }
                     } catch (IOException e) {
@@ -83,5 +86,14 @@ public class Util {
             out.write(buffer, 0, read);
         }
     }
+
+    public static SparseArray<Classifier> getObjs() {
+        return objs;
+    }
+
+    public static void createObjectStore() {
+        objs = new SparseArray<>();
+    }
+
 
 }

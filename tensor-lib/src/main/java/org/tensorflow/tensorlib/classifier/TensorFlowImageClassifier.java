@@ -70,6 +70,7 @@ public class TensorFlowImageClassifier implements Classifier {
 
     public static void init(String name, Context c) {
         Util.copyModelFilesFromAssetsToInternal(name, c);
+        Util.createObjectStore();
     }
 
     /**

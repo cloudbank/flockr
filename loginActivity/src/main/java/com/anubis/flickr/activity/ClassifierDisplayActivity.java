@@ -1,5 +1,6 @@
 package com.anubis.flickr.activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -10,19 +11,25 @@ import android.widget.ImageView;
 
 import com.anubis.flickr.FlickrClientApp;
 import com.anubis.flickr.R;
-import com.anubis.flickr.fragments.FlickrBaseFragment;
 import com.anubis.flickr.models.Photo;
 import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
-import org.tensorflow.tensorlib.activity.BitmapActivity;
+import org.tensorflow.tensorlib.classifier.Classifier;
+import org.tensorflow.tensorlib.classifier.ClassifierType;
 import org.tensorflow.tensorlib.view.ResultsView;
+
+import java.util.List;
 
 import io.realm.Realm;
 
+import static com.anubis.flickr.fragments.FlickrBaseFragment.CLASSIFIER_TYPE;
+import static com.anubis.flickr.fragments.FlickrBaseFragment.RESULT;
+
 public class ClassifierDisplayActivity extends AppCompatActivity {
 
+    public static final int TL_REQ = 007;
     String mUid = "";
     static Photo mPhoto;
     Realm pRealm;
@@ -38,7 +45,7 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String pid = getIntent().getStringExtra(FlickrBaseFragment.RESULT);
+        String pid = getIntent().getStringExtra(RESULT);
         pRealm = Realm.getDefaultInstance();
         mPhoto = pRealm.where(Photo.class).equalTo("id", pid).findFirst();
 
@@ -60,7 +67,7 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
                 .build();
         mPublisherAdView.loadAd(adRequest);*/
         resultsView = (ResultsView) findViewById(R.id.recogView);
-        String classifier = getIntent().getStringExtra(FlickrBaseFragment.CLASSIFIER_TYPE);
+        String classifier = getIntent().getStringExtra(CLASSIFIER_TYPE);
        //@todo pass in the byte[] from getByteArrayFromImageView maybe
         getBitMap(mPhoto.getUrl(),classifier);
 
@@ -70,7 +77,7 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
 
 
 
-    //@todo recycle bitmap
+    //@todo  do not recycle bitmap as per picasso
     //run in bg
     private void getBitMap(String url, String classifier) {
 
@@ -123,13 +130,27 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
 
 
     public void runClassifier(Bitmap bitmap, String classifier) {
-     //@todo future
-        BitmapActivity ba = new BitmapActivity(FlickrClientApp.getAppContext(), classifier);
-        ba.runClassifier(bitmap, resultsView);
+        Intent intent = new Intent(this, ClassifierDisplayActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        Bundle extras = new Bundle();
+        extras.putParcelable("bitmap", bitmap);
+        extras.putString(CLASSIFIER_TYPE, ClassifierType.CLASSIFIER_INCEPTION.getName());
+        intent.putExtras(extras);
+
+        startActivityForResult(intent, TL_REQ);
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if (requestCode == TL_REQ)  {
+            List<Classifier.Recognition> results = data.getParcelableExtra("results");
+            resultsView.setResults(results);
+        }
+
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

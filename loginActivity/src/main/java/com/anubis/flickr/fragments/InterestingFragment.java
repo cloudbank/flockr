@@ -185,6 +185,7 @@ public class InterestingFragment extends FlickrBaseFragment {
         });*/
         rAdapter.setOnItemClickListener((view1, position) -> {
             Intent intent = new Intent(getActivity(), ClassifierDisplayActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             Photo photo = photoList.get(position);
             intent.putExtra(CLASSIFIER_TYPE, ClassifierType.CLASSIFIER_INCEPTION.getName());
             intent.putExtra(RESULT, photo.getId());
