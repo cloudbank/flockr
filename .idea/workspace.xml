@@ -35,17 +35,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f80aa30-297e-4c7f-9a2e-a543f5abd3ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tensor-lib/libs/libandroid_tensorflow_inference_java.jar" afterPath="$PROJECT_DIR$/tensor-lib/libs/libandroid_tensorflow_inference_java.jar" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/--stop" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/flickr.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/loginActivity/src/main/res/drawable-hdpi/ic_star.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/CMakeLists.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/libs/armeabi-v7a/libtensorflow_inference.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/libs/libandroid_tensorflow_inference_java.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/libs/x86/libtensorflow_inference.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/assets/model/imagenet_comp_graph_label_strings.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/assets/model/retrained_labels.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/assets/model/rounded_graph.pb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/assets/model/tensorflow_inception_graph.pb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/assets/test.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/assets/test2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/cpp/imageutils_jni.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/cpp/rgb2yuv.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/cpp/rgb2yuv.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/cpp/tensorflow_utils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/cpp/tensorflow_utils.mm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/cpp/yuv2rgb.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/cpp/yuv2rgb.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/CameraActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/ClassifierActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/StylizeActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/Classifier.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/env/BorderedText.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/env/ImageUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/env/Logger.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/fragment/BitmapFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/fragment/CameraConnectionFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/util/Util.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/AutoFitTextureView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/OverlayView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/RecognitionScoreView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/ResultsView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-hdpi/ic_action_info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-hdpi/tile.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-mdpi/ic_action_info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-xhdpi/ic_action_info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-xxhdpi/ic_action_info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/layout/activity_camera.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/layout/bitmap_fragment.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/layout/camera_connection_fragment_stylize.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/layout/camera_connection_fragment_tracking.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/layout/camera_fragment.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values-sw600dp/template-dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values-sw600dp/template-styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values-v11/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values-v11/template-styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values-v14/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values-v21/base-colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values-v21/base-template-styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values/attrs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values/base-strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values/template-dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tensor-lib/src/main/res/values/template-styles.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build.gradle" afterPath="$PROJECT_DIR$/loginActivity/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/loginActivity/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/loginActivity.iml" afterPath="$PROJECT_DIR$/loginActivity/loginActivity.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/loginActivity/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/FlickrClientApp.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/FlickrClientApp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ClassifierDisplayActivity.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ClassifierDisplayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/InterestingFragment.java" afterPath="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/InterestingFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java" afterPath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/Classifier.java" afterPath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/Classifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java" afterPath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java" afterPath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/util/Util.java" afterPath="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/util/Util.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauthkit/oauthkit.iml" afterPath="$PROJECT_DIR$/oauthkit/oauthkit.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" afterPath="$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" />
     </list>
     <ignored path="flockr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,20 +153,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="TensorFlowImageClassifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java">
+        <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+            <state relative-caret-position="90">
+              <caret line="86" column="31" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassifierDisplayActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BitmapActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="112" column="13" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassifierDisplayActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ClassifierDisplayActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
+            <state relative-caret-position="155">
+              <caret line="147" column="62" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,91 +186,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlickrBaseFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/FlickrBaseFragment.java">
+      <file leaf-file-name="Context.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/content/Context.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tensorLib/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#1101#1119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="31" column="66" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="66" />
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResultsView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/ResultsView.java">
+      <file leaf-file-name="TensorLib.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/TensorLib.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecognitionScoreView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/RecognitionScoreView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BitmapActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="136" column="99" selection-start-line="136" selection-start-column="99" selection-end-line="136" selection-end-column="99" />
+            <state relative-caret-position="119">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1504161136000" expanded="false" signature="80:92" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/Classifier.java">
+      <file leaf-file-name="FlickrClientApp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/FlickrClientApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-              <folding>
-                <element signature="e#3019#3020#0" expanded="true" />
-                <element signature="e#3051#3052#0" expanded="true" />
-                <element signature="e#4034#4035#0" expanded="true" />
-                <element signature="e#4092#4093#0" expanded="true" />
-                <element signature="e#4147#4148#0" expanded="true" />
-                <element signature="e#4207#4208#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parcel.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/os/Parcel.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="292" column="61" selection-start-line="292" selection-start-column="61" selection-end-line="292" selection-end-column="61" />
+            <state relative-caret-position="180">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RectF.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/graphics/RectF.class">
+      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/util/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="165">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/java/util/List.class">
+      <file leaf-file-name="PhotosActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/PhotosActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="165">
+              <caret line="204" column="35" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -235,14 +307,14 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="flickr" />
+              <option name="name" value="phlaiku" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="flickr" />
+                <option name="name" value="phlaiku" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
@@ -258,8 +330,8 @@
                 <option name="path" value="$PROJECT_DIR$/simplecropimagelib" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value=":tensor-lib" />
-                <option name="path" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="name" value=":tensorLib" />
+                <option name="path" value="$PROJECT_DIR$/tensorLib" />
               </ExternalProjectPojo>
             </list>
           </value>
@@ -276,7 +348,7 @@
                 <option name="name" value="transformClassesWithRealmTransformerForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'flickr'." />
+                <option name="description" value="Displays the sub-projects of root project 'phlaiku'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
@@ -393,7 +465,7 @@
                 <option name="name" value="compileDebugAndroidTestJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'flickr'. [incubating]" />
+                <option name="description" value="Displays the components produced by root project 'phlaiku'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
@@ -709,7 +781,7 @@
                 <option name="name" value="generateDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'flickr'. [incubating]" />
+                <option name="description" value="Displays the dependent components of components in root project 'phlaiku'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependentComponents" />
               </ExternalTaskPojo>
@@ -719,7 +791,7 @@
                 <option name="name" value="prepareComAndroidSupportSupportCompat2600Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'flickr'." />
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'phlaiku'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
@@ -886,12 +958,12 @@
                 <option name="name" value="bundleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'flickr'. [incubating]" />
+                <option name="description" value="Displays the configuration model of root project 'phlaiku'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'flickr' (some of the displayed tasks may belong to subprojects)." />
+                <option name="description" value="Displays the tasks runnable from root project 'phlaiku' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -923,7 +995,7 @@
                 <option name="name" value="prepareComGoogleAndroidGmsPlayServicesClearcut1000Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'flickr'." />
+                <option name="description" value="Displays all dependencies declared in root project 'phlaiku'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
@@ -1036,7 +1108,7 @@
                 <option name="name" value="prepareComAndroidSupportAppcompatV72601Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'flickr'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'phlaiku'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -1331,7 +1403,7 @@
                 <option name="name" value="processReleaseGoogleServices" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'flickr'." />
+                <option name="description" value="Displays the properties of root project 'phlaiku'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
@@ -3040,677 +3112,677 @@
             </list>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/tensor-lib">
+        <entry key="$PROJECT_DIR$/tensorLib">
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeDebugProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of project ':tensor-lib'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays the sub-projects of project ':tensorLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="packageReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="validateSigningDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformNativeLibsWithSyncJniLibsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="assembleReleaseUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="prepareDebugDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles a bundle containing the library in debug." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="bundleDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="copyDebugLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processReleaseJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs lint on the Debug build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="lintDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles a bundle containing the library in release." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="bundleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="assembleDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Creates a version of android.jar that's suitable for unit tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mockableAndroidJar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of project ':tensor-lib'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays the configuration model of project ':tensorLib'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from project ':tensor-lib'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays the tasks runnable from project ':tensorLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="packageReleaseRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeReleaseProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="incrementalDebugJavaCompilationSafeguard" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="deviceCheck" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in project ':tensor-lib'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays all dependencies declared in project ':tensorLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformNativeLibsWithStripDebugSymbolForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs lint on all variants." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="lint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project and all projects it depends on." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="buildNeeded" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugAndroidTestBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processDebugUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run unit tests for the release build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="testReleaseUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Deletes the build cache directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="cleanBuildCache" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="assembleDefault" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugAndroidTestShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeDebugShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugAndroidTestJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by project ':tensor-lib'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays the components produced by project ':tensorLib'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles all Debug builds." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="assembleDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processDebugAndroidTestManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugUnitTestJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateJsonModelRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformResourcesWithMergeJavaResForReleaseUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="preDebugAndroidTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the debug variant into the archive file" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="extractDebugAnnotations" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processDebugAndroidTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="javaPreCompileDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileReleaseShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugAndroidTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="prepareDebugAndroidTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="incrementalDebugAndroidTestJavaCompilationSafeguard" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="checkReleaseManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="javaPreCompileDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="packageDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformNativeLibsWithSyncJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugAndroidTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeReleaseJniLibFolders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="prepareReleaseDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Installs and runs instrumentation tests using all Device Providers." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="deviceAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeDebugAndroidTestAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processReleaseManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the android (on device) tests for the Debug build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="uninstallDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in project ':tensor-lib'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays the insight into a specific dependency in project ':tensorLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateReleaseSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="incrementalReleaseUnitTestJavaCompilationSafeguard" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="preReleaseBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles all variants of all applications and secondary packages." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="assemble" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="incrementalDebugUnitTestJavaCompilationSafeguard" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="incrementalReleaseJavaCompilationSafeguard" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="help" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileReleaseUnitTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Installs the android (on device) tests for the Debug build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="installDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="javaPreCompileReleaseUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateJsonModelDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="javaPreCompileRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks on currently connected devices." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="connectedCheck" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Installs and runs the tests for debug on connected devices." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="connectedDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Uninstall all applications." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="uninstallAll" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles all the Test applications." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="assembleAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="extractReleaseAnnotations" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="preDebugUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeReleaseShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the Android dependencies of the project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="androidDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugUnitTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeDebugAndroidTestJniLibFolders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="extractProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="externalNativeBuildCleanDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformClassesWithDexForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="assembleDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="copyReleaseLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processDebugJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugAndroidTestAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileReleaseJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformResourcesWithMergeJavaResForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run unit tests for all variants." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="test" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformNativeLibsWithStripDebugSymbolForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="check" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="javaPreCompileDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run unit tests for the debug build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="testDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="connectedAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="preBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformResourcesWithMergeJavaResForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileReleaseSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileReleaseUnitTestJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformResourcesWithMergeJavaResForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileReleaseAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs lint on the Release build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="lintRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="buildDependents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in project ':tensor-lib'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays the dependent components of components in project ':tensorLib'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="dependentComponents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in project ':tensor-lib'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays all buildscript dependencies declared in project ':tensorLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="checkDebugManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeDebugJniLibFolders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prints out all the source sets defined in this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="sourceSets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="transformResourcesWithMergeJavaResForDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="packageDebugRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateReleaseBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="externalNativeBuildDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the signing info for each variant." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="signingReport" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugAndroidTestAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="externalNativeBuildCleanRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="mergeDebugAndroidTestShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Deletes the build directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="clean" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="preDebugBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="externalNativeBuildRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="build" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles all Release builds." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="assembleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="compileDebugAndroidTestRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="processDebugManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="packageDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="generateReleaseResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of project ':tensor-lib'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensor-lib" />
+                <option name="description" value="Displays the properties of project ':tensorLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/tensorLib" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
             </list>
@@ -3720,7 +3792,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7516147414000" />
+        <entry key="$PROJECT_DIR$" value="7520831435000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -4245,9 +4317,112 @@
                       </ExternalModuleBuildClasspathPojo>
                     </value>
                   </entry>
+                  <entry key="$PROJECT_DIR$/tensorLib">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.3/gradle-2.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.3/gradle-2.3.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.realm/realm-gradle-plugin/2.0.2/b9e96d09d3f8e0b6ce80f96c63618a693e683c64/realm-gradle-plugin-2.0.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/3.0.0/32b833222c886ecfb37d79b1a05ce1eddb702db1/google-services-3.0.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/3.0.0/ee538ce9cf4148485e43017c5542202b8c78ff8e/google-services-3.0.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.tatarka/gradle-retrolambda/3.4.0/d23a7b00f34b89131be0f53bce4a75a9c67663f5/gradle-retrolambda-3.4.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.tatarka/gradle-retrolambda/3.4.0/3b60157fb3c27ffdf7d4426e2a5929ff55b6d1dd/gradle-retrolambda-3.4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.3/gradle-core-2.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.3/gradle-core-2.3.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.realm/realm-transformer/2.0.2/17e3898b0b1da5dad75c339f674ed936985ffac6/realm-transformer-2.0.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.neenbedankt.gradle.plugins/android-apt/1.8/24d19fcf131d31823ff604a542dd0655c4feec86/android-apt-1.8-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.neenbedankt.gradle.plugins/android-apt/1.8/d3c508f0ea2b2bb93c2816a83351090dd662eaac/android-apt-1.8.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.3/builder-2.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.3/builder-2.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.3/lint-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.3/lint-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.3/gradle-api-2.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.3/gradle-api-2.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.3/compilerCommon-2.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.3/compilerCommon-2.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.3.2/proguard-gradle-5.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.core/0.7.5.201505241946/org.jacoco.core-0.7.5.201505241946.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.report/0.7.5.201505241946/org.jacoco.report-0.7.5.201505241946.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.realm/realm-annotations/2.0.2/e97f64258ef6d0daeb26b3b88988215e0b14d9b2/realm-annotations-2.0.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/d8fdc08a455bc0b28bc0bed1f0d032d935cee8e1/javassist-3.20.0-GA-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/a9cbcdfb7e9f86fbc74d3afae65f2248bfbf82a0/javassist-3.20.0-GA.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.3/builder-model-2.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.3/builder-model-2.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.3/builder-test-api-2.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.3/builder-test-api-2.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.3/sdklib-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.3/sdklib-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.3/sdk-common-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.3/sdk-common-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.3/common-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.3/common-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.3/manifest-merger-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.3/manifest-merger-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.3/ddmlib-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.3/ddmlib-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jack/jack-api/0.13.0/jack-api-0.13.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jill/jill-api/0.10.0/jill-api-0.10.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.3/protos-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.3/protos-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.3/shared-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.3/shared-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.3/tracker-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.3/tracker-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.3/lint-checks-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.3/lint-checks-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.3/baseLibrary-2.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.3/baseLibrary-2.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.3/annotations-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.3/annotations-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.3.2/proguard-base-5.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-debug-all/5.0.1/asm-debug-all-5.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.3/layoutlib-api-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.3/layoutlib-api-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.3/dvlib-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.3/dvlib-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.3/repository-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.3/repository-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.3/lint-api-25.3.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.3/lint-api-25.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/5.0.4/asm-analysis-5.0.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/uast/162.2228.14/uast-162.2228.14.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$/tensorLib" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
                 </map>
               </option>
-              <option name="name" value="flickr" />
+              <option name="name" value="phlaiku" />
               <option name="projectBuildClasspath">
                 <list>
                   <option value="$APPLICATION_HOME_DIR$/gradle/gradle-4.1-rc-1/src/announce" />
@@ -4398,19 +4573,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/toolbar_main.xml" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/res/drawable/background_toolbar.xml" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/adapter/FriendsAdapter.java" />
-        <option value="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/RetrainedClassfier.java" />
-        <option value="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/RecognitionScoreView.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/classifier_image_display.xml" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/models/Photos.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/sync/SyncAdapter.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_friends.xml" />
-        <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/res/layout/fragment_tags.xml" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/adapter/SearchAdapter.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/adapter/TagsAdapter.java" />
@@ -4425,7 +4591,6 @@
         <option value="$PROJECT_DIR$/tensor-lib/build.gradle" />
         <option value="$PROJECT_DIR$/oauthkit/build.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/loginActivity/build.gradle" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/FlickrBaseFragment.java" />
         <option value="$PROJECT_DIR$/tensor-lib/src/main/res/values/base-strings.xml" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ImageDisplayActivity.java" />
@@ -4437,24 +4602,33 @@
         <option value="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/fragment/BitmapFragment.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/tensor-lib/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/tensor-lib/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/service/FlickrService.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/TagsFragment.java" />
         <option value="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/FlickrClientApp.java" />
         <option value="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java" />
         <option value="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/util/Util.java" />
         <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/InterestingFragment.java" />
-        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ClassifierDisplayActivity.java" />
         <option value="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/Classifier.java" />
         <option value="$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java" />
+        <option value="$PROJECT_DIR$/local.properties" />
+        <option value="$PROJECT_DIR$/loginActivity/build.gradle" />
+        <option value="$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java" />
+        <option value="$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/util/Util.java" />
+        <option value="$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/cache/ClassifierCache.java" />
+        <option value="$PROJECT_DIR$/loginActivity/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/tensorLib/build/intermediates/manifests/aapt/release/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/tensorLib/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/TensorLibApplication.java" />
+        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/FlickrClientApp.java" />
+        <option value="$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java" />
+        <option value="$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/TensorLib.java" />
+        <option value="$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ClassifierDisplayActivity.java" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-55" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="731" />
@@ -4484,57 +4658,49 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tensor-lib" />
+              <option name="myItemId" value="tensorLib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tensor-lib" />
+              <option name="myItemId" value="tensorLib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -4548,15 +4714,15 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tensor-lib" />
+              <option name="myItemId" value="tensorLib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -4578,15 +4744,49 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tensor-lib" />
+              <option name="myItemId" value="tensorLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorLib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -4612,11 +4812,177 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simplecropimagelib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauthkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauthkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauthkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauthkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauthkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -4626,11 +4992,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -4648,11 +5014,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -4678,11 +5044,45 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flickr" />
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loginActivity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="flickr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phlaiku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -4712,6 +5112,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4729,8 +5137,8 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="settings.editor.selected.configurable" value="instant.run" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tensor-lib/src/main/assets" />
-    <property name="device.picker.selection" value="192.168.60.101:5555" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="device.picker.selection" value="Nexus_7_API_24" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPropertiesWindowManager-NlEditorPanel.SHOW" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -5138,29 +5546,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-55" y="23" width="1280" height="731" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="731" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.48707592" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37723577" sideWeight="0.72374797" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37723577" sideWeight="0.6978998" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31663975" sideWeight="0.5175644" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37723577" sideWeight="0.30210015" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3707317" sideWeight="0.71728593" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3707317" sideWeight="0.70840067" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21626016" sideWeight="0.54523426" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719547" sideWeight="0.49676898" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.022653721" sideWeight="0.49112022" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3707317" sideWeight="0.28271407" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40487805" sideWeight="0.25928918" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37722132" sideWeight="0.48243558" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40487805" sideWeight="0.7504039" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40487805" sideWeight="0.7407108" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3231018" sideWeight="0.4918033" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35609755" sideWeight="0.7197092" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35609755" sideWeight="0.71001613" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -5176,6 +5584,42 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38942307" sideWeight="0.82714057" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31663975" sideWeight="0.5175644" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37723577" sideWeight="0.30210015" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3707317" sideWeight="0.71728593" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find Sample Code" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.49030694" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3231018" sideWeight="0.4918033" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35609755" sideWeight="0.7197092" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.48707592" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37723577" sideWeight="0.7059774" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38942307" sideWeight="0.82714057" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21626016" sideWeight="0.54523426" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719547" sideWeight="0.49676898" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.022653721" sideWeight="0.49112022" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40487805" sideWeight="0.25444266" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37722132" sideWeight="0.48243558" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40487805" sideWeight="0.74555737" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -5191,241 +5635,45 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/3f998a26355e4138e3e7a880a5dac57fc4370339/picasso-2.5.2-sources.jar!/com/squareup/picasso/RequestCreator.java</url>
-          <line>495</line>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java</url>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/3f998a26355e4138e3e7a880a5dac57fc4370339/picasso-2.5.2-sources.jar!/com/squareup/picasso/RequestCreator.java</url>
-          <line>505</line>
-          <properties />
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/3f998a26355e4138e3e7a880a5dac57fc4370339/picasso-2.5.2-sources.jar!/com/squareup/picasso/RequestCreator.java</url>
-          <line>504</line>
-          <properties />
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java</url>
-          <line>163</line>
-          <properties />
-          <option name="timeStamp" value="199" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="214" />
+          <option name="timeStamp" value="270" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java</url>
-          <line>108</line>
+          <url>file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/PhotosActivity.java</url>
+          <line>198</line>
           <properties />
-          <option name="timeStamp" value="229" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java</url>
-          <line>120</line>
-          <properties />
-          <option name="timeStamp" value="242" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ClassifierDisplayActivity.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="250" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java</url>
-          <line>138</line>
-          <properties />
-          <option name="timeStamp" value="258" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ClassifierDisplayActivity.java</url>
-          <line>111</line>
-          <properties />
-          <option name="timeStamp" value="260" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java</url>
-          <line>53</line>
-          <properties class="org.tensorflow.tensorlib.classifier.ClassifierType" method="getLabelFilename" />
-          <option name="timeStamp" value="217" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java</url>
-          <line>49</line>
-          <properties class="org.tensorflow.tensorlib.classifier.ClassifierType" method="getModelFilename" />
-          <option name="timeStamp" value="224" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java</url>
-          <line>11</line>
-          <properties field="CLASSIFIER_RETRAINED" class="org.tensorflow.tensorlib.classifier.ClassifierType" />
-          <option name="timeStamp" value="219" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java</url>
-          <line>13</line>
-          <properties field="CLASSIFIER_INCEPTION" class="org.tensorflow.tensorlib.classifier.ClassifierType" />
-          <option name="timeStamp" value="220" />
+          <option name="timeStamp" value="273" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="269" />
+      <option name="time" value="275" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/res/values/base-strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/drawable/rocket_transparent.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/models/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oauthkit/src/main/java/com/anubis/oauthkit/OAuthBaseClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/CameraActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/graphics/BitmapFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/assets/model/rounded_graph.pb">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/assets/model/imagenet_comp_graph_label_strings.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/assets/model/tensorflow_inception_graph.pb">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/assets/model/retrained_labels.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/content/ContextWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/app/Application.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/java/util/Vector.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="150" column="32" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oauthkit/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/TensorLibApplication.java" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/fragment/BitmapFragment.java">
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/fragment/BitmapFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5436,75 +5684,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/captures/com.anubis.flickr_2017.08.28_23.11.hprof">
-      <provider selected="true" editor-type-id="capture-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="1" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/cpp/imageutils_jni.cc">
+    <entry file="file://$PROJECT_DIR$/captures/com.anubis.flickr_2017.08.28_23.11.hprof" />
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/cpp/imageutils_jni.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/tensor-lib/libs/libandroid_tensorflow_inference_java.jar!/org/tensorflow/contrib/android/TensorFlowInferenceInterface.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/cpp/tensorflow_utils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/tensor-lib/libs/libandroid_tensorflow_inference_java.jar!/org/tensorflow/contrib/android/TensorFlowInferenceInterface.class" />
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/cpp/tensorflow_utils.h" />
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/service/FlickrService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="43" column="74" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5512,11 +5705,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="234" column="39" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/ClassifierActivity.java">
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/activity/ClassifierActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="126" column="38" selection-start-line="126" selection-start-column="38" selection-end-line="126" selection-end-column="38" />
@@ -5524,21 +5716,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java">
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/classifier/ClassifierType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-570">
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="e#1410#1411#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/PhotosActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="343" column="23" selection-start-line="343" selection-start-column="18" selection-end-line="343" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -5547,36 +5728,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="312" column="28" selection-start-line="312" selection-start-column="28" selection-end-line="312" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/view/ResultsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/FlickrBaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="31" column="66" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/java/util/List.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/graphics/RectF.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/os/Parcel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="292" column="61" selection-start-line="292" selection-start-column="61" selection-end-line="292" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/view/RecognitionScoreView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/--stop" />
+    <entry file="file://$PROJECT_DIR$/tensorLib/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/cmake.check_cache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oauthkit/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/InterestingFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="186" column="48" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2987#2988#0" expanded="true" />
-            <element signature="e#3014#3015#0" expanded="true" />
-            <element signature="e#3060#3061#0" expanded="true" />
-            <element signature="e#3102#3103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/FlickrClientApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="239">
+          <caret line="191" column="34" selection-start-line="191" selection-start-column="34" selection-end-line="191" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -5589,102 +5851,193 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/view/View.class">
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/app/ActivityManager.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        <state relative-caret-position="-90">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/ResultsView.java">
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/app/Application.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="28" />
+        <state relative-caret-position="86">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/fragments/FlickrBaseFragment.java">
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/util/LruCache.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+          <folding>
+            <element signature="e#3301#3302#0" expanded="true" />
+            <element signature="e#3352#3353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/classifier/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="31" column="66" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="66" />
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/java/util/List.class">
+    <entry file="jar://$PROJECT_DIR$/tensorLib/libs/libandroid_tensorflow_inference_java.jar!/org/tensorflow/Graph.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/graphics/RectF.class">
+    <entry file="jar://$PROJECT_DIR$/tensorLib/libs/libandroid_tensorflow_inference_java.jar!/org/tensorflow/contrib/android/TensorFlowInferenceInterface.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/cache/ClassifierCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/res/values/base-strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oauthkit/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/PhotosActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="204" column="35" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/build/intermediates/manifests/aapt/release/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#1101#1119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/FlickrClientApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <caret line="86" column="31" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/os/Parcel.class">
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/util/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="292" column="61" selection-start-line="292" selection-start-column="61" selection-end-line="292" selection-end-column="61" />
+        <state relative-caret-position="165">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/android-sdk-macosx-3/platforms/android-26/android.jar!/android/content/Context.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/TensorLib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorLib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="112" column="13" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loginActivity/src/main/java/com/anubis/flickr/activity/ClassifierDisplayActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
+        <state relative-caret-position="155">
+          <caret line="147" column="62" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/TensorFlowImageClassifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/view/RecognitionScoreView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/classifier/Classifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="e#3019#3020#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-            <element signature="e#4034#4035#0" expanded="true" />
-            <element signature="e#4092#4093#0" expanded="true" />
-            <element signature="e#4147#4148#0" expanded="true" />
-            <element signature="e#4207#4208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensor-lib/src/main/java/org/tensorflow/tensorlib/activity/BitmapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="136" column="99" selection-start-line="136" selection-start-column="99" selection-end-line="136" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1504161136000" expanded="false" signature="80:92" ph="..." />
           </folding>
         </state>
       </provider>

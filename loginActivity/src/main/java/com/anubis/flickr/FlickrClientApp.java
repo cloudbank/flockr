@@ -9,7 +9,7 @@ import com.facebook.stetho.Stetho;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
-import org.tensorflow.tensorlib.classifier.TensorFlowImageClassifier;
+import org.tensorflow.tensorlib.TensorLib;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -61,7 +61,7 @@ public class FlickrClientApp extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        TensorFlowImageClassifier.init("model", this);
+        TensorLib.init(this);
 
         Stetho.initializeWithDefaults(this);
         Realm.init(this);

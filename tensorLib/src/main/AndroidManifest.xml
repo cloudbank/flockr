@@ -22,10 +22,11 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-  <application
-        android:extractNativeLibs="false"
+    <application
+
         android:allowBackup="true"
         android:debuggable="true"
+        android:extractNativeLibs="false"
         android:label="@string/app_name">
         <activity
             android:name="org.tensorflow.tensorlib.activity.ClassifierActivity"
@@ -35,7 +36,6 @@
             android:name="org.tensorflow.tensorlib.activity.BitmapActivity"
             android:label="@string/activity_name_classification"
             android:screenOrientation="portrait">
-
 
 
         </activity>

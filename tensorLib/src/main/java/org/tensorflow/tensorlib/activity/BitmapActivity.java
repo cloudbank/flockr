@@ -2,6 +2,7 @@ package org.tensorflow.tensorlib.activity;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.ComponentCallbacks2;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -13,17 +14,17 @@ import android.os.PersistableBundle;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import android.util.SparseArray;
+import android.util.LruCache;
 import android.util.TypedValue;
 
 import org.tensorflow.tensorlib.R;
+import org.tensorflow.tensorlib.TensorLib;
 import org.tensorflow.tensorlib.classifier.Classifier;
 import org.tensorflow.tensorlib.classifier.ClassifierType;
 import org.tensorflow.tensorlib.classifier.TensorFlowImageClassifier;
 import org.tensorflow.tensorlib.env.BorderedText;
 import org.tensorflow.tensorlib.env.Logger;
 import org.tensorflow.tensorlib.fragment.BitmapFragment;
-import org.tensorflow.tensorlib.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,8 +47,6 @@ public class BitmapActivity extends Activity {
     Classifier classifier = null;
     int mInputSize;
     public static final String CLASSIFIER_TYPE = "classifierType";
-    public static final int INCEPTION_OBJ = 0;
-    public static final int RETRAINED_OBJ = 1;
     public static final String TAG = "BitmapActivity";
 
 
@@ -65,35 +64,35 @@ public class BitmapActivity extends Activity {
         //LRU cache?\\
         Bundle extras = getIntent().getExtras();
         Bitmap bmp = (Bitmap) extras.getParcelable("bitmap");
-        String ctype = getIntent().getStringExtra(CLASSIFIER_TYPE);
-        SparseArray<Classifier> objs = Util.getObjs();
+        String cType = extras.getString(CLASSIFIER_TYPE);
+
+
+        LruCache<String, Classifier> objs = TensorLib.classifierCache;
         classifier = null;
-        int index = -1;
-        if (ctype.equals(ClassifierType.CLASSIFIER_RETRAINED.getName())) {
+        if (cType.equals(ClassifierType.CLASSIFIER_RETRAINED.getName())) {
             classifierType = ClassifierType.CLASSIFIER_RETRAINED;
-            if (objs.get(RETRAINED_OBJ) != null) {
-                classifier = objs.get(RETRAINED_OBJ);
-                index = RETRAINED_OBJ;
+            if (objs.get(cType) != null) {
+                classifier = objs.get(cType);
             }
 
-        } else if (ctype.equals(ClassifierType.CLASSIFIER_INCEPTION.getName())) {
+        } else if (cType.equals(ClassifierType.CLASSIFIER_INCEPTION.getName())) {
             classifierType = ClassifierType.CLASSIFIER_INCEPTION;
-            if (objs.get(INCEPTION_OBJ) != null) {
-                classifier = objs.get(INCEPTION_OBJ);
-                index = INCEPTION_OBJ;
+            if (objs.get(cType) != null) {
+                classifier = objs.get(cType);
             }
         }
-
+//@toso erese deodorant context here must match assets copy fn
         if (classifier == null) {
             classifier =
                     TensorFlowImageClassifier.create(
-                            getApplicationContext(), classifierType.getModelFilename(), classifierType.getLabelFilename(), classifierType.getInputSize(),
+                            TensorLib.context, classifierType.getModelFilename(), classifierType.getLabelFilename(), classifierType.getInputSize(),
                             classifierType.getImageMean(), classifierType.getImageStd(), classifierType.getInputName(), classifierType.getOutputName()
                     );
-            objs.put(index, classifier);
+            objs.put(cType, classifier);
         }
         mInputSize = classifierType.getInputSize();
-        runClassifier(bmp,index);
+        //@todo compress bmp earlier
+        runClassifier(bmp);
 
     }
 
@@ -131,7 +130,7 @@ public class BitmapActivity extends Activity {
                 .commit();
     }
 
-    public void runClassifier(final Bitmap bitmap, int index) {
+    public void runClassifier(final Bitmap bitmap) {
         //change this to static
         Bitmap b = null;
         //@todo do we need to deal with JPEG decoding after all?  removed decodejpeg from retrained
@@ -152,11 +151,9 @@ public class BitmapActivity extends Activity {
         final long startTime = SystemClock.uptimeMillis();
         //@todo run in bg return on main
         //final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
-        //@todo
-        //check if smaller first
         //todo cache the results using a Future
 
-        results = (ArrayList< Classifier.Recognition>)Util.getObjs().get(index).recognizeImage(b);
+        results = (ArrayList<Classifier.Recognition>) classifier.recognizeImage(b);
         if (results.size() == 0) {
             results = new ArrayList<Classifier.Recognition>();
             results.add(new Classifier.Recognition("", "There were no results!", 0f, null));
@@ -164,14 +161,11 @@ public class BitmapActivity extends Activity {
         //rv.setResults(results);
 
         final long lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
-        Log.d("TAG", "runClassifier() time : " + lastProcessingTimeMs);
-        //b.recycle();
+        Log.d(TAG, "runClassifier() time : " + lastProcessingTimeMs);
+        //b.recycle(); //picasso limitation with callback
         Intent data = new Intent();
-        // Pass relevant data back as a result
-
-        data.putParcelableArrayListExtra("results", (ArrayList< Classifier.Recognition>)results);
-        data.putExtra("code", 700); // ints work too
-        // Activity finished ok, return the data
+        data.putParcelableArrayListExtra("results", (ArrayList<Classifier.Recognition>) results);
+        data.putExtra("code", 700);
         setResult(RESULT_OK, data);
         this.finish();
     }
@@ -212,5 +206,65 @@ public class BitmapActivity extends Activity {
         //bm.recycle();
         return resizedBitmap;
     }
+
+
+    //@todo
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        // Determine which lifecycle or system event was raised.
+        switch (level) {
+
+            case ComponentCallbacks2.TRIM_MEMORY_UI_HIDDEN:
+
+                /*
+                   Release any UI objects that currently hold memory.
+
+                   The user interface has moved to the background.
+                */
+
+                break;
+
+            case ComponentCallbacks2.TRIM_MEMORY_RUNNING_MODERATE:
+            case ComponentCallbacks2.TRIM_MEMORY_RUNNING_LOW:
+            case ComponentCallbacks2.TRIM_MEMORY_RUNNING_CRITICAL:
+
+                /*
+                   Release any memory that your app doesn't need to run.
+
+                   The device is running low on memory while the app is running.
+                   The event raised indicates the severity of the memory-related event.
+                   If the event is TRIM_MEMORY_RUNNING_CRITICAL, then the system will
+                   begin killing background processes.
+                */
+
+                break;
+
+            case ComponentCallbacks2.TRIM_MEMORY_BACKGROUND:
+            case ComponentCallbacks2.TRIM_MEMORY_MODERATE:
+            case ComponentCallbacks2.TRIM_MEMORY_COMPLETE:
+
+                /*
+                   Release as much memory as the process can.
+
+                   The app is on the LRU list and the system is running low on memory.
+                   The event raised indicates where the app sits within the LRU list.
+                   If the event is TRIM_MEMORY_COMPLETE, the process will be one of
+                   the first to be terminated.
+                */
+
+                break;
+
+            default:
+                /*
+                  Release any non-critical data structures.
+
+                  The app received an unrecognized memory level value
+                  from the system. Treat this as a generic low-memory message.
+                */
+                break;
+        }
+    }
+
 
 }

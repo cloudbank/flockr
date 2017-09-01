@@ -1,75 +1,77 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:2:1-93:12
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:2:1-96:12
 	package
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:3:5-32
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:4:5-32
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:3:5-51
 	xmlns:android
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
 uses-feature#android.hardware.camera
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:6:5-8:36
-MERGED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:28:5-60
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:6:5-8:36
+MERGED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:28:5-60
 	android:required
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:8:9-33
-		MERGED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:8:9-33
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:8:9-33
+		MERGED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:8:9-33
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:7:9-47
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:7:9-47
 uses-permission#android.permission.INTERNET
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:10:5-67
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:10:5-67
 MERGED from [com.google.android.gms:play-services-ads-lite:10.0.0] /Users/sabine/.android/build-cache/37e32fcf83f880dc98af5acf5d31babf5b7d5aca/output/AndroidManifest.xml:19:5-66
 MERGED from [com.google.firebase:firebase-analytics:10.0.0] /Users/sabine/.android/build-cache/e8c06ddf6e5d721f5287f5847834ee2b96f3a5e9/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:10.0.0] /Users/sabine/.android/build-cache/780572d3dc44004ab840469c77b7661d27f782da/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-iid:10.0.0] /Users/sabine/.android/build-cache/e2b937bb2032846ee4eafc1b445cd1cacaff63ae/output/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:10:22-64
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:10:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:11:5-81
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:11:22-78
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:11:22-78
 uses-permission#android.permission.CAMERA
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:12:5-65
-MERGED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:26:5-65
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:12:5-65
+MERGED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:26:5-65
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:12:22-62
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:12:22-62
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:13:5-79
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:13:5-79
 MERGED from [com.google.android.gms:play-services-ads-lite:10.0.0] /Users/sabine/.android/build-cache/37e32fcf83f880dc98af5acf5d31babf5b7d5aca/output/AndroidManifest.xml:20:5-78
 MERGED from [com.google.firebase:firebase-analytics:10.0.0] /Users/sabine/.android/build-cache/e8c06ddf6e5d721f5287f5847834ee2b96f3a5e9/output/AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-analytics-impl:10.0.0] /Users/sabine/.android/build-cache/780572d3dc44004ab840469c77b7661d27f782da/output/AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-iid:10.0.0] /Users/sabine/.android/build-cache/e2b937bb2032846ee4eafc1b445cd1cacaff63ae/output/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:13:22-76
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:13:22-76
 uses-permission#android.permission.READ_SYNC_SETTINGS
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:14:5-77
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:14:5-77
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:14:22-74
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:14:22-74
 uses-permission#android.permission.WRITE_SYNC_SETTINGS
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:15:5-78
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:15:5-78
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:15:22-75
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:15:22-75
 uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:16:5-80
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:16:5-80
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:16:22-77
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:16:22-77
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:17:5-71
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:17:5-71
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:17:22-68
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:17:22-68
 uses-permission#android.permission.MANAGE_ACCOUNTS
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:18:5-74
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:18:5-74
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:18:22-71
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:18:22-71
 application
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:20:5-91:19
-MERGED from [flickr:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/oauthkit/build/intermediates/bundles/default/AndroidManifest.xml:11:5-15:19
-MERGED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:31:5-44:19
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:20:5-94:19
+MERGED from [phlaiku:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/oauthkit/build/intermediates/bundles/default/AndroidManifest.xml:11:5-15:19
+MERGED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:31:5-44:19
 MERGED from [com.github.jetradarmobile:android-snowfall:1.1.6] /Users/sabine/.android/build-cache/c201f7c8eea1d7d86ad3fe7b8548d5d987cb417a/output/AndroidManifest.xml:8:5-20
 MERGED from [com.felipecsl.asymmetricgridview:library:2.0.1] /Users/sabine/.android/build-cache/faf5f6b3067fd249cdd51de52c703d679dfac94c/output/AndroidManifest.xml:10:5-20
 MERGED from [com.aurelhubert:ahbottomnavigation:0.1.3] /Users/sabine/.android/build-cache/ba4310655011d0ca60caad665b6192721aaa38b6/output/AndroidManifest.xml:11:5-20
@@ -102,138 +104,150 @@ MERGED from [com.android.support:support-core-utils:26.0.1] /Users/sabine/.andro
 MERGED from [com.android.support:support-compat:26.0.1] /Users/sabine/.android/build-cache/06955df2774043e1a6fc38fdcedd5de9020d52a4/output/AndroidManifest.xml:25:5-29:19
 MERGED from [com.facebook.stetho:stetho-okhttp3:1.4.1] /Users/sabine/.android/build-cache/b790b0032031a1b717170dd94ba71250667cb329/output/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.stetho:stetho:1.4.1] /Users/sabine/.android/build-cache/6f7ce4025ebbd4e3a2e32f759737771f04bec746/output/AndroidManifest.xml:11:5-20
+	tools:node
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:21:9-27
 	android:extractNativeLibs
-		ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:34:9-42
+		ADDED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:34:9-42
 	android:label
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:24:9-41
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:26:9-41
 	android:supportsRtl
-		ADDED from [flickr:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/oauthkit/build/intermediates/bundles/default/AndroidManifest.xml:14:9-35
+		ADDED from [phlaiku:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/oauthkit/build/intermediates/bundles/default/AndroidManifest.xml:14:9-35
 	android:debuggable
-		ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:33:9-34
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:24:9-34
 	android:allowBackup
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:22:9-35
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:23:9-35
 	android:icon
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:23:9-52
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:25:9-52
 	android:theme
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:25:9-40
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:27:9-40
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:21:9-40
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:22:9-57
 activity#com.anubis.flickr.activity.LoginActivity
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:27:9-46:20
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:28:9-47:20
 	android:label
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:29:13-45
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:30:13-45
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:28:13-51
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:29:13-51
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:30:13-34:29
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:31:13-35:29
 action#android.intent.action.MAIN
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:31:17-69
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:32:17-69
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:31:25-66
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:32:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:33:17-77
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:34:17-77
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:33:27-74
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:34:27-74
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:35:13-44:29
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:36:13-45:29
 action#android.intent.action.VIEW
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:36:17-69
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:37:17-69
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:36:25-66
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:37:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:38:17-76
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:39:17-76
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:38:27-73
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:39:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:39:17-78
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:40:17-78
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:39:27-75
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:40:27-75
 data
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:41:17-43:46
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:42:17-44:46
 	android:host
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:42:21-42
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:43:21-42
 	android:scheme
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:43:21-43
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:44:21-43
 activity#com.anubis.flickr.activity.PhotosActivity
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:47:9-50:64
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:48:9-51:64
 	android:label
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:49:13-45
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:50:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:50:13-52
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:51:13-52
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:48:13-52
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:49:13-52
 activity#com.anubis.flickr.activity.PreviewPhotoActivity
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:51:9-53:57
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:52:9-54:57
 	android:label
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:53:13-45
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:54:13-45
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:52:13-58
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:53:13-58
 activity#com.anubis.flickr.activity.ImageDisplayActivity
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:54:9-56:57
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:55:9-57:57
 	android:label
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:56:13-45
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:57:13-45
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:55:13-58
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:56:13-58
 activity#com.anubis.flickr.activity.ClassifierDisplayActivity
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:57:9-59:57
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:58:9-60:57
 	android:label
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:59:13-45
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:60:13-45
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:58:13-63
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:59:13-63
+activity#org.tensorflow.tensorlib.activity.BitmapActivity
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:62:9-94
+MERGED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:39:9-43:20
+	android:screenOrientation
+		ADDED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:42:13-49
+	android:label
+		ADDED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:41:13-65
+	android:name
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:62:19-82
 provider#com.anubis.flickr.provider.StubProvider
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:62:9-67:39
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:65:9-70:39
 	android:authorities
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:64:13-61
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:67:13-61
 	android:label
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:66:13-43
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:69:13-43
 	android:syncable
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:67:13-36
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:70:13-36
 	android:exported
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:65:13-37
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:68:13-37
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:63:13-50
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:66:13-50
 service#com.anubis.flickr.service.AuthenticatorService
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:70:9-78:19
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:73:9-81:19
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:70:18-62
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:73:18-62
 intent-filter#android.accounts.AccountAuthenticator
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:71:13-73:29
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:74:13-76:29
 action#android.accounts.AccountAuthenticator
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:72:17-80
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:75:17-80
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:72:25-77
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:75:25-77
 x
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:74:13-20
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:77:13-20
 meta-data#android.accounts.AccountAuthenticator
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:75:13-77:57
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:78:13-80:57
 	android:resource
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:77:17-54
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:80:17-54
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:76:17-69
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:79:17-69
 service#com.anubis.flickr.service.SyncService
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:79:9-89:19
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:82:9-92:19
 	android:exported
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:81:13-36
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:84:13-36
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:80:13-48
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:83:13-48
 intent-filter#android.content.SyncAdapter
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:83:13-85:29
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:86:13-88:29
 action#android.content.SyncAdapter
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:84:17-70
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:87:17-70
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:84:25-67
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:87:25-67
 meta-data#android.content.SyncAdapter
-ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:86:13-88:55
+ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:89:13-91:55
 	android:resource
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:88:17-52
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:91:17-52
 	android:name
-		ADDED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml:87:17-59
+		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:90:17-59
 uses-sdk
-INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /Users/sabine/.android/build-cache/ac78fbe7bde1df1ca8b6788db771805afee169b3/output/AndroidManifest.xml:18:5-42
 MERGED from [io.realm:realm-android-library:2.0.2] /Users/sabine/.android/build-cache/288c09ee706adffad1b1a142c69820a96253c3b3/output/AndroidManifest.xml:5:5-7:41
 MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/sabine/.android/build-cache/f8fe812bfb0394412b8d729582d4e78789c0d9a2/output/AndroidManifest.xml:7:5-43
-MERGED from [flickr:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/oauthkit/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
-MERGED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:22:5-24:41
+MERGED from [phlaiku:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/oauthkit/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+MERGED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:22:5-24:41
 MERGED from [com.github.jetradarmobile:android-snowfall:1.1.6] /Users/sabine/.android/build-cache/c201f7c8eea1d7d86ad3fe7b8548d5d987cb417a/output/AndroidManifest.xml:6:5-44
 MERGED from [com.felipecsl.asymmetricgridview:library:2.0.1] /Users/sabine/.android/build-cache/faf5f6b3067fd249cdd51de52c703d679dfac94c/output/AndroidManifest.xml:8:5-43
 MERGED from [com.aurelhubert:ahbottomnavigation:0.1.3] /Users/sabine/.android/build-cache/ba4310655011d0ca60caad665b6192721aaa38b6/output/AndroidManifest.xml:7:5-9:41
@@ -241,7 +255,6 @@ MERGED from [com.android.support:design:26.0.1] /Users/sabine/.android/build-cac
 MERGED from [com.android.support:transition:26.0.1] /Users/sabine/.android/build-cache/560583038a81a493482399b2fe1b6dfa380c5e91/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:26.0.1] /Users/sabine/.android/build-cache/13aa1680b940b546f3b7336dfb2a3bb1f2a9910b/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/sabine/.android/build-cache/d8e3e73be557b9ebb593a5374194d2fe50cd439d/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:multidex:1.0.1] /Users/sabine/.android/build-cache/ac78fbe7bde1df1ca8b6788db771805afee169b3/output/AndroidManifest.xml:18:5-42
 MERGED from [io.reactivex:rxandroid:1.2.1] /Users/sabine/.android/build-cache/480e87425bc2feecc3ff72ff56d0cab9c27228a1/output/AndroidManifest.xml:19:5-43
 MERGED from [com.hkm.taglib:tag:1.6.0] /Users/sabine/.android/build-cache/d856a8fa5535df55c875facdc144d8e3bd08f944/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/sabine/.android/build-cache/1a0aa6672620ae99e2927a936348adf23439b625/output/AndroidManifest.xml:21:5-23:78
@@ -272,29 +285,21 @@ MERGED from [com.facebook.stetho:stetho:1.4.1] /Users/sabine/.android/build-cach
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.0.1] /Users/sabine/.android/build-cache/2ac114b549e2d71080d9b5dbf985805d0afc3562/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
-		INJECTED from /Users/sabine/github/myfriendflickr2016/flickr/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
+		INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml
 uses-feature#android.hardware.camera.autofocus
-ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:29:5-70
+ADDED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:29:5-70
 	android:name
-		ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:29:19-67
+		ADDED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:29:19-67
 activity#org.tensorflow.tensorlib.activity.ClassifierActivity
-ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:36:9-38:48
+ADDED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:36:9-38:48
 	android:label
-		ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:38:13-45
+		ADDED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:38:13-45
 	android:name
-		ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:37:13-80
-activity#org.tensorflow.tensorlib.activity.BitmapActivity
-ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:39:9-43:20
-	android:screenOrientation
-		ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:42:13-49
-	android:label
-		ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:41:13-65
-	android:name
-		ADDED from [flickr:tensor-lib:unspecified] /Users/sabine/github/myfriendflickr2016/flickr/tensor-lib/build/intermediates/bundles/default/AndroidManifest.xml:40:13-76
+		ADDED from [phlaiku:tensorLib:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/AndroidManifest.xml:37:13-80
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.0.1] /Users/sabine/.android/build-cache/2ac114b549e2d71080d9b5dbf985805d0afc3562/output/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:transition:26.0.1] /Users/sabine/.android/build-cache/560583038a81a493482399b2fe1b6dfa380c5e91/output/AndroidManifest.xml:23:9-25:38

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anubis.flickr"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.anubis.flickr">
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -18,12 +18,13 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
 
     <application
-        android:name=".FlickrClientApp"
+        tools:node="merge"
+        android:name="com.anubis.flickr.FlickrClientApp"
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@drawable/rocket_transparent"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".activity.LoginActivity"
             android:label="@string/app_name">
@@ -57,6 +58,8 @@
         <activity
             android:name=".activity.ClassifierDisplayActivity"
             android:label="@string/app_name"></activity>
+
+        <activity android:name="org.tensorflow.tensorlib.activity.BitmapActivity"></activity>
 
 
         <provider

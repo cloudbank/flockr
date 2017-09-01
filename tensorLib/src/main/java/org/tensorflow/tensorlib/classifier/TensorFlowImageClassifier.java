@@ -22,7 +22,6 @@ import android.util.Log;
 
 import org.tensorflow.Operation;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
-import org.tensorflow.tensorlib.util.Util;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -69,8 +68,7 @@ public class TensorFlowImageClassifier implements Classifier {
     }
 
     public static void init(String name, Context c) {
-        Util.copyModelFilesFromAssetsToInternal(name, c);
-        Util.createObjectStore();
+
     }
 
     /**

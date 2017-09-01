@@ -52,7 +52,8 @@ dependencies {
 
     compile project(path: ':oauthkit',configuration: 'default' )
 
-    compile project(path: ':tensor-lib', configuration: 'default')
+    compile project(path: ':tensorLib', configuration: 'default')
+
     compile 'com.github.jetradarmobile:android-snowfall:1.1.6'
     compile 'com.felipecsl.asymmetricgridview:library:2.0.1'
     compile 'com.facebook.rebound:rebound:0.3.8'

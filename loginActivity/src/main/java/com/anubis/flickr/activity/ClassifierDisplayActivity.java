@@ -16,6 +16,7 @@ import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
+import org.tensorflow.tensorlib.activity.BitmapActivity;
 import org.tensorflow.tensorlib.classifier.Classifier;
 import org.tensorflow.tensorlib.classifier.ClassifierType;
 import org.tensorflow.tensorlib.view.ResultsView;
@@ -91,6 +92,7 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
                     public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                         // loaded bitmap is here (bitmap)
                         // run in bg
+//@todo this might be very inefficient see http://www.vogella.com/tutorials/AndroidApplicationOptimization/article.html
 
                         runClassifier(bitmap, this_classifer);
 
@@ -130,7 +132,7 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
 
 
     public void runClassifier(Bitmap bitmap, String classifier) {
-        Intent intent = new Intent(this, ClassifierDisplayActivity.class);
+        Intent intent = new Intent(this, BitmapActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         Bundle extras = new Bundle();
         extras.putParcelable("bitmap", bitmap);
@@ -145,7 +147,7 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == TL_REQ)  {
+        if (resultCode == RESULT_OK && requestCode == TL_REQ) {
             List<Classifier.Recognition> results = data.getParcelableExtra("results");
             resultsView.setResults(results);
         }

@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/libs/androidjhlabs.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f79a376d78a96ffd7339ff14836d892eb09385cd">
+        <dex dex="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/2/androidjhlabs_54d540c81db5dcc1a01d0f8c914553e2d3334f6c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/sabine/.android/build-cache/e0c5acf80446c073f95808f7eb499b5febdb0216/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -381,6 +390,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="452855c28c520849759477b2d3f072be677fde9d">
+        <dex dex="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/4/classes_c0f502f7d0bfa4d693c7c4ed09d04208c58f539c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/sabine/.android/build-cache/ba4310655011d0ca60caad665b6192721aaa38b6/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -414,6 +432,15 @@
         revision="26.0.1"
         sha1="1bc56f57e4f5185dbf14304b1b06895c7b1f0cd8">
         <dex dex="/Users/sabine/github/myfriendflickr2016/flickr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/4/classes_97f6154c9cf328615ddc4b9fb4a873ff23f6d1e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/tensorLib/build/intermediates/bundles/default/libs/libandroid_tensorflow_inference_java.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="58f581d192c624fc6d1b6d3f9460551c4dbbab41">
+        <dex dex="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/8/libandroid_tensorflow_inference_java_5cee1fa0e47975b0f68b94560ff2d72984eb2808/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -513,6 +540,15 @@
         revision="26.0.1"
         sha1="22c673e65215e0764add61e3102946de895439e4">
         <dex dex="/Users/sabine/github/myfriendflickr2016/flickr/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/10/classes_56a2a7160f37cb9bccb9cf825279cb44ffb0dc36/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/oauthkit/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1bc56f57e4f5185dbf14304b1b06895c7b1f0cd8">
+        <dex dex="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/4/classes_27431a6f613ab82aea8f7ea0e5bab32a959660ef/classes.dex" />
     </item>
     <item
         is-multidex="true"
