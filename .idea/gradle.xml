@@ -11,7 +11,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/loginActivity" />
             <option value="$PROJECT_DIR$/oauthkit" />
-            <option value="$PROJECT_DIR$/simplecropimagelib" />
             <option value="$PROJECT_DIR$/tensorLib" />
           </set>
         </option>

@@ -128,7 +128,7 @@ public class InterestingFragment extends FlickrBaseFragment {
             interestingRealm.executeTransaction(new Realm.Transaction() {
                 @Override
                 public void execute(Realm realm) {
-                    mInteresting = interestingRealm.createObject(Interesting.class, Calendar.getInstance().getTime().toString());
+                    mInteresting = realm.createObject(Interesting.class, Calendar.getInstance().getTime().toString());
                     realm.insertOrUpdate(mInteresting);
                     mInteresting.addChangeListener(changeListener);
                 }
@@ -185,9 +185,11 @@ public class InterestingFragment extends FlickrBaseFragment {
         });*/
         rAdapter.setOnItemClickListener((view1, position) -> {
             Intent intent = new Intent(getActivity(), ClassifierDisplayActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+           // intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             Photo photo = photoList.get(position);
             intent.putExtra(CLASSIFIER_TYPE, ClassifierType.CLASSIFIER_INCEPTION.getName());
+            intent.putExtra(CLASSIFIER_WIDTH, ClassifierType.CLASSIFIER_INCEPTION.getInputSize());
+
             intent.putExtra(RESULT, photo.getId());
             startActivity(intent);
         });

@@ -21,7 +21,6 @@
         tools:node="merge"
         android:name="com.anubis.flickr.FlickrClientApp"
         android:allowBackup="true"
-        android:debuggable="true"
         android:icon="@drawable/rocket_transparent"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
@@ -59,7 +58,7 @@
             android:name=".activity.ClassifierDisplayActivity"
             android:label="@string/app_name"></activity>
 
-        <activity android:name="org.tensorflow.tensorlib.activity.BitmapActivity"></activity>
+        <activity android:name="org.tensorflow.tensorlib.activity.BitmapClassifier"></activity>
 
 
         <provider

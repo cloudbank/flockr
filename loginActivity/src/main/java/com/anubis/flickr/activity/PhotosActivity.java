@@ -3,15 +3,17 @@ package com.anubis.flickr.activity;
 import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.accounts.AccountManagerCallback;
+import android.accounts.AccountManagerFuture;
 import android.annotation.TargetApi;
 import android.content.ComponentCallbacks2;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.HandlerThread;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -200,31 +202,40 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         //oauthkit shared prefs
         SharedPreferences authPrefs = getApplicationContext().getSharedPreferences(getString(R.string.OAuthKit_Prefs), 0);
 
+        if (Util.getCurrentUser().length() > 0) {
+            Account acct = SyncAdapter.getSyncAccount(Util.getCurrentUser(),getApplicationContext());
+            //login has changed
+            if (!Util.getCurrentUser().equals(authPrefs.getString(getString(R.string.username), ""))) {
+                Log.d("SYNC", "changing accounts for sync adapter");
+                //  AccountManager am = AccountManager.get(this.getApplicationContext());
+                //  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                //      checkAccountsPermission();
+                //  }
 
-        if (Util.getCurrentUser().length() > 0 && !Util.getCurrentUser().equals(authPrefs.getString(getString(R.string.username), ""))) {
-            //@todo stop the sync adapter and restart
-            Log.d("SYNC", "changing accounts for sync adapter");
-            //find out how to properly stop before restart
-            AccountManager am = AccountManager.get(this.getApplicationContext());
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                isAaccountsRuntimePermission();
-            }
-            Account[] accounts = new Account[]{};
-            try {
-                accounts = am.getAccounts();
-            } catch (SecurityException e) {
-                Log.e("SYNC", "account change removal error");
-            }
-            if (accounts.length > 0) {
-                Account accountToRemove = accounts[0];
-                am.removeAccount(accountToRemove, null, null);
-            }
-            ContentResolver.cancelSync(new Account(authPrefs.getString(getString(R.string.username), ""), getApplication().getString(R.string.account_type)), getApplication().getString(R.string.authority));
-            // could also cancelSync(null);
+                ContentResolver.cancelSync(acct, getApplication().getString(R.string.authority));
+                //@todo sa can start again in colorfragment once users are synced across realms
+                //for now, restart the sa and share realm; should this handler take a bg handlerthread?  future + new handler
+                ((AccountManager) getApplicationContext().getSystemService(Context.ACCOUNT_SERVICE)).removeAccount(acct, new AccountManagerCallback<Boolean>() {
+                    @Override
+                    public void run(AccountManagerFuture<Boolean> future) {
+                        updateUserInfo(authPrefs);
 
+                        SyncAdapter.startSyncAdapter(authPrefs.getString(getString(R.string.username), ""));
+
+                    }
+                }, new Handler());
+                //someone deleted their SA
+            } else if (acct == null) {   ///
+                SyncAdapter.startSyncAdapter(Util.getCurrentUser());
+                //they turned off the individual sync
+            } else if (!ContentResolver.getSyncAutomatically(acct, FlickrClientApp.getAppContext().getString(R.string.authority))) {
+                //turn the thing back on
+                //Toast
+                ContentResolver.setSyncAutomatically(acct, FlickrClientApp.getAppContext().getString(R.string.authority), true);
+            }
         }
+        //init, change login
         updateUserInfo(authPrefs);
-
 
         setContentView(R.layout.activity_photos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -255,30 +266,13 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         tabLayout.addOnTabSelectedListener(onTabSelectedListener(vpPager));
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-8660045387738182~7164386158");
         //delaySync(FlickrClientApp.getAppContext());
+        //SyncAdapter.startSyncAdapter(Util.getCurrentUser());
     }
 
     long delay;
     long c_delayMax = 600 * 1000;
     static Random r = new Random();
 
-    void delaySync(android.content.Context c) {
-        HandlerThread handlerThread = new HandlerThread("delaySync");
-        handlerThread.start();
-        Handler h = new Handler(handlerThread.getLooper());
-        delay = r.nextLong() % c_delayMax;
-        if (delay < 0) {
-            delay = Math.abs(delay);
-        }
-        //new Runnable run
-        h.postDelayed(() -> {
-
-            Log.d("SYNC", "starting after delay " + delay);
-            SyncAdapter.initializeSyncAdapter(c);
-
-
-        }, delay);
-
-    }
 
 
     private void updateUserInfo(SharedPreferences authPrefs) {

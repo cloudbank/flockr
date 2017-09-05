@@ -13,13 +13,12 @@ import android.content.ContentProviderClient;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SyncRequest;
 import android.content.SyncResult;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.anubis.flickr.FlickrClientApp;
 import com.anubis.flickr.R;
@@ -142,22 +141,23 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     /**
      * Helper method to schedule the sync adapter periodic execution
      */
-    public static void configurePeriodicSync(Context context, int syncInterval, int flexTime) {
-        Account account = getSyncAccount(context);
+    public static void configurePeriodicSync(Account account, Context context, int syncInterval, int flexTime) {
         String authority = FlickrClientApp.getAppContext().getString(R.string.authority);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        ContentResolver.setIsSyncable(account, authority, 1);
+        ContentResolver.setSyncAutomatically(account, authority, true);
+        //Bundle bundle = new Bundle();
+        //bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
+       /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             // we can enable inexact timers in our periodic sync
             SyncRequest request = new SyncRequest.Builder().
                     syncPeriodic(syncInterval, flexTime).
                     setSyncAdapter(account, authority).
-                    setExtras(new Bundle()).build();
+                    setExtras(bundle).build();
             ContentResolver.requestSync(request);
-        } else {
-            ContentResolver.addPeriodicSync(account,
-                    authority, new Bundle(), syncInterval);
-        }
+        } else { */
+        ContentResolver.addPeriodicSync(account, authority, Bundle.EMPTY, syncInterval);
+        //}
     }
-
     /**
      * Helper method to have the sync adapter sync immediately
      *
@@ -167,9 +167,13 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
         Bundle bundle = new Bundle();
         bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
         bundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
-        ContentResolver.requestSync(getSyncAccount(context),
+        ContentResolver.requestSync(getSyncAccount(Util.getCurrentUser(), context),
                 FlickrClientApp.getAppContext().getString(R.string.authority), bundle);
         Log.d("SYNC", "sync request");
+    }
+
+    public static void startSyncAdapter(String name) {
+        getSyncAccount(name, FlickrClientApp.getAppContext());
     }
 
     /**
@@ -180,58 +184,49 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
      * @param context The context used to access the account service
      * @return a fake account.
      */
-    public static Account getSyncAccount(Context context) {
+    public static Account getSyncAccount(String name, Context context) {
+
         // Get an instance of the Android account manager
         AccountManager accountManager =
                 (AccountManager) context.getSystemService(Context.ACCOUNT_SERVICE);
 
         // Create the account type and default account
-        Account newAccount = new Account(
-                Util.getCurrentUser(), FlickrClientApp.getAppContext().getString(R.string.account_type));
-
-        // If the password doesn't exist, the account doesn't exist
-        if (null == accountManager.getPassword(newAccount)) {
-
-        /*
-         * Add the account and account type, empty password or user data
-         * If successful, return the Account object, otherwise report an error.
-         */
-            if (!accountManager.addAccountExplicitly(newAccount, "password", null)) {
-                return null;
+        Account[] accts = accountManager.getAccountsByType(FlickrClientApp.getAppContext().getString(R.string.account_type));
+        for (Account a : accts) {
+            if (a.name.equals(name)) {
+                return a;
             }
-            /*
-             * If you don't set android:syncable="true" in
-             * in your <provider> element in the manifest,
-             * then call ContentResolver.setIsSyncable(account, AUTHORITY, 1)
-             * here.
-             */
-            //Log.d("SYNC", "about to call onACCOUNT");
+        }
+
+        Account newAccount = new Account(name, FlickrClientApp.getAppContext().getString(R.string.account_type));
+        if (!accountManager.addAccountExplicitly(newAccount, "password", null)) {
+            //should not happen--error in sdk call
+            Log.e("SYNC","Error while adding account");
+            return null;
+            //System.exit(0);
+
+
+        } else {
             onAccountCreated(newAccount, context);
         }
         return newAccount;
     }
-
-    private static void onAccountCreated(Account newAccount, Context context) {
+    public static void onAccountCreated(Account newAccount, Context context) {
         /*
-         * Since we've created an account
+         * Since we've created an account, let us start a periodic sync
          */
-        SyncAdapter.configurePeriodicSync(context, SYNC_INTERVAL, SYNC_FLEXTIME);
+        if (!ContentResolver.getMasterSyncAutomatically()) {
+            Toast.makeText(context, "Turning the Auto-Sync back on", Toast.LENGTH_SHORT).show();
+            //modal
+            // turn if back on
+            ContentResolver.setMasterSyncAutomatically(true);
+        }
 
-        /*
-         * Without calling setSyncAutomatically, our periodic sync will not be enabled.
-         */
-        ContentResolver.setSyncAutomatically(newAccount, FlickrClientApp.getAppContext().getString(R.string.authority), true);
+        SyncAdapter.configurePeriodicSync(newAccount, context, SYNC_INTERVAL, SYNC_FLEXTIME);
 
-        /*
-         * Finally, let's do a sync to get things started--
-         * NOT NEEDED @todo
-         */
-        //syncImmediately(context);
+
     }
 
-    public static void initializeSyncAdapter(Context context) {
-        getSyncAccount(context);
-    }
 
     private void notifyMe() {
 

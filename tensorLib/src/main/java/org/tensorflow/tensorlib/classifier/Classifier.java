@@ -11,16 +11,16 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-==============================================================================*/
+============================================================================== */
 
 package org.tensorflow.tensorlib.classifier;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;
-import android.os.Parcel;
-import android.os.Parcelable;
 
 import java.util.List;
+
+///@todo fix up the immutable class
 
 /**
  * Generic interface for interacting with different recognition engines.
@@ -29,36 +29,28 @@ public interface Classifier {
     /**
      * An immutable result returned by a Classifier describing what was recognized.
      */
-    public final class Recognition implements Parcelable {
+    public class Recognition {
         /**
          * A unique identifier for what has been recognized. Specific to the class, not the instance of
          * the object.
          */
-        final private  String id;
+        private final String id;
 
         /**
          * Display name for the recognition.
          */
-        final private  String title;
+        private final String title;
 
         /**
          * A sortable score for how good the recognition is relative to others. Higher should be better.
          */
-        final private  Float confidence;
+        private final Float confidence;
 
-        /**
-         * Optional location within the source image for the location of the recognized object.
-         */
-        final private  RectF location;
-
-        /**
-         * for parcelable
-         */
-        private int mData;
-
+        /** Optional location within the source image for the location of the recognized object. */
+        private RectF location;
 
         public Recognition(
-                 String id,  String title,  Float confidence,  RectF location) {
+                final String id, final String title, final Float confidence, final RectF location) {
             this.id = id;
             this.title = title;
             this.confidence = confidence;
@@ -81,6 +73,9 @@ public interface Classifier {
             return new RectF(location);
         }
 
+        public void setLocation(RectF location) {
+            this.location = location;
+        }
 
         @Override
         public String toString() {
@@ -103,48 +98,11 @@ public interface Classifier {
 
             return resultString.trim();
         }
-
-
-
-        @Override
-        public int describeContents() {
-            return 0;
-        }
-
-        @Override
-        public void writeToParcel(Parcel out, int flags) {
-            out.writeString(title);
-            out.writeString(id);
-            out.writeFloat(confidence);
-            out.writeParcelable(location, 0);
-        }
-
-        // Using the `in` variable, we can retrieve the values that
-        // we originally wrote into the `Parcel`.  This constructor is usually
-        // private so that only the `CREATOR` field can access.
-        private Recognition(Parcel in) {
-            title = in.readString();
-            id = in.readString();
-            confidence = in.readFloat();
-            location = in.readParcelable(RectF.class.getClassLoader());
-        }
-
-        // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
-        public static final Parcelable.Creator<Recognition> CREATOR = new Parcelable.Creator<Recognition>() {
-            public Recognition createFromParcel(Parcel in) {
-                return new Recognition(in);
-            }
-
-            public Recognition[] newArray(int size) {
-                return new Recognition[size];
-            }
-        };
-
-
-
     }
 
+
     List<Recognition> recognizeImage(Bitmap bitmap);
+    List<Recognition> recognizeImage(float[] f);
 
     void enableStatLogging(final boolean debug);
 

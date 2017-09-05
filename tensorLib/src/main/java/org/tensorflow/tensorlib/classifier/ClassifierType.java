@@ -7,12 +7,23 @@ import android.os.Environment;
  */
 
 public final class ClassifierType {
-
+//@todo change the graph regarding decodeJpeg if nec
     //replacement for enum because TypeDef annotations lead to interface pef field bloat
     public static final ClassifierType CLASSIFIER_RETRAINED = new ClassifierType("rounded_graph.pb", "retrained_labels.txt", 299, 128, 128f, "Mul", "final_result", "CLASSIFIER_RETRAINED");
     //@todo input output on inception looks as if it is not optimzied/quantized
     public static final ClassifierType CLASSIFIER_INCEPTION = new ClassifierType("tensorflow_inception_graph.pb", "imagenet_comp_graph_label_strings.txt", 224, 117, 1, "input", "output", "CLASSIFIER_INCEPTION");
     public static final String SDFILESTART = Environment.getExternalStorageState() + "/";
+
+
+    public static ClassifierType getTypeForString(String type)  {
+        ClassifierType classifierType;
+        if (type.equals(ClassifierType.CLASSIFIER_INCEPTION.getName())) {
+            classifierType = ClassifierType.CLASSIFIER_INCEPTION;
+        } else {
+            classifierType= ClassifierType.CLASSIFIER_RETRAINED;
+        }
+        return classifierType;
+    }
 
 
     private int inputSize = 0;

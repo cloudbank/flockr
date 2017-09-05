@@ -5,7 +5,6 @@ import com.anubis.flickr.models.Comments;
 import com.anubis.flickr.models.Hottags;
 import com.anubis.flickr.models.PhotoInfo;
 import com.anubis.flickr.models.Photos;
-import com.anubis.flickr.models.User;
 import com.anubis.flickr.models.Who;
 import com.anubis.oauthkit.BuildConfig;
 
@@ -32,8 +31,7 @@ public interface FlickrService {
 
     String KEY = "api_key="+BuildConfig.consumerKey;
 
-    @GET(API_BASE_URL + "?method=flickr.test.login&format=json&nojsoncallback=1&" + KEY )
-    Observable<User> testLogin();
+
 
     @GET(API_BASE_URL + "?method=flickr.photos.getContactsPublicPhotos&per_page=500&format=json&nojsoncallback=1&"+ KEY +"&just_friends=1&extras=date_taken,owner_name,url_s,tags&count=50&include_self=1")
     Observable<Photos> getFriendsPhotos(@Query("user_id") String userId);

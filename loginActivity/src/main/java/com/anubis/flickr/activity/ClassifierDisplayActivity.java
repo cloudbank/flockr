@@ -1,6 +1,5 @@
 package com.anubis.flickr.activity;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -16,21 +15,21 @@ import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
-import org.tensorflow.tensorlib.activity.BitmapActivity;
+import org.tensorflow.tensorlib.activity.BitmapClassifier;
 import org.tensorflow.tensorlib.classifier.Classifier;
 import org.tensorflow.tensorlib.classifier.ClassifierType;
 import org.tensorflow.tensorlib.view.ResultsView;
 
-import java.util.List;
-
 import io.realm.Realm;
 
 import static com.anubis.flickr.fragments.FlickrBaseFragment.CLASSIFIER_TYPE;
+import static com.anubis.flickr.fragments.FlickrBaseFragment.CLASSIFIER_WIDTH;
 import static com.anubis.flickr.fragments.FlickrBaseFragment.RESULT;
 
 public class ClassifierDisplayActivity extends AppCompatActivity {
 
     public static final int TL_REQ = 007;
+    public static final String TAG = "ClierDisplayActivity";
     String mUid = "";
     static Photo mPhoto;
     Realm pRealm;
@@ -69,20 +68,20 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
         mPublisherAdView.loadAd(adRequest);*/
         resultsView = (ResultsView) findViewById(R.id.recogView);
         String classifier = getIntent().getStringExtra(CLASSIFIER_TYPE);
-       //@todo pass in the byte[] from getByteArrayFromImageView maybe
-        getBitMap(mPhoto.getUrl(),classifier);
-
+        int width = getIntent().getIntExtra(CLASSIFIER_WIDTH, 0);
+        //@todo pass in the byte[] from getByteArrayFromImageView maybe
+        getBitMap(mPhoto.getUrl(), classifier, width);
 
 
     }
 
 
-
     //@todo  do not recycle bitmap as per picasso
     //run in bg
-    private void getBitMap(String url, String classifier) {
+    private void getBitMap(String url, String classifier, int width) {
 
         String this_classifer = classifier;
+        int this_width = width;
         Picasso.with(this)
                 .load(url)
                 //keeps a weak ref to target by default; must be run from main thread
@@ -93,8 +92,9 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
                         // loaded bitmap is here (bitmap)
                         // run in bg
 //@todo this might be very inefficient see http://www.vogella.com/tutorials/AndroidApplicationOptimization/article.html
+                        //try to do something lighter here  find lightest bitmap/image lib
 
-                        runClassifier(bitmap, this_classifer);
+                        runClassifier(bitmap, this_classifer, this_width);
 
                     }
 
@@ -109,39 +109,32 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
+    //@todo change this to ensure bitmap is recycled
+    public void runClassifier(Bitmap bitmap, String type, int width) {
+        float[] f = BitmapClassifier.process(bitmap, type);  //deal with bitmap here & quickly as possible
+        ClassifierType t = ClassifierType.getTypeForString(type);
+        Classifier c = BitmapClassifier.getClassifierForType(t);
+        BitmapClassifier.getInstance().runClassifier(c,f,resultsView);
+        //@todo from here we could try intent approach again
+        //@todo save the results to the photo
+        //resultsView.getResults
+    }
 /*
-    public static Bitmap getBitmapFromImageView(ImageView imageView) {
-        BitmapDrawable bitmapDrawable = ((BitmapDrawable) imageView.getDrawable());
-        Bitmap bitmap;
-        if (bitmapDrawable == null) {
-            imageView.buildDrawingCache();
-            bitmap = imageView.getDrawingCache();
-            imageView.buildDrawingCache(false);
-        } else {
-            bitmap = bitmapDrawable.getBitmap();
-        }
-        return bitmap;
-        //ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        // bitmap.compress(Bitmap.CompressFormat.WEBP, 100, stream);
-        // return stream.toByteArray();
-    }*/
-
-
-
-
-
-
     public void runClassifier(Bitmap bitmap, String classifier) {
-        Intent intent = new Intent(this, BitmapActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        //Intent intent = new Intent(this, BitmapActivity.class);
+        //transactiontoolarge exception
+        //intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         Bundle extras = new Bundle();
         extras.putParcelable("bitmap", bitmap);
         extras.putString(CLASSIFIER_TYPE, ClassifierType.CLASSIFIER_INCEPTION.getName());
         intent.putExtras(extras);
-
+        Log.d(TAG, "Starting activity for tensorlib");
         startActivityForResult(intent, TL_REQ);
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -149,10 +142,10 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
 
         if (resultCode == RESULT_OK && requestCode == TL_REQ) {
             List<Classifier.Recognition> results = data.getParcelableExtra("results");
-            resultsView.setResults(results);
+
         }
 
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -166,9 +159,6 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
     }
 
 
-
-
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -178,6 +168,7 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        BitmapClassifier.getInstance().cleanUp();
 
 
     }

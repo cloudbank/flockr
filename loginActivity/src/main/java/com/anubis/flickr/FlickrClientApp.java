@@ -1,11 +1,12 @@
 package com.anubis.flickr;
 
-import android.accounts.Account;
 import android.support.multidex.MultiDexApplication;
 
 import com.anubis.flickr.service.FlickrService;
 import com.anubis.flickr.service.ServiceGenerator;
+import com.anubis.flickr.util.Util;
 import com.facebook.stetho.Stetho;
+import com.google.gson.Gson;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
@@ -17,6 +18,9 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer;
 
+import static com.anubis.flickr.service.ServiceGenerator.createRetrofitRxService;
+import static com.anubis.oauthkit.BuildConfig.baseUrl;
+
 public class FlickrClientApp extends MultiDexApplication {
 
     private static FlickrClientApp instance;
@@ -26,35 +30,43 @@ public class FlickrClientApp extends MultiDexApplication {
         return instance;
     }
 
-
-    private static FlickrService jacksonService;
-    private static FlickrService defaultService;
-    // The authority for the sync adapter's content provider
-    // An account type, in the form of a domain name
-    // The account name
-    // Instance fields
-    Account mAccount;
-
+    private static com.anubis.flickr.service.FlickrService jacksonService;
+    private static com.anubis.flickr.service.FlickrService defaultService;
 
     //prevent leaking activity context http://bit.ly/6LRzfx
 
 
+    //dealing with Application being reclaimed and static vars reset
+    //
     public static FlickrService getJacksonService() {
-        return jacksonService;
+        return ((jacksonService == null) ? createJacksonService(getConsumer()) : jacksonService);
     }
 
     public static FlickrService getDefaultService() {
-        return (FlickrService) defaultService;
+
+        return ((defaultService == null) ? createDefaultService(getConsumer()) : defaultService);
+    }
+
+    private static OkHttpOAuthConsumer getConsumer() {
+        Gson gson = new Gson();
+        String json = Util.getUserPrefs().getString(FlickrClientApp.getAppContext().getString(R.string.Consumer), "");
+        return gson.fromJson(json, OkHttpOAuthConsumer.class);
     }
 
 
-    public static void setJacksonService(OkHttpOAuthConsumer consumer, String baseUrl) {
-        jacksonService = ServiceGenerator.createRetrofitRxService(consumer, FlickrService.class, baseUrl, JacksonConverterFactory.create());
+    //@todo change docs for oauthkit with release
+    public static FlickrService createJacksonService(OkHttpOAuthConsumer consumer) {
+        jacksonService = ServiceGenerator.createRetrofitRxService(consumer, com.anubis.flickr.service.FlickrService.class, baseUrl, JacksonConverterFactory.create());
+        return jacksonService;
     }
 
-    public static void setDefaultService(OkHttpOAuthConsumer consumer, String baseUrl) {
-        defaultService = ServiceGenerator.createRetrofitRxService(consumer, FlickrService.class, baseUrl, SimpleXmlConverterFactory.create());
+    public static FlickrService createDefaultService(OkHttpOAuthConsumer consumer) {
+        defaultService = createRetrofitRxService(consumer, com.anubis.flickr.service.FlickrService.class, baseUrl, SimpleXmlConverterFactory.create());
+        return defaultService;
     }
+
+
+
 
 
     @Override
@@ -62,19 +74,10 @@ public class FlickrClientApp extends MultiDexApplication {
         super.onCreate();
         instance = this;
         TensorLib.init(this);
-
         Stetho.initializeWithDefaults(this);
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().build();
         Realm.setDefaultConfiguration(config);
-        //ObjectMapper mapper = new ObjectMapper();
-        //mapper.registerModule(new Jdk7Module());
-        //FlickrClientApp.context = getApplicationContext();
-
-        // Normal app init code...
-
-
-        //TypefaceUtil.setDefaultFont(this, "SERIF", "fonts/Exo-Medium.otf");
         Picasso.Builder builder = new Picasso.Builder(this);
         //wharton lib requires picasso 2.5.2 right now
         builder.downloader(new OkHttp3Downloader(this, Integer.MAX_VALUE));

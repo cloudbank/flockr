@@ -16,15 +16,16 @@ import java.util.Map;
     "user",
     "stat"
 })
-public class User {
+public class User  {
 
-    //foreignkey
+   
     @JsonProperty("user")
     private UserModel user;
     @JsonProperty("stat")
     private String stat;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
 
 
     /**

@@ -24,5 +24,10 @@
     <string name="ad_unit">ca-app-pub-8660045387738182/8641119351</string>
     <string name="ad_unit3">ca-app-pub-8660045387738182/8361917754</string>
     <string name="label_shared_user">label.shared.user</string>
+    <string name="consumer">consumer</string>
+    <string name="baseUrl">baseUrl</string>
+    <string name="jacksonServiceType">jacksonServiceType</string>
+    <string name="defaultServiceType">defaultServiceType</string>
+    <string name="Consumer">Consumer</string>
 
 </resources>

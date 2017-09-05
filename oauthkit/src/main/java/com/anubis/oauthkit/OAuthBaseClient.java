@@ -9,9 +9,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer;
 
 import java.util.HashMap;
+
+import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer;
 
 public class OAuthBaseClient {
     protected Context context;
@@ -79,7 +80,7 @@ public class OAuthBaseClient {
                 OAuthBaseClient.this.editor.commit();
 
 
-                OAuthBaseClient.this.accessHandler.onLoginSuccess(consumer, baseUrl);
+                OAuthBaseClient.this.accessHandler.onLoginSuccess(consumer);
             }
 
             public void onFailure(Exception e) {
@@ -101,7 +102,7 @@ public class OAuthBaseClient {
                 this.client.fetchAccessToken(uri);
             }
         } else if (this.checkAccessToken() != null) {
-            OAuthBaseClient.this.accessHandler.onLoginSuccess(this.getClient().getConsumer(), this.baseUrl);
+            OAuthBaseClient.this.accessHandler.onLoginSuccess(this.getClient().getConsumer());
         }
 
     }
@@ -127,7 +128,7 @@ public class OAuthBaseClient {
 
 
     public interface OAuthAccessHandler {
-        void onLoginSuccess(OkHttpOAuthConsumer consumer, String baseUrl);
+        void onLoginSuccess(OkHttpOAuthConsumer consumer);
 
         void onLoginFailure(Exception var1);
     }

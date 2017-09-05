@@ -3,9 +3,6 @@ package org.tensorflow.tensorlib.util;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
-import android.util.SparseArray;
-
-import org.tensorflow.tensorlib.classifier.Classifier;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,8 +14,7 @@ import java.io.OutputStream;
  */
 
 public class Util {
-    static SparseArray<Classifier> objs;
-
+    //@todo maybe compress files and use zip util
     public static void copyModelFilesFromAssetsToInternal(String name, Context ctx) {
         AssetManager assetManager = ctx.getAssets();
         String[] files = null;
@@ -32,20 +28,31 @@ public class Util {
             OutputStream out = null;
             File folder = new File(ctx.getFilesDir() + "/" + name);
             boolean success = true;
+            if (folder.exists()) {
+                //not checking for actual content right now
+                if (folder.list().length == files.length) {
+                    return;
+                }
+            }
             if (!folder.exists()) {
                 success = folder.mkdir();
             }
             if (success) {
                 try {
-                    in = assetManager.open(name + "/" + filename);
-                    out = ctx.openFileOutput(filename, Context.MODE_PRIVATE);
-                    copyFile(in, out);
-                    //@todo for the pb files, memmap them, and delete assets, files
-                    in.close();
-                    in = null;
-                    out.flush();
-                    out.close();
-                    out = null;
+                    if (!new File(folder, filename).exists()) {
+
+                        in = assetManager.open(name + "/" + filename);
+
+                        out = ctx.openFileOutput(filename, Context.MODE_PRIVATE);
+
+                        copyFile(in, out);
+                        //@todo for the pb files, memmap them, and delete assets, files
+                        in.close();
+                        in = null;
+                        out.flush();
+                        out.close();
+                        out = null;
+                    }
                 } catch (IOException e) {
                     Log.e("ERROR", "Failed to copy asset file: " + filename, e);
                 } finally {
@@ -86,11 +93,6 @@ public class Util {
             out.write(buffer, 0, read);
         }
     }
-
-    public static SparseArray<Classifier> getObjs() {
-        return objs;
-    }
-
 
 
 

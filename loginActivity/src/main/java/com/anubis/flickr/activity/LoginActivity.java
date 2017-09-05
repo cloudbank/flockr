@@ -3,6 +3,7 @@ package com.anubis.flickr.activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -13,13 +14,17 @@ import android.widget.Toast;
 
 import com.anubis.flickr.FlickrClientApp;
 import com.anubis.flickr.R;
+import com.anubis.flickr.util.Util;
 import com.anubis.oauthkit.OAuthBaseClient;
 import com.anubis.oauthkit.OAuthLoginActivity;
+import com.google.gson.Gson;
 
 import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer;
 
 public class LoginActivity extends OAuthLoginActivity {
     OAuthBaseClient client;
+    protected SharedPreferences prefs;
+    protected SharedPreferences.Editor editor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,11 +69,21 @@ public class LoginActivity extends OAuthLoginActivity {
     }
 
     @Override
-    public void onLoginSuccess(OkHttpOAuthConsumer consumer, String baseUrl) {
-        FlickrClientApp.setJacksonService(consumer, baseUrl);
-        FlickrClientApp.setDefaultService(consumer, baseUrl);
+    public void onLoginSuccess(OkHttpOAuthConsumer consumer) {
+        FlickrClientApp.createJacksonService(consumer);
+        FlickrClientApp.createDefaultService(consumer);
+        saveConsumer(consumer);
         Intent i = new Intent(this, PhotosActivity.class);
         startActivity(i);
+    }
+
+    private static void saveConsumer(OkHttpOAuthConsumer consumer) {
+        SharedPreferences  mPrefs = Util.getUserPrefs();
+        SharedPreferences.Editor prefsEditor = mPrefs.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(consumer);
+        prefsEditor.putString(FlickrClientApp.getAppContext().getString(R.string.Consumer), json);
+        prefsEditor.commit();
     }
 
     @Override

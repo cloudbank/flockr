@@ -39,7 +39,6 @@ import java.util.Vector;
 public class TensorFlowImageClassifier implements Classifier {
 
 
-
     private static final String TAG = "TensorFlowImageClassifi";
 
     // Only return this many results with at least this confidence.
@@ -74,7 +73,7 @@ public class TensorFlowImageClassifier implements Classifier {
     /**
      * Initializes a native TensorFlow session for classifying images.
      *
-     * @param context    app context
+     * @param context       app context
      * @param modelFilename The filepath of the model GraphDef protocol buffer.
      * @param labelFilename The filepath of label file for classes.
      * @param inputSize     The input size. A square image of inputSize x inputSize is assumed.
@@ -106,7 +105,7 @@ public class TensorFlowImageClassifier implements Classifier {
         try {
             File f = context.getFileStreamPath(labelFilename);
             br = new BufferedReader(new FileReader(f));
-            String line ="";
+            String line = "";
             while ((line = br.readLine()) != null) {
                 //@todo optimize
                 c.labels.add(line);
@@ -140,20 +139,39 @@ public class TensorFlowImageClassifier implements Classifier {
     }
 
     @Override
+    public List<Recognition> recognizeImage(final float[] f) {
+        floatValues = f;
+        return recognizeImage();
+    }
+    @Override
     public List<Recognition> recognizeImage(final Bitmap bitmap) {
-        // Log this method so that it can be analyzed with systrace.
-       Trace.beginSection("recognizeImage");
-
-       // Trace.beginSection("preprocessBitmap");
-        // Preprocess the image data from 0-255 int to normalized float based
-        // on the provided parameters.
         bitmap.getPixels(intValues, 0, bitmap.getWidth(), 0, 0, bitmap.getWidth(), bitmap.getHeight());
-        for (int i = 0; i < intValues.length; ++i) {
-            final int val = intValues[i];
+        //@todo send in pixels, do this prior to here
+        processBitMap(intValues);
+        return recognizeImage();
+    }
+
+    //@todo cache/set this on image?
+    public void processBitMap(int[] pixels) {
+
+        for (int i = 0; i < pixels.length; ++i) {
+            final int val = pixels[i];
             floatValues[i * 3 + 0] = (((val >> 16) & 0xFF) - imageMean) / imageStd;
             floatValues[i * 3 + 1] = (((val >> 8) & 0xFF) - imageMean) / imageStd;
             floatValues[i * 3 + 2] = ((val & 0xFF) - imageMean) / imageStd;
         }
+
+    }
+
+
+    public List<Recognition> recognizeImage() {
+        // Log this method so that it can be analyzed with systrace.
+        Trace.beginSection("recognizeImage");
+
+        // Trace.beginSection("preprocessBitmap");
+        // Preprocess the image data from 0-255 int to normalized float based
+        // on the provided parameters.
+
         //Trace.endSection();
 
         // Copy the input data into TensorFlow.

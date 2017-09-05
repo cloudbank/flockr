@@ -1,3 +1,2 @@
 include ':oauthkit', ':tensorLib'
-include ':simplecropimagelib'
 include ':loginActivity'

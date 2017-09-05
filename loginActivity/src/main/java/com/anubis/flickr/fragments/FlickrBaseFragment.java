@@ -30,6 +30,7 @@ public abstract class FlickrBaseFragment extends Fragment {
 
     public static final String RESULT = "result";
     public static final String CLASSIFIER_TYPE = "classifierType";
+    public static final String CLASSIFIER_WIDTH = "classifierWidth";
     public static final String PHOTO_BITMAP = "photo_bitmap";
     protected static final String PAGE = "page";
     protected static final String TITLE = "title";

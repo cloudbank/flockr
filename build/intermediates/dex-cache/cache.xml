@@ -192,6 +192,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/sabine/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_a10365544379a13e9489b718610535e1d17f05ad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/sabine/.android/build-cache/d53b4399652d649f0af9a3c440474c03ca2f3e75/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -394,7 +403,7 @@
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="452855c28c520849759477b2d3f072be677fde9d">
+        sha1="5051d65f43fa78ac00706a217cc87222e4ef9c64">
         <dex dex="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/4/classes_c0f502f7d0bfa4d693c7c4ed09d04208c58f539c/classes.dex" />
     </item>
     <item
@@ -547,7 +556,7 @@
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="1bc56f57e4f5185dbf14304b1b06895c7b1f0cd8">
+        sha1="d8990564f1e22d84b5f83ee229b0a9eb7a7a0669">
         <dex dex="/Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/build/intermediates/transforms/dex/debug/folders/1000/4/classes_27431a6f613ab82aea8f7ea0e5bab32a959660ef/classes.dex" />
     </item>
     <item
