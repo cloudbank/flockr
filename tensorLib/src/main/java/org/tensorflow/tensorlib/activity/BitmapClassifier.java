@@ -58,18 +58,13 @@ public class BitmapClassifier {
         }
         return instance;
     }
-    public static float[] process(Bitmap bitmap, String type) {
 
-        ClassifierType classifierType = ClassifierType.getTypeForString(type);
-        int width =  classifierType.getInputSize();
-        if (bitmap.getWidth() > width || bitmap.getHeight() > width) {
-            bitmap = Bitmap.createScaledBitmap(bitmap, width, width, false);
-        }
-        int[] pixels = new int[width * width];
-        bitmap.getPixels(pixels, 0, bitmap.getWidth(), 0, 0, bitmap.getWidth(), bitmap.getHeight());
-        float[] floatValues = new float[width * width * 3];
-        int imageMean = classifierType.getImageMean();
-        float imageStd = classifierType.getImageStd();
+    public static float[] process(int[] pixels, ClassifierType type) {
+
+
+        float[] floatValues = new float[type.getInputSize() * type.getInputSize() * 3];
+        int imageMean = type.getImageMean();
+        float imageStd = type.getImageStd();
         for (int i = 0; i < pixels.length; ++i) {
             final int val = pixels[i];
             floatValues[i * 3 + 0] = (((val >> 16) & 0xFF) - imageMean) / imageStd;
@@ -81,8 +76,9 @@ public class BitmapClassifier {
 
     }
 
-//cached classifier
-    public static Classifier getClassifierForType(ClassifierType classifierType) {
+
+    //cached classifier
+    private static Classifier getClassifierForType(ClassifierType classifierType) {
         LruCache<ClassifierType, Classifier> objs = TensorLib.classifierCache;
         classifier = null;
         if (classifierType.equals(ClassifierType.CLASSIFIER_RETRAINED)) {
@@ -113,19 +109,19 @@ public class BitmapClassifier {
     }
 
     //to be called from ondestroy of app
-    public  void cleanUp() {
+    public void cleanUp() {
         if (handlerThread != null) {
             handlerThread.quit();
         }
     }
 
-    public void runClassifier(final Classifier classifier, final float[] normalizedPixels, final ResultsView rv) {
-        recognize(classifier,normalizedPixels,rv);
-        //
+    public void runClassifier(int[] pixels, String type, final ResultsView rv) {
+        //recognize();
+
     }
 
     //@todo optimize use of bitmap of try another way perhaps pixels array
-    private void recognize(final Classifier classifier, final float[] normalizedPixels, final ResultsView rv) {
+    public void recognize(final int[] pixels, final String type, final ResultsView rv) {
         //change this to static
         Log.d(TAG, "Starting runClassifiers for tensorlib");
         //@todo do we need to deal with JPEG decoding after all?  removed decodejpeg from retrained
@@ -138,10 +134,12 @@ public class BitmapClassifier {
             @Override
             public void run() {
 
+                ClassifierType classifierType = ClassifierType.getTypeForString(type);
+                float[] normalizedPixels = process(pixels, classifierType);
+
+                classifier = BitmapClassifier.getClassifierForType(classifierType);
 
                 final long startTime = SystemClock.uptimeMillis();
-                //@todo run in bg return on main
-                //final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
                 //todo cache the results using a Future
 
                 results = (ArrayList<Classifier.Recognition>) classifier.recognizeImage(normalizedPixels);
@@ -153,7 +151,16 @@ public class BitmapClassifier {
 
 
                 final long lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
-                rv.setResults(results);
+                //does this break android rule #2?
+                Handler handler2 = new Handler(handlerThread.getLooper());
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        rv.setResults(results);
+                    }
+                });
+
+
                 Log.d(TAG, "runClassifier() time : " + lastProcessingTimeMs);
             }
             //b.recycle(); //picasso limitation with callback

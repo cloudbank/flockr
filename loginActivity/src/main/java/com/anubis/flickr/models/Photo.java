@@ -78,8 +78,11 @@ public class Photo extends RealmObject implements Serializable {
     @JsonProperty("width_s")
     private String width;
 
+
     public boolean isCommon = false;
     public boolean isInteresting = false;
+
+
 
     public String getHeight() {
         return height;

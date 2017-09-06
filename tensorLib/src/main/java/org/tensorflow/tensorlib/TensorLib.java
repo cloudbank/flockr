@@ -26,6 +26,8 @@ public class TensorLib {
     private TensorLib(){}
     public static  Application context;
 
+
+
     public static void init(Application ctx) {
         Log.d(TAG, "TensorLib init()");
         context = ctx;

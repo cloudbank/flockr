@@ -5,9 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/loginActivity/loginActivity.iml" filepath="$PROJECT_DIR$/loginActivity/loginActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/oauthkit/oauthkit.iml" filepath="$PROJECT_DIR$/oauthkit/oauthkit.iml" />
       <module fileurl="file://$PROJECT_DIR$/phlaiku.iml" filepath="$PROJECT_DIR$/phlaiku.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" filepath="$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" filepath="$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tensor-lib/tensor-lib.iml" filepath="$PROJECT_DIR$/tensor-lib/tensor-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/tensorLib/tensorLib.iml" filepath="$PROJECT_DIR$/tensorLib/tensorLib.iml" />
     </modules>
   </component>
