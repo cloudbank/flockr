@@ -1,5 +1,5 @@
 
-# Phlaiku v 1.0   
+# Phlaiku v 1.0   --soon to be published, currently under construction
  <img src="http://i.imgur.com/ypYoNGG.png" height="300"/>    
  
  ###  [SDK 19+, Oreo compatible]
