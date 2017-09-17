@@ -1,4 +1,3 @@
-
 package com.anubis.flickr.models;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -14,45 +13,38 @@ import java.util.List;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-
 @JsonPropertyOrder({
     "url"
 })
 public class Urls {
+  @JsonProperty("url")
+  private List<Url> url = new ArrayList<Url>();
+  @JsonIgnore
+  private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("url")
-    private List<Url> url = new ArrayList<Url>();
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  /**
+   * @return The url
+   */
+  @JsonProperty("url")
+  public List<Url> getUrl() {
+    return url;
+  }
 
-    /**
-     * 
-     * @return
-     *     The url
-     */
-    @JsonProperty("url")
-    public List<Url> getUrl() {
-        return url;
-    }
+  /**
+   * @param url The url
+   */
+  @JsonProperty("url")
+  public void setUrl(List<Url> url) {
+    this.url = url;
+  }
 
-    /**
-     * 
-     * @param url
-     *     The url
-     */
-    @JsonProperty("url")
-    public void setUrl(List<Url> url) {
-        this.url = url;
-    }
+  @JsonAnyGetter
+  public Map<String, Object> getAdditionalProperties() {
+    return this.additionalProperties;
+  }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
+  @JsonAnySetter
+  public void setAdditionalProperty(String name, Object value) {
+    this.additionalProperties.put(name, value);
+  }
 }

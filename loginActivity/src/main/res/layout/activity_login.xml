@@ -1,77 +1,76 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_gravity="center"
-    android:background="@drawable/background_gradient"
-    android:orientation="vertical"
-    tools:context=".LoginActivity">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_gravity="center"
+             android:background="@drawable/background_gradient"
+             android:orientation="vertical"
+             tools:context=".LoginActivity">
 
 
+  <ImageView
+      android:id="@+id/spinner"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="0dp"
+      android:alpha="0.4"
+      android:elevation="1dp"
+      android:src="@drawable/back_login"
+      android:visibility="visible"/>
 
-    <ImageView
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="0dp"
-        android:alpha="0.4"
-        android:elevation="1dp"
-        android:src="@drawable/back_login"
-        android:visibility="visible" />
+  <ImageView
+      android:id="@+id/logo"
+      android:layout_width="480dp"
+      android:layout_height="match_parent"
+      android:layout_gravity="center|center_vertical"
+      android:layout_marginBottom="0dp"
+      android:alpha=".5"
+      android:visibility="visible"
+      android:src="@drawable/circlepink"/>
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="480dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center|center_vertical"
-        android:layout_marginBottom="0dp"
-        android:alpha=".5"
-        android:visibility="visible"
-        android:src="@drawable/circlepink" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|center_horizontal"
+      android:textColor="@color/soap"
+      android:text="droid teahouse 2017"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:textColor="@color/soap"
-        android:text="droid teahouse 2017"/>
+  <ImageView
+      android:id="@+id/loginBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|center_vertical|center_horizontal"
+      android:layout_marginBottom="5dp"
+      android:alpha=".9"
+      android:background="@android:color/transparent"
+      android:backgroundTint="@color/shell"
+      android:clickable="true"
+      android:onClick="loginToRest"
+      android:src="@drawable/arrow2"/>
 
-    <ImageView
-        android:id="@+id/loginBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|center_vertical|center_horizontal"
-        android:layout_marginBottom="5dp"
-        android:alpha=".9"
-        android:background="@android:color/transparent"
-        android:backgroundTint="@color/shell"
-        android:clickable="true"
-        android:onClick="loginToRest"
-        android:src="@drawable/arrow2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="40dp"
-        android:text="phlaiku"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="30sp"
+      android:layout_gravity="bottom|center_horizontal"
+      android:layout_marginBottom="40dp"
+      android:text="phlaiku"/>
 
 
-    <com.jetradarmobile.snowfall.SnowfallView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:snowflakesNum="250"
-        app:snowflakeAlphaMin="100"
-        app:snowflakeAlphaMax="205"
-        app:snowflakeAngleMax="5"
-        app:snowflakeSizeMin="5dp"
-        app:snowflakeSizeMax="8dp"
-        app:snowflakeSpeedMin="8"
-        app:snowflakeSpeedMax="12"
-        app:snowflakesFadingEnabled="true"
-        app:snowflakesAlreadyFalling="false" />
+  <com.jetradarmobile.snowfall.SnowfallView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:snowflakesNum="250"
+      app:snowflakeAlphaMin="100"
+      app:snowflakeAlphaMax="205"
+      app:snowflakeAngleMax="5"
+      app:snowflakeSizeMin="5dp"
+      app:snowflakeSizeMax="8dp"
+      app:snowflakeSpeedMin="8"
+      app:snowflakeSpeedMax="12"
+      app:snowflakesFadingEnabled="true"
+      app:snowflakesAlreadyFalling="false"/>
 </FrameLayout>
 
 

@@ -19,7 +19,7 @@ limitations under the License.
 
 static inline void WriteYUV(const int x, const int y, const int width,
                             const int r8, const int g8, const int b8,
-                            uint8_t* const pY, uint8_t* const pUV) {
+                            uint8_t *const pY, uint8_t *const pUV) {
   // Using formulas from http://msdn.microsoft.com/en-us/library/ms893078
   *pY = ((66 * r8 + 129 * g8 + 25 * b8 + 128) >> 8) + 16;
 
@@ -50,11 +50,11 @@ static inline void WriteYUV(const int x, const int y, const int width,
   pUV[offset + u_offset] += ((-38 * r8 - 74 * g8 + 112 * b8 + 128) >> 10) + 32;
 }
 
-void ConvertARGB8888ToYUV420SP(const uint32_t* const input,
-                               uint8_t* const output, int width, int height) {
-  uint8_t* pY = output;
-  uint8_t* pUV = output + (width * height);
-  const uint32_t* in = input;
+void ConvertARGB8888ToYUV420SP(const uint32_t *const input,
+                               uint8_t *const output, int width, int height) {
+  uint8_t *pY = output;
+  uint8_t *pUV = output + (width * height);
+  const uint32_t *in = input;
 
   for (int y = 0; y < height; y++) {
     for (int x = 0; x < width; x++) {
@@ -73,11 +73,11 @@ void ConvertARGB8888ToYUV420SP(const uint32_t* const input,
   }
 }
 
-void ConvertRGB565ToYUV420SP(const uint16_t* const input, uint8_t* const output,
+void ConvertRGB565ToYUV420SP(const uint16_t *const input, uint8_t *const output,
                              const int width, const int height) {
-  uint8_t* pY = output;
-  uint8_t* pUV = output + (width * height);
-  const uint16_t* in = input;
+  uint8_t *pY = output;
+  uint8_t *pUV = output + (width * height);
+  const uint16_t *in = input;
 
   for (int y = 0; y < height; y++) {
     for (int x = 0; x < width; x++) {

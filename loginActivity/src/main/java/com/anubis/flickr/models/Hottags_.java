@@ -1,4 +1,3 @@
-
 package com.anubis.flickr.models;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -22,94 +21,77 @@ import io.realm.annotations.Ignore;
     "count",
     "tag"
 })
-public class Hottags_  {
+public class Hottags_ {
+  public Hottags_() {
+  }
 
-    public Hottags_() {
-    }
+  @JsonProperty("period")
+  private String period;
+  @JsonProperty("count")
+  private Integer count;
+  private RealmList<Tag> tagsList;
+  @Ignore
+  @JsonProperty("tag")
+  private List<Tag> tag = new ArrayList<Tag>();
+  @JsonIgnore
+  @Ignore
+  private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("period")
+  /**
+   * @return The period
+   */
+  @JsonProperty("period")
+  public String getPeriod() {
+    return period;
+  }
 
-    private String period;
-    @JsonProperty("count")
-    private Integer count;
+  /**
+   * @param period The period
+   */
+  @JsonProperty("period")
+  public void setPeriod(String period) {
+    this.period = period;
+  }
 
-    private RealmList<Tag> tagsList;
+  /**
+   * @return The count
+   */
+  @JsonProperty("count")
+  public Integer getCount() {
+    return count;
+  }
 
-    @Ignore
-    @JsonProperty("tag")
-    private List<Tag> tag = new ArrayList<Tag>();
-    @JsonIgnore
-    @Ignore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  /**
+   * @param count The count
+   */
+  @JsonProperty("count")
+  public void setCount(Integer count) {
+    this.count = count;
+  }
 
-    /**
-     * 
-     * @return
-     *     The period
-     */
-    @JsonProperty("period")
-    public String getPeriod() {
-        return period;
-    }
+  /**
+   * @return The tag
+   */
+  @JsonProperty("tag")
+  public List<Tag> getTag() {
+    return tag;
+  }
 
-    /**
-     * 
-     * @param period
-     *     The period
-     */
-    @JsonProperty("period")
-    public void setPeriod(String period) {
-        this.period = period;
-    }
+  /**
+   * @param tag The tag
+   */
+  @JsonProperty("tag")
+  public void setTag(List<Tag> tag) {
+    this.tag = tag;
+  }
 
-    /**
-     * 
-     * @return
-     *     The count
-     */
-    @JsonProperty("count")
-    public Integer getCount() {
-        return count;
-    }
+  @JsonAnyGetter
+  public Map<String, Object> getAdditionalProperties() {
+    return this.additionalProperties;
+  }
 
-    /**
-     * 
-     * @param count
-     *     The count
-     */
-    @JsonProperty("count")
-    public void setCount(Integer count) {
-        this.count = count;
-    }
-
-    /**
-     * 
-     * @return
-     *     The tag
-     */
-    @JsonProperty("tag")
-    public List<Tag> getTag() {
-        return tag;
-    }
-
-    /**
-     * 
-     * @param tag
-     *     The tag
-     */
-    @JsonProperty("tag")
-    public void setTag(List<Tag> tag) {
-        this.tag = tag;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
+  @JsonAnySetter
+  public void setAdditionalProperty(String name, Object value) {
+    this.additionalProperties.put(name, value);
+  }
 }

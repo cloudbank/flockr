@@ -1,4 +1,3 @@
-
 package com.anubis.flickr.models;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -17,65 +16,55 @@ import java.util.Map;
     "tags"
 })
 public class Who_ {
+  public Who_() {
+  }
 
-    public Who_() {
-    }
+  @JsonProperty("id")
+  private String id;
+  @JsonProperty("tags")
+  private Tags tags;
+  @JsonIgnore
+  private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("id")
-    private String id;
-    @JsonProperty("tags")
-    private Tags tags;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  /**
+   * @return The userId
+   */
+  @JsonProperty("id")
+  public String getId() {
+    return id;
+  }
 
-    /**
-     * 
-     * @return
-     *     The userId
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
+  /**
+   * @param id The userId
+   */
+  @JsonProperty("id")
+  public void setId(String id) {
+    this.id = id;
+  }
 
-    /**
-     * 
-     * @param id
-     *     The userId
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
-    }
+  /**
+   * @return The tags
+   */
+  @JsonProperty("tags")
+  public Tags getTags() {
+    return tags;
+  }
 
-    /**
-     * 
-     * @return
-     *     The tags
-     */
-    @JsonProperty("tags")
-    public Tags getTags() {
-        return tags;
-    }
+  /**
+   * @param tags The tags
+   */
+  @JsonProperty("tags")
+  public void setTags(Tags tags) {
+    this.tags = tags;
+  }
 
-    /**
-     * 
-     * @param tags
-     *     The tags
-     */
-    @JsonProperty("tags")
-    public void setTags(Tags tags) {
-        this.tags = tags;
-    }
+  @JsonAnyGetter
+  public Map<String, Object> getAdditionalProperties() {
+    return this.additionalProperties;
+  }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
+  @JsonAnySetter
+  public void setAdditionalProperty(String name, Object value) {
+    this.additionalProperties.put(name, value);
+  }
 }

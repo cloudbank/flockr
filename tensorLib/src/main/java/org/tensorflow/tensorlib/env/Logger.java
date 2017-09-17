@@ -63,7 +63,7 @@ public final class Logger {
    * Creates a Logger with a custom tag and a custom message prefix. If the message prefix
    * is set to <pre>null</pre>, the caller's class name is used as the prefix.
    *
-   * @param tag identifies the source of a log message.
+   * @param tag           identifies the source of a log message.
    * @param messagePrefix prepended to every message if non-null. If null, the name of the caller is
    *                      being used
    */
@@ -100,10 +100,10 @@ public final class Logger {
    * Return caller's simple name.
    *
    * Android getStackTrace() returns an array that looks like this:
-   *     stackTrace[0]: dalvik.system.VMStack
-   *     stackTrace[1]: java.lang.Thread
-   *     stackTrace[2]: com.google.android.apps.unveil.env.UnveilLogger
-   *     stackTrace[3]: com.google.android.apps.unveil.BaseApplication
+   * stackTrace[0]: dalvik.system.VMStack
+   * stackTrace[1]: java.lang.Thread
+   * stackTrace[2]: com.google.android.apps.unveil.env.UnveilLogger
+   * stackTrace[3]: com.google.android.apps.unveil.BaseApplication
    *
    * This function returns the simple version of the first non-filtered name.
    *

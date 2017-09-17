@@ -1,38 +1,3 @@
-import android.content.Context;
-import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
-import android.graphics.Typeface;
-import android.os.Bundle;
-import android.os.SystemClock;
-import android.util.Size;
-import android.util.TypedValue;
-import android.view.Display;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.Toast;
-
-import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
-import org.tensorflow.tensorlib.R;
-import org.tensorflow.tensorlib.activity.CameraActivity;
-import org.tensorflow.tensorlib.env.BorderedText;
-import org.tensorflow.tensorlib.env.ImageUtils;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Vector;
-
 /*
  * Copyright 2017 The TensorFlow Authors. All Rights Reserved.
  *

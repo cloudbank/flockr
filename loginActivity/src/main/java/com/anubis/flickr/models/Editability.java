@@ -1,4 +1,3 @@
-
 package com.anubis.flickr.models;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -12,68 +11,57 @@ import java.util.HashMap;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-
 @JsonPropertyOrder({
     "cancomment",
     "canaddmeta"
 })
 public class Editability {
+  @JsonProperty("cancomment")
+  private Integer cancomment;
+  @JsonProperty("canaddmeta")
+  private Integer canaddmeta;
+  @JsonIgnore
+  private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("cancomment")
-    private Integer cancomment;
-    @JsonProperty("canaddmeta")
-    private Integer canaddmeta;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  /**
+   * @return The cancomment
+   */
+  @JsonProperty("cancomment")
+  public Integer getCancomment() {
+    return cancomment;
+  }
 
-    /**
-     * 
-     * @return
-     *     The cancomment
-     */
-    @JsonProperty("cancomment")
-    public Integer getCancomment() {
-        return cancomment;
-    }
+  /**
+   * @param cancomment The cancomment
+   */
+  @JsonProperty("cancomment")
+  public void setCancomment(Integer cancomment) {
+    this.cancomment = cancomment;
+  }
 
-    /**
-     * 
-     * @param cancomment
-     *     The cancomment
-     */
-    @JsonProperty("cancomment")
-    public void setCancomment(Integer cancomment) {
-        this.cancomment = cancomment;
-    }
+  /**
+   * @return The canaddmeta
+   */
+  @JsonProperty("canaddmeta")
+  public Integer getCanaddmeta() {
+    return canaddmeta;
+  }
 
-    /**
-     * 
-     * @return
-     *     The canaddmeta
-     */
-    @JsonProperty("canaddmeta")
-    public Integer getCanaddmeta() {
-        return canaddmeta;
-    }
+  /**
+   * @param canaddmeta The canaddmeta
+   */
+  @JsonProperty("canaddmeta")
+  public void setCanaddmeta(Integer canaddmeta) {
+    this.canaddmeta = canaddmeta;
+  }
 
-    /**
-     * 
-     * @param canaddmeta
-     *     The canaddmeta
-     */
-    @JsonProperty("canaddmeta")
-    public void setCanaddmeta(Integer canaddmeta) {
-        this.canaddmeta = canaddmeta;
-    }
+  @JsonAnyGetter
+  public Map<String, Object> getAdditionalProperties() {
+    return this.additionalProperties;
+  }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
+  @JsonAnySetter
+  public void setAdditionalProperty(String name, Object value) {
+    this.additionalProperties.put(name, value);
+  }
 }

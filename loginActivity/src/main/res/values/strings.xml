@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">phlaiku</string>
-    <string name="image_detail">Image Detail</string>
-    <string name="friends_and_you">Visual Phlaiku</string>
-    <string name="interesting_today">Photo Phlai-Q</string>
-    <string name="tags">Phlaiku-Bot</string>
-    <string name="explore">Explore</string>
-    <string name="moon">The Moon</string>
-    <string name="japan">Basho</string>
-    <string name="current_user">currentUser</string>
-    <string name="user_id">userId</string>
-    <string name="OAuthKit_Prefs">OAuthKit_Prefs</string>
-    <string name="Phlix_User_Prefs">Phlix_User_Prefs</string>
-    <string name="title">title</string>
-    <string name="username">username</string>
-    <string name="user_nsid">user_nsid</string>
-    <string name="account_type">com.anubis.flickr</string>
-    <string name="authority">com.anubis.flickr.provider</string>
-    <string name="ad_unit2">ca-app-pub-8660045387738182/4071318959</string>
-    <string name="acct_permission_grant">GET ACCOUNTS permissions must be granted for the app to work</string>
-    <string name="write_storage_permission_grant">WRITE STORAGE permissions must be granted for the app to work</string>
-    <string name="ad_unit">ca-app-pub-8660045387738182/8641119351</string>
-    <string name="ad_unit3">ca-app-pub-8660045387738182/8361917754</string>
-    <string name="label_shared_user">label.shared.user</string>
-    <string name="consumer">consumer</string>
-    <string name="baseUrl">baseUrl</string>
-    <string name="jacksonServiceType">jacksonServiceType</string>
-    <string name="defaultServiceType">defaultServiceType</string>
-    <string name="Consumer">Consumer</string>
+  <string name="app_name">phlaiku</string>
+  <string name="image_detail">Image Detail</string>
+  <string name="friends_and_you">Visual Phlaiku</string>
+  <string name="interesting_today">Photo Phlai-Q</string>
+  <string name="tags">Phlaiku-Bot</string>
+  <string name="explore">Explore</string>
+  <string name="moon">The Moon</string>
+  <string name="japan">Basho</string>
+  <string name="current_user">currentUser</string>
+  <string name="user_id">userId</string>
+  <string name="OAuthKit_Prefs">OAuthKit_Prefs</string>
+  <string name="Phlix_User_Prefs">Phlix_User_Prefs</string>
+  <string name="title">title</string>
+  <string name="username">username</string>
+  <string name="user_nsid">user_nsid</string>
+  <string name="account_type">com.anubis.flickr</string>
+  <string name="authority">com.anubis.flickr.provider</string>
+  <string name="ad_unit2">ca-app-pub-8660045387738182/4071318959</string>
+  <string name="acct_permission_grant">GET ACCOUNTS permissions must be granted for the app to
+    work
+  </string>
+  <string name="write_storage_permission_grant">WRITE STORAGE permissions must be granted for the
+    app to work
+  </string>
+  <string name="ad_unit">ca-app-pub-8660045387738182/8641119351</string>
+  <string name="ad_unit3">ca-app-pub-8660045387738182/8361917754</string>
+  <string name="label_shared_user">label.shared.user</string>
+  <string name="consumer">consumer</string>
+  <string name="baseUrl">baseUrl</string>
+  <string name="jacksonServiceType">jacksonServiceType</string>
+  <string name="defaultServiceType">defaultServiceType</string>
+  <string name="Consumer">Consumer</string>
 
 </resources>

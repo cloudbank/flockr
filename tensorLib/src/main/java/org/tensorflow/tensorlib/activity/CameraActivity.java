@@ -127,8 +127,8 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
     switch (requestCode) {
       case PERMISSIONS_REQUEST: {
         if (grantResults.length > 0
-                && grantResults[0] == PackageManager.PERMISSION_GRANTED
-                && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+            && grantResults[0] == PackageManager.PERMISSION_GRANTED
+            && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
           setFragment();
         } else {
           requestPermission();
@@ -150,7 +150,7 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
       if (shouldShowRequestPermissionRationale(PERMISSION_CAMERA) || shouldShowRequestPermissionRationale(PERMISSION_STORAGE)) {
         Toast.makeText(CameraActivity.this, "Camera AND storage permission are required for this demo", Toast.LENGTH_LONG).show();
       }
-      requestPermissions(new String[] {PERMISSION_CAMERA, PERMISSION_STORAGE}, PERMISSIONS_REQUEST);
+      requestPermissions(new String[]{PERMISSION_CAMERA, PERMISSION_STORAGE}, PERMISSIONS_REQUEST);
     }
   }
 
@@ -204,7 +204,8 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
     }
   }
 
-  public void onSetDebug(final boolean debug) {}
+  public void onSetDebug(final boolean debug) {
+  }
 
   @Override
   public boolean onKeyDown(final int keyCode, final KeyEvent event) {
@@ -218,6 +219,8 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
   }
 
   protected abstract void onPreviewSizeChosen(final Size size, final int rotation);
+
   protected abstract int getLayoutId();
+
   protected abstract Size getDesiredPreviewFrameSize();
 }

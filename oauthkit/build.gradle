@@ -1,42 +1,42 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.1'
+  compileSdkVersion 26
+  buildToolsVersion '26.0.1'
 
-    defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        def propsFile = rootProject.file('local.properties')
-        def props = new Properties()
-        props.load(new FileInputStream(propsFile))
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "baseUrl", props['baseUrl']
-        buildConfigField "String", "callbackUrl", props['callbackUrl']
-        buildConfigField "String", "consumerKey", props['consumerKey']
-        buildConfigField "String", "consumerSecret", props['consumerSecret']
-        buildConfigField "String", "requestTokenEndpoint", props['requestTokenEndpoint']
-        buildConfigField "String", "accessTokenEndpoint", props['accessTokenEndpoint']
-        buildConfigField "String", "authorizationEndpoint", props['authorizationEndpoint']
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+  defaultConfig {
+    minSdkVersion 14
+    targetSdkVersion 26
+    versionCode 1
+    versionName "1.0"
+    def propsFile = rootProject.file('local.properties')
+    def props = new Properties()
+    props.load(new FileInputStream(propsFile))
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    buildConfigField "String", "baseUrl", props['baseUrl']
+    buildConfigField "String", "callbackUrl", props['callbackUrl']
+    buildConfigField "String", "consumerKey", props['consumerKey']
+    buildConfigField "String", "consumerSecret", props['consumerSecret']
+    buildConfigField "String", "requestTokenEndpoint", props['requestTokenEndpoint']
+    buildConfigField "String", "accessTokenEndpoint", props['accessTokenEndpoint']
+    buildConfigField "String", "authorizationEndpoint", props['authorizationEndpoint']
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-        }
     }
+  }
 }
 
 dependencies {
 
-    compile 'se.akerfeldt:okhttp-signpost:1.1.0'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:26.0.0'
-    testCompile 'junit:junit:4.12'
+  compile 'se.akerfeldt:okhttp-signpost:1.1.0'
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+  compile 'com.android.support:appcompat-v7:26.0.0'
+  testCompile 'junit:junit:4.12'
 }

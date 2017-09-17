@@ -1,63 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/back_alpha_40"
-    >
-    <TextView
-        android:id="@+id/tvCommons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/soap"
-        android:gravity="center"
-        android:textSize="12sp"
-        android:text="@string/explore"
-        android:padding="3dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:elevation="5dp" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_alpha_40"
+>
+  <TextView
+      android:id="@+id/tvCommons"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/soap"
+      android:gravity="center"
+      android:textSize="12sp"
+      android:text="@string/explore"
+      android:padding="3dp"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:elevation="5dp"/>
 
-    <TextView
-        android:id="@+id/tvCommons2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/cooler"
-        android:textSize="12sp"
-        android:layout_below="@+id/tvCommons"
-        android:text="@string/explore"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:layout_marginBottom="15dp"
-        android:padding="3dp"
-        android:layout_centerInParent="true" />
+  <TextView
+      android:id="@+id/tvCommons2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/cooler"
+      android:textSize="12sp"
+      android:layout_below="@+id/tvCommons"
+      android:text="@string/explore"
+      android:textAlignment="center"
+      android:gravity="center"
+      android:layout_marginBottom="15dp"
+      android:padding="3dp"
+      android:layout_centerInParent="true"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/commons_circle_logo"
-        android:padding="5dp"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/tvCommons2"
-        android:layout_toStartOf="@+id/tvCommons2"
-        android:layout_alignBottom="@+id/tvCommons" />
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/commons_circle_logo"
+      android:padding="5dp"
+      android:layout_alignParentTop="true"
+      android:layout_toLeftOf="@+id/tvCommons2"
+      android:layout_toStartOf="@+id/tvCommons2"
+      android:layout_alignBottom="@+id/tvCommons"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvSearch"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:scrollbars="vertical"
-        android:background="@android:color/transparent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/tvCommons2" />
-
-
-
-
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/rvSearch"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:layout_gravity="center"
+      android:scrollbars="vertical"
+      android:background="@android:color/transparent"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginBottom="10dp"
+      android:layout_below="@+id/tvCommons2"/>
 
 
 </RelativeLayout>

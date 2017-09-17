@@ -10,47 +10,44 @@ import io.realm.annotations.PrimaryKey;
 /**
  * Created by sabine on 10/6/16.
  */
-
 public class Recent extends RealmObject implements RealmModel {
+  @PrimaryKey
+  public String id;
+  public Date timestamp;
 
-    @PrimaryKey
-    public String id;
+  public RealmList<Photo> getRecentPhotos() {
+    return recentPhotos;
+  }
 
-    public Date timestamp;
+  public void setRecentPhotos(RealmList<Photo> recentPhotos) {
+    this.recentPhotos = recentPhotos;
+  }
 
-    public RealmList<Photo> getRecentPhotos() {
-        return recentPhotos;
-    }
+  public Date getTimestamp() {
+    return timestamp;
+  }
 
-    public void setRecentPhotos(RealmList<Photo> recentPhotos) {
-        this.recentPhotos = recentPhotos;
-    }
+  public void setTimestamp(Date timestamp) {
+    this.timestamp = timestamp;
+  }
 
-    public Date getTimestamp() {
-        return timestamp;
-    }
+  public RealmList<Photo> recentPhotos;
 
-    public void setTimestamp(Date timestamp) {
-        this.timestamp = timestamp;
-    }
+  public String getId() {
+    return id;
+  }
 
-    public RealmList<Photo> recentPhotos;
+  public void setId(String id) {
+    this.id = id;
+  }
 
-    public String getId() {
-        return id;
-    }
+  public RealmList<Tag> getHotTagList() {
+    return hotTagList;
+  }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+  public void setHotTagList(RealmList<Tag> hotTagList) {
+    this.hotTagList = hotTagList;
+  }
 
-    public RealmList<Tag> getHotTagList() {
-        return hotTagList;
-    }
-
-    public void setHotTagList(RealmList<Tag> hotTagList) {
-        this.hotTagList = hotTagList;
-    }
-
-    public RealmList<Tag> hotTagList;
+  public RealmList<Tag> hotTagList;
 }

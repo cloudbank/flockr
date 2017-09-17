@@ -1,4 +1,3 @@
-
 package com.anubis.flickr.models;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -19,68 +18,56 @@ import io.realm.annotations.Ignore;
     "stat"
 })
 public class Hottags {
+  public Hottags() {
+  }
 
+  @JsonProperty("hottags")
+  private Hottags_ hottags;
+  @JsonProperty("stat")
+  private String stat;
+  @JsonIgnore
+  @Ignore
+  private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    public Hottags() {
-    }
+  /**
+   * @return The hottags
+   */
+  @JsonProperty("hottags")
+  public Hottags_ getHottags() {
+    return hottags;
+  }
 
-    @JsonProperty("hottags")
+  /**
+   * @param hottags The hottags
+   */
+  @JsonProperty("hottags")
+  public void setHottags(Hottags_ hottags) {
+    this.hottags = hottags;
+  }
 
-    private Hottags_ hottags;
-    @JsonProperty("stat")
-    private String stat;
-    @JsonIgnore
-    @Ignore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  /**
+   * @return The stat
+   */
+  @JsonProperty("stat")
+  public String getStat() {
+    return stat;
+  }
 
-    /**
-     * 
-     * @return
-     *     The hottags
-     */
-    @JsonProperty("hottags")
-    public Hottags_ getHottags() {
-        return hottags;
-    }
+  /**
+   * @param stat The stat
+   */
+  @JsonProperty("stat")
+  public void setStat(String stat) {
+    this.stat = stat;
+  }
 
-    /**
-     * 
-     * @param hottags
-     *     The hottags
-     */
-    @JsonProperty("hottags")
-    public void setHottags(Hottags_ hottags) {
-        this.hottags = hottags;
-    }
+  @JsonAnyGetter
+  public Map<String, Object> getAdditionalProperties() {
+    return this.additionalProperties;
+  }
 
-    /**
-     * 
-     * @return
-     *     The stat
-     */
-    @JsonProperty("stat")
-    public String getStat() {
-        return stat;
-    }
-
-    /**
-     * 
-     * @param stat
-     *     The stat
-     */
-    @JsonProperty("stat")
-    public void setStat(String stat) {
-        this.stat = stat;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
+  @JsonAnySetter
+  public void setAdditionalProperty(String name, Object value) {
+    this.additionalProperties.put(name, value);
+  }
 }

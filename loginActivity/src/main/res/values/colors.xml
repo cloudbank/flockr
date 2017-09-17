@@ -5,35 +5,30 @@
 <resources>
 
 
-    <color name="soap">#FFF3E2</color>
-    <color name="shell">#FFF3F8</color>
-    <color name="delicious">#FF5EB7</color>
-    <color name="cooler">#FF5EB9</color>
-    <color name="satin">#8E5B5B</color>
-    <color name="bark">#8E7163</color>
-    <color name="LithiumPool">#F2FFB3</color>
+  <color name="soap">#FFF3E2</color>
+  <color name="shell">#FFF3F8</color>
+  <color name="delicious">#FF5EB7</color>
+  <color name="cooler">#FF5EB9</color>
+  <color name="satin">#8E5B5B</color>
+  <color name="bark">#8E7163</color>
+  <color name="LithiumPool">#F2FFB3</color>
 
 
-    <color name="back_alpha_40">#90FF5EB7</color>
-    <color name="back_alpha_30">#60FF5EB7</color>
-    <color name="back_alpha_20">#30FF5EB7</color>
+  <color name="back_alpha_40">#90FF5EB7</color>
+  <color name="back_alpha_30">#60FF5EB7</color>
+  <color name="back_alpha_20">#30FF5EB7</color>
 
-    <color name="back_sand_40">#FF5EB7</color>
-    <color name="back_wee_20">#30F9FE6F</color>
+  <color name="back_sand_40">#FF5EB7</color>
+  <color name="back_wee_20">#30F9FE6F</color>
 
-    <color name="ice">#F5FFDE</color>
-    <color name="linen">#ADA57F</color>
-    <color name="BlackReed">#2A291F</color>
-    <color name="ochre">#6D6850</color>
-    <color name="sand">#CED25C</color>
-    <color name="limon">#E2E765</color>
-    <color name="pee">#F9FE6F</color>
-
-
-
-
-
-
+  <color name="ice">#F5FFDE</color>
+  <color name="linen">#ADA57F</color>
+  <color name="BlackReed">#2A291F</color>
+  <color name="ochre">#6D6850</color>
+  <color name="sand">#CED25C</color>
+  <color name="limon">#E2E765</color>
+  <color name="pee">#F9FE6F</color>
+  <color name="cider">#e3eaa7</color>
 
 
 </resources>

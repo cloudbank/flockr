@@ -14,9 +14,11 @@
  limitations under the License.
 -->
 <resources>
-    <string name="description_info">Info</string>
-    <string name="request_permission">This sample needs camera permission.</string>
-    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
-    <string name="label_shared_user">label.shared.user</string>
+  <string name="description_info">Info</string>
+  <string name="request_permission">This sample needs camera permission.</string>
+  <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+  <string name="label_shared_user">label.shared.user</string>
+  <string name="tensor_prefs">tensor_prefs</string>
+  <string name="classifier">classifier</string>
 
 </resources>

@@ -22,6 +22,7 @@ import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+
 import java.util.Vector;
 
 /**
@@ -49,7 +50,7 @@ public class BorderedText {
    *
    * @param interiorColor the interior text color
    * @param exteriorColor the exterior text color
-   * @param textSize text size in pixels
+   * @param textSize      text size in pixels
    */
   public BorderedText(final int interiorColor, final int exteriorColor, final float textSize) {
     interiorPaint = new Paint();

@@ -1,4 +1,3 @@
-
 package com.anubis.flickr.models;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -21,87 +20,82 @@ import io.realm.annotations.PrimaryKey;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "photo_id",
-        "comments"
+    "photo_id",
+    "comments"
 })
 public class Comments_ extends RealmObject {
-    public Comments_() {
-    }
+  public Comments_() {
+  }
 
-    @PrimaryKey
+  @PrimaryKey
+  @JsonProperty("photo_id")
+  private String photoId;
+  @JsonProperty("comment")
+  public Date timestamp;
 
-    @JsonProperty("photo_id")
-    private String photoId;
-    @JsonProperty("comment")
+  public Date getTimestamp() {
+    return timestamp;
+  }
 
-    public Date timestamp;
+  public void setTimestamp(Date timestamp) {
+    this.timestamp = timestamp;
+  }
 
-    public Date getTimestamp() {
-        return timestamp;
-    }
+  public RealmList<Comment> commentsList;
 
-    public void setTimestamp(Date timestamp) {
-        this.timestamp = timestamp;
-    }
+  public RealmList<Comment> getCommentsList() {
+    return commentsList;
+  }
 
+  public void setCommentsList(RealmList<Comment> commentsList) {
+    this.commentsList = commentsList;
+  }
 
+  @Ignore
+  private List<Comment> comments = new ArrayList<Comment>();
+  @JsonIgnore
+  @Ignore
+  private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    public RealmList<Comment> commentsList;
+  /**
+   * @return The photoId
+   */
+  @JsonProperty("photo_id")
+  public String getPhotoId() {
+    return photoId;
+  }
 
-    public RealmList<Comment> getCommentsList() {
-        return commentsList;
-    }
+  /**
+   * @param photoId The photo_id
+   */
+  @JsonProperty("photo_id")
+  public void setPhotoId(String photoId) {
+    this.photoId = photoId;
+  }
 
-    public void setCommentsList(RealmList<Comment> commentsList) {
-        this.commentsList = commentsList;
-    }
+  /**
+   * @return The comments
+   */
+  @JsonProperty("comment")
+  public List<Comment> getComments() {
+    return comments;
+  }
 
-    @Ignore
-    private List<Comment> comments = new ArrayList<Comment>();
-    @JsonIgnore
-    @Ignore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  /**
+   * @param comments The comments
+   */
+  @JsonProperty("comment")
+  public void setComments(List<Comment> comments) {
+    this.comments = comments;
+  }
 
-    /**
-     * @return The photoId
-     */
-    @JsonProperty("photo_id")
-    public String getPhotoId() {
-        return photoId;
-    }
+  @JsonAnyGetter
+  public Map<String, Object> getAdditionalProperties() {
+    return this.additionalProperties;
+  }
 
-    /**
-     * @param photoId The photo_id
-     */
-    @JsonProperty("photo_id")
-    public void setPhotoId(String photoId) {
-        this.photoId = photoId;
-    }
-
-    /**
-     * @return The comments
-     */
-    @JsonProperty("comment")
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    /**
-     * @param comments The comments
-     */
-    @JsonProperty("comment")
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
+  @JsonAnySetter
+  public void setAdditionalProperty(String name, Object value) {
+    this.additionalProperties.put(name, value);
+  }
 }

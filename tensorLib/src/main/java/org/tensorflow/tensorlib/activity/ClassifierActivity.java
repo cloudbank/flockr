@@ -32,13 +32,13 @@ import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
 
-import org.tensorflow.tensorlib.classifier.Classifier;
 import org.tensorflow.tensorlib.R;
+import org.tensorflow.tensorlib.classifier.Classifier;
 import org.tensorflow.tensorlib.classifier.TensorFlowImageClassifier;
-import org.tensorflow.tensorlib.view.OverlayView.DrawCallback;
 import org.tensorflow.tensorlib.env.BorderedText;
 import org.tensorflow.tensorlib.env.ImageUtils;
 import org.tensorflow.tensorlib.env.Logger;
+import org.tensorflow.tensorlib.view.OverlayView.DrawCallback;
 import org.tensorflow.tensorlib.view.ResultsView;
 
 import java.util.List;
@@ -71,7 +71,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
 
   private static final String MODEL_FILE = "file:///android_asset/tensorflow_inception_graph.pb";
   private static final String LABEL_FILE =
-          "file:///android_asset/imagenet_comp_graph_label_strings.txt";
+      "file:///android_asset/imagenet_comp_graph_label_strings.txt";
 
   private static final boolean SAVE_PREVIEW_BITMAP = false;
 
@@ -137,7 +137,6 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     resultsView = (ResultsView) findViewById(R.id.resultsView);
     previewWidth = size.getWidth();
     previewHeight = size.getHeight();
-
 
 
     final Display display = getWindowManager().getDefaultDisplay();

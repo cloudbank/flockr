@@ -17,83 +17,81 @@ import com.jabistudio.androidjhlabs.filter.TritoneFilter;
 import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
 
 public class ImageFilterProcessor {
-    public static final int NONE = 0;
-    public static final int CONTRAST = 1;
-    public static final int GRAYSCALE = 2;
-    public static final int SOLARIZE = 3;
-    public static final int FRACTAL = 4;
-    public static final int MARBLE = 5;
-    public static final int PINCH = 6;
-    public static final int WARP = 7;
-    public static final int BLUR = 8;
-    public static final int CRYSTALLIZE = 9;
-    public static final int TRITONE = 10;
-    public static final int GLOW = 11;
+  public static final int NONE = 0;
+  public static final int CONTRAST = 1;
+  public static final int GRAYSCALE = 2;
+  public static final int SOLARIZE = 3;
+  public static final int FRACTAL = 4;
+  public static final int MARBLE = 5;
+  public static final int PINCH = 6;
+  public static final int WARP = 7;
+  public static final int BLUR = 8;
+  public static final int CRYSTALLIZE = 9;
+  public static final int TRITONE = 10;
+  public static final int GLOW = 11;
+  Bitmap originalImage;
+  int width;
+  int height;
 
-    Bitmap originalImage;
-    int width;
-    int height;
+  public ImageFilterProcessor(Bitmap originalImage) {
+    this.originalImage = originalImage;
+    this.width = originalImage.getWidth();
+    this.height = originalImage.getHeight();
+  }
 
-    public ImageFilterProcessor(Bitmap originalImage) {
-        this.originalImage = originalImage;
-        this.width = originalImage.getWidth();
-        this.height = originalImage.getHeight();
+  public Bitmap applyFilter(int effectType) {
+    int[] src = AndroidUtils.bitmapToIntArray(originalImage);
+    int[] dest;
+    switch (effectType) {
+      case CONTRAST:
+        ContrastFilter cFilter = new ContrastFilter();
+        dest = cFilter.filter(src, width, height);
+        break;
+      case GRAYSCALE:
+        GrayscaleFilter gFilter = new GrayscaleFilter();
+        dest = gFilter.filter(src, width, height);
+        break;
+      case SOLARIZE:
+        SolarizeFilter sFlter = new SolarizeFilter();
+        dest = sFlter.filter(src, width, height);
+        break;
+      case FRACTAL:
+        KaleidoscopeFilter kFilter = new KaleidoscopeFilter();
+        dest = kFilter.filter(src, width, height);
+        break;
+      case MARBLE:
+        MarbleFilter mFilter = new MarbleFilter();
+        dest = mFilter.filter(src, width, height);
+        break;
+      case PINCH:
+        PinchFilter pFilter = new PinchFilter();
+        dest = pFilter.filter(src, width, height);
+        break;
+      case BLUR:
+        BlurFilter bFilter = new BlurFilter();
+        dest = bFilter.filter(src, width, height);
+        break;
+      case CRYSTALLIZE:
+        CrystallizeFilter clFilter = new CrystallizeFilter();
+        dest = clFilter.filter(src, width, height);
+        break;
+      case TRITONE:
+        TritoneFilter ttFilter = new TritoneFilter();
+        dest = ttFilter.filter(src, width, height);
+        break;
+      case GLOW:
+        GlowFilter glFilter = new GlowFilter();
+        dest = glFilter.filter(src, width, height);
+        break;
+      default:
+        LevelsFilter lFilter = new LevelsFilter();
+        dest = lFilter.filter(src, width, height);
+        break;
     }
-
-    public Bitmap applyFilter(int effectType) {
-        int[] src = AndroidUtils.bitmapToIntArray(originalImage);
-        int[] dest;
-        switch (effectType) {
-            case CONTRAST:
-                ContrastFilter cFilter = new ContrastFilter();
-                dest = cFilter.filter(src, width, height);
-                break;
-            case GRAYSCALE:
-                GrayscaleFilter gFilter = new GrayscaleFilter();
-                dest = gFilter.filter(src, width, height);
-                break;
-            case SOLARIZE:
-                SolarizeFilter sFlter = new SolarizeFilter();
-                dest = sFlter.filter(src, width, height);
-                break;
-            case FRACTAL:
-                KaleidoscopeFilter kFilter = new KaleidoscopeFilter();
-                dest = kFilter.filter(src, width, height);
-                break;
-            case MARBLE:
-                MarbleFilter mFilter = new MarbleFilter();
-                dest = mFilter.filter(src, width, height);
-                break;
-            case PINCH:
-                PinchFilter pFilter = new PinchFilter();
-                dest = pFilter.filter(src, width, height);
-                break;
-            case BLUR:
-                BlurFilter bFilter = new BlurFilter();
-                dest = bFilter.filter(src, width, height);
-                break;
-            case CRYSTALLIZE:
-                CrystallizeFilter clFilter = new CrystallizeFilter();
-                dest = clFilter.filter(src, width, height);
-                break;
-            case TRITONE:
-                TritoneFilter ttFilter = new TritoneFilter();
-                dest = ttFilter.filter(src, width, height);
-                break;
-            case GLOW:
-                GlowFilter glFilter = new GlowFilter();
-                dest = glFilter.filter(src, width, height);
-                break;
-            default:
-                LevelsFilter lFilter = new LevelsFilter();
-                dest = lFilter.filter(src, width, height);
-                break;
-        }
-
-        if (effectType != NONE) {
-            return Bitmap.createBitmap(dest, width, height, Config.ARGB_8888);
-        } else {
-            return originalImage;
-        }
+    if (effectType != NONE) {
+      return Bitmap.createBitmap(dest, width, height, Config.ARGB_8888);
+    } else {
+      return originalImage;
     }
+  }
 }

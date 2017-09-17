@@ -1,4 +1,3 @@
-
 package com.anubis.flickr.models;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -17,68 +16,56 @@ import java.util.Map;
     "stat"
 })
 public class Photos {
+  public Photos() {
+  }
 
-    public Photos() {
-    }
+  @JsonProperty("photos")
+  private Photos_ photos;
+  @JsonProperty("stat")
+  private String stat;
+  @JsonIgnore
+  private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  //RealmList<Recognition> recognitionList;
 
-    @JsonProperty("photos")
+  /**
+   * @return The photos
+   */
+  @JsonProperty("photos")
+  public Photos_ getPhotos() {
+    return photos;
+  }
 
-    private Photos_ photos;
-    @JsonProperty("stat")
-    private String stat;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  /**
+   * @param photos The photos
+   */
+  @JsonProperty("photos")
+  public void setPhotos(Photos_ photos) {
+    this.photos = photos;
+  }
 
-    //RealmList<Recognition> recognitionList;
+  /**
+   * @return The stat
+   */
+  @JsonProperty("stat")
+  public String getStat() {
+    return stat;
+  }
 
-    /**
-     * 
-     * @return
-     *     The photos
-     */
-    @JsonProperty("photos")
-    public Photos_ getPhotos() {
-        return photos;
-    }
+  /**
+   * @param stat The stat
+   */
+  @JsonProperty("stat")
+  public void setStat(String stat) {
+    this.stat = stat;
+  }
 
-    /**
-     * 
-     * @param photos
-     *     The photos
-     */
-    @JsonProperty("photos")
-    public void setPhotos(Photos_ photos) {
-        this.photos = photos;
-    }
+  @JsonAnyGetter
+  public Map<String, Object> getAdditionalProperties() {
+    return this.additionalProperties;
+  }
 
-    /**
-     * 
-     * @return
-     *     The stat
-     */
-    @JsonProperty("stat")
-    public String getStat() {
-        return stat;
-    }
-
-    /**
-     * 
-     * @param stat
-     *     The stat
-     */
-    @JsonProperty("stat")
-    public void setStat(String stat) {
-        this.stat = stat;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
+  @JsonAnySetter
+  public void setAdditionalProperty(String name, Object value) {
+    this.additionalProperties.put(name, value);
+  }
 }

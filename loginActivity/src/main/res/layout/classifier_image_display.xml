@@ -1,111 +1,88 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:background="@color/shell"
+                  android:fitsSystemWindows="true"
+                  android:focusableInTouchMode="true"
+                  android:overScrollMode="ifContentScrolls"
+                  android:scrollbarStyle="insideOverlay"
+                  android:scrollbars="vertical"
+                  tools:context=".ImageDisplayActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
         android:background="@color/shell"
-        android:fitsSystemWindows="true"
-        android:focusableInTouchMode="true"
-        android:overScrollMode="ifContentScrolls"
-        android:scrollbarStyle="insideOverlay"
-        android:scrollbars="vertical"
-        tools:context=".ImageDisplayActivity">
+        android:padding="1dp"
+        android:text="the title"
+        android:textColor="@color/soap"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
 
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar_main"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/ivResult"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:background="@color/shell"
+        android:padding="1dp"
+        android:scaleType="centerCrop"/>
 
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivResult"
+        android:layout_alignStart="@+id/ivResult"
+        android:layout_below="@+id/ivResult"
+        android:background="@color/shell"
+        android:text="Taken by username"
+        android:textColor="@color/soap"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
 
-
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/toolbar"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:background="@color/shell"
-            android:layout_gravity="center"
-            android:padding="1dp"
-            android:text="the title"
-            android:textColor="@color/soap"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/ivResult"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_below="@id/title"
-            android:layout_centerHorizontal="true"
-            android:background="@color/shell"
-            android:padding="1dp"
-            android:scaleType="centerCrop" />
-
-        <TextView
-            android:id="@+id/tvUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ivResult"
-            android:layout_alignStart="@+id/ivResult"
-            android:layout_below="@+id/ivResult"
-            android:background="@color/shell"
-            android:text="Taken by username"
-            android:textColor="@color/soap"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/timestamp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/ivResult"
-            android:layout_below="@id/ivResult"
-            android:background="@color/shell"
-            android:text="timestamp"
-            android:textColor="@color/soap"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ivResult"
+        android:layout_below="@id/ivResult"
+        android:background="@color/shell"
+        android:text="timestamp"
+        android:textColor="@color/soap"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
 
 
-        <co.hkm.soltag.TagContainerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/tag_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvUser"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="20dp"
-            android:padding="2dp"
-            app:container_background_color="@color/shell"
-            app:container_border_color="@color/shell"
-            app:container_enable_drag="false"
-            app:horizontal_interval="5dp"
-            app:tag_border_color="@color/soap"
-            app:tag_horizontal_padding="5dp"
-            app:tag_text_color="@color/soap"
-            app:tag_text_size="12sp"
-            app:tag_theme="random"
-            app:tag_vertical_padding="5dp"
-            app:vertical_interval="5dp" />
+    <TextView
+        android:id="@+id/recogView"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_below="@id/tvUser"
+        android:background="@color/cider"
+        android:padding="10dp"
+        android:textAlignment="textStart"
+        android:textSize="17sp"
+        android:textStyle="bold"/>
 
 
-        <org.tensorflow.tensorlib.view.RecognitionScoreView
-            android:id="@+id/recogView"
-
-            android:layout_below="@id/tag_group"
-            android:layout_width="match_parent"
-            android:layout_height="112dp"/>
-
-
-
-    </RelativeLayout>
+  </RelativeLayout>
 </ScrollView>

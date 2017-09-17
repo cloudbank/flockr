@@ -18,6 +18,7 @@ package org.tensorflow.tensorlib.env;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.os.Environment;
+
 import java.io.File;
 import java.io.FileOutputStream;
 
@@ -27,7 +28,7 @@ import java.io.FileOutputStream;
 public class ImageUtils {
   @SuppressWarnings("unused")
   private static final Logger LOGGER = new Logger();
-  
+
   static {
     try {
       System.loadLibrary("tensorflow_demo");
@@ -63,7 +64,7 @@ public class ImageUtils {
   /**
    * Saves a Bitmap object to disk for analysis.
    *
-   * @param bitmap The bitmap to save.
+   * @param bitmap   The bitmap to save.
    * @param filename The location to save the bitmap to.
    */
   public static void saveBitmap(final Bitmap bitmap, final String filename) {
@@ -170,10 +171,10 @@ public class ImageUtils {
    * input and output must already be allocated and non-null. For efficiency, no error checking is
    * performed.
    *
-   * @param input The array of YUV 4:2:0 input data.
-   * @param output A pre-allocated array for the ARGB 8:8:8:8 output data.
-   * @param width The width of the input image.
-   * @param height The height of the input image.
+   * @param input    The array of YUV 4:2:0 input data.
+   * @param output   A pre-allocated array for the ARGB 8:8:8:8 output data.
+   * @param width    The width of the input image.
+   * @param height   The height of the input image.
    * @param halfSize If true, downsample to 50% in each dimension, otherwise not.
    */
   public static native void convertYUV420SPToARGB8888(
@@ -184,14 +185,10 @@ public class ImageUtils {
    * and height. The input and output must already be allocated and non-null.
    * For efficiency, no error checking is performed.
    *
-   * @param y
-   * @param u
-   * @param v
-   * @param uvPixelStride
-   * @param width The width of the input image.
-   * @param height The height of the input image.
+   * @param width    The width of the input image.
+   * @param height   The height of the input image.
    * @param halfSize If true, downsample to 50% in each dimension, otherwise not.
-   * @param output A pre-allocated array for the ARGB 8:8:8:8 output data.
+   * @param output   A pre-allocated array for the ARGB 8:8:8:8 output data.
    */
   public static native void convertYUV420ToARGB8888(
       byte[] y,
@@ -210,9 +207,9 @@ public class ImageUtils {
    * and height. The input and output must already be allocated and non-null.
    * For efficiency, no error checking is performed.
    *
-   * @param input The array of YUV 4:2:0 input data.
+   * @param input  The array of YUV 4:2:0 input data.
    * @param output A pre-allocated array for the RGB 5:6:5 output data.
-   * @param width The width of the input image.
+   * @param width  The width of the input image.
    * @param height The height of the input image.
    */
   public static native void convertYUV420SPToRGB565(
@@ -223,9 +220,9 @@ public class ImageUtils {
    * instance, in creating data to feed the classes that rely on raw camera
    * preview frames.
    *
-   * @param input An array of input pixels in ARGB8888 format.
+   * @param input  An array of input pixels in ARGB8888 format.
    * @param output A pre-allocated array for the YUV420SP output data.
-   * @param width The width of the input image.
+   * @param width  The width of the input image.
    * @param height The height of the input image.
    */
   public static native void convertARGB8888ToYUV420SP(
@@ -236,9 +233,9 @@ public class ImageUtils {
    * instance, in creating data to feed the classes that rely on raw camera
    * preview frames.
    *
-   * @param input An array of input pixels in RGB565 format.
+   * @param input  An array of input pixels in RGB565 format.
    * @param output A pre-allocated array for the YUV420SP output data.
-   * @param width The width of the input image.
+   * @param width  The width of the input image.
    * @param height The height of the input image.
    */
   public static native void convertRGB565ToYUV420SP(
@@ -248,14 +245,14 @@ public class ImageUtils {
    * Returns a transformation matrix from one reference frame into another.
    * Handles cropping (if maintaining aspect ratio is desired) and rotation.
    *
-   * @param srcWidth Width of source frame.
-   * @param srcHeight Height of source frame.
-   * @param dstWidth Width of destination frame.
-   * @param dstHeight Height of destination frame.
-   * @param applyRotation Amount of rotation to apply from one frame to another.
-   *  Must be a multiple of 90.
+   * @param srcWidth            Width of source frame.
+   * @param srcHeight           Height of source frame.
+   * @param dstWidth            Width of destination frame.
+   * @param dstHeight           Height of destination frame.
+   * @param applyRotation       Amount of rotation to apply from one frame to another. Must be a
+   *                            multiple of 90.
    * @param maintainAspectRatio If true, will ensure that scaling in x and y remains constant,
-   * cropping the image if necessary.
+   *                            cropping the image if necessary.
    * @return The transformation fulfilling the desired requirements.
    */
   public static Matrix getTransformationMatrix(

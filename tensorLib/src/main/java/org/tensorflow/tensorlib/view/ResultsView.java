@@ -15,10 +15,12 @@ limitations under the License.
 
 package org.tensorflow.tensorlib.view;
 
-import org.tensorflow.tensorlib.classifier.Classifier.Recognition;
+import org.tensorflow.tensorlib.classifier.Classifier;
 
 import java.util.List;
 
 public interface ResultsView {
-  public void setResults(final List<Recognition> results);
+  public void setResults(final List<Classifier.Recognition> results);
+  public void setStringResults(final List<String> results);
+
 }
