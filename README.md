@@ -11,11 +11,9 @@ Uses  [Tensor-Lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorfl
   
   + jni.
 
-
-
 >>>>EXPERIENCE  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/WFZnLo7.png" height="500" /><img src="https://i.imgur.com/bBeivjY.png" height="500" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/WFZnLo7.png" height="500" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<<img src="https://i.imgur.com/bBeivjY.png" height="500" />
 
 >>>>INSPIRE
 
