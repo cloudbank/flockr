@@ -1,7 +1,9 @@
 # Phlaiku v 1.0   
-###  [SDK 19+, Oreo compatible]
+ <img src="http://i.imgur.com/ypYoNGG.png" height="300"/>    
+ 
+ ###  [SDK 19+, Oreo compatible]
 
-Uses  [tensor-lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorflow](https://www.tensorflow.org) helper library for image classification that optimizes both classifier creation as well as return time via object caching.  Three branches are being implemented in research for the best optimizations for mobile: 
+Uses  [Tensor-Lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorflow](https://www.tensorflow.org) helper library for image classification that optimizes both classifier creation as well as return time via object caching.  Three branches are being implemented in research for the best optimizations for mobile: 
   
   + java : *uses the approach that going to native can cause extra overhead; uses java nio memory map for managing the model file and makes use of lightest possible structures and dev.android best practices for memory and performance optimizations to prevent OutOfMemoryError and reduce the average return time 4 fold, object creation 3 fold.*
   
@@ -9,7 +11,7 @@ Uses  [tensor-lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorfl
   
   + jni.
 
-<img src="http://i.imgur.com/ypYoNGG.png" height="500"/>    
+
 
 >>>>EXPERIENCE
 
