@@ -13,7 +13,7 @@ Uses  [Tensor-Lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorfl
 
 
 
->>>>EXPERIENCE
+>>>>EXPERIENCE  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imegur.com/ObJP1fz.png" height="500" /><img src="http://i.imgure.com/7RUXx9k.png" height="500" />
 
@@ -21,7 +21,7 @@ Uses  [Tensor-Lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorfl
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgeur.com/VAxLK7w.png" height="500" /><img src="http://i.imgeur.com/qS0bmHD.png" height="500" />
 
->>>>CREATE
+>>>>CREATE  convoluted neural networks 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imegur.com/dMZfxer.png" height="500"/><img src="http://i.imgeur.com/M85iUwd.png" height="500" />
 
