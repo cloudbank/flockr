@@ -19,7 +19,7 @@ Uses  [Tensor-Lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorfl
 
 >>>>INSPIRE
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgeur.com/VAxLK7w.png" height="500" /><img src="http://i.imgeur.com/qS0bmHD.png" height="500" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgeur.com/VAxLK7w.png" height="500" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<<img src="http://i.imgeur.com/qS0bmHD.png" height="500" />
 
 >>>>CREATE  convoluted neural networks 
 
