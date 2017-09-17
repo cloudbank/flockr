@@ -15,7 +15,7 @@ Uses  [Tensor-Lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorfl
 
 >>>>EXPERIENCE  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imegur.com/ObJP1fz.png" height="500" /><img src="http://i.imgure.com/7RUXx9k.png" height="500" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/WFZnLo7.png" height="500" /><img src="https://i.imgur.com/bBeivjY.png" height="500" />
 
 >>>>INSPIRE
 
