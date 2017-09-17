@@ -13,13 +13,16 @@ Uses  [Tensor-Lib](https://github.com/cloudbank/tensor-lib)--  a google[Tensorfl
 
 >>>>EXPERIENCE  Inception v5 and my retrained model
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/WFZnLo7.png" height="500" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/bBeivjY.png" height="500" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/WFZnLo7.png" height="500" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/bBeivjY.png" height="500" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/nZ7tJX9.png" height="500" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/1Aaktty.png" height="500" />
 
+
 >>>>INSPIRE
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgeur.com/VAxLK7w.png" height="500" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<<img src="http://i.imgeur.com/qS0bmHD.png" height="500" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i.imgeur.com/VAxLK7w.png" height="500" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<<img src="http://i.imgeur.com/qS0bmHD.png" height="500" />
 
 >>>>CREATE  convoluted neural networks 
 
