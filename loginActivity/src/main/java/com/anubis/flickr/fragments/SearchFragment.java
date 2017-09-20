@@ -19,7 +19,7 @@ import com.anubis.flickr.R;
 import com.anubis.flickr.activity.ImageDisplayActivity;
 import com.anubis.flickr.adapter.SearchAdapter;
 import com.anubis.flickr.adapter.SpacesItemDecoration;
-import com.anubis.flickr.models.Common;
+import com.anubis.flickr.models.Paintings;
 import com.anubis.flickr.models.Photo;
 import com.anubis.flickr.models.Photos;
 
@@ -42,7 +42,7 @@ public class SearchFragment extends FlickrBaseFragment {
   Realm commonsRealm;
   RealmChangeListener changeListener;
   Subscription commonSubscription;
-  Common mCommon;
+  Paintings mCommon;
 
   @Override
   public void onDestroy() {
@@ -62,21 +62,21 @@ public class SearchFragment extends FlickrBaseFragment {
   public void onAttach(Context context) {
     super.onAttach(context);
     searchAdapter = new SearchAdapter(FlickrClientApp.getAppContext(), sPhotos, true);
-    changeListener = new RealmChangeListener<Common>() {
+    changeListener = new RealmChangeListener<Paintings>() {
       @Override
-      public void onChange(Common c) {
+      public void onChange(Paintings c) {
         updateDisplay(c);
       }
     };
     commonsRealm = Realm.getDefaultInstance();
-    final Date maxDate = commonsRealm.where(Common.class).maximumDate("timestamp");
-    mCommon = commonsRealm.where(Common.class).equalTo("timestamp", maxDate).findFirst();
+    final Date maxDate = commonsRealm.where(Paintings.class).maximumDate("timestamp");
+    mCommon = commonsRealm.where(Paintings.class).equalTo("timestamp", maxDate).findFirst();
     if (mCommon == null) {
       showProgress("Loading data, please wait...");
       commonsRealm.executeTransactionAsync(new Realm.Transaction() {
         @Override
         public void execute(Realm bgRealm) {
-          bgRealm.createObject(Common.class, Calendar.getInstance().getTime().toString());
+          bgRealm.createObject(Paintings.class, Calendar.getInstance().getTime().toString());
         }
       }, new Realm.Transaction.OnSuccess() {
         @Override
@@ -84,7 +84,7 @@ public class SearchFragment extends FlickrBaseFragment {
           //change listeners only on looper threads
           Handler handler = new Handler();
           handler.post(() -> {
-            mCommon = commonsRealm.where(Common.class).equalTo("timestamp", maxDate).findFirst();
+            mCommon = commonsRealm.where(Paintings.class).equalTo("timestamp", maxDate).findFirst();
             mCommon.addChangeListener(changeListener);
             getCommonsPage1();  //<---- change
           });
@@ -120,11 +120,11 @@ public class SearchFragment extends FlickrBaseFragment {
     setRetainInstance(true);
   }
 
-  private void updateDisplay(Common c) {
+  private void updateDisplay(Paintings c) {
     Log.d("TABS", "search updateDisplay(s)");
     sPhotos.clear();
     if (null != c) {
-      sPhotos.addAll(c.getCommonPhotos());
+      sPhotos.addAll(c.getPaintingPhotos());
     }
     searchAdapter.notifyDataSetChanged();
   }
@@ -182,11 +182,11 @@ public class SearchFragment extends FlickrBaseFragment {
             try {
               realm = Realm.getDefaultInstance();
               realm.beginTransaction();
-              Date maxDate = realm.where(Common.class).maximumDate("timestamp");
-              Common c = realm.where(Common.class).equalTo("timestamp", maxDate).findFirst();
+              Date maxDate = realm.where(Paintings.class).maximumDate("timestamp");
+              Paintings c = realm.where(Paintings.class).equalTo("timestamp", maxDate).findFirst();
               for (Photo photo : p.getPhotos().getPhotoList()) {
                 photo.isCommon = true;
-                c.commonPhotos.add(photo);
+                c.paintingPhotos.add(photo);
               }
               c.timestamp = Calendar.getInstance().getTime();
               realm.copyToRealmOrUpdate(c);

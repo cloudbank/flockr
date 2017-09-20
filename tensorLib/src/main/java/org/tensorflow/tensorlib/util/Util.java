@@ -20,7 +20,6 @@ import java.io.OutputStream;
 /**
  * Created by sabine on 8/27/17.
  */
-
 public class Util {
   //@todo maybe compress files and use zip util
   //do more efficiently with filechannel
@@ -77,7 +76,6 @@ public class Util {
     }
   }
 
-
   public static Classifier slowCacheGet(String type) {
     Gson gson = new Gson();
     String json = Util.getTensorPrefs().getString(type, "");
@@ -96,6 +94,4 @@ public class Util {
   public static SharedPreferences getTensorPrefs() {
     return TensorLib.context.getSharedPreferences(TensorLib.context.getResources().getString(R.string.tensor_prefs), 0);
   }
-
-
 }

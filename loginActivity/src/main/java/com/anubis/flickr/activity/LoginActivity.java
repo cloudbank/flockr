@@ -111,3 +111,4 @@ public class LoginActivity extends OAuthLoginActivity {
     ringProgressDialog.dismiss();
   }
 }
+

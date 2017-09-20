@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.tensorflow.tensorlib.fragment;
 
 import android.app.Fragment;
@@ -55,7 +54,6 @@ public class BitmapFragment extends Fragment {
       "file:///android_asset/rounded_graph.pb"; // or optimized_graph.pb
   private static final String LABEL_FILE =
       "file:///android_asset/retrained_labels.txt";
-
   private ResultsView resultsView;
   private ImageView imageView;
   private ImageView clicker;
@@ -63,9 +61,7 @@ public class BitmapFragment extends Fragment {
 
   @Override
   public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
-
     View view = inflater.inflate(R.layout.bitmap_fragment, container, false);
-
     File f = null;
     try {
       f = getFile();
@@ -82,14 +78,12 @@ public class BitmapFragment extends Fragment {
             IMAGE_STD,
             INPUT_NAME,
             OUTPUT_NAME);
-
     //the cameraconnectionfragment has a custom callback
     resultsView = (ResultsView) view.findViewById(R.id.resultsView);
     final Bitmap bitmap = BitmapFactory.decodeFile(f.getAbsolutePath());
     imageView = (ImageView) view.findViewById(R.id.imageView);
     imageView.setVisibility(View.VISIBLE);
     imageView.setImageBitmap(bitmap);
-
     clicker = (ImageView) view.findViewById(R.id.clicker);
     clicker.setVisibility(View.VISIBLE);
     clicker.setOnClickListener(new View.OnClickListener() {
@@ -100,7 +94,6 @@ public class BitmapFragment extends Fragment {
         //runClassifier(bitmap);
       }
     });
-
     return view;
   }
 
@@ -124,7 +117,6 @@ public class BitmapFragment extends Fragment {
     final long startTime = SystemClock.uptimeMillis();
     //@todo run in bg?
     final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
-
     resultsView.setResults(results);
     requestRender();
     final long lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
@@ -133,7 +125,6 @@ public class BitmapFragment extends Fragment {
     // resultsView.setResults(results);
     // requestRender();
     // computing = false;
-
     //  });
   }
 
@@ -145,35 +136,28 @@ public class BitmapFragment extends Fragment {
   }
 
   private File getFile() throws IOException {
-
     AssetManager am = getActivity().getAssets();
     InputStream inputStream = am.open("test2.jpg");
     return createFileFromInputStream(inputStream);
   }
 
   private File createFileFromInputStream(InputStream inputStream) {
-
     try {
       File f = new File(getActivity().getFilesDir() + "/test.jpg");
       OutputStream outputStream = new FileOutputStream(f);
       byte buffer[] = new byte[1024];
       int length = 0;
-
       while ((length = inputStream.read(buffer)) > 0) {
         outputStream.write(buffer, 0, length);
       }
-
       outputStream.close();
       inputStream.close();
-
       return f;
     } catch (IOException e) {
       //Logging exception
     }
-
     return null;
   }
-
 
   @Override
   public void onActivityCreated(final Bundle savedInstanceState) {
@@ -184,6 +168,4 @@ public class BitmapFragment extends Fragment {
   public void onViewCreated(final View view, final Bundle savedInstanceState) {
     textureView = (AutoFitTextureView) view.findViewById(R.id.texture);
   }
-
-
 }

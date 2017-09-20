@@ -76,7 +76,7 @@ public class Photo extends RealmObject implements Serializable {
   private String width;
   public boolean isCommon = false;
   public boolean isInteresting = false;
-  public String recogs;
+  public String recogs="";
 
   public String getHeight() {
     return height;

@@ -8,8 +8,10 @@ import static com.squareup.picasso.Picasso.with;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,17 +29,19 @@ import java.io.IOException;
 import io.realm.Realm;
 
 public class ClassifierDisplayActivity extends AppCompatActivity {
-  public static final String TAG = "ClierDisplayActivity";
+  public static final String TAG = "ClassifierDisplayAct";
   String mUid = "";
   static Photo mPhoto;
   static Realm pRealm;
-  //static ResultsView resultsView;
+  //@todo deal w static reclaim again
   static TextView resultsView;
   static int[] pixels;
   static int width;
   static String classifierType;
   BitmapAsyncTask bmt;
+  static String mPid;
 
+  //@todo maybe keep this non static since short lived activity for all static refs
   static private class BitmapAsyncTask extends AsyncTask<RequestCreator, Void, Bitmap> {
     @Override
     protected Bitmap doInBackground(RequestCreator... rc) {
@@ -56,51 +60,49 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
       result.getPixels(pixels, 0, width, 0, 0, width, width);
       String results = BitmapClassifier.getInstance().recognize(pixels, classifierType);
       resultsView.setText(results);
-      //save resulst to realm
-      //get results in future  or callback and persist on photo
+      // pixels = null;
+      pRealm.executeTransaction(new Realm.Transaction() {
+        @Override
+        public void execute(Realm realm) {
 
-/*
-            pRealm.executeTransaction(new Realm.Transaction() {
-                @Override
-                public void execute(Realm realm) {
-                    mPhoto.pixels = pixels;
-                    realm.copyToRealmOrUpdate(mPhoto);
-                }
-            });
-*/
-      // result.recycle();
+          mPhoto = pRealm.where(Photo.class).equalTo("id", mPid).findFirst();
+          mPhoto.recogs = results;
+          //@todo json method from realm w gson?
+          realm.copyToRealmOrUpdate(mPhoto);
+          Log.d(TAG, "mPhoto"+ mPhoto.getTitle());
+        }
+      });
+      //result.recycle();
     }
   }
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     setContentView(R.layout.classifier_image_display);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     resultsView = (TextView) findViewById(R.id.recogView);
-    String pid = getIntent().getStringExtra(RESULT);
+    mPid = getIntent().getStringExtra(RESULT);
     pRealm = Realm.getDefaultInstance();
-    mPhoto = pRealm.where(Photo.class).equalTo("id", pid).findFirst();
-    //if (mPhoto.recogs != null && mPhoto.recogs.size() > 0) {
-    //     resultsView.set(mPhoto.recogs);
-    // } else {
-//@todo SAVE the results on photos; maybe set timeout on future
-    //mUid = mPhoto.getId();
+    mPhoto = pRealm.where(Photo.class).equalTo("id", mPid).findFirst();
     classifierType = getIntent().getStringExtra(CLASSIFIER_TYPE);
     width = getIntent().getIntExtra(CLASSIFIER_WIDTH, 0);
     ImageView imageView = (ImageView) findViewById(R.id.ivResult);
     RequestCreator rc = with(FlickrClientApp.getAppContext()).load(mPhoto.getUrl()).networkPolicy(NetworkPolicy.OFFLINE);
     rc.into(imageView);
-    // if (mPhoto.pixels == null) {
+    if (mPhoto.recogs.length() < 1) {
     bmt = new BitmapAsyncTask();
     bmt.execute(rc);
+    } else {
+      final long startTime = SystemClock.uptimeMillis();
+      resultsView.setText(mPhoto.recogs);
+      final long lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
+      Log.d(TAG, "getting from photo"+ mPhoto.getTitle() + " " + lastProcessingTimeMs);
+    }
   }
-
-
-
-
 
 /*
     public void runClassifier(Bitmap bitmap, String classifier) {
@@ -150,10 +152,12 @@ public class ClassifierDisplayActivity extends AppCompatActivity {
     if (null != pRealm && !pRealm.isClosed()) {
       pRealm.close();
     }
-    if (bmt.getStatus() != AsyncTask.Status.FINISHED) {
+    if (bmt != null && (bmt.getStatus() != AsyncTask.Status.FINISHED)) {
       bmt.cancel(true);
+     // bmt = null;
     }
+    //@todo cleaning up futures
     //ensure future thread is dead
-    BitmapClassifier.getInstance().cleanUp();
+    //BitmapClassifier.getInstance().cleanUp();
   }
 }

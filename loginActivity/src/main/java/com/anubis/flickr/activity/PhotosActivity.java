@@ -3,19 +3,12 @@ package com.anubis.flickr.activity;
 import com.google.android.gms.ads.MobileAds;
 
 import android.Manifest;
-import android.accounts.Account;
-import android.accounts.AccountManager;
-import android.accounts.AccountManagerCallback;
-import android.accounts.AccountManagerFuture;
 import android.annotation.TargetApi;
 import android.content.ComponentCallbacks2;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -38,7 +31,6 @@ import com.anubis.flickr.fragments.FriendsFragment;
 import com.anubis.flickr.fragments.InterestingFragment;
 import com.anubis.flickr.fragments.SearchFragment;
 import com.anubis.flickr.fragments.TagsFragment;
-import com.anubis.flickr.sync.SyncAdapter;
 import com.anubis.flickr.util.Util;
 
 import java.util.ArrayList;
@@ -182,7 +174,7 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
     rootView = findViewById(android.R.id.content);
     //oauthkit shared prefs
     SharedPreferences authPrefs = getApplicationContext().getSharedPreferences(getString(R.string.OAuthKit_Prefs), 0);
-    if (Util.getCurrentUser().length() > 0) {
+   /* if (Util.getCurrentUser().length() > 0) {
       Account acct = SyncAdapter.getSyncAccount(Util.getCurrentUser(), getApplicationContext());
       //login has changed
       if (!Util.getCurrentUser().equals(authPrefs.getString(getString(R.string.username), ""))) {
@@ -210,7 +202,9 @@ public class PhotosActivity extends AppCompatActivity implements FlickrBaseFragm
         //Toast
         ContentResolver.setSyncAutomatically(acct, FlickrClientApp.getAppContext().getString(R.string.authority), true);
       }
-    }
+
+
+    }*/
     //init, change login
     updateUserInfo(authPrefs);
     setContentView(R.layout.activity_photos);

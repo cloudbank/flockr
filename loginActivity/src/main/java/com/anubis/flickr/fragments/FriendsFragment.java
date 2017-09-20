@@ -63,7 +63,7 @@ public class FriendsFragment extends FlickrBaseFragment {
   @Override
   public void onActivityCreated(@Nullable Bundle savedInstanceState) {
     super.onActivityCreated(savedInstanceState);
-    changeListener = new RealmChangeListener<UserModel>() {
+    /*changeListener = new RealmChangeListener<UserModel>() {
       @Override
       public void onChange(UserModel u) {
         updateDisplay(u);
@@ -71,8 +71,9 @@ public class FriendsFragment extends FlickrBaseFragment {
                     makeSingle(cPhotos);
                     fAdapter.notifyDataSetChanged();
                 }*/
-      }
+     /* }
     };
+    b
     userRealm = Realm.getDefaultInstance();
     final String user_id = Util.getUserId();
     mUser = userRealm.where(UserModel.class).equalTo("userId", user_id).findFirst();
@@ -90,7 +91,7 @@ public class FriendsFragment extends FlickrBaseFragment {
     } else {
       mUser.addChangeListener(changeListener);
       updateDisplay(mUser);
-    }
+    }*/
   }
 
   // Store instance variables based on arguments passed

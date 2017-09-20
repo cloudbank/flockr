@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.tensorflow.tensorlib.activity;
 
 import android.graphics.Bitmap;
@@ -46,7 +45,6 @@ import java.util.Vector;
 
 public class ClassifierActivity extends CameraActivity implements OnImageAvailableListener {
   private static final Logger LOGGER = new Logger();
-
   // These are the settings for the original v1 Inception model. If you want to
   // use a model that's been produced from the TensorFlow for Poets codelab,
   // you'll need to set IMAGE_SIZE = 299, IMAGE_MEAN = 128, IMAGE_STD = 128,
@@ -68,39 +66,26 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   private static final float IMAGE_STD = 1;
   private static final String INPUT_NAME = "input";
   private static final String OUTPUT_NAME = "output";
-
   private static final String MODEL_FILE = "file:///android_asset/tensorflow_inception_graph.pb";
   private static final String LABEL_FILE =
       "file:///android_asset/imagenet_comp_graph_label_strings.txt";
-
   private static final boolean SAVE_PREVIEW_BITMAP = false;
-
   private static final boolean MAINTAIN_ASPECT = true;
-
   private static final Size DESIRED_PREVIEW_SIZE = new Size(640, 480);
-
   private Classifier classifier;
-
   private Integer sensorOrientation;
-
   private int previewWidth = 0;
   private int previewHeight = 0;
   private byte[][] yuvBytes;
   private int[] rgbBytes = null;
   private Bitmap rgbFrameBitmap = null;
   private Bitmap croppedBitmap = null;
-
   private Bitmap cropCopyBitmap;
-
   private boolean computing = false;
-
   private Matrix frameToCropTransform;
   private Matrix cropToFrameTransform;
-
   private ResultsView resultsView;
-
   private BorderedText borderedText;
-
   private long lastProcessingTimeMs;
 
   @Override
@@ -122,7 +107,6 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, getResources().getDisplayMetrics());
     borderedText = new BorderedText(textSizePx);
     borderedText.setTypeface(Typeface.MONOSPACE);
-
     classifier =
         TensorFlowImageClassifier.create(
             getApplicationContext(),
@@ -133,35 +117,25 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             IMAGE_STD,
             INPUT_NAME,
             OUTPUT_NAME);
-
     resultsView = (ResultsView) findViewById(R.id.resultsView);
     previewWidth = size.getWidth();
     previewHeight = size.getHeight();
-
-
     final Display display = getWindowManager().getDefaultDisplay();
     final int screenOrientation = display.getRotation();
-
     LOGGER.i("Sensor orientation: %d, Screen orientation: %d", rotation, screenOrientation);
-
     sensorOrientation = rotation + screenOrientation;
-
     LOGGER.i("Initializing at size %dx%d", previewWidth, previewHeight);
     rgbBytes = new int[previewWidth * previewHeight];
     rgbFrameBitmap = Bitmap.createBitmap(previewWidth, previewHeight, Config.ARGB_8888);
     croppedBitmap = Bitmap.createBitmap(INPUT_SIZE, INPUT_SIZE, Config.ARGB_8888);
-
     frameToCropTransform =
         ImageUtils.getTransformationMatrix(
             previewWidth, previewHeight,
             INPUT_SIZE, INPUT_SIZE,
             sensorOrientation, MAINTAIN_ASPECT);
-
     cropToFrameTransform = new Matrix();
     frameToCropTransform.invert(cropToFrameTransform);
-
     yuvBytes = new byte[3][];
-
     addCallback(
         new DrawCallback() {
           @Override
@@ -174,25 +148,19 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   @Override
   public void onImageAvailable(final ImageReader reader) {
     Image image = null;
-
     try {
       image = reader.acquireLatestImage();
-
       if (image == null) {
         return;
       }
-
       if (computing) {
         image.close();
         return;
       }
       computing = true;
-
       Trace.beginSection("imageAvailable");
-
       final Plane[] planes = image.getPlanes();
       fillBytes(planes, yuvBytes);
-
       final int yRowStride = planes[0].getRowStride();
       final int uvRowStride = planes[1].getRowStride();
       final int uvPixelStride = planes[1].getPixelStride();
@@ -206,7 +174,6 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
           uvRowStride,
           uvPixelStride,
           rgbBytes);
-
       image.close();
     } catch (final Exception e) {
       if (image != null) {
@@ -216,16 +183,13 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
       Trace.endSection();
       return;
     }
-
     rgbFrameBitmap.setPixels(rgbBytes, 0, previewWidth, 0, 0, previewWidth, previewHeight);
     final Canvas canvas = new Canvas(croppedBitmap);
     canvas.drawBitmap(rgbFrameBitmap, frameToCropTransform, null);
-
     // For examining the actual TF input.
     if (SAVE_PREVIEW_BITMAP) {
       ImageUtils.saveBitmap(croppedBitmap);
     }
-
     runInBackground(
         new Runnable() {
           @Override
@@ -233,14 +197,12 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             final long startTime = SystemClock.uptimeMillis();
             final List<Classifier.Recognition> results = classifier.recognizeImage(croppedBitmap);
             lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
-
             cropCopyBitmap = Bitmap.createBitmap(croppedBitmap);
             resultsView.setResults(results);
             requestRender();
             computing = false;
           }
         });
-
     Trace.endSection();
   }
 
@@ -262,7 +224,6 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
           canvas.getWidth() - copy.getWidth() * scaleFactor,
           canvas.getHeight() - copy.getHeight() * scaleFactor);
       canvas.drawBitmap(copy, matrix, new Paint());
-
       final Vector<String> lines = new Vector<String>();
       if (classifier != null) {
         String statString = classifier.getStatString();
@@ -271,13 +232,11 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
           lines.add(line);
         }
       }
-
       lines.add("Frame: " + previewWidth + "x" + previewHeight);
       lines.add("Crop: " + copy.getWidth() + "x" + copy.getHeight());
       lines.add("View: " + canvas.getWidth() + "x" + canvas.getHeight());
       lines.add("Rotation: " + sensorOrientation);
       lines.add("Inference time: " + lastProcessingTimeMs + "ms");
-
       borderedText.drawLines(canvas, 10, canvas.getHeight() - 10, lines);
     }
   }

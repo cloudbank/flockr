@@ -241,7 +241,6 @@ ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity
 		ADDED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml:89:11-53
 uses-sdk
 INJECTED from /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/loginActivity/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:multidex:1.0.1] /Users/sabine/.android/build-cache/ac78fbe7bde1df1ca8b6788db771805afee169b3/output/AndroidManifest.xml:18:5-42
 MERGED from [io.realm:realm-android-library:2.0.2] /Users/sabine/.android/build-cache/288c09ee706adffad1b1a142c69820a96253c3b3/output/AndroidManifest.xml:5:5-7:41
 MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/sabine/.android/build-cache/f8fe812bfb0394412b8d729582d4e78789c0d9a2/output/AndroidManifest.xml:7:5-43
 MERGED from [phlaiku:oauthkit:unspecified] /Users/sabine/github/myfriendflickr2016/phlaiku/phlaiku/oauthkit/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
@@ -253,6 +252,7 @@ MERGED from [com.android.support:design:26.0.1] /Users/sabine/.android/build-cac
 MERGED from [com.android.support:transition:26.0.1] /Users/sabine/.android/build-cache/560583038a81a493482399b2fe1b6dfa380c5e91/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:26.0.1] /Users/sabine/.android/build-cache/13aa1680b940b546f3b7336dfb2a3bb1f2a9910b/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/sabine/.android/build-cache/d8e3e73be557b9ebb593a5374194d2fe50cd439d/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:multidex:1.0.1] /Users/sabine/.android/build-cache/ac78fbe7bde1df1ca8b6788db771805afee169b3/output/AndroidManifest.xml:18:5-42
 MERGED from [io.reactivex:rxandroid:1.2.1] /Users/sabine/.android/build-cache/480e87425bc2feecc3ff72ff56d0cab9c27228a1/output/AndroidManifest.xml:19:5-43
 MERGED from [com.hkm.taglib:tag:1.6.0] /Users/sabine/.android/build-cache/d856a8fa5535df55c875facdc144d8e3bd08f944/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/sabine/.android/build-cache/1a0aa6672620ae99e2927a936348adf23439b625/output/AndroidManifest.xml:21:5-23:78

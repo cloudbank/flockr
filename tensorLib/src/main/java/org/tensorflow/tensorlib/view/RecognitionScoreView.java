@@ -12,7 +12,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
-
 package org.tensorflow.tensorlib.view;
 
 import android.content.Context;
@@ -36,13 +35,11 @@ public class RecognitionScoreView extends View implements ResultsView {
 
   public RecognitionScoreView(final Context context, final AttributeSet set) {
     super(context, set);
-
     textSizePx =
         TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, getResources().getDisplayMetrics());
     fgPaint = new Paint();
     fgPaint.setTextSize(textSizePx);
-
     bgPaint = new Paint();
     bgPaint.setColor(0xcce3eaa7);
   }
@@ -58,17 +55,15 @@ public class RecognitionScoreView extends View implements ResultsView {
     this.stringResults = results;
     postInvalidate();  //causes ondraw
   }
+
   @Override
   public void onDraw(final Canvas canvas) {
     final int x = 10;
     int y = (int) (fgPaint.getTextSize() * 1.5f);
-
     canvas.drawPaint(bgPaint);
-
-
     if (results != null) {
       for (final Recognition recog : results) {
-        canvas.drawText(recog.getTitle() + ": " + (recog.getConfidence() != null ? recog.getConfidence() : Float.NEGATIVE_INFINITY ), x, y, fgPaint);
+        canvas.drawText(recog.getTitle() + ": " + (recog.getConfidence() != null ? recog.getConfidence() : Float.NEGATIVE_INFINITY), x, y, fgPaint);
         y += fgPaint.getTextSize() * 1.5f;
       }
       // } else {

@@ -11,11 +11,8 @@ import org.tensorflow.tensorlib.util.Util;
 /**
  * Created by sabine on 8/31/17.
  */
-
 public class TensorLib {
-
   public static final String TAG = "TensorLib";
-
   public static Classifier inceptionClassifier;
   public static Classifier retrainedClassifier;
   //public static LruCache<ClassifierType, Classifier> fastCache;
@@ -25,7 +22,6 @@ public class TensorLib {
   }
 
   public static Application context;
-
 
   public static void init(Application ctx) {
     Log.d(TAG, "TensorLib init()");
@@ -44,6 +40,16 @@ public class TensorLib {
     Log.d(TAG, "TensorLib persistClassifiers() obj size" + classifier1);
     Util.slowCachePut(classifier1, inception.getName());
     inceptionClassifier = classifier1;
-  }
 
+    ClassifierType retrained = ClassifierType.CLASSIFIER_RETRAINED;
+    Classifier classifier2 =
+        TensorFlowImageClassifier.create(
+            TensorLib.context, retrained.getModelFilename(), retrained.getLabelFilename(), retrained.getInputSize(),
+            retrained.getImageMean(), retrained.getImageStd(), retrained.getInputName(), retrained.getOutputName()
+        );
+    Util.slowCachePut(classifier2, retrained.getName());
+    retrainedClassifier = classifier2;
+    Log.d(TAG, "TensorLib persistClassifiers() done"  );
+
+  }
 }

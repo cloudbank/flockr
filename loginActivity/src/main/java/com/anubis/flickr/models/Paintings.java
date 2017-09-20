@@ -10,17 +10,17 @@ import io.realm.annotations.PrimaryKey;
 /**
  * Created by sabine on 10/6/16.
  */
-public class Common extends RealmObject implements RealmModel {
+public class Paintings extends RealmObject implements RealmModel {
   @PrimaryKey
   public String id;
   public Date timestamp;
 
-  public RealmList<Photo> getCommonPhotos() {
-    return commonPhotos;
+  public RealmList<Photo> getPaintingPhotos() {
+    return paintingPhotos;
   }
 
-  public void setCommonPhotos(RealmList<Photo> commonPhotos) {
-    this.commonPhotos = commonPhotos;
+  public void setPaintingPhotos(RealmList<Photo> paintingPhotos) {
+    this.paintingPhotos = paintingPhotos;
   }
 
   public Date getTimestamp() {
@@ -31,7 +31,7 @@ public class Common extends RealmObject implements RealmModel {
     this.timestamp = timestamp;
   }
 
-  public RealmList<Photo> commonPhotos;
+  public RealmList<Photo> paintingPhotos;
 
   public String getId() {
     return id;

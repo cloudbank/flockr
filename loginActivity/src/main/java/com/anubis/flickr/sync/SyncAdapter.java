@@ -24,7 +24,7 @@ import android.widget.Toast;
 import com.anubis.flickr.FlickrClientApp;
 import com.anubis.flickr.R;
 import com.anubis.flickr.activity.LoginActivity;
-import com.anubis.flickr.models.Common;
+import com.anubis.flickr.models.Paintings;
 import com.anubis.flickr.models.Hottags;
 import com.anubis.flickr.models.Interesting;
 import com.anubis.flickr.models.Photo;
@@ -454,10 +454,10 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
             try {
               realm5 = Realm.getDefaultInstance();
               realm5.beginTransaction();
-              Common c = realm5.where(Common.class).findFirst();
+              Paintings c = realm5.where(Paintings.class).findFirst();
               for (Photo photo : p.getPhotos().getPhotoList()) {
                 photo.isCommon = true;
-                c.commonPhotos.add(photo);
+                c.paintingPhotos.add(photo);
               }
               realm5.copyToRealmOrUpdate(c);
               realm5.commitTransaction();

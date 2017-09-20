@@ -6,7 +6,7 @@
   <string name="friends_and_you">Visual Phlaiku</string>
   <string name="interesting_today">Photo Phlai-Q</string>
   <string name="tags">Phlaiku-Bot</string>
-  <string name="explore">Explore</string>
+  <string name="explore">Inceptionv5</string>
   <string name="moon">The Moon</string>
   <string name="japan">Basho</string>
   <string name="current_user">currentUser</string>
@@ -33,5 +33,6 @@
   <string name="jacksonServiceType">jacksonServiceType</string>
   <string name="defaultServiceType">defaultServiceType</string>
   <string name="Consumer">Consumer</string>
+  <string name="paintings">Retrained</string>
 
 </resources>

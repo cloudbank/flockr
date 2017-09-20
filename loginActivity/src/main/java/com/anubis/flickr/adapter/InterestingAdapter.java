@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +65,7 @@ public class InterestingAdapter extends RecyclerView.Adapter<InterestingAdapter.
     mContext = context;
     this.setHasStableIds(true);
   }
-
+  private static final String TAG = "InterestingAdapter";
   private Context getContext() {
     return mContext;
   }
@@ -88,11 +89,15 @@ public class InterestingAdapter extends RecyclerView.Adapter<InterestingAdapter.
     ImageView imageView = viewHolder.ivImage;
     RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) imageView
         .getLayoutParams();
-    int aspectRatio = Integer.parseInt(photo.getHeight()) / Integer.parseInt(photo.getWidth());
+    int aspectRatio = 0;
+    if ((photo != null && photo.getHeight() != null) && photo.getWidth() != null) {
+      aspectRatio = (Integer.parseInt(photo.getHeight()) / Integer.parseInt(photo.getWidth()));
+    } else {
+      Log.d(TAG, " photo is null" + photo);
+    }
     Random rand = new Random();
     int n = rand.nextInt(100) + 375;
     lp.height = n; // photo.getPhotoHeight() * 2;
-    //n = rand.nextInt(200) + 100;
     lp.width = aspectRatio > 0 ? n / aspectRatio : n;//
     fp.width = lp.width;
     fp.height = lp.height;

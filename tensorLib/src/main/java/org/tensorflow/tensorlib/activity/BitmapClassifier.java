@@ -1,7 +1,5 @@
 package org.tensorflow.tensorlib.activity;
 
-import android.os.Handler;
-import android.os.HandlerThread;
 import android.os.SystemClock;
 import android.util.Log;
 
@@ -29,8 +27,6 @@ public class BitmapClassifier {
   private static final Logger LOGGER = new Logger();
 
   List<Classifier.Recognition> results = new ArrayList<>();
-  Handler handler, handler2;
-  HandlerThread handlerThread;
   //@todo ensure static vars are persisted
   static ClassifierType classifierType;
   static Classifier classifier;
@@ -142,23 +138,13 @@ public class BitmapClassifier {
       handler2.removeCallbacksAndMessages(null);
       handler2 = null;
     }*/
+
     if (!future.isDone() && !future.isCancelled()) {
       future.cancel(true);
 
     }
 
-    if (handler != null) {
-      handler.removeCallbacksAndMessages(null);
-      handler = null;
-    }
-    if (handler2 != null) {
-      handler2.removeCallbacksAndMessages(null);
-      handler2 = null;
-    }
-    if (handlerThread != null) {
-      handlerThread.interrupt();
-      handlerThread.quit();
-    }
+
   }
 
 
@@ -170,21 +156,20 @@ public class BitmapClassifier {
     //completeablefuture not available until 24
     final long startTime = SystemClock.uptimeMillis();
     ExecutorService executor = Executors.newSingleThreadExecutor();
+    Log.d(TAG, "classifier in :" +  pixels.length + " " + type);
      future
         = executor.submit(new Callable() {
       public List<Classifier.Recognition> call() {
         ClassifierType classifierType = ClassifierType.getTypeForString(type);
         float[] normalizedPixels = process(pixels, classifierType);
         classifier = BitmapClassifier.getClassifierForType(classifierType);
-
+        Log.d(TAG, "future in :" +  classifier);
         return (ArrayList<Classifier.Recognition>) classifier.recognizeImage(normalizedPixels);
       }
     });
 //progress?
     //displayOtherThings(); // do other things while searching
     try {
-
-
       results = future.get(); //
       final long lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
       Log.d(TAG, "results in :" +  results.toString() + " " + lastProcessingTimeMs);
