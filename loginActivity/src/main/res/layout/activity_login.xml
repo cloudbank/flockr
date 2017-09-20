@@ -1,12 +1,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
              android:layout_gravity="center"
-             android:background="@drawable/background_gradient"
+             android:background="@drawable/vvn3"
              android:orientation="vertical"
              tools:context=".LoginActivity">
+
 
 
   <ImageView
@@ -17,17 +18,8 @@
       android:alpha="0.4"
       android:elevation="1dp"
       android:src="@drawable/back_login"
-      android:visibility="visible"/>
+      android:visibility="invisible"/>
 
-  <ImageView
-      android:id="@+id/logo"
-      android:layout_width="480dp"
-      android:layout_height="match_parent"
-      android:layout_gravity="center|center_vertical"
-      android:layout_marginBottom="0dp"
-      android:alpha=".5"
-      android:visibility="visible"
-      android:src="@drawable/circlepink"/>
 
   <TextView
       android:layout_width="wrap_content"
@@ -49,28 +41,42 @@
       android:onClick="loginToRest"
       android:src="@drawable/arrow2"/>
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textSize="30sp"
-      android:layout_gravity="bottom|center_horizontal"
-      android:layout_marginBottom="40dp"
-      android:text="phlaiku"/>
+
 
 
   <com.jetradarmobile.snowfall.SnowfallView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      app:snowflakesNum="250"
+      app:snowflakesNum="285"
       app:snowflakeAlphaMin="100"
-      app:snowflakeAlphaMax="205"
+      app:snowflakeAlphaMax="200"
       app:snowflakeAngleMax="5"
-      app:snowflakeSizeMin="5dp"
-      app:snowflakeSizeMax="8dp"
-      app:snowflakeSpeedMin="8"
+      app:snowflakeSizeMin="2dp"
+      app:snowflakeSizeMax="6dp"
+      app:snowflakeSpeedMin="10"
       app:snowflakeSpeedMax="12"
       app:snowflakesFadingEnabled="true"
-      app:snowflakesAlreadyFalling="false"/>
+      app:snowflakesAlreadyFalling="true"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="30sp"
+      android:alpha="0.4"
+      android:textColor="@color/cider"
+      android:layout_gravity="bottom|center_horizontal"
+      android:layout_marginBottom="40dp"
+      android:text="classified003"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="15sp"
+      android:alpha="0.4"
+      android:textStyle="italic"
+      android:textColor="@color/cider"
+      android:layout_gravity="bottom|center_horizontal"
+      android:layout_marginBottom="30dp"
+      android:text="with tensorflow"/>
 </FrameLayout>
 
 
